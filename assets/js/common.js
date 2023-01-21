@@ -325,7 +325,6 @@ $(function() {
             }
         },
 		removalDelay: 160,
-		preloader: false,
 		fixedContentPos: false,
 		mainClass: 'mfp-fade',
 		callbacks: {
@@ -342,7 +341,6 @@ $(function() {
 		disableOn: 700,
 		type: 'iframe',
 		removalDelay: 160,
-		preloader: false,
 		fixedContentPos: false,
 		mainClass: 'mfp-fade'
 	});
@@ -490,7 +488,7 @@ function setHeightFullSection() {
 	var height = $(window).height();
 
 	/* Set full height in started blocks */
-	$('.error-page, .menu-full-overlay, .preloader .centrize').css({'height': height});
+	$('.error-page, .menu-full-overlay, .centrize').css({'height': height});
 }
 
 } )( jQuery );

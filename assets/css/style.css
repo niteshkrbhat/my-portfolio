@@ -5245,6 +5245,11 @@ a.wp-block-button__link {
 	}
 }
 
+.works-list-items .image .img{
+	position: relative! important;
+	top: 20px! important;
+}
+
 @media screen and (max-width: 767px) {
 	.lui-section {
 		padding-bottom: 120px;
@@ -5428,6 +5433,9 @@ a.wp-block-button__link {
 	}
 	.dark-skin .works-item .image .img:before, .dark-skin .works-item .image .img:after{
 		background: transparent !important;
+	}
+	.works-list-items .image .img {
+		top: -30px! important;
 	}
 	.works-item .image img {
 		height: 210px;
@@ -5620,16 +5628,5 @@ a.wp-block-button__link {
 	}
 	.footer .copyright-text, .footer .footer-heading {
 		text-align: center!important;
-	}
-}
-
-.works-list-items .image .img{
-	position: relative! important;
-	top: 20px! important;
-}
-
-@media (max-width: 767px) {
-	.works-list-items .image .img {
-		top: -30px! important;
 	}
 }

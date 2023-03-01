@@ -455,6 +455,7 @@ body.dark-skin {
 .dark-skin .works-item .image .img:before,
 .dark-skin .works-item .image .img:after {
 	background: #222831;
+	background: transparent;
 }
 
 .dark-skin .works-items.works-list-items .works-item .desc .name {

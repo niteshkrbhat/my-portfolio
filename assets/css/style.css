@@ -2304,6 +2304,7 @@ hr {
 
 .lui-text p {
 	margin: 0;
+	text-align: left;
 }
 
 .lui-bgtitle {
@@ -3415,6 +3416,10 @@ hr {
 	min-height: 36rem;
 }
 
+.testimonial-inner {
+	margin-bottom: 50px;
+}
+
 .testimonials-item .image {
 	margin-bottom: 30px;
 	position: relative;
@@ -3453,6 +3458,7 @@ hr {
 	margin-top: 30px;
 	position: absolute;
 	bottom: 20px;
+	text-align: left;
 }
 
 .testimonials-item .info .name {

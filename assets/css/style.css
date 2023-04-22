@@ -3410,10 +3410,16 @@ hr {
 .testimonials-item {
 	position: relative;
 	overflow: hidden;
-	padding: 30px 35px;
+	padding: 30px 30px;
 	background: #fff;
 	border-radius: 18px;
 	min-height: 36rem;
+}
+
+@media (max-width: 767px) {
+	.testimonials-item {
+		padding: 30px 20px;
+	}
 }
 
 .testimonial-inner {

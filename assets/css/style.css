@@ -3092,7 +3092,7 @@ hr {
 .works-items.works-list-items .works-item .desc .name {
 	margin-bottom: 0;
 	font-family: "Jost";
-	font-size: 50px;
+	font-size: 45px;
 	line-height: 1.2;
 	color: #000;
 	font-weight: 700;
@@ -3137,6 +3137,7 @@ hr {
 	background: #fff;
 	border-radius: 20px;
 	overflow: initial;
+	min-height: 25rem;
 }
 
 .works-items.works-masonry-items .works-item .image {

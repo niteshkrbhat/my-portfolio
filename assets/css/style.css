@@ -342,8 +342,7 @@ button:hover {
 a.btn:hover:before,
 .btn:hover:before,
 button:hover:before,
-.btn.btn-solid:before,
-.elementor .btn.btn-solid:before {
+.btn.btn-solid:before, {
 	width: calc(100% - 4px);
 	height: calc(100% - 4px);
 	opacity: 1;
@@ -5682,4 +5681,52 @@ a.wp-block-button__link {
 	color: var(--tg-gray-four);
 	opacity: 0.7;
 	text-transform: capitalize;
+}
+
+.testimonials-text {
+	display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: left;
+}
+
+.modal-header {
+	padding: 0.5rem 1rem;
+}
+
+.modal-body {
+	padding: 0 1rem;
+}
+
+.modal-footer {
+	padding: 0 0.75rem;
+	width: 100%;
+}
+
+.modal-content {
+	padding: 10px;
+}
+
+.social-media {
+	width: 100%;
+}
+
+.social-media p {
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.project-name {
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.badge-light-light {
+    background-color: #E9ECEF;
+    border: 1px solid #E9ECEF;
+    color: #3F4651;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-weight: 500;
 }

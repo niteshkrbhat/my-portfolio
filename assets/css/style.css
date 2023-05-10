@@ -337,6 +337,7 @@ a.btn:hover,
 .btn:hover,
 button:hover {
 	color: #FFF;
+	background: #29a587;
 }
 
 a.btn:hover:before,

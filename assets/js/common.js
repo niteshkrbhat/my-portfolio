@@ -27,6 +27,61 @@ $(window).on("load", function() {
 	});
 });
 
+$(document).ready(function () {
+    $("#arunModalOpen").click(function () {
+       $("#arunkumar").modal("show");
+    });
+      
+    $("#arunModalClose").click(function () {
+       $("#arunkumar").modal("hide");
+    });
+    $("#preetamModalOpen").click(function () {
+       $("#preetamrao").modal("show");
+    }); 
+    $("#preetamModalClose").click(function () {
+       $("#preetamrao").modal("hide");
+    });
+    $("#anuragModalOpen").click(function () {
+       $("#anuragyadav").modal("show");
+    });
+    $("#anuragModalClose").click(function () {
+       $("#anuragyadav").modal("hide");
+    });
+    $("#abhiModalOpen").click(function () {
+       $("#abhisheksharma").modal("show");
+    });
+    $("#abhiModalClose").click(function () {
+       $("#abhisheksharma").modal("hide");
+    });
+    $("#ankitModalOpen").click(function () {
+       $("#ankitjoshi").modal("show");
+    });
+      
+    $("#ankitModalClose").click(function () {
+       $("#ankitjoshi").modal("hide");
+    });
+    $("#karanModalOpen").click(function () {
+       $("#karanasthana").modal("show");
+    });
+    $("#karanModalClose").click(function () {
+       $("#karanasthana").modal("hide");
+    });
+    $("#rajeshModalOpen").click(function () {
+       $("#rajeshkumar").modal("show");
+    });
+      
+    $("#rajeshModalClose").click(function () {
+       $("#rajeshkumar").modal("hide");
+    });
+    $("#abhishekModalOpen").click(function () {
+       $("#abhishekdutta").modal("show");
+    });
+      
+    $("#abhishekModalClose").click(function () {
+       $("#abhishekdutta").modal("hide");
+    });
+});
+
 $(function() {
 	'use strict';
 

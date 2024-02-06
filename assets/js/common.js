@@ -60,6 +60,19 @@ $(document).ready(function () {
     $("#ankitModalClose").click(function () {
        $("#ankitjoshi").modal("hide");
     });
+    $("#pavanModalOpen").click(function () {
+       $("#pavanverma").modal("show");
+    });
+    $("#pavanModalClose").click(function () {
+       $("#pavanverma").modal("hide");
+    });
+
+    $("#harshModalOpen").click(function () {
+       $("#harshkumar").modal("show");
+    });
+    $("#harshModalClose").click(function () {
+       $("#harshkumar").modal("hide");
+    });
     $("#karanModalOpen").click(function () {
        $("#karanasthana").modal("show");
     });

@@ -27,6 +27,15 @@ $(window).on("load", function() {
 	});
 });
 
+$(function() {
+$('.tp-header-dropdown nav ul li').each(function() {
+	if ($(this).find('.mega-menu').length > 0) {
+		$(this).addClass('p-static');
+	}
+});
+});
+
+
 $(document).ready(function () {
     $("#arunModalOpen").click(function () {
        $("#arunkumar").modal("show");

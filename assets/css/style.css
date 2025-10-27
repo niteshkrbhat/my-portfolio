@@ -5845,6 +5845,12 @@ a.wp-block-button__link {
 	max-height: 0;
 }
 
+@media (max-width: 767px) {
+	.light-skin .pf-reveal .d-inner {
+		margin-top: -400%;
+	}
+}
+
 .dark-skin .pf-reveal .d-inner {
 	margin-top: -100%;
 	color: #fff;

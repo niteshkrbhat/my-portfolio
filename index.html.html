@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cold Email Sender</title>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f1117;--bg2:#181c27;--bg3:#1e2333;
+  --border:#2a2f45;--border2:#333a55;
+  --text:#e8eaf0;--text2:#8b92a8;--text3:#5a6180;
+  --blue:#4f8ef7;--blue2:#3a6fd8;--blue-dim:#1a2a4a;
+  --green:#4caf7d;--green-dim:#1a3328;
+  --red:#e05555;--red-dim:#3a1a1a;
+  --amber:#f0a040;--amber-dim:#3a2a10;
+  --radius:8px;--radius-sm:5px;
+  --font:'SF Mono','Fira Code',monospace;
+  --font-ui:system-ui,-apple-system,sans-serif;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font-ui);min-height:100vh;padding:24px}
+.wrap{max-width:700px;margin:0 auto}
+h2{font-size:20px;font-weight:600;letter-spacing:-.3px;margin-bottom:2px}
+.sub{font-size:13px;color:var(--text2);margin-bottom:20px}
+
+/* Setup banner */
+.setup-banner{background:var(--amber-dim);border:1px solid var(--amber);border-radius:var(--radius);padding:12px 16px;margin-bottom:16px;font-size:12.5px;color:var(--amber);line-height:1.6}
+.setup-banner strong{display:block;font-size:13px;margin-bottom:4px}
+.setup-banner code{background:rgba(240,160,64,.15);padding:1px 5px;border-radius:3px;font-family:var(--font);font-size:11px}
+
+/* Auth section */
+.auth-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px;text-align:center}
+.auth-card p{font-size:13px;color:var(--text2);margin-bottom:14px}
+#auth-status{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:var(--radius-sm);font-size:13px;font-weight:500;background:var(--bg3);border:1px solid var(--border);color:var(--text2);margin-bottom:12px}
+#auth-status.connected{background:var(--green-dim);border-color:var(--green);color:var(--green)}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex-shrink:0}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+.stat{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:12px;text-align:center}
+.stat-n{font-size:24px;font-weight:600;font-family:var(--font)}
+.stat-l{font-size:11px;color:var(--text2);margin-top:2px;text-transform:uppercase;letter-spacing:.05em}
+.n-total{color:var(--text)}
+.n-queued{color:var(--blue)}
+.n-sent{color:var(--green)}
+.n-fail{color:var(--red)}
+
+/* Tabs */
+.tabs{display:flex;border-bottom:1px solid var(--border);margin-bottom:16px;gap:0}
+.tab{padding:9px 18px;font-size:13px;cursor:pointer;color:var(--text2);border-bottom:2px solid transparent;transition:color .15s;user-select:none}
+.tab.active{color:var(--blue);border-bottom-color:var(--blue);font-weight:500}
+.section{display:none}.section.show{display:block}
+
+/* Card */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px}
+.label{font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
+
+/* Inputs */
+textarea,input,select{width:100%;font-family:var(--font-ui);font-size:13px;color:var(--text);background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius-sm);padding:8px 10px;outline:none;transition:border .15s}
+textarea:focus,input:focus{border-color:var(--blue)}
+textarea{resize:vertical;line-height:1.6}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;font-size:13px;font-weight:500;border-radius:var(--radius-sm);border:1px solid var(--border2);background:transparent;color:var(--text);cursor:pointer;transition:all .15s;user-select:none}
+.btn:hover{background:var(--bg3);border-color:var(--blue)}
+.btn-primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+.btn-primary:hover{background:var(--blue2);border-color:var(--blue2)}
+.btn-danger{background:var(--red);color:#fff;border-color:var(--red)}
+.btn-danger:hover{opacity:.85}
+.btn-google{background:#fff;color:#333;border-color:#ddd;font-weight:500}
+.btn-google:hover{background:#f5f5f5}
+.btn:disabled{opacity:.35;cursor:not-allowed;pointer-events:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+
+/* Grid layouts */
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.col-map{display:grid;grid-template-columns:auto 1fr;gap:8px 12px;align-items:center;font-size:13px;margin-top:10px}
+.col-map label{color:var(--text2)}
+
+/* Contacts table */
+.contact-list{max-height:240px;overflow-y:auto;border:1px solid var(--border);border-radius:var(--radius-sm)}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{background:var(--bg3);padding:7px 10px;text-align:left;font-weight:500;color:var(--text2);border-bottom:1px solid var(--border);position:sticky;top:0}
+td{padding:6px 10px;border-bottom:1px solid var(--border);color:var(--text)}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,255,255,.02)}
+.badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.badge-q{background:var(--blue-dim);color:var(--blue)}
+.badge-s{background:var(--green-dim);color:var(--green)}
+.badge-f{background:var(--red-dim);color:var(--red)}
+.badge-p{background:var(--amber-dim);color:var(--amber)}
+
+/* Preview */
+.preview-box{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;font-size:13px;line-height:1.7;white-space:pre-wrap;max-height:260px;overflow-y:auto;color:var(--text)}
+
+/* Progress */
+.progress-bar{width:100%;height:4px;background:var(--bg3);border-radius:2px;margin:10px 0;overflow:hidden}
+.progress-fill{height:100%;background:var(--blue);border-radius:2px;transition:width .3s}
+
+/* Log */
+.log{max-height:140px;overflow-y:auto;font-size:11.5px;color:var(--text2);font-family:var(--font);padding:.6rem;background:var(--bg3);border-radius:var(--radius-sm);border:1px solid var(--border);line-height:1.5}
+.log div{padding:1px 0}
+.err{color:var(--red)}
+.ok{color:var(--green)}
+.info{color:var(--blue)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h2>Cold Email Sender</h2>
+<p class="sub">Personalized outreach — powered by your Gmail via OAuth</p>
+
+<!-- Setup instructions -->
+<div class="setup-banner">
+  <strong>⚙️ One-time setup required</strong>
+  1. Go to <a href="https://console.cloud.google.com" target="_blank" style="color:inherit">console.cloud.google.com</a> → Create a project → Enable <strong>Gmail API</strong><br>
+  2. Go to <strong>APIs & Services → Credentials → Create OAuth 2.0 Client ID</strong> (Web app)<br>
+  3. Add <code>http://localhost</code> and your hosting URL to Authorised JavaScript origins<br>
+  4. Copy your <strong>Client ID</strong> and paste it below, then save the file and reopen it.
+</div>
+
+<div class="auth-card">
+  <div class="label" style="margin-bottom:10px">Google OAuth Client ID</div>
+  <input id="client-id-input" type="text" placeholder="YOUR_CLIENT_ID.apps.googleusercontent.com" style="max-width:480px;margin:0 auto 12px;display:block;text-align:center">
+  <div id="auth-status"><span class="dot"></span>Not connected</div><br>
+  <button class="btn btn-google" onclick="connectGmail()">
+    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+    Sign in with Google
+  </button>
+</div>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stat"><div class="stat-n n-total" id="s-total">0</div><div class="stat-l">Total</div></div>
+  <div class="stat"><div class="stat-n n-queued" id="s-queue">0</div><div class="stat-l">Queued</div></div>
+  <div class="stat"><div class="stat-n n-sent" id="s-sent">0</div><div class="stat-l">Sent</div></div>
+  <div class="stat"><div class="stat-n n-fail" id="s-fail">0</div><div class="stat-l">Failed</div></div>
+</div>
+
+<!-- Tabs -->
+<div class="tabs">
+  <div class="tab active" onclick="showTab('import')">1. Import contacts</div>
+  <div class="tab" onclick="showTab('template')">2. Email template</div>
+  <div class="tab" onclick="showTab('preview')">3. Preview & send</div>
+</div>
+
+<!-- Tab: Import -->
+<div id="tab-import" class="section show">
+  <div class="card">
+    <div class="label">Paste CSV data</div>
+    <p style="font-size:12px;color:var(--text2);margin-bottom:8px">Required columns: <strong>Name, Company, Email</strong> — other columns ignored. First row = headers.</p>
+    <textarea id="csv-input" rows="6" placeholder="Name,Company,Email&#10;Priya Sharma,Infosys,priya@infosys.com&#10;Rahul Verma,TCS,rahul@tcs.com"></textarea>
+    <div class="col-map">
+      <label>Name column:</label>
+      <input id="col-name" type="text" value="Name" style="width:auto">
+      <label>Company column:</label>
+      <input id="col-company" type="text" value="Company" style="width:auto">
+      <label>Email column:</label>
+      <input id="col-email" type="text" value="Email" style="width:auto">
+    </div>
+    <div class="btns">
+      <button class="btn btn-primary" onclick="parseCSV()">Parse contacts</button>
+      <button class="btn" onclick="loadSample()">Load sample data</button>
+    </div>
+  </div>
+  <div id="contacts-section" style="display:none">
+    <div class="card">
+      <div class="label">Parsed contacts</div>
+      <div class="contact-list" id="contact-table-wrap"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Tab: Template -->
+<div id="tab-template" class="section">
+  <div class="card">
+    <div class="label">Subject line</div>
+    <input id="tpl-subject" type="text" value="UI/UX Designer (7 yrs) | Exploring opportunities at {{company}}" style="margin-bottom:12px">
+    <div class="label">Email body — use <code style="background:var(--blue-dim);color:var(--blue);padding:1px 5px;border-radius:3px;font-size:11px">{{name}}</code> and <code style="background:var(--blue-dim);color:var(--blue);padding:1px 5px;border-radius:3px;font-size:11px">{{company}}</code></div>
+    <textarea id="tpl-body" rows="16">Hi {{name}},
+
+I was exploring {{company}} and really liked how you're approaching design. I'm a Senior UI/UX Designer with 7+ years of experience working on SaaS platforms, dashboards, and enterprise applications. Recently, I led the redesign of a data-heavy dashboard, improving usability and simplifying complex workflows.
+
+I'm not sure if you're currently hiring, but I'd love to connect and understand more about your design team—and explore if there could be a fit, now or in the near future.
+
+A quick bit about what I bring:
+• Strong experience in Figma, designing across multiple domains
+• Front-end understanding (HTML, CSS) for smoother dev handoff
+• Experience across multiple domains — SaaS, Fintech, Blockchain, Odoo, Salesforce
+
+You can view my portfolio here: https://niteshkrbhat.in/
+
+Would love to connect either way.
+
+Best regards,
+Nitesh Kumar Bhat
++91-7889514480</textarea>
+  </div>
+</div>
+
+<!-- Tab: Preview & Send -->
+<div id="tab-preview" class="section">
+  <div class="card">
+    <div class="label">Preview email</div>
+    <div class="row2" style="margin-bottom:8px">
+      <div>
+        <div style="font-size:11px;color:var(--text2);margin-bottom:4px">Contact #</div>
+        <input id="preview-idx" type="number" value="1" min="1" oninput="updatePreview()">
+      </div>
+      <div style="display:flex;align-items:flex-end;gap:6px">
+        <button class="btn" onclick="prevPreview()" style="flex:1">← Prev</button>
+        <button class="btn" onclick="nextPreview()" style="flex:1">Next →</button>
+      </div>
+    </div>
+    <div style="font-size:12px;color:var(--text2);margin-bottom:3px">To: <span id="prev-to" style="color:var(--text)">—</span></div>
+    <div style="font-size:12px;color:var(--text2);margin-bottom:10px">Subject: <span id="prev-subject" style="color:var(--text)">—</span></div>
+    <div class="preview-box" id="prev-body">Import contacts first, then return here.</div>
+  </div>
+
+  <div class="card">
+    <div class="label">Send settings</div>
+    <div class="row3">
+      <div>
+        <div style="font-size:11px;color:var(--text2);margin-bottom:4px">Start from #</div>
+        <input id="send-from" type="number" value="1" min="1">
+      </div>
+      <div>
+        <div style="font-size:11px;color:var(--text2);margin-bottom:4px">End at #</div>
+        <input id="send-to" type="number" value="50" min="1">
+      </div>
+      <div>
+        <div style="font-size:11px;color:var(--text2);margin-bottom:4px">Delay (sec)</div>
+        <input id="send-delay" type="number" value="3" min="1" max="30">
+      </div>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="prog" style="width:0%"></div></div>
+    <div style="font-size:12px;color:var(--text2);margin-bottom:8px" id="prog-label">Ready to send</div>
+    <div class="log" id="log"><div style="color:var(--text3)">Logs will appear here...</div></div>
+    <div class="btns">
+      <button class="btn btn-primary" id="btn-send" onclick="startSending()">Send emails via Gmail ↗</button>
+      <button class="btn btn-danger" id="btn-stop" onclick="stopSending()" disabled>Stop</button>
+      <button class="btn" onclick="exportLog()">Export log CSV</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+let contacts = [];
+let sending = false;
+let stopFlag = false;
+let logEntries = [];
+let accessToken = null;
+
+// ─── AUTH ───────────────────────────────────────────────────────────────────
+
+function connectGmail() {
+  const clientId = document.getElementById('client-id-input').value.trim();
+  if (!clientId || clientId === 'YOUR_CLIENT_ID.apps.googleusercontent.com') {
+    alert('Please enter your Google OAuth Client ID first.\nSee the setup instructions above.');
+    return;
+  }
+
+  const client = google.accounts.oauth2.initTokenClient({
+    client_id: clientId,
+    scope: 'https://www.googleapis.com/auth/gmail.send',
+    callback: (tokenResp) => {
+      if (tokenResp.error) {
+        addLog('OAuth error: ' + tokenResp.error, 'err');
+        return;
+      }
+      accessToken = tokenResp.access_token;
+      const el = document.getElementById('auth-status');
+      el.className = 'connected';
+      el.innerHTML = '<span class="dot"></span>Connected to Gmail';
+      addLog('Gmail connected successfully', 'ok');
+    }
+  });
+  client.requestAccessToken();
+}
+
+// ─── TABS ────────────────────────────────────────────────────────────────────
+
+function showTab(name) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('show'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('show');
+  const map = {import:0, template:1, preview:2};
+  document.querySelectorAll('.tab')[map[name]].classList.add('active');
+  if (name === 'preview') updatePreview();
+}
+
+// ─── CSV PARSING ─────────────────────────────────────────────────────────────
+
+function loadSample() {
+  document.getElementById('csv-input').value =
+`Name,Company,Email
+Priya Sharma,Infosys,priya.sharma@infosys.com
+Rahul Verma,Tata Consultancy Services,rahul.verma@tcs.com
+Anjali Mehta,Wipro,anjali.mehta@wipro.com
+Sanjay Gupta,HCL Technologies,sanjay.gupta@hcl.com
+Deepika Nair,Tech Mahindra,deepika.nair@techmahindra.com`;
+  parseCSV();
+}
+
+function parseCSV() {
+  const raw = document.getElementById('csv-input').value.trim();
+  if (!raw) { alert('Please paste CSV data first'); return; }
+  const colName = document.getElementById('col-name').value.trim();
+  const colCompany = document.getElementById('col-company').value.trim();
+  const colEmail = document.getElementById('col-email').value.trim();
+
+  const lines = raw.split('\n');
+  const headers = lines[0].split(',').map(h => h.trim());
+  const ni = headers.findIndex(h => h.toLowerCase() === colName.toLowerCase());
+  const ci = headers.findIndex(h => h.toLowerCase() === colCompany.toLowerCase());
+  const ei = headers.findIndex(h => h.toLowerCase() === colEmail.toLowerCase());
+
+  if (ni<0 || ci<0 || ei<0) {
+    alert(`Column not found!\nLooking for: "${colName}", "${colCompany}", "${colEmail}"\nFound: ${headers.join(', ')}`);
+    return;
+  }
+
+  contacts = [];
+  for (let i=1; i<lines.length; i++) {
+    const parts = parseCSVLine(lines[i]);
+    if (parts.length < Math.max(ni,ci,ei)+1) continue;
+    const name = parts[ni].trim(), company = parts[ci].trim(), email = parts[ei].trim();
+    if (name && email) contacts.push({name, company, email, status:'queued'});
+  }
+
+  updateStats();
+  renderTable();
+  document.getElementById('contacts-section').style.display = 'block';
+  document.getElementById('send-to').value = contacts.length;
+  addLog(`Parsed ${contacts.length} contacts`, 'ok');
+}
+
+function parseCSVLine(line) {
+  const result = []; let cur = '', inQ = false;
+  for (let i=0; i<line.length; i++) {
+    if (line[i]==='"') { inQ=!inQ; }
+    else if (line[i]===',' && !inQ) { result.push(cur); cur=''; }
+    else { cur+=line[i]; }
+  }
+  result.push(cur);
+  return result;
+}
+
+// ─── TABLE + STATS ───────────────────────────────────────────────────────────
+
+function renderTable() {
+  const wrap = document.getElementById('contact-table-wrap');
+  const show = contacts.slice(0, 200);
+  wrap.innerHTML = '<table><thead><tr><th>#</th><th>Name</th><th>Company</th><th>Email</th><th>Status</th></tr></thead><tbody>' +
+    show.map((c,i) => `<tr>
+      <td style="color:var(--text3)">${i+1}</td>
+      <td>${esc(c.name)}</td>
+      <td>${esc(c.company)}</td>
+      <td style="color:var(--blue);font-size:11px">${esc(c.email)}</td>
+      <td><span class="badge badge-${c.status[0]}">${c.status}</span></td>
+    </tr>`).join('') +
+    (contacts.length > 200 ? `<tr><td colspan="5" style="text-align:center;color:var(--text3);font-size:11px;padding:8px">...and ${contacts.length-200} more</td></tr>` : '') +
+    '</tbody></table>';
+}
+
+function updateStats() {
+  document.getElementById('s-total').textContent = contacts.length;
+  document.getElementById('s-queue').textContent = contacts.filter(c=>c.status==='queued').length;
+  document.getElementById('s-sent').textContent = contacts.filter(c=>c.status==='sent').length;
+  document.getElementById('s-fail').textContent = contacts.filter(c=>c.status==='failed').length;
+}
+
+// ─── PREVIEW ─────────────────────────────────────────────────────────────────
+
+function fillTemplate(tpl, name, company) {
+  return tpl.replace(/{{name}}/gi, name).replace(/{{company}}/gi, company);
+}
+
+function updatePreview() {
+  if (!contacts.length) return;
+  const idx = Math.min(Math.max(parseInt(document.getElementById('preview-idx').value)||1,1), contacts.length);
+  document.getElementById('preview-idx').value = idx;
+  const c = contacts[idx-1];
+  document.getElementById('prev-to').textContent = `${c.name} <${c.email}>`;
+  document.getElementById('prev-subject').textContent = fillTemplate(document.getElementById('tpl-subject').value, c.name, c.company);
+  document.getElementById('prev-body').textContent = fillTemplate(document.getElementById('tpl-body').value, c.name, c.company);
+}
+
+function prevPreview() {
+  const el = document.getElementById('preview-idx');
+  el.value = Math.max(1, parseInt(el.value||1)-1);
+  updatePreview();
+}
+function nextPreview() {
+  const el = document.getElementById('preview-idx');
+  el.value = Math.min(contacts.length||1, parseInt(el.value||1)+1);
+  updatePreview();
+}
+
+// ─── GMAIL SEND ──────────────────────────────────────────────────────────────
+
+function makeRFC2822(to, subject, body) {
+  // Encode as base64url RFC 2822 message for Gmail API
+  const msg = [
+    `To: ${to}`,
+    `Subject: =?UTF-8?B?${btoa(unescape(encodeURIComponent(subject)))}?=`,
+    'MIME-Version: 1.0',
+    'Content-Type: text/plain; charset=UTF-8',
+    'Content-Transfer-Encoding: base64',
+    '',
+    btoa(unescape(encodeURIComponent(body)))
+  ].join('\r\n');
+  // base64url encode the whole message
+  return btoa(msg).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+}
+
+async function sendOneEmail(contact) {
+  if (!accessToken) throw new Error('Not authenticated. Connect Gmail first.');
+
+  const subject = fillTemplate(document.getElementById('tpl-subject').value, contact.name, contact.company);
+  const body = fillTemplate(document.getElementById('tpl-body').value, contact.name, contact.company);
+
+  const raw = makeRFC2822(`${contact.name} <${contact.email}>`, subject, body);
+
+  const resp = await fetch('https://gmail.googleapis.com/gmail/v1/users/me/messages/send', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ raw })
+  });
+
+  if (!resp.ok) {
+    const err = await resp.json().catch(() => ({}));
+    // Token expired?
+    if (resp.status === 401) {
+      accessToken = null;
+      document.getElementById('auth-status').className = '';
+      document.getElementById('auth-status').innerHTML = '<span class="dot"></span>Token expired — reconnect';
+      throw new Error('Access token expired. Please reconnect Gmail and retry.');
+    }
+    throw new Error(err.error?.message || `HTTP ${resp.status}`);
+  }
+
+  return true;
+}
+
+// ─── SEND LOOP ───────────────────────────────────────────────────────────────
+
+async function startSending() {
+  if (!contacts.length) { alert('No contacts loaded. Please import CSV first.'); showTab('import'); return; }
+  if (!accessToken) { alert('Please connect Gmail first by clicking "Sign in with Google".'); return; }
+
+  stopFlag = false;
+  sending = true;
+  document.getElementById('btn-send').disabled = true;
+  document.getElementById('btn-stop').disabled = false;
+
+  const from = Math.max(1, parseInt(document.getElementById('send-from').value)||1) - 1;
+  const to   = Math.min(contacts.length, parseInt(document.getElementById('send-to').value)||50);
+  const delay = (parseInt(document.getElementById('send-delay').value)||3) * 1000;
+  const total = to - from;
+  let done = 0;
+
+  addLog(`Starting send: contacts ${from+1}–${to} (${total} emails)`, 'info');
+
+  for (let i=from; i<to; i++) {
+    if (stopFlag) { addLog('Stopped by user.', 'info'); break; }
+    const c = contacts[i];
+    if (c.status === 'sent') { done++; continue; }
+
+    document.getElementById('prog-label').textContent = `Sending ${i+1}/${to}: ${c.name} at ${c.company}…`;
+
+    try {
+      await sendOneEmail(c);
+      c.status = 'sent';
+      addLog(`✓ ${c.name} <${c.email}>`, 'ok');
+    } catch(e) {
+      c.status = 'failed';
+      addLog(`✗ ${c.name}: ${e.message}`, 'err');
+      if (e.message.includes('expired')) { stopFlag = true; break; }
+    }
+
+    done++;
+    document.getElementById('prog').style.width = Math.round((done/total)*100) + '%';
+    updateStats();
+    renderTable();
+
+    if (i < to-1 && !stopFlag) await sleep(delay);
+  }
+
+  sending = false;
+  document.getElementById('btn-send').disabled = false;
+  document.getElementById('btn-stop').disabled = true;
+  const sent = contacts.filter(c=>c.status==='sent').length;
+  const failed = contacts.filter(c=>c.status==='failed').length;
+  document.getElementById('prog-label').textContent = `Done! Sent: ${sent}, Failed: ${failed}`;
+  addLog(`Finished — Sent: ${sent} | Failed: ${failed}`, 'info');
+}
+
+function stopSending() {
+  stopFlag = true;
+  document.getElementById('btn-stop').disabled = true;
+  addLog('Stop requested…', 'info');
+}
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+// ─── LOGS / EXPORT ───────────────────────────────────────────────────────────
+
+function addLog(msg, type) {
+  logEntries.push({msg, time: new Date().toLocaleTimeString()});
+  const log = document.getElementById('log');
+  const el = document.createElement('div');
+  if (type) el.className = type;
+  el.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+  log.appendChild(el);
+  log.scrollTop = log.scrollHeight;
+}
+
+function exportLog() {
+  const rows = ['Time,Name,Company,Email,Status'];
+  contacts.forEach(c => rows.push(`"${new Date().toLocaleDateString()}","${c.name}","${c.company}","${c.email}","${c.status}"`));
+  const blob = new Blob([rows.join('\n')], {type:'text/csv'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'email_log.csv';
+  a.click();
+}
+
+function esc(s) { return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+</script>
+</body>
+</html>

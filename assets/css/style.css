@@ -5364,7 +5364,7 @@ a.wp-block-button__link {
 		min-height: 160px;
 	}
 	.section.hero-started .title {
-		font-size: 40px;
+		font-size: 32px;
 	}
 	.section.hero-started .lui-subtitle {
 		font-size: 18px;
@@ -5373,7 +5373,7 @@ a.wp-block-button__link {
 		font-size: 24px;
 	}
 	.section.hero-started .slide {
-		top: 680px;
+		top: 730px;
 		transform: scale(0.5);
 	}
 	.hero-started .btn-lnk {

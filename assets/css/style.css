@@ -2286,10 +2286,8 @@ hr {
 
 .lui-subtitle {
 	font-size: 13px;
-	font-weight: 700;
+	font-weight: 500;
 	color: #000;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
 }
 
 .lui-subtitle strong,
@@ -2459,7 +2457,7 @@ hr {
 
 .section.hero-started .title {
 	font-family: "Jost";
-	font-size: 75px;
+	font-size: 52px;
 	line-height: 1.2;
 	color: #FFF;
 	font-weight: 700;
@@ -2470,24 +2468,26 @@ hr {
 }
 
 .section.hero-started .lui-subtitle {
-	font-size: 15px;
+	font-size: 21px;
 }
 
-.section.hero-started .label strong,
+.mt-10 {
+	margin-top: 10px;
+}
+.section.hero-started .label,
 .section.hero-started .label b {
 	font-family: 'Caveat';
 	font-size: 30px;
 	font-weight: 700;
 	letter-spacing: 0;
 	text-transform: none;
-	margin-left: 10px;
 	color: #000;
 }
 
 .section.hero-started .description {
-	padding: 40px 0 40px 0;
+	padding: 20px 0 20px 0;
 	font-size: 18px;
-	max-width: 520px;
+	max-width: 600px;
 }
 
 .section.hero-started .description p {
@@ -5367,7 +5367,7 @@ a.wp-block-button__link {
 		font-size: 40px;
 	}
 	.section.hero-started .lui-subtitle {
-		font-size: 13px;
+		font-size: 18px;
 	}
 	.section.hero-started .label strong, .section.hero-started .label b {
 		font-size: 24px;

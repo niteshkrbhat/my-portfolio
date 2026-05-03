@@ -563,21 +563,22 @@
                                 <div class="sa-work-wrap" style="margin-bottom: 300px;">
                                     <div class="sa-work-item sa-work-panel p-relative not-hide-cursor mb-60" data-cursor="View<br>Demo">
                                         <div class="sa-work-portfolio-thumb">
-                                            <a href="assets/images/screenshots/dfm-web/screenshot-1.svg" data-fancybox="dfm-web" alt="gallery-image" class="d-block cursor-hide">
+                                            <a href="assets/images/screenshots/dfm-web/dfm-web-featured.png" data-fancybox="dfm-web" alt="gallery-image" data-caption="Dashboard Showing Quick Insights of Data Flow Manager" class="d-block cursor-hide">
                                                 <img src="assets/images/screenshots/dfm-web/dfm-web-featured.png" alt="">
                                             </a>
-                                            <a href="assets/images/screenshots/dfm-web/design-system.svg" data-fancybox="dfm-web" alt="gallery-image"></a>
-                                            <a href="assets/images/screenshots/dfm-web/screenshot-2.svg" data-fancybox="dfm-web" alt="gallery-image"></a>
-                                            <a href="assets/images/screenshots/dfm-web/screenshot-3.svg" data-fancybox="dfm-web" alt="gallery-image"></a>
-                                            <a href="assets/images/screenshots/dfm-web/screenshot-4.svg" data-fancybox="dfm-web" alt="gallery-image"></a>
-                                            <a href="assets/images/screenshots/dfm-web/screenshot-5.svg" data-fancybox="dfm-web" alt="gallery-image"></a>
-                                            <a href="assets/images/screenshots/dfm-web/screenshot-6.svg" data-fancybox="dfm-web" alt="gallery-image"></a>
-                                            <a href="assets/images/screenshots/dfm-web/screenshot-7.svg" data-fancybox="dfm-web" alt="gallery-image"></a>
-                                            <a href="assets/images/screenshots/dfm-web/screenshot-8.svg" data-fancybox="dfm-web" alt="gallery-image"></a>
-                                            <a href="assets/images/screenshots/dfm-web/screenshot-9.svg" data-fancybox="dfm-web" alt="gallery-image"></a>
-                                            <a href="assets/images/screenshots/dfm-web/screenshot-10.svg" data-fancybox="dfm-web" alt="gallery-image"></a>
-                                            <a href="assets/images/screenshots/dfm-web/screenshot-11.svg" data-fancybox="dfm-web" alt="gallery-image"></a>
-                                            <a href="assets/images/screenshots/dfm-web/screenshot-12.svg" data-fancybox="dfm-web" alt="gallery-image"></a>
+                                            <a href="assets/images/screenshots/dfm-web/design-system.svg" data-fancybox="dfm-web" alt="gallery-image" data-caption="Data Flow Manager Icon Library (Design System)"></a>
+                                            <a href="assets/images/screenshots/dfm-web/screenshot-1.svg" data-fancybox="dfm-web" alt="gallery-image" data-caption="Flow Details Process Group"></a>
+                                            <a href="assets/images/screenshots/dfm-web/screenshot-2.svg" data-fancybox="dfm-web" alt="gallery-image" data-caption="Cluster List Page when a cluster is in process of being setup"></a>
+                                            <a href="assets/images/screenshots/dfm-web/screenshot-3.svg" data-fancybox="dfm-web" alt="gallery-image" data-caption="Add a New Cluster Popup"></a>
+                                            <a href="assets/images/screenshots/dfm-web/screenshot-4.svg" data-fancybox="dfm-web" alt="gallery-image" data-caption="Flow Details Upgrading a Process Group"></a>
+                                            <a href="assets/images/screenshots/dfm-web/screenshot-5.svg" data-fancybox="dfm-web" alt="gallery-image" data-caption="Upgrade Process Group Summary Page"></a>
+                                            <a href="assets/images/screenshots/dfm-web/screenshot-6.svg" data-fancybox="dfm-web" alt="gallery-image" data-caption="LDAP Configuration Page to connect NiFi with DFM"></a>
+                                            <a href="assets/images/screenshots/dfm-web/screenshot-7.svg" data-fancybox="dfm-web" alt="gallery-image" data-caption="Frequently Asked Question Page"></a>
+                                            <a href="assets/images/screenshots/dfm-web/screenshot-8.svg" data-fancybox="dfm-web" alt="gallery-image" data-caption="Data Flow Inventory Page"></a>
+                                            <a href="assets/images/screenshots/dfm-web/screenshot-9.svg" data-fancybox="dfm-web" alt="gallery-image" data-caption="Controller Service Page to sync Controller Services with the Process Group"></a>
+                                            <a href="assets/images/screenshots/dfm-web/screenshot-10.svg" data-fancybox="dfm-web" alt="gallery-image" data-caption="AI Powered Data Flow Page to create Process groups through AI"></a>
+                                            <a href="assets/images/screenshots/dfm-web/screenshot-11.svg" data-fancybox="dfm-web" alt="gallery-image" data-caption="AI Powered Data Flow Page"></a>
+                                            <a href="assets/images/screenshots/dfm-web/screenshot-12.svg" data-fancybox="dfm-web" alt="gallery-image" data-caption="Flow Registry Page"></a>
                                         </div>
                                     </div>
                                     <div class="sa-work-item sa-work-panel p-relative not-hide-cursor mb-60" data-cursor="View<br>Demo">
@@ -1303,6 +1304,15 @@
                         })
                     })
                 });
+        </script>
+
+        <script type="text/javascript">
+            $('[data-fancybox="dfm-web"]').fancybox({
+                buttons: ["zoom", "close"],
+                caption: function(instance, item) {
+                    return $(this).data('caption') || '';
+                }
+            });
         </script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     </body>

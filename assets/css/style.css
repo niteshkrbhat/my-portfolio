@@ -7304,3 +7304,25 @@ body.tp-magic-cursor #magic-cursor {
     	padding: 0 10px;
     }
 }
+
+
+.fancybox-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 20px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* optional polish */
+.fancybox-caption__body {
+    max-width: 100%;
+}
+
+.fancybox-caption {
+    backdrop-filter: blur(6px);
+}

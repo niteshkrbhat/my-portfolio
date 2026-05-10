@@ -1,0 +1,30 @@
+/* ============================================
+   PERFORMANCE.CSS — Add to all pages
+   ============================================ */
+
+/* 1. Prevent layout shift from images */
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+/* 2. Defer rendering of below-fold sections */
+/* Apply this class to any section NOT visible on first load */
+.below-fold {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+}
+
+/* 3. Smooth image appearance on lazy load */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* 4. Prevent render-blocking web fonts */
+@font-face {
+    font-display: swap; /* Add this to any existing @font-face rules */
+}

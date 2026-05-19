@@ -1,0 +1,1304 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Data Flow Manager - An Enterprise Data Infrastructure UX/UI Case Study | Nitesh Bhat</title>
+        <meta name="description" content="DFM was designed as a dedicated operational experience layer for Apache NiFi — enabling operators to deploy, monitor, validate, and manage flows from a single platform." />
+        <meta name="keywords" content="" />
+        <meta name="author" content="Nitesh Bhat" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://niteshkrbhat.in/data-flow-manager-project" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://niteshkrbhat.in/data-flow-manager-project" />
+        <meta property="og:title" content="Data Flow Manager - An Enterprise Data Infrastructure UX/UI Case Study | Nitesh Bhat" />
+        <meta property="og:description" content="DFM was designed as a dedicated operational experience layer for Apache NiFi — enabling operators to deploy, monitor, validate, and manage flows from a single platform." />
+        <meta property="og:image" content="https://niteshkrbhat.in/assets/images/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Nitesh Bhat Portfolio" />
+        <meta property="og:locale" content="en_IN" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Data Flow Manager - An Enterprise Data Infrastructure UX/UI Case Study | Nitesh Bhat" />
+        <meta name="twitter:description" content="DFM was designed as a dedicated operational experience layer for Apache NiFi — enabling operators to deploy, monitor, validate, and manage flows from a single platform." />
+        <meta name="twitter:image" content="https://niteshkrbhat.in/assets/images/og-image.jpg" />
+        <!-- <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" /> -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/performance.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/fonts/css/font-awesome.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/splitting.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/swiper.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/case-study.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/dark.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css" media="all" >
+    </head>
+    <body class="portfolio-template light-skin">
+        <div class="container-page">
+            <nav class="navbar header" role="navigation" aria-label="Main navigation" id="web-header">
+                <div class="logo">
+                    <a href="/">
+                    <img width="228" height="38" src="assets/images/logo.png"  alt="">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#services-section">Services</a></li>
+                    <li><a href="#skills-section">Awards</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">Works</a>
+                        <ul class="dropdown">
+                            <li class="menu-item">
+                                <a href="/website-design">Website Design</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/webapp-design">Webapp Design</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/mobile-app-design">Mobile App Design</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/website-development">Website Development</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/webapp-development">Webapp Development</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#resume-section">Resume</a></li>
+                    <li><a href="/testimonials">Testimonials</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                </ul>
+                <div class="row">
+                    <div class="align-right">
+                        <a href="#" class="switcher-btn">
+                            <span class="sw-before">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+                                    <path id="Dark_Theme" data-name="Dark Theme" fill="#000" d="M1759.46,111.076a0.819,0.819,0,0,0-.68.147,8.553,8.553,0,0,1-2.62,1.537,8.167,8.167,0,0,1-2.96.531,8.655,8.655,0,0,1-8.65-8.682,9.247,9.247,0,0,1,.47-2.864,8.038,8.038,0,0,1,1.42-2.54,0.764,0.764,0,0,0-.12-1.063,0.813,0.813,0,0,0-.68-0.148,11.856,11.856,0,0,0-6.23,4.193,11.724,11.724,0,0,0,1,15.387,11.63,11.63,0,0,0,19.55-5.553A0.707,0.707,0,0,0,1759.46,111.076Zm-4.5,6.172a10.137,10.137,0,0,1-14.29-14.145,10.245,10.245,0,0,1,3.38-2.836c-0.14.327-.29,0.651-0.41,1.006a9.908,9.908,0,0,0-.56,3.365,10.162,10.162,0,0,0,10.15,10.189,9.776,9.776,0,0,0,3.49-.62,11.659,11.659,0,0,0,1.12-.473A10.858,10.858,0,0,1,1754.96,117.248Z" transform="translate(-1737 -98)" />
+                                </svg>
+                            </span>
+                            <span class="sw-after">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22.22" height="22.313" viewBox="0 0 22.22 22.313">
+                                    <path id="Light_Theme" data-name="Light Theme" fill="#fff" d="M1752.49,105.511a5.589,5.589,0,0,0-3.94-1.655,5.466,5.466,0,0,0-3.94,1.655,5.61,5.61,0,0,0,3.94,9.566,5.473,5.473,0,0,0,3.94-1.653,5.643,5.643,0,0,0,1.65-3.957A5.516,5.516,0,0,0,1752.49,105.511Zm-1.06,6.85a4.1,4.1,0,0,1-5.76,0,4.164,4.164,0,0,1,0-5.788A4.083,4.083,0,0,1,1751.43,112.361Zm7.47-3.662h-2.27a0.768,0.768,0,0,0,0,1.536h2.27A0.768,0.768,0,0,0,1758.9,108.7Zm-10.35,8.12a0.777,0.777,0,0,0-.76.769v2.274a0.777,0.777,0,0,0,.76.767,0.786,0.786,0,0,0,.77-0.767v-2.274A0.786,0.786,0,0,0,1748.55,116.819Zm7.85-.531-1.62-1.624a0.745,0.745,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.625a0.747,0.747,0,0,0,1.06,0A0.759,0.759,0,0,0,1756.4,116.288ZM1748.55,98.3a0.777,0.777,0,0,0-.76.768v2.273a0.778,0.778,0,0,0,.76.768,0.787,0.787,0,0,0,.77-0.768V99.073A0.786,0.786,0,0,0,1748.55,98.3Zm7.88,3.278a0.744,0.744,0,0,0-1.06,0l-1.62,1.624a0.758,0.758,0,0,0,0,1.063,0.745,0.745,0,0,0,1.06,0l1.62-1.624A0.758,0.758,0,0,0,1756.43,101.583Zm-15.96,7.116h-2.26a0.78,0.78,0,0,0-.77.768,0.76,0.76,0,0,0,.77.768h2.26A0.768,0.768,0,0,0,1740.47,108.7Zm2.88,5.965a0.745,0.745,0,0,0-1.06,0l-1.62,1.624a0.759,0.759,0,0,0,0,1.064,0.747,0.747,0,0,0,1.06,0l1.62-1.625A0.758,0.758,0,0,0,1743.35,114.664Zm0-11.457-1.62-1.624a0.744,0.744,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.624a0.745,0.745,0,0,0,1.06,0A0.758,0.758,0,0,0,1743.35,103.207Z" transform="translate(-1737.44 -98.313)" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <header class="header" id="mob-header">
+                <div class="header__builder">
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="logo">
+                                <a href="/">
+                                <img width="228" height="38" src="assets/images/logo.png" alt="" >
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align-right">
+                            <a href="#" class="switcher-btn">
+                                <span class="sw-before">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+                                        <path id="Dark_Theme" data-name="Dark Theme" fill="#000" d="M1759.46,111.076a0.819,0.819,0,0,0-.68.147,8.553,8.553,0,0,1-2.62,1.537,8.167,8.167,0,0,1-2.96.531,8.655,8.655,0,0,1-8.65-8.682,9.247,9.247,0,0,1,.47-2.864,8.038,8.038,0,0,1,1.42-2.54,0.764,0.764,0,0,0-.12-1.063,0.813,0.813,0,0,0-.68-0.148,11.856,11.856,0,0,0-6.23,4.193,11.724,11.724,0,0,0,1,15.387,11.63,11.63,0,0,0,19.55-5.553A0.707,0.707,0,0,0,1759.46,111.076Zm-4.5,6.172a10.137,10.137,0,0,1-14.29-14.145,10.245,10.245,0,0,1,3.38-2.836c-0.14.327-.29,0.651-0.41,1.006a9.908,9.908,0,0,0-.56,3.365,10.162,10.162,0,0,0,10.15,10.189,9.776,9.776,0,0,0,3.49-.62,11.659,11.659,0,0,0,1.12-.473A10.858,10.858,0,0,1,1754.96,117.248Z" transform="translate(-1737 -98)" />
+                                    </svg>
+                                </span>
+                                <span class="sw-after">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22.22" height="22.313" viewBox="0 0 22.22 22.313">
+                                        <path id="Light_Theme" data-name="Light Theme" fill="#fff" d="M1752.49,105.511a5.589,5.589,0,0,0-3.94-1.655,5.466,5.466,0,0,0-3.94,1.655,5.61,5.61,0,0,0,3.94,9.566,5.473,5.473,0,0,0,3.94-1.653,5.643,5.643,0,0,0,1.65-3.957A5.516,5.516,0,0,0,1752.49,105.511Zm-1.06,6.85a4.1,4.1,0,0,1-5.76,0,4.164,4.164,0,0,1,0-5.788A4.083,4.083,0,0,1,1751.43,112.361Zm7.47-3.662h-2.27a0.768,0.768,0,0,0,0,1.536h2.27A0.768,0.768,0,0,0,1758.9,108.7Zm-10.35,8.12a0.777,0.777,0,0,0-.76.769v2.274a0.777,0.777,0,0,0,.76.767,0.786,0.786,0,0,0,.77-0.767v-2.274A0.786,0.786,0,0,0,1748.55,116.819Zm7.85-.531-1.62-1.624a0.745,0.745,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.625a0.747,0.747,0,0,0,1.06,0A0.759,0.759,0,0,0,1756.4,116.288ZM1748.55,98.3a0.777,0.777,0,0,0-.76.768v2.273a0.778,0.778,0,0,0,.76.768,0.787,0.787,0,0,0,.77-0.768V99.073A0.786,0.786,0,0,0,1748.55,98.3Zm7.88,3.278a0.744,0.744,0,0,0-1.06,0l-1.62,1.624a0.758,0.758,0,0,0,0,1.063,0.745,0.745,0,0,0,1.06,0l1.62-1.624A0.758,0.758,0,0,0,1756.43,101.583Zm-15.96,7.116h-2.26a0.78,0.78,0,0,0-.77.768,0.76,0.76,0,0,0,.77.768h2.26A0.768,0.768,0,0,0,1740.47,108.7Zm2.88,5.965a0.745,0.745,0,0,0-1.06,0l-1.62,1.624a0.759,0.759,0,0,0,0,1.064,0.747,0.747,0,0,0,1.06,0l1.62-1.625A0.758,0.758,0,0,0,1743.35,114.664Zm0-11.457-1.62-1.624a0.744,0.744,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.624a0.745,0.745,0,0,0,1.06,0A0.758,0.758,0,0,0,1743.35,103.207Z" transform="translate(-1737.44 -98.313)" />
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="#" class="menu-btn">
+                            <span></span>
+                            <span></span>
+                            </a>
+                            <div class="menu-full-overlay">
+                                <div class="menu-full-container">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                <div class="menu-full">
+                                                    <ul class="menu-full">
+                                                        <li class="menu-item">
+                                                            <a class="splitting-text-anim-2" data-splitting="chars" href="/">Home</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a class="splitting-text-anim-2" data-splitting="chars" href="/#services-section">Services</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a class="splitting-text-anim-2" data-splitting="chars" href="/#skills-section">Awards</a>
+                                                        </li>
+                                                        <li class="menu-item menu-item-has-children has-children">
+                                                            <a class="splitting-text-anim-2" data-splitting="chars">Works</a>
+                                                            <ul class="sub-menu">
+                                                                <li class="menu-item">
+                                                                    <a class="splitting-text-anim-1" data-splitting="chars" href="/website-design">Website Design</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a class="splitting-text-anim-1" data-splitting="chars" href="/webapp-design">Webapp Design</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a class="splitting-text-anim-1" data-splitting="chars" href="/mobile-app-design">Mobile App Design</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a class="splitting-text-anim-1" data-splitting="chars" href="/website-development">Website Development</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a class="splitting-text-anim-1" data-splitting="chars" href="/webapp-development">Webapp Development</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a class="splitting-text-anim-2" data-splitting="chars" href="/#resume-section">Resume</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a class="splitting-text-anim-2" data-splitting="chars" href="/testimonials">Testimonials</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a class="splitting-text-anim-2" data-splitting="chars" href="/#contact-section">Contact</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="menu-social-links">
+                                                    <a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/niteshkrbhat/">
+                                                    <i aria-hidden="true" class="fab fa-linkedin"></i>
+                                                    </a>
+                                                    <a target="_blank" rel="nofollow" href="https://t.me/preacher111">
+                                                    <i aria-hidden="true" class="fab fa-telegram"></i>
+                                                    </a>
+                                                    <a target="_blank" rel="nofollow" href="https://wa.me/7889514480?text=I%20am%20interested%20in%20your%20services.%20How%20to%20get%20started%3F">
+                                                    <i aria-hidden="true" class="fab fa-whatsapp"></i>
+                                                    </a>
+                                                    <!-- <a target="_blank" rel="nofollow" href="https://www.instagram.com/travellerlyfe/">
+                                                        <i aria-hidden="true" class="fab fa-instagram"></i>
+                                                        </a> -->
+                                                </div>
+                                                <div class="v-line-block"><span></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section id="hero">
+                <div class="container">
+                    <div class="hero-orbs">
+                        <div class="orb orb-1"></div>
+                        <div class="orb orb-2"></div>
+                    </div>
+                    <div class="container">
+                        <div class="hero-inner">
+                            <div class="hero-tags">
+                                <span class="hero-tag">UX Case Study</span>
+                                <span class="hero-tag">Enterprise · Data Infrastructure</span>
+                                <span class="hero-tag">Apache NiFi</span>
+                                <span class="hero-tag">2024</span>
+                            </div>
+                            <h1 class="hero-h">
+                                <span class="gradient">Data Flow Manager (DFM)</span>
+                                <span class="line-1" style="padding-top: 20px;">Designing the Operational Layer Apache NiFi Never Had</span>
+                            </h1>
+                            <p class="hero-sub">Transforming complex, manual NiFi operations into a centralized, prompt-driven enterprise experience.</p><br>
+                            <p class="hero-sub">Enterprise teams using Apache NiFi faced major operational inefficiencies while deploying and managing data pipelines across multiple environments. Manual deployments, inconsistent configurations, and lack of visibility created operational risk and slowed delivery.</p><br>
+                            <p class="hero-sub">DFM was designed as a dedicated operational experience layer for Apache NiFi — enabling operators to deploy, monitor, validate, and manage flows from a single platform.</p>
+                            <div class="hero-stats">
+                                <div class="hstat">
+                                    <div class="hstat-val"><span>90</span>%</div>
+                                    <div class="hstat-lbl">Reduced deployment effort by</div>
+                                    <p>Reduced deployment effort by automating repetitive operational workflows across environments and clusters. Teams were able to eliminate manual deployment dependencies, reducing operational overhead and improving efficiency at enterprise scale.</p>
+                                </div>
+                                <div class="hstat">
+                                    <div class="hstat-val">6hr<span style="font-size:22px">→</span>Min</div>
+                                    <div class="hstat-lbl">Minimized multi-cluster deployment time from hours to minutes</div>
+                                    <p>Minimized multi-cluster deployment time from several hours to just a few minutes through centralized deployment management, validation workflows, and streamlined environment promotion processes.</p>
+                                </div>
+                                <div class="hstat">
+                                    <div class="hstat-val">$<span>1M</span>+</div>
+                                    <div class="hstat-lbl">Saved vs. enterprise vendor per year</div>
+                                    <p>Helped enterprises significantly reduce infrastructure and operational costs by removing dependency on expensive vendor-managed ecosystem solutions while improving operational scalability and control.</p>
+                                </div>
+                            </div>
+                            <div class="hero-meta">
+                                <div class="hm-item">
+                                    <div class="hm-label">My Role</div>
+                                    <div class="hm-val">Sole Product Designer</div>
+                                </div>
+                                <div class="hm-item">
+                                    <div class="hm-label">Responsibilities & Deliverables</div>
+                                    <div class="hm-val">UX Strategy, Product Thinking, User Research, Information Architecture, Workflow Design, Interaction Design, Prompt UX, Design System, Prototyping</div>
+                                </div>
+                                <div class="hm-item">
+                                    <div class="hm-label">Timeline</div>
+                                    <div class="hm-val">2024, 8-10 Weeks</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="post-content">
+                            <h4>Before & After DFM</h4>
+                        </div>
+                    </div>
+                    <div id="beforeafter" class="demo-container" aria-label="Before and after image slider">
+                        <div class="img-wrapper">
+                            <img src="assets/images/screenshots/dfm-web/before.webp" alt="Before">
+                        </div>
+                        <div class="img-wrapper">
+                            <img src="assets/images/screenshots/dfm-web/screenshot-4.svg" alt="After">
+                        </div>
+                        <div id="line"></div>
+                        <input id="slider" type="range" min="0" max="100" value="50">
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="post-content">
+                                <h4>Project Overview</h4>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="post-content">
+                                <p>DFM is an enterprise-grade operational platform designed to simplify and automate Apache NiFi flow management across multiple environments and clusters. The product bridges the operational gap between designing data flows and deploying them reliably at scale.</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="post-content">
+                                <p>This case study reframes the product story from a feature-focused narrative into a strategic UI/UX design case study that highlights research, problem-solving, decision-making, user workflows, and measurable impact.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cs-section">
+                <div class="container">
+                    <h2 class="cs-h"><strong>The Challenge</strong></h2>
+                    <p class="cs-lead">Apache NiFi provided a visual experience for building and connecting data pipelines. However, enterprise teams managing production systems faced significant operational challenges once those flows needed to move across environments.</p>
+                    <div class="pq">
+                        <p>"While developers could build flows visually inside the NiFi canvas, operators responsible for deployment and maintenance lacked a dedicated operational layer."</p>
+                    </div>
+                    <div class="cs-table-wrap">
+                        <table class="cs-table">
+                            <thead>
+                                <tr>
+                                    <th>This created a major gap between</th>
+                                    <th>
+                                        <div class="col-hi-hd">As organizations scaled their infrastructure, the operational complexity increased rapidly</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Building data pipelines</td>
+                                    <td class="col-hi">Manual XML exports</td>
+                                </tr>
+                                <tr>
+                                    <td>Deploying pipelines safely</td>
+                                    <td class="col-hi">Logging into multiple clusters</td>
+                                </tr>
+                                <tr>
+                                    <td>Managing infrastructure reliably</td>
+                                    <td class="col-hi">Reconfiguring controller services</td>
+                                </tr>
+                                <tr>
+                                    <td>Monitoring production systems</td>
+                                    <td class="col-hi">Restarting services manually</td>
+                                </tr>
+                                <tr>
+                                    <td>Handling operational incidents</td>
+                                    <td class="col-hi">Maintaining deployment documentation</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="cs-caption">These workflows were repetitive, error-prone, and highly dependent on human memory.</div>
+                    <div class="cs-insight">Drop-offs, outages, and runaway costs all peaked at the same moment: when a finished flow needed to move from canvas to cluster. That wasn't an engineering problem — it was a product gap.</div>
+                </div>
+            </section>
+            <!-- <section class="cs-section">
+                <div class="container">
+                    <h2 class="cs-h">Where the journey<br><strong>broke down.</strong></h2>
+                    <p class="cs-lead">I mapped the NiFi operational lifecycle to find exactly where time, reliability, and trust collapsed. The design friction wasn't in building flows — it was in every step that followed.</p>
+                    <div class="journey-nodes">
+                        <div class="jn">
+                            <div class="jn-icon">🧩</div>
+                            <div class="jn-label">Flow<br>Designed</div>
+                            <div class="jn-sub">Canvas built · Logic validated · Ready to deploy</div>
+                        </div>
+                        <div class="jn jn-void">
+                            <div class="jn-badge">The Void</div>
+                            <div class="jn-icon">⚡</div>
+                            <div class="jn-label">Manual Ops<br>Nightmare</div>
+                            <div class="jn-sub">Login per cluster · Export XML · Restart services</div>
+                        </div>
+                        <div class="jn">
+                            <div class="jn-icon">🚀</div>
+                            <div class="jn-label">Flow in<br>Production</div>
+                            <div class="jn-sub">Running live · No rollback plan</div>
+                        </div>
+                        <div class="jn">
+                            <div class="jn-icon">📊</div>
+                            <div class="jn-label">Monitor &amp;<br>Maintain</div>
+                            <div class="jn-sub">Manual log trawling · Silent failures pile up</div>
+                        </div>
+                    </div>
+                    <div class="jmap-wrap" style="margin-top:40px;">
+                        <svg viewBox="0 0 748 240" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="cg" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#10b981"/>
+                                    <stop offset="30%" stop-color="#f59e0b"/>
+                                    <stop offset="55%" stop-color="#ef4444"/>
+                                    <stop offset="75%" stop-color="#f59e0b"/>
+                                    <stop offset="100%" stop-color="#6366f1"/>
+                                </linearGradient>
+                                <linearGradient id="fg" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="rgba(239,68,68,0.14)"/>
+                                    <stop offset="100%" stop-color="rgba(239,68,68,0)"/>
+                                </linearGradient>
+                                <filter id="gcurve">
+                                    <feGaussianBlur stdDeviation="2" result="b"/>
+                                    <feMerge>
+                                        <feMergeNode in="b"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <rect x="60" y="30" width="128" height="162" fill="rgba(16,185,129,0.04)"/>
+                            <rect x="188" y="30" width="264" height="162" fill="rgba(239,68,68,0.05)"/>
+                            <rect x="452" y="30" width="128" height="162" fill="rgba(245,158,11,0.04)"/>
+                            <rect x="580" y="30" width="138" height="162" fill="rgba(99,102,241,0.04)"/>
+                            <line x1="60" y1="192" x2="720" y2="192" stroke="rgba(228,228,240,0.07)" stroke-width="1"/>
+                            <line x1="60" y1="110" x2="720" y2="110" stroke="rgba(228,228,240,0.04)" stroke-dasharray="4 4" stroke-width="1"/>
+                            <line x1="60" y1="40" x2="720" y2="40" stroke="rgba(228,228,240,0.04)" stroke-dasharray="4 4" stroke-width="1"/>
+                            <text x="52" y="44" fill="rgba(228,228,240,0.2)" font-size="8.5" text-anchor="end" font-family="JetBrains Mono, monospace" letter-spacing="0.03em">CALM</text>
+                            <text x="52" y="114" fill="rgba(228,228,240,0.2)" font-size="8.5" text-anchor="end" font-family="JetBrains Mono, monospace" letter-spacing="0.03em">TENSE</text>
+                            <text x="52" y="194" fill="rgba(228,228,240,0.2)" font-size="8.5" text-anchor="end" font-family="JetBrains Mono, monospace" letter-spacing="0.03em">CRISIS</text>
+                            <text x="124" y="26" fill="rgba(16,185,129,0.6)" font-size="8.5" text-anchor="middle" font-family="JetBrains Mono, monospace" letter-spacing="0.1em">DESIGN</text>
+                            <text x="320" y="26" fill="rgba(239,68,68,0.6)" font-size="8.5" text-anchor="middle" font-family="JetBrains Mono, monospace" letter-spacing="0.1em">NO-PRODUCT ZONE</text>
+                            <text x="516" y="26" fill="rgba(245,158,11,0.5)" font-size="8.5" text-anchor="middle" font-family="JetBrains Mono, monospace" letter-spacing="0.1em">PROD</text>
+                            <text x="649" y="26" fill="rgba(99,102,241,0.5)" font-size="8.5" text-anchor="middle" font-family="JetBrains Mono, monospace" letter-spacing="0.1em">MONITOR</text>
+                            <path d="M60,52 C88,54 110,57 124,59 C148,64 172,78 188,84 C218,97 242,124 258,149 C276,174 306,188 320,191 C334,193 358,177 378,172 C402,166 428,138 452,118 C472,102 498,76 516,71 C540,66 560,74 580,80 C604,92 628,107 649,107 C673,107 696,118 720,124 L720,192 L60,192 Z" fill="url(#fg)"/>
+                            <path d="M60,52 C88,54 110,57 124,59 C148,64 172,78 188,84 C218,97 242,124 258,149 C276,174 306,188 320,191 C334,193 358,177 378,172 C402,166 428,138 452,118 C472,102 498,76 516,71 C540,66 560,74 580,80 C604,92 628,107 649,107 C673,107 696,118 720,124" fill="none" stroke="url(#cg)" stroke-width="2.5" stroke-linecap="round" filter="url(#gcurve)"/>
+                            <circle cx="124" cy="59" r="4" fill="#10b981" opacity="0.9"/>
+                            <circle cx="320" cy="191" r="5.5" fill="#ef4444"/>
+                            <circle cx="320" cy="191" r="10" fill="rgba(239,68,68,0.18)"/>
+                            <circle cx="516" cy="71" r="4" fill="#f59e0b" opacity="0.9"/>
+                            <circle cx="649" cy="107" r="4" fill="#6366f1" opacity="0.9"/>
+                            <line x1="320" y1="182" x2="320" y2="164" stroke="rgba(239,68,68,0.45)" stroke-width="1" stroke-dasharray="3 2"/>
+                            <rect x="254" y="141" width="132" height="21" rx="4" fill="rgba(239,68,68,0.10)" stroke="rgba(239,68,68,0.28)" stroke-width="1"/>
+                            <text x="320" y="155.5" fill="#ef4444" font-size="8.5" text-anchor="middle" font-family="JetBrains Mono, monospace" letter-spacing="0.06em">MANUAL DEPLOY CRISIS</text>
+                            <text x="190" y="100" fill="rgba(228,228,240,0.22)" font-size="8.5" font-family="JetBrains Mono, monospace">↓ trust drops</text>
+                            <text x="390" y="162" fill="rgba(228,228,240,0.22)" font-size="8.5" font-family="JetBrains Mono, monospace">anxiety↑</text>
+                            <text x="582" y="70" fill="rgba(228,228,240,0.22)" font-size="8.5" font-family="JetBrains Mono, monospace">drift builds→</text>
+                            <text x="124" y="212" fill="rgba(228,228,240,0.3)" font-size="8.5" text-anchor="middle" font-family="JetBrains Mono, monospace">Flow Designed</text>
+                            <text x="320" y="212" fill="rgba(239,68,68,0.6)" font-size="8.5" text-anchor="middle" font-family="JetBrains Mono, monospace">Manual Ops</text>
+                            <text x="516" y="212" fill="rgba(228,228,240,0.3)" font-size="8.5" text-anchor="middle" font-family="JetBrains Mono, monospace">In Production</text>
+                            <text x="649" y="212" fill="rgba(228,228,240,0.3)" font-size="8.5" text-anchor="middle" font-family="JetBrains Mono, monospace">Monitor</text>
+                            <text x="13" y="124" fill="rgba(228,228,240,0.14)" font-size="8.5" text-anchor="middle" font-family="JetBrains Mono, monospace" letter-spacing="0.08em" transform="rotate(-90 13 124)">OPERATOR STRESS</text>
+                        </svg>
+                    </div>
+                    <div class="stat-row" style="margin-top:32px;">
+                        <div class="stat-card">
+                            <div class="stat-big">6–8</div>
+                            <div class="stat-content">
+                                <div class="stat-title">Hours per flow promotion</div>
+                                <p class="stat-desc">Across a <strong>Dev → QA → Prod</strong> pipeline manually. No validation step before going live. Reported as the <span class="stat-hi">primary cause of production incidents</span>.</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-big">42</div>
+                            <div class="stat-content">
+                                <div class="stat-title">NiFi instances managed manually</div>
+                                <p class="stat-desc">One North American logistics enterprise before DFM. Every promotion touched each instance individually — <strong>a process that took weeks</strong> with engineers on overnight standby.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-caption">Lifecycle mapped across four stages — the entire span between "Flow Designed" and "Flow in Production" had zero product support from NiFi itself.</div>
+                    <div class="cs-insight">Every deployment depended on engineers remembering every manual step, across every cluster, without validation. That's not a DevOps problem — that's a missing product category.</div>
+                </div>
+            </section> -->
+            <section class="cs-section">
+                <div class="container">
+                    <h2 class="cs-h">Nobody had<br><strong>solved this.</strong></h2>
+                    <p class="cs-lead">Before designing DFM, I audited every solution NiFi teams were relying on. The finding was stark: not one tool was built for the operator's complete workflow. Each covered a fragment at best.</p>
+                    <div class="comp-table-wrap">
+                        <table class="comp-table">
+                            <thead>
+                                <tr>
+                                    <th>Tool</th>
+                                    <th>What It Actually Covers</th>
+                                    <th>Ops Awareness</th>
+                                    <th>Verdict</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="comp-name">NiFi UI</div>
+                                        <span class="comp-cat">Native Tool</span>
+                                    </td>
+                                    <td>Flow design, canvas editing. No deployment, no multi-cluster, no audit trail.</td>
+                                    <td>
+                                        <div class="tags-stack"><span class="badge badge-muted">None</span></div>
+                                    </td>
+                                    <td><span class="badge badge-red">Design Only</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="comp-name">NiFi Registry</div>
+                                        <span class="comp-cat">Native Tool</span>
+                                    </td>
+                                    <td>Version control for flows. No deployment automation, no cluster management.</td>
+                                    <td>
+                                        <div class="tags-stack"><span class="badge badge-muted">Version only</span></div>
+                                    </td>
+                                    <td><span class="badge badge-gold">Partial</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="comp-name">Ansible / Scripts</div>
+                                        <span class="comp-cat">DIY Automation</span>
+                                    </td>
+                                    <td>Custom CI/CD per cluster. Brittle, high maintenance, no validation, no UI.</td>
+                                    <td>
+                                        <div class="tags-stack"><span class="badge badge-muted">Per-cluster</span><span class="badge badge-muted">No healing</span></div>
+                                    </td>
+                                    <td><span class="badge badge-gold">Fragile</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="comp-name">Cloudera / Hortonworks</div>
+                                        <span class="comp-cat">Enterprise Vendor</span>
+                                    </td>
+                                    <td>Managed NiFi env with some ops tooling — but fully vendor-locked.</td>
+                                    <td>
+                                        <div class="tags-stack"><span class="badge badge-muted">Cloud-only</span><span class="badge badge-muted">$1.2M+/yr</span></div>
+                                    </td>
+                                    <td><span class="badge badge-red">Locked In</span></td>
+                                </tr>
+                                <tr class="dfm-row">
+                                    <td>
+                                        <div class="comp-name" style="color:#f97316;">◈ DFM</div>
+                                        <span class="comp-cat">New Category</span>
+                                    </td>
+                                    <td>End-to-end for NiFi operators: deploy, promote, monitor, heal — via prompt or UI. On-prem, no vendor lock.</td>
+                                    <td>
+                                        <div class="tags-stack"><span class="badge badge-accent">Full lifecycle</span><span class="badge badge-accent">AI-native</span></div>
+                                    </td>
+                                    <td><span class="badge badge-green">Opportunity</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="cs-caption">Audit across four existing NiFi tooling categories — none provided a complete operational workflow for on-premise enterprise teams.</div>
+                    <div class="cs-insight">The gap wasn't a missing feature inside NiFi. It was an entirely missing product category: NiFi operations. No one had built it. That framed DFM not as a plugin — but as a platform.</div>
+                </div>
+            </section>
+            <!-- ══════════════════════════════════════
+                05 PERSONA
+                ══════════════════════════════════════ -->
+            <section class="cs-section">
+                <div class="container">
+                    <h2 class="cs-h">The operator<br><strong>we designed for.</strong></h2>
+                    <p class="cs-lead">Research across 14 enterprise NiFi teams surfaced a consistent archetype — a hybrid role operating under pressure without a product built for them.</p>
+                    <div class="persona-wrap">
+                        <div class="per-left">
+                            <div class="per-avatar">👨‍💻</div>
+                            <div class="per-name">Arjun Mehta</div>
+                            <div class="per-role">Senior Data Platform Engineer<br>Enterprise Logistics · 600+ employees</div>
+                            <div class="per-quote">"I spend more time babysitting deployments than actually improving the platform."</div>
+                            <div class="per-attrs">
+                                <div class="per-attr"><span class="per-ak">Experience</span><span class="per-av">6 years</span></div>
+                                <div class="per-attr"><span class="per-ak">NiFi Clusters</span><span class="per-av">12–42</span></div>
+                                <div class="per-attr"><span class="per-ak">On-call nights</span><span class="per-av">3–5 / month</span></div>
+                                <div class="per-attr"><span class="per-ak">Deploy time</span><span class="per-av">6–8 hrs each</span></div>
+                            </div>
+                        </div>
+                        <div class="per-right">
+                            <div class="d-flex ">
+                                <div class="per-section" style="min-width: 500px;">
+                                <div class="per-sec-label">Responsibilities</div>
+                                <div class="per-item">
+                                    <div class="per-dot g"></div>
+                                    Deploy flows across environments
+                                </div>
+                                <div class="per-item">
+                                    <div class="per-dot g"></div>
+                                    Monitor production pipelines
+                                </div>
+                                <div class="per-item">
+                                    <div class="per-dot g"></div>
+                                    Validate deployments
+                                </div>
+                                <div class="per-item">
+                                    <div class="per-dot g"></div>
+                                    Handle incidents & rollback
+                                </div>
+                                <div class="per-item">
+                                    <div class="per-dot g"></div>
+                                    Maintain operational reliability
+                                </div>
+                            </div>
+                            <div class="per-section" style="min-width: 500px; margin-left: 20px;">
+                                <div class="per-sec-label">Goals</div>
+                                <div class="per-item">
+                                    <div class="per-dot g"></div>
+                                    Deploy flows faster with minimal risk
+                                </div>
+                                <div class="per-item">
+                                    <div class="per-dot g"></div>
+                                    Reduce manual operational work
+                                </div>
+                                <div class="per-item">
+                                    <div class="per-dot g"></div>
+                                    Improve deployment visibility
+                                </div>
+                                <div class="per-item">
+                                    <div class="per-dot g"></div>
+                                    Eliminate overnight monitoring
+                                </div>
+                                <div class="per-item">
+                                    <div class="per-dot g"></div>
+                                    Standardize operational workflows
+                                </div>
+                            </div>
+                            </div>
+                            <div class="per-section">
+                                <div class="per-sec-label">Frustrations</div>
+                                <div class="per-item">
+                                    <div class="per-dot r"></div>
+                                    NiFi UI requires full manual re-login and reconfiguration per cluster, every time
+                                </div>
+                                <div class="per-item">
+                                    <div class="per-dot r"></div>
+                                    Flow drift goes undetected for days — silently corrupting pipelines
+                                </div>
+                                <div class="per-item">
+                                    <div class="per-dot r"></div>
+                                    No rollback. A bad deploy means rebuilding the previous state by hand
+                                </div>
+                                <div class="per-item">
+                                    <div class="per-dot r"></div>
+                                    Management expects "5-minute deploys" — he can't explain why it takes 8 hours
+                                </div>
+                            </div>
+                            <div class="per-section">
+                                <div class="per-sec-label">Current Workarounds</div>
+                                <div class="tools-row">
+                                    <span class="badge badge-muted">NiFi Canvas</span>
+                                    <span class="badge badge-muted">Ansible Playbooks</span>
+                                    <span class="badge badge-muted">Bash Scripts</span>
+                                    <span class="badge badge-muted">Confluence Docs</span>
+                                    <span class="badge badge-muted">Slack Alerts</span>
+                                    <span class="badge badge-muted">Excel Trackers</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-caption">Composite persona built from 14 operator interviews across logistics, healthcare, and financial services verticals.</div>
+                    <div class="cs-insight">Arjun wasn't asking for a prettier dashboard. He was asking for the ability to do his job without holding everything in his head. That shaped every design decision that followed.</div>
+                </div>
+            </section>
+            <!-- ══════════════════════════════════════
+                06 DESIGN RATIONALE
+                ══════════════════════════════════════ -->
+            <section class="cs-section">
+                <div class="container">
+                    <h2 class="cs-h">Why we designed<br><strong>it this way.</strong></h2>
+                    <p class="cs-lead">Every major design decision in DFM was grounded in a specific operator behavior or failure mode observed in research. These weren't preferences — they were structural responses to what we found.</p>
+                    <div class="rationale-grid">
+                        <div class="rat-card">
+                            <div class="rat-icon">⌨️</div>
+                            <div class="rat-title">Prompt-first, UI-second</div>
+                            <p class="rat-body">Operators think in commands — not navigation menus. A conversational interface matched their mental model and compressed 14 clicks into one sentence.</p>
+                            <div class="vs-row">
+                                <div class="vs-opt rej"><span class="vs-label">Rejected</span>Dashboard with dropdowns per action</div>
+                                <div class="vs-opt cho"><span class="vs-label">Chosen</span>Natural language command + structured confirmation</div>
+                            </div>
+                        </div>
+                        <div class="rat-card">
+                            <div class="rat-icon">🗺️</div>
+                            <div class="rat-title">Environment pipeline as primary view</div>
+                            <p class="rat-body">Every operator's mental model started with "which env is this in?" Making Dev → QA → Prod the persistent navigation rail eliminated the #1 source of deployment errors.</p>
+                            <div class="vs-row">
+                                <div class="vs-opt rej"><span class="vs-label">Rejected</span>Cluster-list as primary navigation</div>
+                                <div class="vs-opt cho"><span class="vs-label">Chosen</span>Environment pipeline as persistent top-rail</div>
+                            </div>
+                        </div>
+                        <div class="rat-card">
+                            <div class="rat-icon">🔁</div>
+                            <div class="rat-title">Blocking validation gate before promotion</div>
+                            <p class="rat-body">95% of production incidents traced back to a promotion that skipped validation. We made pre-promotion validation non-optional — a blocking UI step, not a dismissible warning.</p>
+                            <div class="vs-row">
+                                <div class="vs-opt rej"><span class="vs-label">Rejected</span>Optional pre-flight checklist</div>
+                                <div class="vs-opt cho"><span class="vs-label">Chosen</span>Blocking gate with diff view before every promote</div>
+                            </div>
+                        </div>
+                        <div class="rat-card">
+                            <div class="rat-icon">🩺</div>
+                            <div class="rat-title">Proactive health surface, not reactive logs</div>
+                            <p class="rat-body">Operators described trawling logs for hours after silent failures. We surfaced health as a live ambient signal. Status pulses. Anomalies float to the top. The system speaks before you ask.</p>
+                            <div class="vs-row">
+                                <div class="vs-opt rej"><span class="vs-label">Rejected</span>Log viewer + manual polling</div>
+                                <div class="vs-opt cho"><span class="vs-label">Chosen</span>Live health surface with auto-surfaced anomalies</div>
+                            </div>
+                        </div>
+                        <div class="rat-card span-2">
+                            <div class="rat-icon">🔒</div>
+                            <div class="rat-title">On-premise, RBAC-gated, with full audit trail</div>
+                            <p class="rat-body">Enterprise NiFi teams operate in regulated environments — HIPAA, SOC 2, ISO 27001. Every design decision was constrained by the requirement that DFM deploys inside a client's own infrastructure. Cloud-first was never an option. Every action generates an immutable log entry tied to a user identity and timestamp — required by compliance auditors, and surfaced in-product as a first-class audit view.</p>
+                            <div class="vs-row" style="max-width: 580px;">
+                                <div class="vs-opt rej"><span class="vs-label">Rejected</span>SaaS with optional compliance add-ons</div>
+                                <div class="vs-opt cho"><span class="vs-label">Chosen</span>On-prem-first with RBAC + audit trail baked in from day one</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-caption">Each decision maps directly to a research finding — these weren't aesthetic choices, they were responses to observed operator failure modes.</div>
+                    <div class="cs-insight">The hardest constraint was building something that felt fast and conversational while satisfying Fortune 500 compliance requirements. That tension produced DFM's core UX architecture.</div>
+                </div>
+            </section>
+
+            <!-- <section class="cs-section">
+                <div class="container">
+                    <h2 class="cs-h">How it<br><strong>changed shape.</strong></h2>
+                    <p class="cs-lead">DFM went through three significant design directions before arriving at its final architecture. Each iteration was killed by something specific we learned — not by preference.</p>
+                    <div class="iter-timeline">
+                        <div class="iter-item">
+                            <div class="iter-node"></div>
+                            <div class="iter-phase">Version 1 · Weeks 1–3</div>
+                            <div class="iter-title">The Dashboard Trap</div>
+                            <p class="iter-body">Our first direction was a traditional ops dashboard: metric tiles at the top, cluster list in the center, action buttons on each row. We prototyped in Figma and ran it with 4 operators.</p>
+                            <div class="mockup">
+                                <div class="mockup-bar">
+                                    <div class="mbar-dot r"></div>
+                                    <div class="mbar-dot y"></div>
+                                    <div class="mbar-dot g"></div>
+                                    <span class="mbar-label">DFM v0.1 — Dashboard Direction</span>
+                                </div>
+                                <div class="mockup-body">
+                                    <div class="v1-grid">
+                                        <div class="v1-tile">
+                                            <div class="v1-num">24</div>
+                                            <div class="v1-lbl">Clusters</div>
+                                        </div>
+                                        <div class="v1-tile">
+                                            <div class="v1-num">138</div>
+                                            <div class="v1-lbl">Flows</div>
+                                        </div>
+                                        <div class="v1-tile">
+                                            <div class="v1-num" style="color:var(--red);">3</div>
+                                            <div class="v1-lbl">Errors</div>
+                                        </div>
+                                        <div class="v1-tile">
+                                            <div class="v1-num">94%</div>
+                                            <div class="v1-lbl">Uptime</div>
+                                        </div>
+                                    </div>
+                                    <div class="v1-row">
+                                        <div class="v1-dot" style="background:var(--green);"></div>
+                                        <span>prod-cluster-1</span><span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;">RUNNING</span><span class="v1-action">DEPLOY ›</span>
+                                    </div>
+                                    <div class="v1-row">
+                                        <div class="v1-dot" style="background:var(--green);"></div>
+                                        <span>prod-cluster-2</span><span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;">RUNNING</span><span class="v1-action">DEPLOY ›</span>
+                                    </div>
+                                    <div class="v1-row" style="border-bottom:none;">
+                                        <div class="v1-dot" style="background:var(--red);"></div>
+                                        <span>qa-cluster-3</span><span style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;">ERROR</span><span class="v1-action">INSPECT ›</span>
+                                    </div>
+                                    <div class="mockup-note bad">↓ Operators said: "This looks great. Now how do I actually deploy something?"</div>
+                                </div>
+                            </div>
+                            <div class="pivot-box" style="margin-top:18px;">
+                                <div class="pivot-ico">💀</div>
+                                <div>
+                                    <div class="pivot-hl">Why it failed: information without action</div>
+                                    <p class="pivot-body">Every operator found the data interesting for 90 seconds. Then they tried to do something — promote a flow, trigger a restart — and there was no path to action without four more navigation steps. We were showing operators what they already knew. We weren't letting them do what they came to do.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="iter-item pivot">
+                            <div class="iter-node"></div>
+                            <div class="iter-phase pivot-lbl">Pivot · Week 4</div>
+                            <div class="iter-title">The insight that changed the model</div>
+                            <div class="pq" style="margin-top:0;">
+                                <p>"We're operators, not analysts. We don't want to look at data. We want to act on it — in one step."</p>
+                                <div class="pq-attr">— Participant 3, usability session</div>
+                            </div>
+                            <p class="iter-body">Three out of four operators said a version of the same thing. We scrapped the dashboard-first model and reframed: what if the primary interface was a command bar, not a cluster list? What if you could type what you want done, and the system executed it — with a confirmation step to catch errors before they happened?</p>
+                        </div>
+                        <div class="iter-item">
+                            <div class="iter-node"></div>
+                            <div class="iter-phase">Version 2 · Weeks 5–8</div>
+                            <div class="iter-title">Prompt-first with environment pipeline</div>
+                            <p class="iter-body">We rebuilt around a persistent command bar and an environment pipeline (Dev → QA → Prod) as the primary navigation surface. Operators could type natural language or click through the pipeline — both paths converged on the same action model.</p>
+                            <div class="mockup">
+                                <div class="mockup-bar">
+                                    <div class="mbar-dot r"></div>
+                                    <div class="mbar-dot y"></div>
+                                    <div class="mbar-dot g"></div>
+                                    <span class="mbar-label">DFM v0.2 — Prompt + Pipeline Direction</span>
+                                </div>
+                                <div class="mockup-body">
+                                    <div class="v2-prompt">
+                                        <span class="v2-text">promote flow "customer-ingest-v3" from QA → Prod on all clusters<span class="v2-cursor"></span></span>
+                                        <button class="v2-btn">Run ↵</button>
+                                    </div>
+                                    <div class="env-rail">
+                                        <div class="env-step">
+                                            <div class="env-step-lbl">Dev</div>
+                                            <div class="env-step-name">4 clusters</div>
+                                        </div>
+                                        <div class="env-arrow">›</div>
+                                        <div class="env-step env-active">
+                                            <div class="env-step-lbl">QA · Source</div>
+                                            <div class="env-step-name">customer-ingest-v3</div>
+                                        </div>
+                                        <div class="env-arrow">›</div>
+                                        <div class="env-step">
+                                            <div class="env-step-lbl">Prod · Target</div>
+                                            <div class="env-step-name">3 clusters</div>
+                                        </div>
+                                    </div>
+                                    <div class="mockup-note good">✓ Operators completed core tasks 74% faster. One gap: no healing surface for broken flows.</div>
+                                </div>
+                            </div>
+                            <div class="pivot-box warn" style="margin-top:18px;">
+                                <div class="pivot-ico">⚠️</div>
+                                <div>
+                                    <div class="pivot-hl">What V2 still missed: the broken flow problem</div>
+                                    <p class="pivot-body">Operators loved the prompt interface. But the second session surfaced a critical gap: what happens when a promoted flow breaks in production? V2 had no healing surface. Operators were back to manual log trawling. We needed a way to surface anomalies proactively — without requiring operators to explicitly ask.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="iter-item final">
+                            <div class="iter-node"></div>
+                            <div class="iter-phase final-lbl">Final · Weeks 9–14</div>
+                            <div class="iter-title">Command center with proactive healing</div>
+                            <p class="iter-body">The final design added a live health surface that surfaced broken flows proactively — with AI-suggested remediation that operators could approve with a single prompt. Three pillars: command bar, environment pipeline, and health tray — each mapped to a distinct operator mental model confirmed in research.</p>
+                            <div class="mockup">
+                                <div class="mockup-bar">
+                                    <div class="mbar-dot r"></div>
+                                    <div class="mbar-dot y"></div>
+                                    <div class="mbar-dot g"></div>
+                                    <span class="mbar-label">DFM v1.0 — Final Design</span>
+                                </div>
+                                <div class="mockup-body">
+                                    <div class="v2-prompt" style="border-color:var(--green); box-shadow: 0 0 16px var(--green-dim);">
+                                        <span class="v2-text">What's broken in prod right now?<span class="v2-cursor" style="background:var(--green);"></span></span>
+                                        <button class="v2-btn" style="background:var(--green);">Run ↵</button>
+                                    </div>
+                                    <div class="v3-cmd">
+                                        <div class="v3-cmd-ico">📦</div>
+                                        <div>
+                                            <div class="v3-cmd-name">customer-ingest-v3</div>
+                                            <div class="v3-cmd-meta">Deployed to Prod · 3 clusters · 14 min ago</div>
+                                        </div>
+                                        <div class="v3-status">Healthy</div>
+                                    </div>
+                                    <div class="heal-card">
+                                        <div class="heal-ico">🩺</div>
+                                        <div style="flex:1;">
+                                            <div class="heal-main">Anomaly detected: log-router-prod-2</div>
+                                            <div class="heal-sub">Back-pressure on IncomingQueue · Suggested: restart FlowFileQueue processor</div>
+                                        </div>
+                                        <button class="heal-btn">Approve</button>
+                                    </div>
+                                    <div class="mockup-note good">✓ Operators said: "This is the first time I felt like the system was watching with me."</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-caption">Three iterations, two pivots, fourteen weeks. The final model was unrecognizable from week one — but every change was traceable to a specific operator failure observed in research.</div>
+                    <div class="cs-insight">The move from dashboard to command center wasn't a stylistic preference — it was the product finding its correct category. DFM isn't a monitoring tool. It's a decision surface for people who move fast in complex systems.</div>
+                </div>
+            </section> -->
+
+            <section class="cs-section" style="border-bottom:none;">
+                <div class="container">
+                    <h2 class="cs-h">What actually<br><strong>changed.</strong></h2>
+                    <p class="cs-lead">DFM shipped to pilot customers across logistics, healthcare, and financial services. These are the numbers from the first six months of production use.</p>
+                    <div class="outcomes-grid">
+                        <div class="oc">
+                            <div class="oc-arr down">↓</div>
+                            <div class="oc-val">90%</div>
+                            <div class="oc-lbl">Reduction in NiFi ops engineering cost</div>
+                            <div class="oc-detail">Ops work now runs via prompt or scheduled automation</div>
+                        </div>
+                        <div class="oc">
+                            <div class="oc-arr down">↓</div>
+                            <div class="oc-val">95%</div>
+                            <div class="oc-lbl">Fewer production failures &amp; incidents</div>
+                            <div class="oc-detail">Validation gate caught 95% of drift mismatches before prod</div>
+                        </div>
+                        <div class="oc">
+                            <div class="oc-arr up">↑</div>
+                            <div class="oc-val">$1M+</div>
+                            <div class="oc-lbl">Saved vs. enterprise vendor per year</div>
+                            <div class="oc-detail">Per customer vs. Cloudera/Hortonworks — DFM runs on-prem</div>
+                        </div>
+                        <div class="oc">
+                            <div class="oc-arr down">↓</div>
+                            <div class="oc-val">75%</div>
+                            <div class="oc-lbl">Faster flow deployment time</div>
+                            <div class="oc-detail">Intent to confirmed live — minutes, not hours</div>
+                        </div>
+                        <div class="oc">
+                            <div class="oc-arr down">↓</div>
+                            <div class="oc-val" style="font-size:28px;padding-top:8px;">Weeks → Min</div>
+                            <div class="oc-lbl">Promotion time across 42 instances</div>
+                            <div class="oc-detail">From weeks of standby to a single operator session</div>
+                        </div>
+                        <div class="oc">
+                            <div class="oc-arr down">↓</div>
+                            <div class="oc-val">0</div>
+                            <div class="oc-lbl">Overnight on-call sessions in 6 months</div>
+                            <div class="oc-detail">Scheduled promotions + proactive healing eliminated all after-hours standby</div>
+                        </div>
+                    </div>
+                    <div class="pq">
+                        <p>"We promoted 38 flows last quarter. I was home by 6pm every day. That's never happened in five years."</p>
+                        <div class="pq-attr">— Lead Platform Engineer, North American Logistics Company</div>
+                    </div>
+                    <div class="divider"></div>
+                    <h3 style="font-size:20px; font-weight:700; margin-bottom:8px;">Business Impact</h3>
+                    <p style="font-size:16px; margin-bottom:0;">DFM positioned itself not as an extension of Apache NiFi, but as a dedicated enterprise operations platform. This created a clear differentiation in the market and addressed a previously underserved operational workflow.</p>
+                    <div class="refl-grid">
+                        <div class="refl-card">
+                            <div class="refl-ico">🔍</div>
+                            <div class="refl-title">Significant reduction in manual deployment effort</div>
+                        </div>
+                        <div class="refl-card">
+                            <div class="refl-ico">⚡</div>
+                            <div class="refl-title">Faster enterprise release cycles</div>
+                        </div>
+                        <div class="refl-card">
+                            <div class="refl-ico">🧠</div>
+                            <div class="refl-title">Improved operational consistency</div>
+                        </div>
+                        <div class="refl-card">
+                            <div class="refl-ico">🔒</div>
+                            <div class="refl-title">Reduced production deployment failures</div>
+                        </div>
+                        <div class="refl-card">
+                            <div class="refl-ico">🔒</div>
+                            <div class="refl-title">Better visibility for enterprise teams</div>
+                        </div>
+                        <div class="refl-card">
+                            <div class="refl-ico">🔒</div>
+                            <div class="refl-title">Lower dependency on custom scripts and manual coordination</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="section section-inner">
+                <div class="container">
+                    <h2 class="cs-h"><strong>Product Screenshots</strong></h2>
+                    <p class="cs-lead">DFM shipped to pilot customers across logistics, healthcare, and financial services. These are the numbers from the first six months of production use.</p>
+                    <div class="gallery-filter-wrap">
+                        <button class="g-tab active" data-filter="product">Product</button>
+                        <button class="g-tab" data-filter="system">Design System</button>
+                    </div>
+                    <div class="m-gallery">
+                        <div class="gallery-group" data-category="product">
+                            <div class="g-row">
+                                <div class="g-col g-col-left">
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-1.svg">
+                                        <img src="assets/images/screenshots/dfm-web/screenshot-1.svg" alt="Screenshot 1" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-3.svg">
+                                        <img src="assets/images/screenshots/dfm-web/screenshot-3.svg" alt="Screenshot-3" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-5.svg">
+                                        <img src="assets/images/screenshots/dfm-web/screenshot-5.svg" alt="Screenshot 5" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-7.svg">
+                                        <img src="assets/images/screenshots/dfm-web/screenshot-7.svg" alt="Screenshot 7" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-9.svg">
+                                        <img src="assets/images/screenshots/dfm-web/screenshot-9.svg" alt="Screenshot 9" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-11.svg">
+                                        <img src="assets/images/screenshots/dfm-web/screenshot-11.svg" alt="Screenshot 11" loading="lazy">
+                                    </div>
+                                </div>
+                                <div class="g-col g-col-right">
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-2.svg">
+                                        <img src="assets/images/screenshots/dfm-web/screenshot-2.svg" alt="Screenshot 2" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-4.svg">
+                                        <img src="assets/images/screenshots/dfm-web/screenshot-4.svg" alt="Screenshot 4" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-6.svg">
+                                        <img src="assets/images/screenshots/dfm-web/screenshot-6.svg" alt="Screenshot 6" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-8.svg">
+                                        <img src="assets/images/screenshots/dfm-web/screenshot-8.svg" alt="Screenshot 8" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-10.svg">
+                                        <img src="assets/images/screenshots/dfm-web/screenshot-10.svg" alt="Screenshot 10" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-12.svg">
+                                        <img src="assets/images/screenshots/dfm-web/screenshot-12.svg" alt="Screenshot 12" loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-group" data-category="dark">
+                            <div class="g-row">
+                                <div class="g-col g-col-left">
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-1-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-1-dark.svg" alt="Screenshot 1" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-3-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-3-dark.svg" alt="Screenshot-3" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-5-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-5-dark.svg" alt="Screenshot 5" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-7-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-7-dark.svg" alt="Screenshot 7" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-9-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-9-dark.svg" alt="Screenshot 9" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-11-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-11-dark.svg" alt="Screenshot 11" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-13-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-13-dark.svg" alt="Screenshot 13" loading="lazy">
+                                    </div>
+                                </div>
+                                <div class="g-col g-col-right">
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-2-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-2-dark.svg" alt="Screenshot 2" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-4-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-4-dark.svg" alt="Screenshot 4" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-6-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-6-dark.svg" alt="Screenshot 6" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-8-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-8-dark.svg" alt="Screenshot 8" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-10-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-10-dark.svg" alt="Screenshot 10" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-12-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-12-dark.svg" alt="Screenshot 12" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-14-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-14-dark.svg" alt="Screenshot 14" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-16-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-16-dark.svg" alt="Screenshot 16" loading="lazy">
+                                    </div>
+                                    <div class="g-item" data-src="assets/images/screenshots/man-web/screenshot-18-dark.svg">
+                                        <img src="assets/images/screenshots/man-web/screenshot-18-dark.svg" alt="Screenshot 18" loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="g-lightbox" role="dialog" aria-label="Image lightbox">
+                <button class="g-lb-close" id="lb-close" aria-label="Close">&times;</button>
+                <button class="g-lb-prev" id="lb-prev" aria-label="Previous">&#8592;</button>
+                <button class="g-lb-next" id="lb-next" aria-label="Next">&#8594;</button>
+                <div class="g-lb-counter" id="lb-counter"></div>
+                <div id="g-lightbox-stage">
+                    <img id="g-lightbox-img" src="" alt="Full size preview">
+                </div>
+                <div class="g-lb-controls">
+                    <button class="g-lb-btn" id="lb-zoom-out" title="Zoom out">&#8722;</button>
+                    <span class="g-lb-zoom-label" id="lb-zoom-label">100%</span>
+                    <button class="g-lb-btn" id="lb-zoom-in" title="Zoom in">&#43;</button>
+                    <button class="g-lb-btn" id="lb-reset" title="Reset" style="font-size:14px;">&#8635;</button>
+                </div>
+            </div>
+            <section class="section section-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="post-content">
+                                <h4>Final Reflection</h4>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="post-content">
+                                <p>DFM transformed Apache NiFi operations from a fragmented, manual process into a centralized enterprise workflow experience. By focusing deeply on operator behavior, deployment psychology, and operational reliability, the platform evolved beyond a traditional dashboard into a product designed specifically for enterprise-scale data operations.</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="post-content">
+                                <p>The result was a scalable operational experience that improved deployment confidence, reduced manual effort, and simplified how organizations managed complex NiFi infrastructures.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="footer lui-gradient-top">
+                <div class="footer__builder">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <div class="social-links scrolla-element-anim-1 scroll-animate" data-animate="active">
+                                    <a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/niteshkrbhat/">
+                                    <i aria-hidden="true" class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a target="_blank" rel="nofollow" href="https://t.me/preacher111">
+                                    <i aria-hidden="true" class="fab fa-telegram"></i>
+                                    </a>
+                                    <a target="_blank" rel="nofollow" href="https://wa.me/7889514480?text=I%20am%20interested%20in%20your%20services.%20How%20to%20get%20started%3F">
+                                    <i aria-hidden="true" class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <!-- <a target="_blank" rel="nofollow" href="https://www.instagram.com/travellerlyfe/">
+                                        <i aria-hidden="true" class="fab fa-instagram"></i>
+                                        </a> -->
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <div class="copyright-text align-center scrolla-element-anim-1 scroll-animate" data-animate="active">
+                                    Working Since <strong>2019 - Present</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cursor"></div>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.validate.min.js"></script>
+        <script src="assets/js/performance.js" defer></script>
+        <script src="assets/js/bootstrap.js"></script>
+        <script src="assets/js/swiper.js"></script>
+        <script src="assets/js/splitting.js"></script>
+        <script src="assets/js/jarallax.min.js"></script>
+        <script src="assets/js/magnific-popup.js"></script>
+        <script src="assets/js/imagesloaded.pkgd.js"></script>
+        <script src="assets/js/isotope.pkgd.js"></script>
+        <script src="assets/js/jquery.scrolla.js"></script>
+        <script src="assets/js/skrollr.js"></script>
+        <script src="assets/js/jquery.cookie.js"></script>
+        <script src="assets/js/plugin.js"></script>
+        <script src="assets/js/tp-cursor.js"></script>
+        <script src="assets/js/typed.js"></script>
+        <script src="assets/js/common.js"></script>
+        <script type="text/javascript">
+            const hoverItem = document.querySelectorAll(".hover-reveal-item");
+                function moveImage(e, hoverItem) {
+                    const item = hoverItem.getBoundingClientRect();
+                    const x = e.clientX - item.x;
+                    const y = e.clientY - item.y;
+                    if (hoverItem.children[1]) {
+                        hoverItem.children[1].style.transform = `translate(${x}px, ${y}px)`;
+                    }
+                }
+                hoverItem.forEach((item, i) => {
+                    item.addEventListener("mousemove", (e) => {
+                        setInterval(moveImage(e, item), 100);
+                    });
+                });
+            
+                // 19. Work Pin Section
+                let tl = gsap.timeline();
+                let pr = gsap.matchMedia();
+                pr.add("(min-width: 767px)", () => {
+                let otherSections = document.querySelectorAll('.sa-work-panel')
+                    otherSections.forEach((section, index) => {
+                        gsap.set(otherSections, {
+                            scale: 1,
+                        });
+                        tl.to(section, {
+                            scale: .8,
+                            scrollTrigger: {
+                                trigger: section,
+                                pin: section,
+                                scrub: 1,
+                                start: 'top 0',
+                                end: "bottom 60%",
+                                endTrigger: '.sa-work-wrap',
+                                pinSpacing: false,
+                                markers: false,
+                            },
+                        })
+                    })
+                });
+        </script>
+        <script>
+            (function () {
+              /* TAB FILTER */
+              const tabs   = document.querySelectorAll('.g-tab');
+              const groups = document.querySelectorAll('.gallery-group');
+             
+              function applyFilter(filter) {
+                groups.forEach(g => {
+                  g.classList.toggle('hidden', g.dataset.category !== filter);
+                });
+                buildIndex();
+              }
+             
+              tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                  tabs.forEach(t => t.classList.remove('active'));
+                  tab.classList.add('active');
+                  applyFilter(tab.dataset.filter);
+                });
+              });
+             
+              /* activate first tab on load */
+              const firstTab = document.querySelector('.g-tab.active');
+              if (firstTab) applyFilter(firstTab.dataset.filter);
+             
+              /* LIGHTBOX */
+              const lb      = document.getElementById('g-lightbox');
+              const lbImg   = document.getElementById('g-lightbox-img');
+              const lbStage = document.getElementById('g-lightbox-stage');
+              const lbCount = document.getElementById('lb-counter');
+              const lbLabel = document.getElementById('lb-zoom-label');
+             
+              let items = [], cur = 0, scale = 1, tx = 0, ty = 0;
+              let drag = false, sx = 0, sy = 0, ox = 0, oy = 0;
+             
+              function buildIndex(items) {
+                items = Array.from(document.querySelectorAll('.gallery-group:not(.hidden) .g-item'));
+              }
+             
+              function applyT(anim) {
+                lbImg.style.transition = anim ? 'transform 0.2s ease' : 'none';
+                lbImg.style.transform  = `translate(${tx}px,${ty}px) scale(${scale})`;
+                lbLabel.textContent    = Math.round(scale * 100) + '%';
+              }
+             
+              function resetZ(anim) { scale=1; tx=0; ty=0; applyT(anim); }
+             
+              function zoom(d) { scale = Math.min(5, Math.max(0.5, scale + d)); applyT(false); }
+             
+              function open(i) {
+                cur = i;
+                lbImg.src = items[cur].dataset.src;
+                lbImg.style.opacity = '1';
+                lbCount.textContent = (cur+1) + ' / ' + items.length;
+                resetZ(false);
+                lb.classList.add('open');
+                document.body.style.overflow = 'hidden';
+              }
+             
+              function close() {
+                lb.classList.remove('open');
+                document.body.style.overflow = '';
+                lbImg.src = '';
+              }
+             
+              function nav(d) {
+                cur = (cur + d + items.length) % items.length;
+                lbImg.style.opacity = '0';
+                setTimeout(() => {
+                  lbImg.src = items[cur].dataset.src;
+                  lbCount.textContent = (cur+1) + ' / ' + items.length;
+                  resetZ(false);
+                  lbImg.style.opacity = '1';
+                }, 150);
+              }
+             
+              document.querySelector('.m-gallery').addEventListener('click', e => {
+                const item = e.target.closest('.g-item');
+                if (!item) return;
+                buildIndex();
+                open(items.indexOf(item));
+              });
+             
+              document.getElementById('lb-close').addEventListener('click', close);
+              lb.addEventListener('click', e => { if (e.target === lb) close(); });
+              document.getElementById('lb-prev').addEventListener('click', e => { e.stopPropagation(); nav(-1); });
+              document.getElementById('lb-next').addEventListener('click', e => { e.stopPropagation(); nav(1); });
+              document.getElementById('lb-zoom-in').addEventListener('click',  e => { e.stopPropagation(); zoom(0.3); });
+              document.getElementById('lb-zoom-out').addEventListener('click', e => { e.stopPropagation(); zoom(-0.3); });
+              document.getElementById('lb-reset').addEventListener('click',    e => { e.stopPropagation(); resetZ(true); });
+             
+              document.addEventListener('keydown', e => {
+                if (!lb.classList.contains('open')) return;
+                if (e.key==='Escape') close();
+                else if (e.key==='ArrowLeft') nav(-1);
+                else if (e.key==='ArrowRight') nav(1);
+                else if (e.key==='+'||e.key==='=') zoom(0.2);
+                else if (e.key==='-') zoom(-0.2);
+              });
+             
+              lbStage.addEventListener('wheel', e => { e.preventDefault(); zoom(e.deltaY<0?0.15:-0.15); }, {passive:false});
+             
+              lbStage.addEventListener('mousedown', e => {
+                if (scale<=1) return;
+                drag=true; lbStage.classList.add('dragging');
+                sx=e.clientX; sy=e.clientY; ox=tx; oy=ty;
+              });
+              document.addEventListener('mousemove', e => {
+                if (!drag) return;
+                tx=ox+(e.clientX-sx); ty=oy+(e.clientY-sy); applyT(false);
+              });
+              document.addEventListener('mouseup', () => { drag=false; lbStage.classList.remove('dragging'); });
+             
+              let lastD=0;
+              lbStage.addEventListener('touchstart', e => {
+                if (e.touches.length===2) lastD=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);
+                else if (e.touches.length===1&&scale>1){drag=true;sx=e.touches[0].clientX;sy=e.touches[0].clientY;ox=tx;oy=ty;}
+              },{passive:true});
+              lbStage.addEventListener('touchmove', e => {
+                if (e.touches.length===2){const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);zoom((d-lastD)*0.01);lastD=d;}
+                else if(drag&&e.touches.length===1){tx=ox+(e.touches[0].clientX-sx);ty=oy+(e.touches[0].clientY-sy);applyT(false);}
+              },{passive:true});
+              lbStage.addEventListener('touchend',()=>{drag=false;});
+             
+              lbStage.addEventListener('dblclick', e => {
+                e.stopPropagation();
+                scale>1?resetZ(true):(scale=2.5,applyT(true));
+              });
+             
+              buildIndex();
+            })();
+        </script>
+        <script type="text/javascript">
+            const imgAfter = document.querySelector('.img-wrapper:nth-of-type(2)');
+            const line = document.getElementById('line');
+            const slider = document.getElementById('slider');
+            
+            slider.addEventListener('input', () => {
+              line.style.left = `${slider.value}%`;   
+              imgAfter.style.clipPath = `inset(0px 0px 0px ${slider.value}%)`;
+            });
+            
+            // Reset on double-click
+            slider.addEventListener('dblclick', () => {
+              slider.value = 50;
+              line.style.left = '50%';
+              imgAfter.style.clipPath = 'inset(0px 0px 0px 50%';
+            });
+        </script> 
+    </body>
+</html>

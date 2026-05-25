@@ -304,10 +304,6 @@ body.dark-skin {
 	background: linear-gradient(180deg, #31363c 0%, #222831 100%);
 }
 
-.dark-skin .m-titles .m-title {
-	color: #fff;
-}
-
 .dark-skin .m-titles .m-subtitle strong,
 .dark-skin .m-titles .m-subtitle b {
 	color: #fff;

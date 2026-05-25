@@ -1348,47 +1348,6 @@
         <script src="assets/js/tp-cursor.js"></script>
         <script src="assets/js/typed.js"></script>
         <script src="assets/js/common.js"></script>
-        <script type="text/javascript">
-            const hoverItem = document.querySelectorAll(".hover-reveal-item");
-                function moveImage(e, hoverItem) {
-                    const item = hoverItem.getBoundingClientRect();
-                    const x = e.clientX - item.x;
-                    const y = e.clientY - item.y;
-                    if (hoverItem.children[1]) {
-                        hoverItem.children[1].style.transform = `translate(${x}px, ${y}px)`;
-                    }
-                }
-                hoverItem.forEach((item, i) => {
-                    item.addEventListener("mousemove", (e) => {
-                        setInterval(moveImage(e, item), 100);
-                    });
-                });
-            
-                // 19. Work Pin Section
-                let tl = gsap.timeline();
-                let pr = gsap.matchMedia();
-                pr.add("(min-width: 767px)", () => {
-                let otherSections = document.querySelectorAll('.sa-work-panel')
-                    otherSections.forEach((section, index) => {
-                        gsap.set(otherSections, {
-                            scale: 1,
-                        });
-                        tl.to(section, {
-                            scale: .8,
-                            scrollTrigger: {
-                                trigger: section,
-                                pin: section,
-                                scrub: 1,
-                                start: 'top 0',
-                                end: "bottom 60%",
-                                endTrigger: '.sa-work-wrap',
-                                pinSpacing: false,
-                                markers: false,
-                            },
-                        })
-                    })
-                });
-        </script>
         <script>
             const award = document.getElementById("award");
             

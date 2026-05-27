@@ -2535,7 +2535,7 @@ hr {
 
 .section.hero-started .title {
 	font-family: "Jost";
-	font-size: 52px;
+	font-size: 48px;
 	line-height: 1.2;
 	color: #FFF;
 	font-weight: 700;
@@ -5444,10 +5444,14 @@ a.wp-block-button__link {
 		min-height: 160px;
 	}
 	.section.hero-started .title {
-		font-size: 32px;
+		font-size: 28px;
 	}
 	.section.hero-started .lui-subtitle {
-		font-size: 18px;
+		font-size: 14px;
+	}
+
+	.section.hero-started .label, .section.hero-started .label b {
+		font-size: 21px;
 	}
 	.section.hero-started .label strong, .section.hero-started .label b {
 		font-size: 24px;
@@ -8110,7 +8114,7 @@ body.tp-magic-cursor #magic-cursor {
     /* ── GLASS CONTROLS (top-right) ───────────────────────── */
     .controls {
       position: absolute;
-      top: 68px;
+      bottom: 68px;
       right: 5vw;
       z-index: 6;
       display: flex;
@@ -8242,7 +8246,7 @@ body.tp-magic-cursor #magic-cursor {
 
     /* ── RESPONSIVE ───────────────────────────────────────── */
     @media (max-width: 600px) {
-      .content { padding: 0 6vw 90px; }
+      .content { padding: 0 2vw 40px; }
       .cta-row { flex-direction: column; align-items: flex-start; }
       .btn-primary, .btn-ghost { width: 100%; text-align: center; }
     }

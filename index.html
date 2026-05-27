@@ -233,9 +233,9 @@
             <video id="videoBg" src="video.mp4" autoplay loop muted playsinline></video>
           </div>
 
-          <!-- ② Foreground full-bleed video -->
+          <!-- ② Foreground full-bleed video — audio source, no loop (managed in JS) -->
           <div class="video-fg">
-            <video id="videoFg" src="video.mp4" autoplay loop muted playsinline></video>
+            <video id="videoFg" src="video.mp4" playsinline></video>
           </div>
 
           <!-- ③ Cinematic overlays -->
@@ -257,6 +257,17 @@
               <!-- unmuted icon -->
               <svg id="iconUnmuted" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display:none">
                 <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+              </svg>
+            </button>
+
+            <button class="ctrl-btn" id="btnPlay" aria-label="Pause video" title="Pause video">
+              <!-- pause icon (default – video is playing) -->
+              <svg id="iconPause" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+              </svg>
+              <!-- play icon -->
+              <svg id="iconPlay" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                <path d="M8 5v14l11-7z"/>
               </svg>
             </button>
           </div>
@@ -1379,79 +1390,133 @@
         </script>
 
         <script>
-  /* ── Video elements ───────────────────────────────────── */
-  const fg = document.getElementById('videoFg');
-  const bg = document.getElementById('videoBg');
-  const btnMute  = document.getElementById('btnMute');
-  const btnPlay  = document.getElementById('btnPlay');
-  const soundBadge = document.getElementById('soundBadge');
-  const timecodeEl = document.getElementById('timecode');
+  const fg          = document.getElementById('videoFg');
+  const bg          = document.getElementById('videoBg');
+  const btnMute     = document.getElementById('btnMute');
+  const btnPlay     = document.getElementById('btnPlay');
+  const soundBadge  = document.getElementById('soundBadge');
+  const timecodeEl  = document.getElementById('timecode');
 
-  /* ── Sync background video to foreground ──────────────── */
+  const MAX_AUTO_LOOPS = 3;   // play through 3 times automatically
+  let   loopsDone      = 0;   // completed loops counter
+  let   afterLimit     = false; // true once the 3-loop budget is spent
+  let   playOnce       = false; // user triggered a manual single-play
+
+  /* ── bg always stays muted — enforce it ──────────────── */
+  bg.muted = true;
+
+  /* ── Sync bg position to fg (visual only, no audio) ──── */
   fg.addEventListener('timeupdate', () => {
-    if (Math.abs(bg.currentTime - fg.currentTime) > 0.25) {
+    if (Math.abs(bg.currentTime - fg.currentTime) > 0.3) {
       bg.currentTime = fg.currentTime;
     }
-  });
-
-  /* ── Timecode HH:MM:SS:FF ──────────────────────────────── */
-  const pad = n => String(Math.floor(n)).padStart(2,'0');
-  fg.addEventListener('timeupdate', () => {
+    /* timecode */
     const t  = fg.currentTime;
     const h  = Math.floor(t / 3600);
     const m  = Math.floor((t % 3600) / 60);
     const s  = Math.floor(t % 60);
     const fr = Math.floor((t % 1) * 24);
+    const pad = n => String(Math.floor(n)).padStart(2, '0');
     timecodeEl.textContent = `${pad(h)}:${pad(m)}:${pad(s)}:${pad(fr)}`;
   });
 
-  /* ── Mute / Unmute ────────────────────────────────────── */
+  /* ── Handle each fg video end ─────────────────────────── */
+  fg.addEventListener('ended', () => {
+    if (!afterLimit) {
+      /* Still within the auto-loop budget */
+      loopsDone++;
+      if (loopsDone < MAX_AUTO_LOOPS) {
+        /* Play again */
+        fg.currentTime = 0;
+        bg.currentTime = 0;
+        fg.play().catch(() => {});
+      } else {
+        /* Budget exhausted — pause */
+        afterLimit = true;
+        playOnce   = false;
+        fg.currentTime = 0;
+        bg.currentTime = 0;
+        bg.pause();
+        syncPlayUI();
+      }
+    } else if (playOnce) {
+      /* Manual single-play finished — pause */
+      playOnce = false;
+      fg.currentTime = 0;
+      bg.currentTime = 0;
+      bg.pause();
+      syncPlayUI();
+    }
+  });
+
+  /* ── Auto-start with audio ────────────────────────────── */
+  fg.muted = false;           // request unmuted playback
+
+  fg.play().then(() => {
+    /* Autoplay with audio succeeded */
+    soundBadge.classList.add('hidden');
+    syncMuteUI();
+  }).catch(() => {
+    /* Browser blocked unmuted autoplay — fall back to muted */
+    fg.muted = true;
+    fg.play().catch(() => {});
+    syncMuteUI();
+    /* Auto-hide the "Tap for sound" badge after 6 s */
+    setTimeout(() => {
+      soundBadge.style.transition = 'opacity 1s';
+      soundBadge.classList.add('hidden');
+    }, 6000);
+  });
+
+  /* ── Mute / Unmute (fg only — bg is always muted) ─────── */
   function syncMuteUI() {
     const muted = fg.muted;
-    document.getElementById('iconMuted').style.display   = muted ? '' : 'none';
+    document.getElementById('iconMuted').style.display   = muted ? ''     : 'none';
     document.getElementById('iconUnmuted').style.display = muted ? 'none' : '';
-    if (!muted) {
-      soundBadge.classList.add('hidden');
-    }
+    if (!muted) soundBadge.classList.add('hidden');
   }
 
   btnMute.addEventListener('click', () => {
-    fg.muted = bg.muted = !fg.muted;
+    fg.muted = !fg.muted;
+    /* bg.muted stays true always */
     syncMuteUI();
   });
 
-  /* Clicking the badge also unmutes */
   soundBadge.addEventListener('click', () => {
-    fg.muted = bg.muted = false;
+    fg.muted = false;
     syncMuteUI();
   });
 
-  /* Auto-hide badge after 5 s */
-  setTimeout(() => {
-    if (!fg.muted) return;
-    soundBadge.style.transition = 'opacity 1s';
-    soundBadge.classList.add('hidden');
-  }, 6000);
-
-  /* ── Play / Pause ─────────────────────────────────────── */
+  /* ── Play / Pause button ──────────────────────────────── */
   function syncPlayUI() {
     const playing = !fg.paused;
-    document.getElementById('iconPause').style.display = playing ? '' : 'none';
+    document.getElementById('iconPause').style.display = playing ? ''     : 'none';
     document.getElementById('iconPlay').style.display  = playing ? 'none' : '';
+    btnPlay.setAttribute('aria-label', playing ? 'Pause video' : 'Play video');
   }
 
   btnPlay.addEventListener('click', () => {
     if (fg.paused) {
-      fg.play(); bg.play();
+      if (afterLimit) {
+        /* Manual single-play mode */
+        playOnce = true;
+        fg.currentTime = 0;
+        bg.currentTime = 0;
+      }
+      fg.play().catch(() => {});
+      bg.play().catch(() => {});
     } else {
-      fg.pause(); bg.pause();
+      fg.pause();
+      bg.pause();
+      if (afterLimit) playOnce = false; /* user paused mid single-play */
     }
     syncPlayUI();
   });
+
   fg.addEventListener('play',  syncPlayUI);
   fg.addEventListener('pause', syncPlayUI);
 
-  /* ── Initial state ─────────────────────────────────────── */
+  /* ── Initial UI state ─────────────────────────────────── */
   syncMuteUI();
   syncPlayUI();
 </script>

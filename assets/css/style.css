@@ -27,7 +27,7 @@ body {
 	height: auto !important;
 	font-size: 16px;
 	color: #262626;
-	font-family: "Jost", sans-serif;
+	font-family: "Geist", sans-serif;
 	font-weight: 400;
 	line-height: 1.7;
 	-webkit-font-smoothing: antialiased;
@@ -78,7 +78,7 @@ img {
 input,
 textarea,
 button {
-	font-family: "Jost";
+	font-family: "Geist", sans-serif;
 }
 
 label {
@@ -118,7 +118,7 @@ h5,
 h6,
 .m-title {
 	font-weight: 400;
-	font-family: "Jost";
+	font-family: "Geist", sans-serif;
 	margin: 0;
 	margin-bottom: 15px;
 	color: #000;
@@ -363,7 +363,7 @@ textarea {
 	display: block;
 	width: 100%;
 	height: 60px;
-	font-family: "Jost";
+	font-family: "Geist", sans-serif;
 	font-size: 16px;
 	color: #000;
 	resize: none;
@@ -388,7 +388,7 @@ label,
 legend {
 	display: block;
 	padding-bottom: 20px;
-	font-family: "Jost";
+	font-family: "Geist", sans-serif;
 	font-size: 20px;
 }
 
@@ -404,7 +404,7 @@ input[type="radio"] {
 
 label.error {
 	padding-top: 5px;
-	font-family: "Jost";
+	font-family: "Geist", sans-serif;
 	font-size: 14px;
 	color: red;
 	display: none;
@@ -482,7 +482,7 @@ blockquote,
 	position: relative;
 	margin: 50px 0 50px 50px;
 	padding: 65px 50px 0 50px!important;
-	font-family: "Jost";
+	font-family: "Geist", sans-serif;
 	font-size: 22px;
 	line-height: 1.3;
 	color: #000;
@@ -558,7 +558,7 @@ blockquote cite,
 .wp-block-quote.is-large cite,
 .wp-block-quote.is-style-large cite,
 .wp-block-pullquote cite {
-	font-family: "Jost";
+	font-family: "Geist", sans-serif;
 	font-size: 16px;
 	font-style: normal;
 	display: block;
@@ -1875,7 +1875,7 @@ hr {
 	vertical-align: top;
 	font-size: 22px;
 	line-height: 1;
-	font-family: "Jost";
+	font-family: "Geist", sans-serif;
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
@@ -1970,7 +1970,7 @@ hr {
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
-	font-family: "Jost";
+	font-family: "Geist", sans-serif;
 	font-size: 20px;
 	line-height: 1;
 	font-weight: 500;
@@ -2085,7 +2085,7 @@ hr {
 
 .header .logo .logotype__title {
 	display: block;
-	font-family: "Jost";
+	font-family: "Geist", sans-serif;
 	font-size: 22px;
 	line-height: 1;
 	font-weight: 800;
@@ -2294,7 +2294,7 @@ hr {
 .m-titles .m-title {
 	margin-top: 0;
 	margin-bottom: 10px;
-	font-family: "Jost";
+	font-family: "Google Sans Flex", sans-serif;
 	font-size: 44px;
 	line-height: 1.3;
 	color: #000;
@@ -2338,7 +2338,7 @@ hr {
 .h-titles .h-title {
 	margin-top: 0;
 	margin-bottom: 0;
-	font-family: "Jost";
+	font-family: "Geist", sans-serif;
 	font-size: 54px;
 	line-height: 1;
 	color: #000;
@@ -2534,7 +2534,7 @@ hr {
 }
 
 .section.hero-started .title {
-	font-family: "Jost";
+	font-family: "Google Sans Flex", sans-serif;
 	font-size: 48px;
 	line-height: 1.2;
 	color: #FFF;
@@ -3169,7 +3169,7 @@ hr {
 
 .works-items.works-list-items .works-item .desc .name {
 	margin-bottom: 0;
-	font-family: "Jost";
+	font-family: "Geist", sans-serif;
 	font-size: 45px;
 	line-height: 1.2;
 	color: #000;
@@ -4339,7 +4339,7 @@ input.search-submit,
 	margin-bottom: 50px;
 	padding: 0;
 	position: relative;
-	font-family: 'Jost';
+	font-family: "Geist", sans-serif;
 	font-size: 18px;
 }
 
@@ -4705,7 +4705,6 @@ small {
 
 .section__comments .m-titles .m-title {
 	font-size: 34px;
-	font-family: 'Jost';
 	font-weight: 700;
 }
 
@@ -7822,7 +7821,7 @@ body.tp-magic-cursor #magic-cursor {
   transform: translateX(-50%);
   width: .2rem;
   height: 100%;
-  background-color: #FAFAFA;
+  background-color: #29a587;
 }
 
 .demo-container input {
@@ -7844,10 +7843,10 @@ body.tp-magic-cursor #magic-cursor {
   /* custom */
   height: 2.25rem;
   width: 2.25rem;
-  border: .25rem solid #fff;
+  border: .15rem solid #fff;
   border-radius: 50%;
   box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.1);
-  background-color: #fff;
+  background-color: #29a587;
   background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 height%3D%2224px%22 viewBox%3D%220 -960 960 960%22 width%3D%2224px%22 fill%3D%22%23000%22%3E%3Cpath d%3D%22M286.15-293.85 100-479.62l185.77-185.76 42.15 41.76-113 113.62h530.16l-113-113.62 42.15-41.76L860-479.62 674.23-293.85l-42.54-41.77 113.39-114H214.54l113.38 114-41.77 41.77Z%22/%3E%3C/svg%3E');
   background-size: cover;
   cursor: grab;
@@ -7859,7 +7858,7 @@ body.tp-magic-cursor #magic-cursor {
   border: .25rem solid #fff;
   border-radius: 50%;
   box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.1);
-  background-color: #fff;
+  background-color: #29a587;
   background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 height%3D%2224px%22 viewBox%3D%220 -960 960 960%22 width%3D%2224px%22 fill%3D%22%23000%22%3E%3Cpath d%3D%22M286.15-293.85 100-479.62l185.77-185.76 42.15 41.76-113 113.62h530.16l-113-113.62 42.15-41.76L860-479.62 674.23-293.85l-42.54-41.77 113.39-114H214.54l113.38 114-41.77 41.77Z%22/%3E%3C/svg%3E');
   background-size: cover;
   cursor: grab;
@@ -8325,3 +8324,12 @@ body.tp-magic-cursor #magic-cursor {
   transform:translateY(calc(-50% + 6px));
 }
 .dir-l:hover .hs-tip{transform:translateY(-50%);}
+
+
+.ba-tag{
+  position:absolute;top:16px;
+  padding:5px 13px;background:rgba(0,0,0,.65);backdrop-filter:blur(8px);
+  border-radius:100px;font-family:'JetBrains Mono',monospace;
+  font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;z-index:5;
+}
+.ba-tag-l{left:16px}.ba-tag-r{right:16px}

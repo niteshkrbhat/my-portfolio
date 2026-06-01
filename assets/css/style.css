@@ -977,7 +977,7 @@ hr {
 }
 
 .lui-section {
-	padding-bottom: 220px;
+	padding-bottom: 120px;
 }
 
 .disabled {
@@ -2272,7 +2272,7 @@ hr {
 }
 
 .section.section-inner.started-heading {
-	padding-top: 220px;
+	padding-top: 120px;
 	padding-bottom: 70px;
 	background: linear-gradient(180deg, #FFFFFF 0%, #F0EBE3 100%);
 	z-index: 3;
@@ -2386,10 +2386,10 @@ hr {
 
 .lui-bgtitle {
 	position: relative;
-	top: -50px;
+	top: -25px;
 	left: -50%;
 	width: 200%;
-	font-size: 350px;
+	font-size: 150px;
 	color: rgba(0, 0, 0, 0.02);
 	font-weight: bold;
 	line-height: 1px;
@@ -5339,10 +5339,10 @@ a.wp-block-button__link {
 
 @media screen and (max-width: 767px) {
 	.lui-section {
-		padding-bottom: 120px;
+		padding-bottom: 80px;
 	}
 	.lui-section-hero {
-		padding-bottom: 120px;
+		padding-bottom: 80px;
 	}
 	/*.container {
 		padding: 0 20px;
@@ -5938,12 +5938,6 @@ a.wp-block-button__link {
 	background: #fff;
 	padding: 10px 20px 20px 20px;
 	max-height: 0;
-}
-
-@media (max-width: 767px) {
-	.light-skin .pf-reveal .d-inner {
-		margin-top: -400%;
-	}
 }
 
 .dark-skin .pf-reveal .d-inner {
@@ -8486,4 +8480,62 @@ body.tp-magic-cursor #magic-cursor {
 	margin-top: 30px;
 	color: #29a587;
 	font-weight: 600;
+}
+
+.portfolio-wrap {
+	margin-bottom: 300px;
+}
+
+.numbers-item .icon i {
+	position: relative;
+    margin-top: 13px;
+}
+
+.swiper-wrapper {
+	height: auto;
+}
+
+.exp-company {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.exp-company-inner {
+	display: flex;
+	align-items: center;
+}
+
+@media (max-width: 767px) {
+	.light-skin .pf-reveal .d-inner {
+		margin-top: -400%;
+	}
+	.m-titles .m-subtitle strong, .m-titles .m-subtitle b {
+		font-size: 16px;
+	}
+	.hero-img {
+		display: none;
+	}
+	.award {
+		height: auto;
+		margin-bottom: 30px;
+	}
+	.lui-bgtitle {
+		/*top: -330px;*/
+	    font-size: 80px;
+	}
+	.swiper-container {
+		height: auto;
+	}
+	.portfolio-wrap {
+		margin-bottom: 0px;
+	}
+	.exp-company {
+		flex-direction: column;
+		align-items: baseline;
+	}
+	.exp-company-inner {
+		flex-direction: column;
+		align-items: baseline;
+	}
 }

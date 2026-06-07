@@ -289,8 +289,8 @@
             </section>
             <section class="cs-section">
                 <div class="container">
-                    <h2 class="cs-h"><strong>Understanding The Problem</strong></h2>
-                    <br>
+                    <!-- <h2 class="cs-h"><strong>Understanding The Problem</strong></h2>
+                    <br> -->
                     <h4>What is Apache NiFi?</h4>
                     <p class="cs-lead">Apache NiFi is a platform used by enterprises to move, transform, and automate data between systems. Think of it as a highway system for data. Just as highways connect cities and enable the movement of people and goods, NiFi connects applications, databases, cloud services, and enterprise systems to ensure data reaches the right destination efficiently and securely. Companies use it to:</p>
                     <div class="stat-row" style="margin-top:32px;">
@@ -335,58 +335,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <br><br>
-                <div class="container">
-                    <h4> The Challenge </h4>
-                    <p class="cs-lead">While NiFi is powerful, managing it at enterprise scale becomes increasingly difficult.</p>
-                    <div class="pq">
-                        <p>"While developers could build flows visually inside the NiFi canvas, operators responsible for deployment and maintenance lacked a dedicated operational layer."</p>
-                    </div>
-                    <div class="cs-table-wrap">
-                        <table class="cs-table">
-                            <thead>
-                                <tr>
-                                    <th>Teams face challenges such as</th>
-                                    <th>
-                                        <div class="col-hi-hd">Business Impact</div>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Multiple cluster management</td>
-                                    <td class="col-hi">Managing multiple clusters separately increased operational complexity and reduced efficiency.</td>
-                                </tr>
-                                <tr>
-                                    <td>Manual deployments</td>
-                                    <td class="col-hi">Repetitive deployment processes consumed valuable engineering time and increased human error.</td>
-                                </tr>
-                                <tr>
-                                    <td>Poor visibility into changes</td>
-                                    <td class="col-hi">Limited traceability made troubleshooting and accountability difficult.</td>
-                                </tr>
-                                <tr>
-                                    <td>No centralized governance</td>
-                                    <td class="col-hi">Inconsistent controls across environments created compliance and security challenges.</td>
-                                </tr>
-                                <tr>
-                                    <td>High dependency on NiFi specialists</td>
-                                    <td class="col-hi">Teams struggled to scale operations due to reliance on a few highly specialized users.</td>
-                                </tr>
-                                <tr>
-                                    <td>Deployment failures caused by configuration errors</td>
-                                    <td class="col-hi">Manual configuration issues frequently delayed releases and disrupted workflows.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <br><br>
-                    <div class="bg-radius">
-                        <img src="assets/images/screenshots/dfm-web/before.webp" alt="Before">
-                    </div>
-                    <div class="cs-caption">These challenges increase operational costs and slow down releases.</div>
-                    <div class="cs-insight">Drop-offs, outages, and runaway costs all peaked at the same moment: when a finished flow needed to move from canvas to cluster. That wasn't an engineering problem — it was a product gap.</div>
                 </div>
             </section>
             <section class="cs-section">
@@ -449,6 +397,58 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="container">
+                            <h4> The Challenge </h4>
+                            <p class="cs-lead">While NiFi is powerful, managing it at enterprise scale becomes increasingly difficult.</p>
+                            <div class="pq">
+                                <p>"While developers could build flows visually inside the NiFi canvas, operators responsible for deployment and maintenance lacked a dedicated operational layer."</p>
+                            </div>
+                            <div class="cs-table-wrap">
+                                <table class="cs-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Teams face challenges such as</th>
+                                            <th>
+                                                <div class="col-hi-hd">Business Impact</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Multiple cluster management</td>
+                                            <td class="col-hi">Managing multiple clusters separately increased operational complexity and reduced efficiency.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Manual deployments</td>
+                                            <td class="col-hi">Repetitive deployment processes consumed valuable engineering time and increased human error.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Poor visibility into changes</td>
+                                            <td class="col-hi">Limited traceability made troubleshooting and accountability difficult.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>No centralized governance</td>
+                                            <td class="col-hi">Inconsistent controls across environments created compliance and security challenges.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>High dependency on NiFi specialists</td>
+                                            <td class="col-hi">Teams struggled to scale operations due to reliance on a few highly specialized users.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Deployment failures caused by configuration errors</td>
+                                            <td class="col-hi">Manual configuration issues frequently delayed releases and disrupted workflows.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <br><br>
+                            <div class="bg-radius">
+                                <img src="assets/images/screenshots/dfm-web/before.webp" alt="Before">
+                            </div>
+                            <div class="cs-caption">These challenges increase operational costs and slow down releases.</div>
+                            <div class="cs-insight">Drop-offs, outages, and runaway costs all peaked at the same moment: when a finished flow needed to move from canvas to cluster. That wasn't an engineering problem — it was a product gap.</div>
+                        </div><br>
                         <div class="iter-item">
                             <div class="iter-node"></div>
                             <h4>Stakeholder Interviews</h4>

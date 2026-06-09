@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /assets/js/
+Disallow: /assets/fonts/
 
 Sitemap: https://niteshkrbhat.in/sitemap.xml

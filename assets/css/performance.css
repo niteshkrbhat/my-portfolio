@@ -1,30 +1,72 @@
-/* ============================================
-   PERFORMANCE.CSS — Add to all pages
-   ============================================ */
+/* =====================================================
+   PERFORMANCE.CSS — niteshkrbhat.in
+   Critical performance & rendering hints
+   ===================================================== */
 
-/* 1. Prevent layout shift from images */
+/* 1. Prevent CLS from images without explicit dimensions */
 img {
     height: auto;
     max-width: 100%;
 }
 
-/* 2. Defer rendering of below-fold sections */
-/* Apply this class to any section NOT visible on first load */
+/* 2. Contain below-fold sections — deferred rendering
+   Apply .below-fold to any section not visible on first load */
 .below-fold {
     content-visibility: auto;
-    contain-intrinsic-size: 0 500px;
+    contain-intrinsic-size: 0 600px;
 }
 
-/* 3. Smooth image appearance on lazy load */
+/* 3. Smooth fade-in for lazy-loaded images */
 img[loading="lazy"] {
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.35s ease;
 }
 img[loading="lazy"].loaded {
     opacity: 1;
 }
 
-/* 4. Prevent render-blocking web fonts */
+/* 4. Font-display: swap for custom @font-face rules
+   (this empty rule is a reminder — add font-display:swap
+   inside each @font-face block in your font files) */
 @font-face {
-    font-display: swap; /* Add this to any existing @font-face rules */
+    font-display: swap;
+}
+
+/* 5. Reduce motion for accessibility + perf */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* 6. GPU-accelerate hero video for smooth playback */
+#videoBg,
+#videoFg {
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* 7. table-bg optimisation hint (large PNG used as bg-image) */
+[style*="table-bg.png"] {
+    background-size: cover;
+    background-attachment: scroll; /* avoid fixed — kills GPU compositing on mobile */
+}
+
+/* 8. Skeleton shimmer for lazy-loaded project thumbnails
+   Removes the blank-box flash before images load */
+.sa-work-portfolio-thumb img[loading="lazy"]:not(.loaded) {
+    background: linear-gradient(90deg, #e8e8e8 25%, #f2f2f2 50%, #e8e8e8 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite;
+    min-height: 200px;
+}
+@keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
 }

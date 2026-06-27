@@ -1610,7 +1610,6 @@ hr {
 		display: block;
 		position: relative;
 		z-index: 20;
-		height: 100vh;
 	}
 
 	#mob-header .switcher-btn {

@@ -1608,6 +1608,9 @@ hr {
 @media screen and (max-width: 768px) {
 	#mob-header {
 		display: block;
+		position: relative;
+		z-index: 20;
+		height: 100vh;
 	}
 
 	#mob-header .switcher-btn {

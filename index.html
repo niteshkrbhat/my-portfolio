@@ -9,7 +9,7 @@
         <meta name="keywords" content="UI UX Designer, Figma, Product Designer, Senior UX Designer India, SaaS UX Designer, Fintech Designer, Mobile App Designer, Web App Designer, Dashboard Design, Web3 Designer, Freelance UI Designer India, Delhi Designer" />
         <meta name="author" content="Nitesh Bhat" />
         <meta name="robots" content="index, follow" />
-        <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#1A1816" media="(prefers-color-scheme: dark)" />
         <meta name="theme-color" content="#F5F7F5" media="(prefers-color-scheme: light)" />
         <link rel="canonical" href="https://niteshkrbhat.in/" />
         <meta property="og:type" content="website" />
@@ -34,23 +34,15 @@
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <!-- PERFORMANCE: Preload LCP (hero) image -->
-        <link rel="preload" as="image" href="assets/images/nitesh.png" fetchpriority="high">
         <link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/performance.css">
         <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" media="all">
         <link rel="stylesheet" href="assets/fonts/css/font-awesome.css" type="text/css" media="all">
-        <link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css" media="all">
         <link rel="stylesheet" href="assets/css/splitting.css" type="text/css" media="all">
-        <link rel="stylesheet" href="assets/css/swiper.css" type="text/css" media="all">
-        <!-- animate.css: loaded async — not needed for above-fold render -->
-        <link rel="stylesheet" href="assets/css/animate.css" media="print" onload="this.media='all'">
-        <noscript><link rel="stylesheet" href="assets/css/animate.css"></noscript>
         <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
         <link rel="stylesheet" href="assets/css/dark.css" type="text/css" media="all">
-        <!-- fancybox CSS: loaded async — only needed when lightbox opens -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" media="print" onload="this.media='all'">
-        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"></noscript>
+        <link rel="stylesheet" href="assets/css/cs-story.css" type="text/css" media="all">
+        <link rel="stylesheet" href="assets/css/home.css" type="text/css" media="all">
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -83,9 +75,12 @@
             }
         }
         </script>
+        <link rel="stylesheet" href="assets/css/site-shell.css" type="text/css" media="all" >
     </head>
     <body class="home light-skin tp-magic-cursor" data-bg-color="#F5F7F5">
-        <div id="magic-cursor" class="cursor-white-bg">
+        <script>if (/(?:^|;\s*)skin=dark(?:;|$)/.test(document.cookie)) document.body.className = document.body.className.replace('light-skin', 'dark-skin');</script>
+        <a class="skip-link" href="#cs">Skip to main content</a>
+        <div id="magic-cursor" class="cursor-white-bg" aria-hidden="true">
             <div id="ball"></div>
         </div>
 
@@ -118,7 +113,7 @@
                 </ul>
                 <div class="row">
                     <div class="align-right">
-                        <a href="#" class="switcher-btn">
+                        <a href="#" class="switcher-btn" role="button" aria-label="Dark mode" aria-pressed="false">
                             <span class="sw-before">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
                                     <path id="Dark_Theme" data-name="Dark Theme" fill="currentColor" d="M1759.46,111.076a0.819,0.819,0,0,0-.68.147,8.553,8.553,0,0,1-2.62,1.537,8.167,8.167,0,0,1-2.96.531,8.655,8.655,0,0,1-8.65-8.682,9.247,9.247,0,0,1,.47-2.864,8.038,8.038,0,0,1,1.42-2.54,0.764,0.764,0,0,0-.12-1.063,0.813,0.813,0,0,0-.68-0.148,11.856,11.856,0,0,0-6.23,4.193,11.724,11.724,0,0,0,1,15.387,11.63,11.63,0,0,0,19.55-5.553A0.707,0.707,0,0,0,1759.46,111.076Zm-4.5,6.172a10.137,10.137,0,0,1-14.29-14.145,10.245,10.245,0,0,1,3.38-2.836c-0.14.327-.29,0.651-0.41,1.006a9.908,9.908,0,0,0-.56,3.365,10.162,10.162,0,0,0,10.15,10.189,9.776,9.776,0,0,0,3.49-.62,11.659,11.659,0,0,0,1.12-.473A10.858,10.858,0,0,1,1754.96,117.248Z" transform="translate(-1737 -98)" />
@@ -146,7 +141,7 @@
                             </div>
                         </div>
                         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align-right">
-                            <a href="#" class="switcher-btn">
+                            <a href="#" class="switcher-btn" role="button" aria-label="Dark mode" aria-pressed="false">
                                 <span class="sw-before">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
                                         <path id="Dark_Theme" data-name="Dark Theme" fill="#000" d="M1759.46,111.076a0.819,0.819,0,0,0-.68.147,8.553,8.553,0,0,1-2.62,1.537,8.167,8.167,0,0,1-2.96.531,8.655,8.655,0,0,1-8.65-8.682,9.247,9.247,0,0,1,.47-2.864,8.038,8.038,0,0,1,1.42-2.54,0.764,0.764,0,0,0-.12-1.063,0.813,0.813,0,0,0-.68-0.148,11.856,11.856,0,0,0-6.23,4.193,11.724,11.724,0,0,0,1,15.387,11.63,11.63,0,0,0,19.55-5.553A0.707,0.707,0,0,0,1759.46,111.076Zm-4.5,6.172a10.137,10.137,0,0,1-14.29-14.145,10.245,10.245,0,0,1,3.38-2.836c-0.14.327-.29,0.651-0.41,1.006a9.908,9.908,0,0,0-.56,3.365,10.162,10.162,0,0,0,10.15,10.189,9.776,9.776,0,0,0,3.49-.62,11.659,11.659,0,0,0,1.12-.473A10.858,10.858,0,0,1,1754.96,117.248Z" transform="translate(-1737 -98)" />
@@ -158,11 +153,11 @@
                                     </svg>
                                 </span>
                             </a>
-                            <a href="#" class="menu-btn">
+                            <a href="#" class="menu-btn" role="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
                                 <span></span>
                                 <span></span>
                             </a>
-                            <div class="menu-full-overlay">
+                            <div class="menu-full-overlay" id="site-menu">
                                 <div class="menu-full-container">
                                     <div class="container">
                                         <div class="row">
@@ -179,7 +174,7 @@
                                                             <a class="splitting-text-anim-2" data-splitting="chars" href="/#award-section">Award</a>
                                                         </li>
                                                         <li class="menu-item menu-item-has-children has-children">
-                                                            <a class="splitting-text-anim-2" data-splitting="chars">Works</a>
+                                                            <a class="splitting-text-anim-2" data-splitting="chars" href="#" role="button" aria-expanded="false">Works</a>
                                                             <ul class="sub-menu">
                                                                 <li class="menu-item">
                                                                     <a class="splitting-text-anim-1" data-splitting="chars" href="/website-design">Website Design</a>
@@ -210,10 +205,10 @@
                                                     </ul>
                                                 </div>
                                                 <div class="menu-social-links">
-                                                    <a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/niteshkrbhat/">
+                                                    <a target="_blank" rel="nofollow noopener" href="https://www.linkedin.com/in/niteshkrbhat/" aria-label="LinkedIn">
                                                         <i aria-hidden="true" class="fab fa-linkedin"></i>
                                                     </a>
-                                                    <a target="_blank" rel="nofollow" href="https://wa.me/7889514480?text=I%20am%20interested%20in%20your%20services.%20How%20to%20get%20started%3F">
+                                                    <a target="_blank" rel="nofollow noopener" href="https://wa.me/7889514480?text=I%20am%20interested%20in%20your%20services.%20How%20to%20get%20started%3F" aria-label="WhatsApp">
                                                         <i aria-hidden="true" class="fab fa-whatsapp"></i>
                                                     </a>
                                                 </div>
@@ -230,11 +225,9 @@
             </header>
 
             <div class="wrapper">
-
-                <!-- ==================== HERO SECTION ==================== -->
-                <section class="hero" id="hero">
+            <section class="hero" id="hero" aria-label="Introduction video">
                     <!-- ① Ambient blur background -->
-                    <div class="video-bg">
+                    <div class="video-bg" aria-hidden="true">
                         <video id="videoBg" src="video.webm" autoplay loop muted playsinline preload="none"></video>
                     </div>
                     <!-- ② Foreground full-bleed video — audio source, no loop (managed in JS) -->
@@ -247,16 +240,16 @@
                     <div class="overlay-bottom"></div>
                     <div class="grain"></div>
                     <!-- ⑤ Timecode -->
-                    <div class="timecode" id="timecode">00:00:00:00</div>
+                    <div class="timecode" id="timecode" aria-hidden="true">00:00:00:00</div>
                     <!-- ⑥ Glass controls -->
                     <div class="controls">
                         <button class="ctrl-btn" id="btnMute" aria-label="Toggle sound" title="Toggle sound">
                             <!-- muted icon (default) -->
                             <svg id="iconMuted" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.63 3.63a1 1 0 0 0-1.41 1.41L7.29 10.1 7 10.34V13.6l.29.24-5.07 5.13a1 1 0 0 0 1.41 1.41l18-18a1 1 0 0 0-1.41-1.41L3.63 3.63ZM9 10.62V5.27L13.73 10 9 10.62ZM15 12l-2.19-2.19 2.19-2.2V12Zm2 0V6.73l1.55 1.55A5 5 0 0 1 20 12c0 1.2-.42 2.3-1.12 3.16l1.42 1.43A7 7 0 0 0 22 12a7 7 0 0 0-2.23-5.1L19 6.14V3.41L9 13.41V15a1 1 0 0 0 2 0v-.18l4-4V12Z"/>
+                                <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"/>
                             </svg>
                             <!-- unmuted icon -->
-                            <svg id="iconUnmuted" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                            <svg id="iconUnmuted" class="is-off" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
                             </svg>
                         </button>
@@ -266,13 +259,13 @@
                                 <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
                             </svg>
                             <!-- play icon -->
-                            <svg id="iconPlay" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                            <svg id="iconPlay" class="is-off" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 5v14l11-7z"/>
                             </svg>
                         </button>
                     </div>
                     <!-- ⑦ "Tap for sound" badge -->
-                    <div class="sound-badge" id="soundBadge">
+                    <div class="sound-badge" id="soundBadge" aria-hidden="true">
                         <div class="waves">
                             <div class="wave-bar"></div>
                             <div class="wave-bar"></div>
@@ -282,912 +275,463 @@
                         </div>
                         <p>Tap for sound</p>
                     </div>
-                    <!-- ⑧ Content -->
-                    <div class="content">
-                        <div class="lui-started v-line v-line-left">
-                            <div class="section hero-started">
-                                <div class="content scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                    <div class="titles">
-                                        <div class="label" style="color: #fff;">Hi, I am Nitesh Kumar Bhat.</div>
-                                        <h1 class="title splitting-text-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
-                                            <span><b>Senior UI/UX </b> & Product Designer</span>
-                                        </h1>
-                                        <div class="lui-subtitle">I turn user problems into clean, intuitive digital products.</div>
-                                    </div>
-                                    <div class="description">
-                                        <div class="social-links">
-                                            <a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/niteshkrbhat/">
-                                                <i aria-hidden="true" class="fab fa-linkedin"></i>
-                                            </a>
-                                            <a target="_blank" rel="nofollow" href="https://wa.me/7889514480?text=I%20am%20interested%20in%20your%20services.%20How%20to%20get%20started%3F">
-                                                <i aria-hidden="true" class="fab fa-whatsapp"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="bts">
-                                        <a target="_blank" href="resume.pdf" class="btn">
-                                            <span>Download Resume</span>
-                                        </a>
-                                        <a href="#works-section" class="btn-lnk" style="color: #fff;">My Works</a>
-                                    </div>
+                <div class="hm-hero">
+                    <p class="hm-hello"><i aria-hidden="true"></i>Hi, I am Nitesh Kumar Bhat.</p>
+                    <h1><em>Senior UI/UX</em> &amp; Product Designer</h1>
+                    <p class="hm-hero-lead">I turn user problems into clean, intuitive digital products.</p>
+                    <div class="hm-hero-actions">
+                        <a class="hm-btn hm-btn--primary" href="#works-section">View my work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        <a class="hm-btn hm-btn--ghost" href="resume.pdf" target="_blank" rel="noopener">Download resume <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 12l6 6 6-6M5 20h14"/></svg></a>
+                        <div class="hm-social"><a href="https://www.linkedin.com/in/niteshkrbhat/" target="_blank" rel="nofollow noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.64-1.6-2.64-1.62 0-1.86 1.26-1.86 2.55v4.92h-4z"/></svg></a><a href="https://wa.me/7889514480?text=I%20am%20interested%20in%20your%20services.%20How%20to%20get%20started%3F" target="_blank" rel="nofollow noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.16-1.5A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.06.9.92-2.98-.2-.31a8.2 8.2 0 1 1 6.84 3.72zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.71-1.33.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.3-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.66 4.22 3.73 1.57.68 2.19.74 2.97.62.48-.07 1.46-.6 1.67-1.18.2-.57.2-1.07.14-1.17-.06-.11-.22-.17-.47-.29z"/></svg></a></div>
+                    </div>
+                    <dl class="hm-facts"><div><dt>Years designing products</dt><dd>7<b>+</b></dd></div><div><dt>Award &middot; Ksolves</dt><dd>Best Designer</dd></div><div><dt>In-depth case studies</dt><dd>6</dd></div><div><dt>Countries served</dt><dd>4</dd></div></dl>
+                </div>
+            </section>
+
+            <main class="cs cs--voices" id="cs">
+                <div class="cs-progress" aria-hidden="true"></div>
+                <div class="cs-wrap">
+                    <section class="hm-sec" id="services-section" aria-labelledby="h-services">
+                        <div class="hm-intro rv">
+                            <div><span class="eyebrow">What I do</span><h2 id="h-services">Design and front-end, <em>from research to release</em></h2></div>
+                            <p class="hm-intro-text">I am a skilled UI/UX designer with over 7 years of experience in creating user-centric designs for web and mobile applications. My expertise lies in leading design projects across various industries, enhancing usability, and collaborating effectively with cross-functional teams. I am passionate about utilizing cutting-edge design tools and methodologies to deliver high-quality user experiences</p>
+                        </div>
+                        <dl class="hm-stats rv"><div><dt>Years of experience</dt><dd>7<b>+</b></dd></div><div><dt>Companies</dt><dd>4</dd></div><div><dt>Services</dt><dd>6</dd></div><div><dt>Client testimonials</dt><dd>14</dd></div></dl>
+                        <div class="hm-explorer rv">
+                            <div class="hm-ex-list" role="tablist" aria-label="Services" aria-orientation="vertical" data-autoplay="6000">
+                                <button type="button" class="hm-ex-tab" role="tab" id="svc-tab-0" aria-controls="svc-0" aria-selected="true"><span class="hm-ex-num">01</span><span class="hm-ex-name"><strong>Research &amp; Strategy</strong><small>UX</small></span><span class="hm-ex-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+                                <button type="button" class="hm-ex-tab" role="tab" id="svc-tab-1" aria-controls="svc-1" aria-selected="false" tabindex="-1"><span class="hm-ex-num">02</span><span class="hm-ex-name"><strong>Web App &amp; Dashboard</strong><small>Design</small></span><span class="hm-ex-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+                                <button type="button" class="hm-ex-tab" role="tab" id="svc-tab-2" aria-controls="svc-2" aria-selected="false" tabindex="-1"><span class="hm-ex-num">03</span><span class="hm-ex-name"><strong>Mobile App</strong><small>Design</small></span><span class="hm-ex-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+                                <button type="button" class="hm-ex-tab" role="tab" id="svc-tab-3" aria-controls="svc-3" aria-selected="false" tabindex="-1"><span class="hm-ex-num">04</span><span class="hm-ex-name"><strong>Website UI/UX</strong><small>Design</small></span><span class="hm-ex-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+                                <button type="button" class="hm-ex-tab" role="tab" id="svc-tab-4" aria-controls="svc-4" aria-selected="false" tabindex="-1"><span class="hm-ex-num">05</span><span class="hm-ex-name"><strong>Frontend Development</strong><small>Development</small></span><span class="hm-ex-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+                                <button type="button" class="hm-ex-tab" role="tab" id="svc-tab-5" aria-controls="svc-5" aria-selected="false" tabindex="-1"><span class="hm-ex-num">06</span><span class="hm-ex-name"><strong>Brand &amp; Graphic Design</strong><small>Design</small></span><span class="hm-ex-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+                            </div>
+                            <div class="hm-ex-panels">
+                                <article class="hm-ex-panel" id="svc-0" role="tabpanel" aria-labelledby="svc-tab-0">
+                                    <div class="hm-ex-stage"><svg class="il" viewBox="0 0 800 370" role="img" aria-label="Research illustration: affinity-map sticky notes, a user persona card, analytics under a magnifying glass and a user journey line">
+<path class="i-stk i-flow" d="M60 318 C 190 262, 290 350, 410 300 S 630 250, 750 292"/>
+<circle class="i-ac2" cx="60" cy="318" r="8"/><circle class="i-y" cx="250" cy="309" r="8"/><circle class="i-p" cx="410" cy="300" r="8"/><circle class="i-ac2" cx="590" cy="268" r="8"/><circle class="i-ac2" cx="750" cy="292" r="8"/>
+<text class="i-t11 i-tw" x="60" y="348" text-anchor="middle">Discover</text><text class="i-t11 i-tw" x="250" y="339" text-anchor="middle">Define</text><text class="i-t11 i-tw" x="410" y="330" text-anchor="middle">Ideate</text><text class="i-t11 i-tw" x="590" y="298" text-anchor="middle">Test</text><text class="i-t11 i-tw" x="750" y="322" text-anchor="middle">Deliver</text>
+<g class="fl"><g class="sh">
+<g transform="rotate(-8 130 100)"><rect class="i-y" x="88" y="58" width="84" height="84" rx="6"/><rect class="i-note" x="100" y="78" width="56" height="6" rx="3"/><rect class="i-note" x="100" y="92" width="44" height="6" rx="3"/><rect class="i-note" x="100" y="106" width="50" height="6" rx="3"/></g>
+<g transform="rotate(7 190 170)"><rect class="i-ac2" x="148" y="128" width="84" height="84" rx="6"/><rect class="i-note" x="160" y="148" width="58" height="6" rx="3"/><rect class="i-note" x="160" y="162" width="40" height="6" rx="3"/><rect class="i-note" x="160" y="176" width="52" height="6" rx="3"/></g>
+<g transform="rotate(-4 120 225)"><rect class="i-p" x="80" y="186" width="78" height="78" rx="6"/><rect class="i-note" x="92" y="206" width="50" height="6" rx="3"/><rect class="i-note" x="92" y="220" width="38" height="6" rx="3"/></g>
+</g></g>
+<g class="sh">
+<rect class="i-card" x="290" y="40" width="210" height="210" rx="18"/>
+<circle class="i-ys" cx="395" cy="100" r="34"/><circle class="i-ac" cx="395" cy="92" r="12"/><path class="i-ac" d="M372 126 a23 19 0 0 1 46 0 z"/>
+<rect class="i-ink" x="345" y="148" width="100" height="11" rx="5.5"/><rect class="i-ln" x="360" y="167" width="70" height="7" rx="3.5"/>
+<rect class="i-acs" x="314" y="188" width="74" height="22" rx="11"/><text class="i-t11 i-tac" x="351" y="203" text-anchor="middle">Goals</text>
+<rect class="i-ps" x="396" y="188" width="80" height="22" rx="11"/><text class="i-t11 i-tpk" x="436" y="203" text-anchor="middle">Pain points</text>
+<rect class="i-ln2" x="314" y="222" width="162" height="6" rx="3"/><rect class="i-ln2" x="314" y="234" width="120" height="6" rx="3"/>
+</g>
+<g class="fl fl2"><rect class="i-ac" x="470" y="20" width="96" height="40" rx="20"/><path class="i-ac" d="M488 56 l-6 14 l18 -12 z"/><text class="i-t15 i-tw" x="518" y="46" text-anchor="middle">Why?</text></g>
+<g class="sh">
+<rect class="i-card" x="545" y="78" width="195" height="150" rx="16"/><rect class="i-ink" x="565" y="96" width="70" height="8" rx="4"/>
+<rect class="i-ln" x="568" y="168" width="18" height="42" rx="4"/><rect class="i-ln" x="596" y="150" width="18" height="60" rx="4"/><rect class="i-ac" x="624" y="128" width="18" height="82" rx="4"/><rect class="i-ln" x="652" y="160" width="18" height="50" rx="4"/><rect class="i-ln" x="680" y="140" width="18" height="70" rx="4"/><rect class="i-ln" x="708" y="176" width="18" height="34" rx="4"/>
+</g>
+<g class="fl"><circle class="i-lens" cx="633" cy="150" r="34"/><line class="i-handle" x1="657" y1="174" x2="684" y2="201"/></g>
+</svg></div>
+                                    <div class="hm-ex-copy"><div><span class="hm-ex-kind"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M8 11h6M11 8v6"/></svg></i>UX &middot; 01 / 06</span><h3>Research &amp; Strategy</h3><p>I map user behaviour before any screen is designed — turning ambiguity into a clear, validated design direction.</p><a class="hm-ex-go" href="/data-flow-manager-project">Read a case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div><h4>What you get</h4><ul class="hm-ex-items"><li>User Interviews &amp; Surveys</li><li>Competitor Analysis</li><li>Personas &amp; Journey Maps</li><li>Usability Testing</li></ul></div></div>
+                                </article>
+                                <article class="hm-ex-panel" id="svc-1" role="tabpanel" aria-labelledby="svc-tab-1" hidden>
+                                    <div class="hm-ex-stage"><svg class="il" viewBox="0 0 800 370" role="img" aria-label="Dashboard illustration: an admin web app with sidebar navigation, KPI tiles, a bar chart, a donut chart and a revenue tooltip">
+<g class="sh">
+<rect class="i-card" x="100" y="26" width="600" height="318" rx="16"/>
+<rect class="i-card2" x="100" y="26" width="600" height="34" rx="16"/><rect class="i-card2" x="100" y="44" width="600" height="16"/>
+<circle class="i-dr" cx="122" cy="43" r="5"/><circle class="i-dy" cx="138" cy="43" r="5"/><circle class="i-dg" cx="154" cy="43" r="5"/><rect class="i-card" x="300" y="34" width="200" height="18" rx="9"/>
+<rect class="i-card2" x="100" y="60" width="118" height="270"/>
+<circle class="i-ac" cx="124" cy="84" r="9"/><rect class="i-ink" x="140" y="80" width="50" height="8" rx="4"/>
+<rect class="i-ac" x="112" y="106" width="94" height="26" rx="8"/><rect class="i-wl" x="124" y="116" width="50" height="6" rx="3"/>
+<rect class="i-ln" x="124" y="148" width="58" height="6" rx="3"/><rect class="i-ln" x="124" y="172" width="48" height="6" rx="3"/><rect class="i-ln" x="124" y="196" width="64" height="6" rx="3"/><rect class="i-ln" x="124" y="220" width="40" height="6" rx="3"/>
+<rect class="i-card2" x="236" y="76" width="108" height="66" rx="12"/><circle class="i-ac" cx="254" cy="96" r="8"/><rect class="i-ln" x="270" y="93" width="50" height="6" rx="3"/><text class="i-t18 i-tk" x="248" y="128">12.4k</text>
+<rect class="i-card2" x="352" y="76" width="108" height="66" rx="12"/><circle class="i-y" cx="370" cy="96" r="8"/><rect class="i-ln" x="386" y="93" width="50" height="6" rx="3"/><text class="i-t18 i-tk" x="364" y="128">98%</text>
+<rect class="i-card2" x="468" y="76" width="108" height="66" rx="12"/><circle class="i-b" cx="486" cy="96" r="8"/><rect class="i-ln" x="502" y="93" width="50" height="6" rx="3"/><text class="i-t18 i-tk" x="480" y="128">$84k</text>
+<rect class="i-card2" x="584" y="76" width="108" height="66" rx="12"/><circle class="i-p" cx="602" cy="96" r="8"/><rect class="i-ln" x="618" y="93" width="50" height="6" rx="3"/><text class="i-t18 i-tk" x="596" y="128">2.1x</text>
+<rect class="i-card2" x="236" y="156" width="290" height="172" rx="12"/><rect class="i-ink" x="252" y="172" width="80" height="8" rx="4"/>
+<rect class="i-ln2" x="252" y="200" width="258" height="1"/><rect class="i-ln2" x="252" y="240" width="258" height="1"/><rect class="i-ln2" x="252" y="280" width="258" height="1"/>
+<rect class="i-ac2" x="258" y="250" width="16" height="60" rx="4"/><rect class="i-ac2" x="288" y="220" width="16" height="90" rx="4"/><rect class="i-ac2" x="318" y="240" width="16" height="70" rx="4"/><rect class="i-ac2" x="348" y="190" width="16" height="120" rx="4"/><rect class="i-ac2" x="378" y="225" width="16" height="85" rx="4"/><rect class="i-ac2" x="408" y="180" width="16" height="130" rx="4"/><rect class="i-ac2" x="438" y="210" width="16" height="100" rx="4"/><rect class="i-ac" x="468" y="170" width="16" height="140" rx="4"/>
+<rect class="i-card2" x="540" y="156" width="152" height="172" rx="12"/>
+<circle class="i-dtrack" cx="616" cy="226" r="42"/>
+<circle class="i-darc i-darc1" cx="616" cy="226" r="42" stroke-dasharray="158 264" transform="rotate(-90 616 226)"/>
+<circle class="i-darc i-darc2" cx="616" cy="226" r="42" stroke-dasharray="60 264" stroke-dashoffset="-158" transform="rotate(-90 616 226)"/>
+<circle class="i-darc i-darc3" cx="616" cy="226" r="42" stroke-dasharray="30 264" stroke-dashoffset="-218" transform="rotate(-90 616 226)"/>
+<text class="i-t16 i-tk" x="616" y="232" text-anchor="middle">64%</text>
+<rect class="i-ac" x="560" y="290" width="10" height="10" rx="3"/><rect class="i-ln" x="576" y="292" width="34" height="6" rx="3"/><rect class="i-y" x="622" y="290" width="10" height="10" rx="3"/><rect class="i-ln" x="638" y="292" width="34" height="6" rx="3"/>
+</g>
+<g class="fl"><g class="sh"><rect class="i-ink" x="334" y="158" width="118" height="48" rx="10"/><path class="i-ink" d="M451 176 l11 6 l-11 6 z"/><text class="i-t11 i-tw2" x="348" y="177">Revenue</text><text class="i-t16 i-tg" x="348" y="197">+24.6%</text></g></g>
+</svg></div>
+                                    <div class="hm-ex-copy"><div><span class="hm-ex-kind"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg></i>Design &middot; 02 / 06</span><h3>Web App &amp; Dashboard</h3><p>I design different dashboards and admin panels where dense information feels intuitive at a glance.</p><a class="hm-ex-go" href="/webapp-design">See web app designs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div><h4>What you get</h4><ul class="hm-ex-items"><li>Information Architecture &amp; Wireframes</li><li>High-Fidelity Figma Prototypes</li><li>Design Systems &amp; Components</li><li>Handoff Documentation</li></ul></div></div>
+                                </article>
+                                <article class="hm-ex-panel" id="svc-2" role="tabpanel" aria-labelledby="svc-tab-2" hidden>
+                                    <div class="hm-ex-stage"><svg class="il" viewBox="0 0 800 370" role="img" aria-label="Mobile app illustration: three phone screens showing onboarding, a home screen with a tap gesture, and a checkout flow">
+<path class="i-stk i-flow" d="M262 50 Q300 6 330 34"/><path class="i-ac2" d="M330 34 l-12 -2 l6 -9 z"/>
+<path class="i-stk i-flow" d="M470 34 Q500 6 540 50"/><path class="i-ac2" d="M540 50 l-3 -12 l10 4 z"/>
+<g class="sh" transform="rotate(-7 210 200)">
+<rect class="i-bez" x="135" y="55" width="150" height="290" rx="26"/><rect class="i-card" x="143" y="63" width="134" height="274" rx="20"/><rect class="i-bez" x="190" y="69" width="40" height="8" rx="4"/>
+<circle class="i-acs" cx="210" cy="150" r="44"/><circle class="i-ac" cx="210" cy="150" r="18"/><circle class="i-y" cx="240" cy="124" r="8"/><circle class="i-p" cx="178" cy="178" r="6"/>
+<rect class="i-ink" x="162" y="212" width="96" height="10" rx="5"/><rect class="i-ln" x="170" y="230" width="80" height="6" rx="3"/><rect class="i-ln" x="178" y="242" width="64" height="6" rx="3"/>
+<circle class="i-ac" cx="200" cy="272" r="3.5"/><circle class="i-ln" cx="210" cy="272" r="3.5"/><circle class="i-ln" cx="220" cy="272" r="3.5"/>
+<rect class="i-ac" x="158" y="290" width="104" height="30" rx="15"/><text class="i-t11 i-tw" x="210" y="309" text-anchor="middle">Get started</text>
+</g>
+<g class="sh" transform="rotate(7 590 200)">
+<rect class="i-bez" x="515" y="55" width="150" height="290" rx="26"/><rect class="i-card" x="523" y="63" width="134" height="274" rx="20"/><rect class="i-bez" x="570" y="69" width="40" height="8" rx="4"/>
+<rect class="i-ink" x="540" y="92" width="70" height="9" rx="4.5"/>
+<rect class="i-card2" x="538" y="112" width="104" height="58" rx="10"/><circle class="i-ps" cx="558" cy="141" r="11"/><rect class="i-ink" x="576" y="134" width="52" height="7" rx="3.5"/><rect class="i-ln" x="576" y="146" width="36" height="5" rx="2.5"/>
+<rect class="i-inp" x="538" y="184" width="104" height="26" rx="8"/><rect class="i-ln" x="548" y="194" width="44" height="6" rx="3"/>
+<rect class="i-inp" x="538" y="218" width="104" height="26" rx="8"/><rect class="i-ln" x="548" y="228" width="60" height="6" rx="3"/>
+<rect class="i-acs" x="538" y="256" width="34" height="18" rx="9"/><circle class="i-ac" cx="563" cy="265" r="7"/><rect class="i-ln" x="580" y="262" width="50" height="6" rx="3"/>
+<rect class="i-ink" x="538" y="290" width="104" height="30" rx="15"/><text class="i-t11 i-tw" x="590" y="309" text-anchor="middle">Pay $42</text>
+</g>
+<g class="sh">
+<rect class="i-bez" x="325" y="30" width="150" height="310" rx="26"/><rect class="i-card" x="333" y="38" width="134" height="294" rx="20"/><rect class="i-bez" x="380" y="44" width="40" height="8" rx="4"/>
+<rect class="i-ink" x="348" y="66" width="70" height="9" rx="4.5"/><circle class="i-ys" cx="450" cy="70" r="9"/>
+<rect class="i-ac" x="346" y="88" width="108" height="70" rx="12"/><rect class="i-wl" x="358" y="102" width="50" height="6" rx="3"/><text class="i-t16 i-tw" x="358" y="140">$2,480</text>
+<rect class="i-acs" x="346" y="170" width="32" height="32" rx="10"/><rect class="i-ys" x="384" y="170" width="32" height="32" rx="10"/><rect class="i-bs" x="422" y="170" width="32" height="32" rx="10"/>
+<circle class="i-ac" cx="362" cy="186" r="6"/><circle class="i-y" cx="400" cy="186" r="6"/><circle class="i-b" cx="438" cy="186" r="6"/>
+<circle class="i-card2" cx="360" cy="226" r="11"/><rect class="i-ink" x="378" y="219" width="54" height="6" rx="3"/><rect class="i-ln2" x="378" y="229" width="38" height="5" rx="2.5"/>
+<circle class="i-card2" cx="360" cy="256" r="11"/><rect class="i-ink" x="378" y="249" width="46" height="6" rx="3"/><rect class="i-ln2" x="378" y="259" width="30" height="5" rx="2.5"/>
+<circle class="i-card2" cx="360" cy="286" r="11"/><rect class="i-ink" x="378" y="279" width="58" height="6" rx="3"/><rect class="i-ln2" x="378" y="289" width="34" height="5" rx="2.5"/>
+<rect class="i-card2" x="341" y="304" width="118" height="22" rx="11"/><circle class="i-ac" cx="364" cy="315" r="4"/><circle class="i-ln" cx="388" cy="315" r="4"/><circle class="i-ln" cx="412" cy="315" r="4"/><circle class="i-ln" cx="436" cy="315" r="4"/>
+</g>
+<circle class="i-ripple" cx="424" cy="128" r="22"/><circle class="i-tap" cx="424" cy="128" r="10"/>
+</svg></div>
+                                    <div class="hm-ex-copy"><div><span class="hm-ex-kind"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></i>Design &middot; 03 / 06</span><h3>Mobile App</h3><p>IOS and Android experiences designed for real thumbs. I design for one-handed use, fast task completion, &amp; delight in the details.</p><a class="hm-ex-go" href="/mobile-app-design">See mobile apps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div><h4>What you get</h4><ul class="hm-ex-items"><li>User Flows &amp; Wireframes</li><li>iOS &amp; Android UI Design</li><li>Interactive Figma Prototypes</li><li>Gesture &amp; Motion Specifications</li></ul></div></div>
+                                </article>
+                                <article class="hm-ex-panel" id="svc-3" role="tabpanel" aria-labelledby="svc-tab-3" hidden>
+                                    <div class="hm-ex-stage"><svg class="il" viewBox="0 0 800 370" role="img" aria-label="Website illustration: a wireframe behind a finished landing page with navigation, headline, call-to-action button, hero image and feature cards">
+<rect class="i-wt" x="200" y="18" width="520" height="300" rx="14"/>
+<rect class="i-wt" x="230" y="34" width="140" height="14" rx="4"/><rect class="i-wt" x="400" y="34" width="120" height="14" rx="4"/>
+<text class="i-t11 i-tw2" x="706" y="44" text-anchor="end">Wireframe</text>
+<g class="sh">
+<rect class="i-card" x="90" y="60" width="540" height="290" rx="16"/>
+<rect class="i-card2" x="90" y="60" width="540" height="30" rx="16"/><rect class="i-card2" x="90" y="76" width="540" height="14"/>
+<circle class="i-dr" cx="110" cy="75" r="5"/><circle class="i-dy" cx="126" cy="75" r="5"/><circle class="i-dg" cx="142" cy="75" r="5"/>
+<circle class="i-ac" cx="118" cy="112" r="9"/><rect class="i-ink" x="134" y="108" width="46" height="8" rx="4"/>
+<rect class="i-ln" x="330" y="109" width="40" height="6" rx="3"/><rect class="i-ln" x="384" y="109" width="40" height="6" rx="3"/><rect class="i-ln" x="438" y="109" width="40" height="6" rx="3"/>
+<rect class="i-ink" x="540" y="101" width="70" height="22" rx="11"/><text class="i-t10 i-tw" x="575" y="116" text-anchor="middle">Contact</text>
+<rect class="i-acs" x="116" y="140" width="80" height="16" rx="8"/>
+<rect class="i-ink" x="116" y="166" width="230" height="18" rx="6"/><rect class="i-ink" x="116" y="192" width="110" height="18" rx="6"/><rect class="i-ac" x="232" y="192" width="80" height="18" rx="6"/>
+<rect class="i-ln" x="116" y="222" width="210" height="7" rx="3.5"/><rect class="i-ln" x="116" y="236" width="170" height="7" rx="3.5"/>
+<rect class="i-ac" x="116" y="258" width="108" height="32" rx="16"/><text class="i-t11 i-tw" x="170" y="278" text-anchor="middle">Get started</text>
+<rect class="i-ghost" x="232" y="258" width="90" height="32" rx="16"/><rect class="i-ln" x="254" y="271" width="46" height="6" rx="3"/>
+<rect class="i-acs" x="380" y="138" width="226" height="150" rx="14"/><circle class="i-y" cx="560" cy="172" r="18"/>
+<path class="i-ac" d="M392 288 L460 212 L512 260 L548 228 L606 288 Z"/><path class="i-ac2" d="M392 288 L430 250 L470 288 Z"/>
+<rect class="i-card2" x="116" y="304" width="150" height="32" rx="10"/><rect class="i-ys" x="126" y="312" width="16" height="16" rx="5"/><rect class="i-ln" x="150" y="317" width="80" height="6" rx="3"/>
+<rect class="i-card2" x="280" y="304" width="150" height="32" rx="10"/><rect class="i-bs" x="290" y="312" width="16" height="16" rx="5"/><rect class="i-ln" x="314" y="317" width="80" height="6" rx="3"/>
+<rect class="i-card2" x="444" y="304" width="162" height="32" rx="10"/><rect class="i-ps" x="454" y="312" width="16" height="16" rx="5"/><rect class="i-ln" x="478" y="317" width="80" height="6" rx="3"/>
+</g>
+<circle class="i-ripple i-ripple-ink" cx="200" cy="276" r="18"/>
+<path class="i-cursor" d="M200 276 l0 26 l7 -6 l5 11 l5 -2 l-5 -11 l9 0 z"/>
+<g class="fl"><line class="i-lead" x1="606" y1="182" x2="644" y2="166"/><rect class="i-y" x="642" y="150" width="130" height="30" rx="15"/><text class="i-t11 i-tk" x="707" y="169" text-anchor="middle">Clear hierarchy</text></g>
+<g class="fl fl2"><line class="i-lead" x1="606" y1="320" x2="650" y2="278"/><rect class="i-p" x="650" y="262" width="122" height="30" rx="15"/><text class="i-t11 i-tk" x="711" y="281" text-anchor="middle">Responsive grid</text></g>
+</svg></div>
+                                    <div class="hm-ex-copy"><div><span class="hm-ex-kind"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M6 6.5h.01M9 6.5h.01"/></svg></i>Design &middot; 04 / 06</span><h3>Website UI/UX</h3><p>Research-led website design that converts. Every layout decision is intentional — brand, hierarchy, and user flow working as one.</p><a class="hm-ex-go" href="/website-design">See website designs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div><h4>What you get</h4><ul class="hm-ex-items"><li>Wireframing &amp; Moodboarding</li><li>Responsive Figma Design</li><li>Landing Page Optimisation</li><li>SEO-friendly Structure</li></ul></div></div>
+                                </article>
+                                <article class="hm-ex-panel" id="svc-4" role="tabpanel" aria-labelledby="svc-tab-4" hidden>
+                                    <div class="hm-ex-stage"><svg class="il" viewBox="0 0 800 370" role="img" aria-label="Front-end illustration: a code editor with HTML and CSS feeding a responsive layout on desktop, tablet and phone, with a 98 performance score">
+<g class="sh">
+<rect class="i-ed" x="70" y="36" width="380" height="300" rx="16"/>
+<rect class="i-edb" x="70" y="36" width="380" height="32" rx="16"/><rect class="i-edb" x="70" y="52" width="380" height="16"/>
+<circle class="i-dr" cx="92" cy="52" r="5"/><circle class="i-dy" cx="108" cy="52" r="5"/><circle class="i-dg" cx="124" cy="52" r="5"/>
+<rect class="i-tab" x="150" y="43" width="90" height="18" rx="6"/><text class="i-t10 i-tcode" x="195" y="56" text-anchor="middle">index.html</text>
+<rect class="i-lnum" x="88" y="88" width="10" height="6" rx="3"/><rect class="i-ck" x="112" y="88" width="40" height="6" rx="3"/><rect class="i-cw" x="156" y="88" width="60" height="6" rx="3"/><rect class="i-ck" x="220" y="88" width="30" height="6" rx="3"/>
+<rect class="i-lnum" x="88" y="108" width="10" height="6" rx="3"/><rect class="i-cp" x="128" y="108" width="50" height="6" rx="3"/><rect class="i-cw" x="182" y="108" width="8" height="6" rx="3"/><rect class="i-cv" x="194" y="108" width="90" height="6" rx="3"/>
+<rect class="i-lnum" x="88" y="128" width="10" height="6" rx="3"/><rect class="i-cp" x="128" y="128" width="64" height="6" rx="3"/><rect class="i-cv" x="196" y="128" width="70" height="6" rx="3"/>
+<rect class="i-lnum" x="88" y="148" width="10" height="6" rx="3"/><rect class="i-cc" x="112" y="148" width="140" height="6" rx="3"/>
+<rect class="i-lnum" x="88" y="168" width="10" height="6" rx="3"/><rect class="i-ck" x="112" y="168" width="30" height="6" rx="3"/><rect class="i-cs" x="146" y="168" width="90" height="6" rx="3"/><rect class="i-cw" x="240" y="168" width="20" height="6" rx="3"/>
+<rect class="i-lnum" x="88" y="188" width="10" height="6" rx="3"/><rect class="i-cp" x="128" y="188" width="44" height="6" rx="3"/><rect class="i-cv" x="176" y="188" width="120" height="6" rx="3"/>
+<rect class="i-lnum" x="88" y="208" width="10" height="6" rx="3"/><rect class="i-cp" x="128" y="208" width="70" height="6" rx="3"/><rect class="i-cv" x="202" y="208" width="60" height="6" rx="3"/><rect class="i-cw" x="266" y="208" width="30" height="6" rx="3"/>
+<rect class="i-lnum" x="88" y="228" width="10" height="6" rx="3"/><rect class="i-ck" x="112" y="228" width="24" height="6" rx="3"/>
+<rect class="i-lnum" x="88" y="248" width="10" height="6" rx="3"/><rect class="i-cc" x="112" y="248" width="110" height="6" rx="3"/>
+<rect class="i-lnum" x="88" y="268" width="10" height="6" rx="3"/><rect class="i-ck" x="112" y="268" width="60" height="6" rx="3"/><rect class="i-cs" x="176" y="268" width="70" height="6" rx="3"/>
+<rect class="i-lnum" x="88" y="288" width="10" height="6" rx="3"/><rect class="i-cp" x="128" y="288" width="40" height="6" rx="3"/><rect class="i-caret" x="172" y="284" width="2" height="14"/>
+</g>
+<path class="i-stk i-flow" d="M452 180 C 466 180, 462 124, 474 124"/><path class="i-ac2" d="M476 124 l-10 -5 l0 10 z"/>
+<g class="sh">
+<rect class="i-bez" x="476" y="50" width="230" height="148" rx="10"/><rect class="i-card" x="484" y="58" width="214" height="126" rx="5"/>
+<rect class="i-ac" x="494" y="68" width="60" height="8" rx="4"/><rect class="i-ink" x="494" y="90" width="110" height="10" rx="5"/><rect class="i-ln" x="494" y="106" width="90" height="6" rx="3"/><rect class="i-ac" x="494" y="120" width="50" height="14" rx="7"/>
+<rect class="i-acs" x="612" y="86" width="76" height="56" rx="6"/><rect class="i-card2" x="494" y="150" width="60" height="26" rx="4"/><rect class="i-card2" x="560" y="150" width="60" height="26" rx="4"/><rect class="i-card2" x="626" y="150" width="62" height="26" rx="4"/>
+<rect class="i-bez" x="575" y="198" width="32" height="18"/><rect class="i-bez" x="556" y="214" width="70" height="6" rx="3"/>
+<rect class="i-bez" x="482" y="228" width="96" height="118" rx="10"/><rect class="i-card" x="488" y="234" width="84" height="106" rx="6"/>
+<rect class="i-ac" x="496" y="242" width="30" height="6" rx="3"/><rect class="i-ink" x="496" y="256" width="60" height="7" rx="3.5"/><rect class="i-ln" x="496" y="268" width="48" height="5" rx="2.5"/><rect class="i-acs" x="496" y="280" width="68" height="36" rx="4"/><rect class="i-ac" x="496" y="322" width="36" height="10" rx="5"/>
+<rect class="i-bez" x="598" y="250" width="62" height="100" rx="12"/><rect class="i-card" x="604" y="256" width="50" height="88" rx="8"/>
+<rect class="i-ink" x="610" y="266" width="34" height="6" rx="3"/><rect class="i-acs" x="610" y="278" width="38" height="30" rx="4"/><rect class="i-ln" x="610" y="314" width="30" height="4" rx="2"/><rect class="i-ac" x="610" y="326" width="26" height="9" rx="4.5"/>
+</g>
+<g class="fl"><circle class="i-strack" cx="742" cy="282" r="32"/><circle class="i-sarc" cx="742" cy="282" r="32" stroke-dasharray="197 201" transform="rotate(-90 742 282)"/><text class="i-t18 i-tw" x="742" y="288" text-anchor="middle">98</text><text class="i-t10 i-tw2" x="742" y="334" text-anchor="middle">Performance</text></g>
+</svg></div>
+                                    <div class="hm-ex-copy"><div><span class="hm-ex-kind"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6M14 4l-4 16"/></svg></i>Development &middot; 05 / 06</span><h3>Frontend Development</h3><p>I close the gap between design and code. Pixel-perfect builds with clean, maintainable markup and eye for detail.</p><a class="hm-ex-go" href="/website-development">See development work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div><h4>What you get</h4><ul class="hm-ex-items"><li>HTML5, CSS3, JavaScript</li><li>Bootstrap 4 and 5</li><li>Responsive &amp; Cross-browser</li><li>Core Web Vitals Optimisation</li></ul></div></div>
+                                </article>
+                                <article class="hm-ex-panel" id="svc-5" role="tabpanel" aria-labelledby="svc-tab-5" hidden>
+                                    <div class="hm-ex-stage"><svg class="il" viewBox="0 0 800 370" role="img" aria-label="Brand illustration: a logomark on a construction grid, a typography specimen, a colour palette and social media post designs">
+<g class="sh">
+<rect class="i-card" x="70" y="34" width="270" height="302" rx="18"/>
+<circle class="i-guide" cx="205" cy="176" r="96"/><circle class="i-guide" cx="205" cy="176" r="64"/>
+<line class="i-guide" x1="205" y1="70" x2="205" y2="282"/><line class="i-guide" x1="99" y1="176" x2="311" y2="176"/><line class="i-guide" x1="130" y1="101" x2="280" y2="251"/><line class="i-guide" x1="280" y1="101" x2="130" y2="251"/>
+<circle class="i-ac i-mark" cx="184" cy="176" r="48"/><circle class="i-y i-mark i-mul" cx="226" cy="176" r="48"/>
+<circle class="i-ink" cx="184" cy="176" r="3"/><circle class="i-ink" cx="226" cy="176" r="3"/>
+<text class="i-t11 i-tk2" x="90" y="318">Logomark</text><text class="i-t11 i-tk2" x="320" y="318" text-anchor="end">8pt grid</text>
+</g>
+<g class="sh">
+<rect class="i-card2" x="358" y="34" width="186" height="140" rx="16"/>
+<text class="i-tAa" x="376" y="118">Aa</text><text class="i-t11 i-tk2" x="378" y="152">Geist &#183; Semibold</text>
+<rect class="i-ink" x="470" y="70" width="56" height="10" rx="5"/><rect class="i-ink2" x="470" y="88" width="44" height="8" rx="4"/><rect class="i-ln" x="470" y="104" width="36" height="6" rx="3"/>
+</g>
+<g class="sh">
+<rect class="i-card" x="358" y="190" width="186" height="146" rx="16"/><text class="i-t11 i-tk2" x="376" y="216">Palette</text>
+<circle class="i-ink" cx="388" cy="248" r="14"/><circle class="i-ac" cx="422" cy="248" r="14"/><circle class="i-ac2" cx="456" cy="248" r="14"/><circle class="i-y" cx="490" cy="248" r="14"/><circle class="i-p" cx="524" cy="248" r="14"/>
+<rect class="i-acs" x="376" y="282" width="30" height="34" rx="6"/><rect class="i-ac2" x="406" y="282" width="30" height="34"/><rect class="i-ac" x="436" y="282" width="30" height="34"/><rect class="i-ys" x="466" y="282" width="30" height="34"/><rect class="i-y" x="496" y="282" width="30" height="34" rx="6"/>
+</g>
+<g class="sh" transform="rotate(-5 680 220)"><rect class="i-ink" x="604" y="96" width="160" height="220" rx="18"/><rect class="i-wsoft" x="622" y="250" width="90" height="10" rx="5"/></g>
+<g class="fl"><g class="sh" transform="rotate(5 650 160)">
+<rect class="i-ac" x="566" y="46" width="170" height="230" rx="18"/>
+<circle class="i-wl" cx="594" cy="76" r="13"/><circle class="i-y i-mul" cx="610" cy="76" r="13"/>
+<rect class="i-wl" x="586" y="112" width="120" height="12" rx="6"/><rect class="i-wl" x="586" y="132" width="90" height="12" rx="6"/>
+<rect class="i-wsoft" x="586" y="158" width="130" height="72" rx="10"/><circle class="i-y" cx="690" cy="180" r="12"/>
+<rect class="i-wl" x="586" y="244" width="60" height="8" rx="4"/>
+</g></g>
+</svg></div>
+                                    <div class="hm-ex-copy"><div><span class="hm-ex-kind"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="8" cy="10" r="1.2"/><circle cx="12" cy="7.5" r="1.2"/><circle cx="16" cy="10" r="1.2"/><path d="M12 21a3 3 0 0 1 0-6h1.5"/></svg></i>Design &middot; 06 / 06</span><h3>Brand &amp; Graphic Design</h3><p>Consistent identity across every touchpoint — from logo to social creatives. Design that looks unified, not assembled from templates.</p></div><div><h4>What you get</h4><ul class="hm-ex-items"><li>Logo &amp; Visual Identity</li><li>Social Media Creatives</li><li>Marketing Materials</li><li>Brand Style Guides</li></ul></div></div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <section class="hm-sec hm-feat" id="works-section" aria-labelledby="h-work">
+                    <div class="cs-wrap">
+                        <header class="hm-head rv"><div><span class="eyebrow">Featured work</span><h2 id="h-work">A cross-section of products I've designed</h2></div><a class="hm-link" href="/webapp-design">View all work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></header>
+                        <nav class="hm-cats rv" aria-label="Browse work by type"><p>Browse by type</p><a href="/website-design">Website Design</a><a href="/webapp-design">Webapp Design</a><a href="/mobile-app-design">Mobile App Design</a><a href="/website-development">Website Development</a><a href="/webapp-development">Webapp Development</a></nav>
+                    </div>
+                    <!-- Full-bleed featured slider — driven by home-featured.js -->
+                    <div class="hm-fs" data-fs data-fs-delay="7000" aria-roledescription="carousel" aria-label="Featured projects">
+                        <div class="hm-fs-track" aria-live="off">
+                            <article class="hm-fs-slide pg--dfm is-active" id="fs-1" aria-roledescription="slide" aria-label="1 of 7: Data Flow Manager">
+                                <div class="hm-fs-bg" aria-hidden="true"><img src="assets/images/featured/dfm-sm.jpg" alt="" width="1200" height="571"></div>
+                                <div class="hm-fs-media"><img srcset="assets/images/featured/dfm-sm.jpg 1200w, assets/images/featured/dfm-lg.jpg 2400w" sizes="(max-width: 900px) 100vw, 64vw" src="assets/images/featured/dfm-lg.jpg" alt="Data Flow Manager dashboard on a laptop" width="2400" height="1141"></div>
+                                <div class="hm-fs-copy"><div class="hm-fs-copy-in">
+                                    <p class="hm-fs-top"><span class="hm-fs-num">01</span>Enterprise data infrastructure</p>
+                                    <h3>Data Flow Manager</h3>
+                                    <p class="hm-fs-desc">A dedicated operational experience layer for Apache NiFi &mdash; enabling operators to deploy, monitor, validate, and manage flows from a single platform.</p>
+                                    <dl class="hm-fs-kpis"><div><dt>less deployment effort</dt><dd>90%</dd></div><div><dt>multi-cluster deploys</dt><dd>6h&rarr;min</dd></div><div><dt>saved per year</dt><dd>$1M+</dd></div></dl>
+                                    <ul class="hm-fs-meta"><li>2024</li><li>8&ndash;10 weeks</li><li>Sole product designer</li></ul>
+                                    <a class="hm-fs-go" href="/data-flow-manager-project">Read case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                                </div></div>
+                            </article>
+                            <article class="hm-fs-slide pg--symbiontra" id="fs-2" aria-roledescription="slide" aria-label="2 of 7: Symbiontra">
+                                <div class="hm-fs-bg" aria-hidden="true"><img src="assets/images/featured/symbiontra-sm.jpg" alt="" width="1200" height="571" loading="lazy"></div>
+                                <div class="hm-fs-media"><img srcset="assets/images/featured/symbiontra-sm.jpg 1200w, assets/images/featured/symbiontra-lg.jpg 1893w" sizes="(max-width: 900px) 100vw, 64vw" src="assets/images/featured/symbiontra-lg.jpg" alt="Symbiontra data value chain screen on a laptop" width="1893" height="900" loading="lazy"></div>
+                                <div class="hm-fs-copy"><div class="hm-fs-copy-in">
+                                    <p class="hm-fs-top"><span class="hm-fs-num">02</span>Data Mesh platform</p>
+                                    <h3>Symbiontra</h3>
+                                    <p class="hm-fs-desc">A unified operational platform for Data Mesh ecosystems &mdash; procure, publish, govern, and consume data products from one place.</p>
+                                    <ul class="hm-fs-meta"><li>8&ndash;10 weeks</li><li>Sole product designer</li></ul>
+                                    <a class="hm-fs-go" href="/symbiontra-project">Read case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                                </div></div>
+                            </article>
+                            <article class="hm-fs-slide pg--demerara" id="fs-3" aria-roledescription="slide" aria-label="3 of 7: Demerara Bank">
+                                <div class="hm-fs-bg" aria-hidden="true"><img src="assets/images/featured/demerara-sm.jpg" alt="" width="1200" height="571" loading="lazy"></div>
+                                <div class="hm-fs-media"><img srcset="assets/images/featured/demerara-sm.jpg 1200w, assets/images/featured/demerara-lg.jpg 1893w" sizes="(max-width: 900px) 100vw, 64vw" src="assets/images/featured/demerara-lg.jpg" alt="Demerara Bank online banking dashboard on a laptop" width="1893" height="900" loading="lazy"></div>
+                                <div class="hm-fs-copy"><div class="hm-fs-copy-in">
+                                    <p class="hm-fs-top"><span class="hm-fs-num">03</span>Digital banking</p>
+                                    <h3>Demerara Bank</h3>
+                                    <p class="hm-fs-desc">A secure, modern online banking experience for personal and business customers across Guyana.</p>
+                                    <dl class="hm-fs-kpis"><div><dt>higher task completion</dt><dd>60%</dd></div></dl>
+                                    <ul class="hm-fs-meta"><li>2025</li></ul>
+                                    <a class="hm-fs-go" href="/demerara-bank-project">Read case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                                </div></div>
+                            </article>
+                            <article class="hm-fs-slide pg--dn" id="fs-4" aria-roledescription="slide" aria-label="4 of 7: Dashboard Ninja with AI">
+                                <div class="hm-fs-bg" aria-hidden="true"><img src="assets/images/featured/dashboard-ninja-sm.jpg" alt="" width="1200" height="571" loading="lazy"></div>
+                                <div class="hm-fs-media"><img srcset="assets/images/featured/dashboard-ninja-sm.jpg 1200w, assets/images/featured/dashboard-ninja-lg.jpg 1893w" sizes="(max-width: 900px) 100vw, 64vw" src="assets/images/featured/dashboard-ninja-lg.jpg" alt="Dashboard Ninja KPI and chart dashboard on a laptop" width="1893" height="900" loading="lazy"></div>
+                                <div class="hm-fs-copy"><div class="hm-fs-copy-in">
+                                    <p class="hm-fs-top"><span class="hm-fs-num">04</span>AI business dashboards</p>
+                                    <h3>Dashboard Ninja with AI</h3>
+                                    <p class="hm-fs-desc">Build dynamic dashboards, track KPIs in real time, and generate AI-powered reports inside Odoo.</p>
+                                    <dl class="hm-fs-kpis"><div><dt>less reporting effort</dt><dd>85%</dd></div></dl>
+                                    <ul class="hm-fs-meta"><li>2024</li></ul>
+                                    <a class="hm-fs-go" href="/dashboard-ninja-project">Read case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                                </div></div>
+                            </article>
+                            <article class="hm-fs-slide pg--mind" id="fs-5" aria-roledescription="slide" aria-label="5 of 7: Mind AI Ninja">
+                                <div class="hm-fs-bg" aria-hidden="true"><img src="assets/images/featured/mind-ai-ninja-sm.jpg" alt="" width="1200" height="571" loading="lazy"></div>
+                                <div class="hm-fs-media"><img srcset="assets/images/featured/mind-ai-ninja-sm.jpg 1200w, assets/images/featured/mind-ai-ninja-lg.jpg 1893w" sizes="(max-width: 900px) 100vw, 64vw" src="assets/images/featured/mind-ai-ninja-lg.jpg" alt="Mind AI Ninja departments screen on a laptop" width="1893" height="900" loading="lazy"></div>
+                                <div class="hm-fs-copy"><div class="hm-fs-copy-in">
+                                    <p class="hm-fs-top"><span class="hm-fs-num">05</span>Enterprise knowledge AI</p>
+                                    <h3>Mind AI Ninja</h3>
+                                    <p class="hm-fs-desc">An enterprise knowledge brain &mdash; intelligent search, chatbot, and document management for faster decisions.</p>
+                                    <ul class="hm-fs-meta"><li>2024</li><li>8&ndash;10 weeks</li><li>Sole product designer</li></ul>
+                                    <a class="hm-fs-go" href="/mind-ai-ninja-project">Read case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                                </div></div>
+                            </article>
+                            <article class="hm-fs-slide pg--odoo" id="fs-6" aria-roledescription="slide" aria-label="6 of 7: Odoo Ecommerce">
+                                <div class="hm-fs-bg" aria-hidden="true"><img src="assets/images/featured/odoo-ecommerce-sm.jpg" alt="" width="1200" height="571" loading="lazy"></div>
+                                <div class="hm-fs-media"><img srcset="assets/images/featured/odoo-ecommerce-sm.jpg 1200w, assets/images/featured/odoo-ecommerce-lg.jpg 2400w" sizes="(max-width: 900px) 100vw, 64vw" src="assets/images/featured/odoo-ecommerce-lg.jpg" alt="Odoo Ecommerce storefront on a laptop" width="2400" height="1141" loading="lazy"></div>
+                                <div class="hm-fs-copy"><div class="hm-fs-copy-in">
+                                    <p class="hm-fs-top"><span class="hm-fs-num">06</span>AI store builder</p>
+                                    <h3>Odoo Ecommerce</h3>
+                                    <p class="hm-fs-desc">A no-code, AI-powered builder for creating, customizing, and scaling modern online stores.</p>
+                                    <ul class="hm-fs-meta"><li>2025</li><li>4 weeks</li><li>Sole product designer</li></ul>
+                                    <a class="hm-fs-go" href="/odoo-ecommerce-project">Read case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                                </div></div>
+                            </article>
+                            <article class="hm-fs-slide pg--fvbank" id="fs-7" aria-roledescription="slide" aria-label="7 of 7: FV Bank">
+                                <div class="hm-fs-bg" aria-hidden="true"><img src="assets/images/featured/fvbank-sm.jpg" alt="" width="1200" height="571" loading="lazy"></div>
+                                <div class="hm-fs-media"><img srcset="assets/images/featured/fvbank-sm.jpg 1200w, assets/images/featured/fvbank-lg.jpg 1893w" sizes="(max-width: 900px) 100vw, 64vw" src="assets/images/featured/fvbank-lg.jpg" alt="FV Bank app showing portfolio balance" width="1893" height="900" loading="lazy"></div>
+                                <div class="hm-fs-copy"><div class="hm-fs-copy-in">
+                                    <p class="hm-fs-top"><span class="hm-fs-num">07</span>Mobile app &middot; Fintech</p>
+                                    <h3>FV Bank</h3>
+                                    <p class="hm-fs-desc">A business banking and custody app, revamped for better usability with a scalable design system.</p>
+                                    <ul class="hm-fs-meta"><li>Usability revamp</li><li>Design system</li></ul>
+                                    <a class="hm-fs-go" href="/mobile-app-design#fvbank">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                                </div></div>
+                            </article>
+                        </div>
+                        <div class="hm-fs-ui">
+                            <div class="hm-fs-ui-in">
+                                <div class="hm-fs-tabs" aria-label="Choose a project">
+                                    <button type="button" class="pg--dfm" aria-controls="fs-1" aria-current="true"><span class="n">01</span><span class="t">Data Flow Manager</span><i aria-hidden="true"></i></button>
+                                    <button type="button" class="pg--symbiontra" aria-controls="fs-2"><span class="n">02</span><span class="t">Symbiontra</span><i aria-hidden="true"></i></button>
+                                    <button type="button" class="pg--demerara" aria-controls="fs-3"><span class="n">03</span><span class="t">Demerara Bank</span><i aria-hidden="true"></i></button>
+                                    <button type="button" class="pg--dn" aria-controls="fs-4"><span class="n">04</span><span class="t">Dashboard Ninja</span><i aria-hidden="true"></i></button>
+                                    <button type="button" class="pg--mind" aria-controls="fs-5"><span class="n">05</span><span class="t">Mind AI Ninja</span><i aria-hidden="true"></i></button>
+                                    <button type="button" class="pg--odoo" aria-controls="fs-6"><span class="n">06</span><span class="t">Odoo Ecommerce</span><i aria-hidden="true"></i></button>
+                                    <button type="button" class="pg--fvbank" aria-controls="fs-7"><span class="n">07</span><span class="t">FV Bank</span><i aria-hidden="true"></i></button>
+                                </div>
+                                <div class="hm-fs-btns">
+                                    <button type="button" class="hm-fs-pause" aria-label="Pause slideshow" hidden><svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg><svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg></button>
+                                    <button type="button" class="hm-fs-prev" aria-label="Previous project"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></button>
+                                    <button type="button" class="hm-fs-next" aria-label="Next project"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
-                <!-- ==================== SERVICES SECTION ==================== -->
-                <section class="lui-section lui-gradient-bottom below-fold" id="services-section" style="padding-top: 125px;">
-                    <div class="lui-heading">
-                        <div class="container">
-                            <div class="m-titles align-center">
-                                <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-                                    <span>What I Do</span>
-                                </h2>
-                                <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-                                    <span class="exp-text">I am a skilled UI/UX designer with over 7 years of experience in creating user-centric designs for web and mobile applications. My expertise lies in leading design projects across various industries, enhancing usability, and collaborating effectively with cross-functional teams. I am passionate about utilizing cutting-edge design tools and methodologies to deliver high-quality user experiences</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="v-line v-line-right">
-                        <div class="container">
-                            <div class="swiper-container js-services scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="services-item">
-                                            <div class="lui-subtitle"><span>UX</span></div>
-                                            <h5 class="lui-title"><span>Research & Strategy</span></h5>
-                                            <div class="lui-text">
-                                                <div>I map user behaviour before any screen is designed — turning ambiguity into a clear, validated design direction.</div>
-                                                <ul class="card-deliverables">
-                                                    <li class="deliverable">User Interviews &amp; Surveys</li>
-                                                    <li class="deliverable">Competitor Analysis</li>
-                                                    <li class="deliverable">Personas &amp; Journey Maps</li>
-                                                    <li class="deliverable">Usability Testing</li>
-                                                </ul>
-                                            </div>
-                                            <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="services-item">
-                                            <div class="lui-subtitle"><span>Design</span></div>
-                                            <h5 class="lui-title"><span>Web App & Dashboard</span></h5>
-                                            <div class="lui-text">
-                                                <div>
-                                                    <p>I design different dashboards and admin panels where dense information feels intuitive at a glance.</p>
-                                                    <ul class="card-deliverables">
-                                                        <li class="deliverable">Information Architecture & Wireframes</li>
-                                                        <li class="deliverable">High-Fidelity Figma Prototypes</li>
-                                                        <li class="deliverable">Design Systems &amp; Components</li>
-                                                        <li class="deliverable">Handoff Documentation</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="services-item">
-                                            <div class="lui-subtitle"><span>Design</span></div>
-                                            <h5 class="lui-title"><span>Mobile App</span></h5>
-                                            <div class="lui-text">
-                                                <div>IOS and Android experiences designed for real thumbs. I design for one-handed use, fast task completion, & delight in the details.</div>
-                                                <ul class="card-deliverables">
-                                                    <li class="deliverable">User Flows &amp; Wireframes</li>
-                                                    <li class="deliverable">iOS &amp; Android UI Design</li>
-                                                    <li class="deliverable">Interactive Figma Prototypes</li>
-                                                    <li class="deliverable">Gesture &amp; Motion Specifications</li>
-                                                </ul>
-                                            </div>
-                                            <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="services-item">
-                                            <div class="lui-subtitle"><span>Design</span></div>
-                                            <h5 class="lui-title"><span>Website UI/UX</span></h5>
-                                            <div class="lui-text">
-                                                <div>Research-led website design that converts. Every layout decision is intentional — brand, hierarchy, and user flow working as one.</div>
-                                                <ul class="card-deliverables">
-                                                    <li class="deliverable">Wireframing &amp; Moodboarding</li>
-                                                    <li class="deliverable">Responsive Figma Design</li>
-                                                    <li class="deliverable">Landing Page Optimisation</li>
-                                                    <li class="deliverable">SEO-friendly Structure</li>
-                                                </ul>
-                                            </div>
-                                            <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="services-item">
-                                            <div class="lui-subtitle"><span>Development</span></div>
-                                            <h5 class="lui-title"><span>Frontend Development</span></h5>
-                                            <div class="lui-text">
-                                                <div>
-                                                    <p>I close the gap between design and code. Pixel-perfect builds with clean, maintainable markup and eye for detail.</p>
-                                                    <ul class="card-deliverables">
-                                                        <li class="deliverable">HTML5, CSS3, JavaScript</li>
-                                                        <li class="deliverable">Bootstrap 4 and 5</li>
-                                                        <li class="deliverable">Responsive &amp; Cross-browser</li>
-                                                        <li class="deliverable">Core Web Vitals Optimisation</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="services-item">
-                                            <div class="lui-subtitle"><span>Design</span></div>
-                                            <h5 class="lui-title"><span>Brand & Graphic Design</span></h5>
-                                            <div class="lui-text">
-                                                <div>
-                                                    <p>Consistent identity across every touchpoint — from logo to social creatives. Design that looks unified, not assembled from templates.</p>
-                                                    <ul class="card-deliverables">
-                                                        <li class="deliverable">Logo &amp; Visual Identity</li>
-                                                        <li class="deliverable">Social Media Creatives</li>
-                                                        <li class="deliverable">Marketing Materials</li>
-                                                        <li class="deliverable">Brand Style Guides</li><!-- FIX: was </lidiv> -->
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="image" style="background-image: url(assets/images/pat-2.png);"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </div>
-                            <div class="lui-bgtitle"><span>Services</span></div>
+                <div class="cs-wrap">
+                    <section class="hm-sec" id="exp" aria-labelledby="h-exp">
+                        <header class="hm-head rv"><div><span class="eyebrow">Experience</span><h2 id="h-exp">My story so far</h2></div><a class="hm-link" href="resume.pdf" target="_blank" rel="noopener">Download resume <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 12l6 6 6-6M5 20h14"/></svg></a></header>
+                        <ol class="hm-timeline">
+                            <li class="hm-job is-now rv">
+                                <div class="hm-job-when"><b>2024</b><span>Jun 2024 &ndash; Present</span><em data-since="2024-06">Current role</em></div>
+                                <span class="hm-job-node" aria-hidden="true">K</span>
+                                <article class="hm-job-card">
+                                    <header class="hm-job-head"><div><span class="hm-job-live"><i></i>Currently here</span><h3>Ksolves</h3><p class="hm-job-role">Senior UI/UX Designer</p></div><a class="hm-job-award" href="#award-section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4zM7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg>Best Designer award</a></header>
+                                    <ul class="hm-job-points"><li>Led end-to-end design of internal products across Odoo, Big Data, and AI (<a href="/data-flow-manager-project">DFM</a>, <a href="/mind-ai-ninja-project">Mind AI Ninja</a>, <a href="/dashboard-ninja-project">Dashboard Ninja</a>, <a href="/arc-theme-backend-project">Arc Backend Theme</a>, etc.), from research to high-fidelity UI and scalable design systems.</li><li>Designed &amp; enhanced Odoo-based landing pages and client product features, ensuring consistent, user-centric UI/UX across platforms.</li><li>Revamped client projects in Salesforce and Big Data domains (<a href="/demerara-bank-project">Demerara Bank</a>, <a href="/symbiontra-project">Meshantra / Symbiontra</a>), improving usability through research-driven design and scalable systems.</li></ul>
+                                    <ul class="hm-job-tags" aria-label="Focus areas"><li>Odoo</li><li>Big Data</li><li>AI products</li><li>Salesforce</li><li>Design systems</li></ul>
+                                </article>
+                            </li>
+                            <li class="hm-job rv">
+                                <div class="hm-job-when"><b>2021</b><span>Aug 2021 &ndash; Jun 2024</span><em>2 yrs 10 mos</em></div>
+                                <span class="hm-job-node" aria-hidden="true">S</span>
+                                <article class="hm-job-card">
+                                    <header class="hm-job-head"><div><h3>Solultima Pvt. Ltd.</h3><p class="hm-job-role">UI/UX Designer &amp; UI Developer</p></div></header>
+                                    <ul class="hm-job-points"><li>Led end-to-end design for <strong>FV Bank</strong> and <strong>Yug Network</strong> across web, mobile, and browser platforms; built Yug Network from scratch and revamped FV Bank by improving usability and implementing scalable design systems.</li><li>Designed multiple Web3 and crypto products across fintech, gaming, launchpads, and staking; simplified complex workflows into intuitive UI/UX and contributed to front-end for pixel-perfect implementation.</li></ul>
+                                    <ul class="hm-job-tags" aria-label="Focus areas"><li>Fintech</li><li>Web3 &amp; crypto</li><li>Browser extension</li><li>Front-end</li></ul>
+                                </article>
+                            </li>
+                            <li class="hm-job rv">
+                                <div class="hm-job-when"><b>2020</b><span>Apr 2020 &ndash; Aug 2021</span><em>1 yr 4 mos</em></div>
+                                <span class="hm-job-node" aria-hidden="true">O</span>
+                                <article class="hm-job-card">
+                                    <header class="hm-job-head"><div><h3>Orgzit</h3><p class="hm-job-role">UI/UX Designer &amp; UI Developer</p></div></header>
+                                    <ul class="hm-job-points"><li>Designed high-fidelity web and mobile experiences for the <strong>Orgzit Web &amp; Mobile App</strong> aligned with business goals, creating wireframes and UI designs while enhancing existing features for better usability.</li><li>Optimized Orgzit's mobile interface using React Native, ensuring consistency and smooth performance.</li></ul>
+                                    <ul class="hm-job-tags" aria-label="Focus areas"><li>SaaS</li><li>Web &amp; mobile</li><li>React Native</li></ul>
+                                </article>
+                            </li>
+                            <li class="hm-job rv">
+                                <div class="hm-job-when"><b>2019</b><span>May 2019 &ndash; Mar 2020</span><em>10 mos</em></div>
+                                <span class="hm-job-node" aria-hidden="true">Q</span>
+                                <article class="hm-job-card">
+                                    <header class="hm-job-head"><div><h3>Quillhash Technologies</h3><p class="hm-job-role">UI/UX Designer &amp; UI Developer</p></div><span class="hm-job-first">Where it started</span></header>
+                                    <ul class="hm-job-points"><li>Designed interactive, high-fidelity website experiences aligned with business requirements, ensuring pixel-perfect implementation from design to development.</li><li>Worked on multiple product- and service-based websites while contributing to overall product UI/UX design, focusing on usability, consistency, and seamless user experience.</li></ul>
+                                    <ul class="hm-job-tags" aria-label="Focus areas"><li>Websites</li><li>Product UI</li><li>Front-end</li></ul>
+                                </article>
+                            </li>
+                        </ol>
+                    </section>
+                </div>
+                <section class="hm-award" id="award-section" aria-labelledby="h-award">
+                    <div class="hm-award-stage">
+                        <header class="hm-award-head rv"><span class="eyebrow">Award</span><h2 id="h-award">&ldquo;Best Designer&rdquo; at Ksolves</h2><p class="hm-award-lead">Received the "Best Designer" award by Ksolves for outstanding contribution to product design across multiple business domains and successful delivery of high-impact web and mobile experiences.</p></header>
+                        <div class="hm-award-in rv">
+                            <svg class="hm-award-links" aria-hidden="true"></svg>
+                            <div class="hm-award-trophy"><img class="hm-award-img" src="assets/images/awards.png" alt="Best Designer award trophy from Ksolves presented to Nitesh Kumar Bhat" width="375" height="666" loading="lazy"></div>
+                            <ol><li><strong>Recognized for designing multiple high-impact products across diverse domains within a year</strong><p>Awarded for successfully delivering design solutions across various industries, demonstrating adaptability and a deep understanding of different user needs. Consistently maintained high design quality while working on multiple products simultaneously, ensuring each solution aligned with business goals and user expectations.</p></li><li><strong>Led end-to-end UI/UX design for web and mobile platforms</strong><p>Managed the complete design lifecycle—from user research and information architecture to wireframing, prototyping, and final UI delivery. Collaborated closely with cross-functional teams to ensure seamless implementation and consistency across both web and mobile experiences.</p></li><li><strong>Delivered scalable, user-centric solutions improving overall product experience</strong><p>Focused on creating intuitive and scalable design systems that enhanced usability and ensured long-term consistency across products. Prioritized user needs through research-driven decisions, leading to improved engagement and smoother user journeys.</p></li><li><strong>Demonstrated consistency, speed, and design excellence across projects</strong><p>Maintained a high standard of design output while working under tight timelines and managing multiple deliverables. Balanced speed with attention to detail, consistently producing polished, impactful designs that met both user and business requirements.</p></li></ol>
                         </div>
                     </div>
                 </section>
+                <div class="cs-wrap">
+                    <section class="hm-sec" id="testimonials-section" aria-labelledby="h-voices">
+                        <header class="hm-head rv"><div><span class="eyebrow">Testimonials</span><h2 id="h-voices">Trusted by founders, engineers, and product leaders across 4 countries.</h2></div><a class="hm-link" href="/testimonials">Read all testimonials <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></header>
+                        <div class="hm-quotes">
+                            <figure class="hm-quote rv"><p class="hm-quote-head">transformed complex ideas into user-friendly interfaces</p><p>Nitesh made an important impact during his 1.4 years at Orgzit as a UX Designer &amp; UI Developer. His creativity and meticulous coding skills transformed complex ideas into user-friendly interfaces. As a UI Developer, Nitesh's commitment to clean and efficient code adhered to coding standards.</p><figcaption class="hm-quote-by"><img src="assets/images/clients/pavan.jpg" alt="" width="46" height="46" loading="lazy"><span><strong>Pavan Verma</strong><span>CEO &amp; Founder of Orgzit</span></span></figcaption></figure>
+                            <figure class="hm-quote rv"><p class="hm-quote-head">always helpful and proactive</p><p>We are very happy with "Nitesh's performance in the past three years". 2021's projections look promising even with COVID's devastating impact on the hospitality industry. Nitesh is always helpful and proactive when it comes to new plans or taking on new challenges. Looking forward to a long term partnership</p><figcaption class="hm-quote-by"><img src="assets/images/clients/abhishek.jpg" alt="" width="46" height="46" loading="lazy"><span><strong>Abhishek Sharma</strong><span>CEO, CrypticOcean</span></span></figcaption></figure>
+                            <figure class="hm-quote rv"><p class="hm-quote-head">Nitesh did a very professional job</p><p>I would like to recommend Nitesh. I look forward to working with him in future projects. I would like to express my satisfaction on the cooperation regarding the development of the projects. Nitesh did a very professional job. I am satisfied with the solution given to me and with the communication flow through all the projects.</p><figcaption class="hm-quote-by"><img src="assets/images/clients/preetam.jpg" alt="" width="46" height="46" loading="lazy"><span><strong>Preetam Rao</strong><span>CEO, QuillAudits &amp; QuillHash</span></span></figcaption></figure>
+                        </div>
+                        <div class="hm-faces-row rv"><div class="hm-faces" aria-hidden="true"><img src="assets/images/clients/pavan.jpg" alt="" width="40" height="40" loading="lazy"><img src="assets/images/clients/abhishek.jpg" alt="" width="40" height="40" loading="lazy"><img src="assets/images/clients/preetam.jpg" alt="" width="40" height="40" loading="lazy"><img src="assets/images/clients/harsh.jpg" alt="" width="40" height="40" loading="lazy"><img src="assets/images/clients/arun.jpg" alt="" width="40" height="40" loading="lazy"><img src="assets/images/clients/karan.jpg" alt="" width="40" height="40" loading="lazy"><img src="assets/images/clients/ankit.jpg" alt="" width="40" height="40" loading="lazy"><img src="assets/images/clients/abhishekdutta.jpg" alt="" width="40" height="40" loading="lazy"></div><p>14 testimonials from clients and teammates</p><a class="hm-link" href="/testimonials">See them all <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+                    </section>
+                    <section class="hm-sec" id="contact-section" aria-labelledby="h-contact">
+                        <div class="hm-contact rv">
+                            <div class="hm-contact-info">
+                                <span class="eyebrow">Contact me</span><h2 id="h-contact">Let's talk about ideas</h2>
+                                <ul class="hm-ci"><li><span class="hm-ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><span class="hm-ci-k">Location</span><span class="hm-ci-v">Remote</span></span></li><li><span class="hm-ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span><span class="hm-ci-k">Email</span><a class="hm-ci-v" href="mailto:niteshbhat97@gmail.com">niteshbhat97@gmail.com</a></span></li><li><span class="hm-ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><span class="hm-ci-k">Phone</span><a class="hm-ci-v" href="tel:+917889514480">+91 7889514480</a></span></li></ul>
+                                <div class="hm-social"><a href="https://www.linkedin.com/in/niteshkrbhat/" target="_blank" rel="nofollow noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.64-1.6-2.64-1.62 0-1.86 1.26-1.86 2.55v4.92h-4z"/></svg></a><a href="https://wa.me/7889514480?text=I%20am%20interested%20in%20your%20services.%20How%20to%20get%20started%3F" target="_blank" rel="nofollow noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.16-1.5A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.06.9.92-2.98-.2-.31a8.2 8.2 0 1 1 6.84 3.72zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.71-1.33.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.3-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.66 4.22 3.73 1.57.68 2.19.74 2.97.62.48-.07 1.46-.6 1.67-1.18.2-.57.2-1.07.14-1.17-.06-.11-.22-.17-.47-.29z"/></svg></a></div>
+                            </div>
+                            <form class="hm-form" id="cform" method="post" action="https://formsubmit.co/5fe64e19719148bb55fce3f30b139f3a">
+                                <div class="hm-form-grid">
+                                    <div class="hm-field"><label for="f-name">Your full name <b>*</b></label><input id="f-name" type="text" name="name" autocomplete="name" required></div>
+                                    <div class="hm-field"><label for="f-email">Your email address <b>*</b></label><input id="f-email" type="email" name="email" autocomplete="email" required></div>
+                                    <div class="hm-field full"><label for="f-subject">Subject <b>*</b></label><input id="f-subject" type="text" name="subject" required></div>
+                                    <div class="hm-field full"><label for="f-message">Your message <b>*</b></label><textarea id="f-message" name="message" required></textarea></div>
+                                </div>
+                                <div class="hm-form-foot"><p>Fields marked * are required.</p><button class="hm-submit" type="submit">Send message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></button></div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div><!-- /.wrapper -->
 
-                <!-- ==================== AWARD SECTION ==================== -->
-                <section class="lui-section lui-gradient-center below-fold" id="award-section">
-                    <div class="lui-heading">
-                        <div class="container">
-                            <div class="m-titles align-center">
-                                <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-                                    <span>Awards</span>
-                                </h2>
-                                <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-                                    <span><b>Received the "Best Designer" award by Ksolves for outstanding contribution to product design across multiple business domains and successful delivery of high-impact web and mobile experiences.</b></span>
-                                </div>
-                            </div>
-                        </div>
+        <!-- ==================== FOOTER ==================== -->
+            <footer class="site-foot" aria-label="Site footer">
+            <div class="site-foot-inner">
+                <div class="site-foot-top">
+                    <div class="site-foot-brand">
+                        <a href="/" class="site-foot-logo"><img src="assets/images/logo.png" width="228" height="38" alt="Nitesh Bhat"></a>
+                        <p>UI/UX designer &amp; front-end developer crafting enterprise platforms, web apps and mobile products.</p>
+                        <a class="site-foot-cta" href="/#contact-section">Start a project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                     </div>
-                    <div class="v-line v-line-left">
-                        <img class="hero-img" src="assets/images/city.png" alt="City skyline background" width="1920" height="1080" fetchpriority="high">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
-                                    <div class="award-container">
-                                        <img src="assets/images/awards.png" class="award" alt="Design Awards and Recognition — Nitesh Bhat" width="600" height="400" loading="lazy" decoding="async">
-                                    </div>
-                                    <!-- Hotspot 1: top-left area (logo zone) -->
-                                    <div class="hotspot dir-r hotspot-1">
-                                        <div class="hs-ring">
-                                            <div class="hs-dot"></div>
-                                        </div>
-                                        <div class="hs-tip">
-                                            <div class="hs-tip-title">Recognized for designing multiple high-impact products across diverse domains within a year</div>
-                                            <div class="hs-tip-text">Awarded for successfully delivering design solutions across various industries, demonstrating adaptability and a deep understanding of different user needs. Consistently maintained high design quality while working on multiple products simultaneously, ensuring each solution aligned with business goals and user expectations.</div>
-                                        </div>
-                                    </div>
-                                    <!-- Hotspot 2: blue piece upper -->
-                                    <div class="hotspot dir-l hotspot-2">
-                                        <div class="hs-ring">
-                                            <div class="hs-dot"></div>
-                                        </div>
-                                        <div class="hs-tip">
-                                            <div class="hs-tip-title">Led end-to-end UI/UX design for web and mobile platforms</div>
-                                            <div class="hs-tip-text">Managed the complete design lifecycle—from user research and information architecture to wireframing, prototyping, and final UI delivery. Collaborated closely with cross-functional teams to ensure seamless implementation and consistency across both web and mobile experiences.</div>
-                                        </div>
-                                    </div>
-                                    <!-- Hotspot 3: white piece "Best Designer" zone -->
-                                    <div class="hotspot dir-r hotspot-3">
-                                        <div class="hs-ring">
-                                            <div class="hs-dot"></div>
-                                        </div>
-                                        <div class="hs-tip">
-                                            <div class="hs-tip-title">Delivered scalable, user-centric solutions improving overall product experience</div>
-                                            <div class="hs-tip-text">Focused on creating intuitive and scalable design systems that enhanced usability and ensured long-term consistency across products. Prioritized user needs through research-driven decisions, leading to improved engagement and smoother user journeys.</div>
-                                        </div>
-                                    </div>
-                                    <!-- Hotspot 4: blue piece lower ("Presented to") -->
-                                    <div class="hotspot dir-l hotspot-4">
-                                        <div class="hs-ring">
-                                            <div class="hs-dot"></div>
-                                        </div>
-                                        <div class="hs-tip">
-                                            <div class="hs-tip-title">Demonstrated consistency, speed, and design excellence across projects</div>
-                                            <div class="hs-tip-text">Maintained a high standard of design output while working under tight timelines and managing multiple deliverables. Balanced speed with attention to detail, consistently producing polished, impactful designs that met both user and business requirements.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lui-bgtitle" style="position: static;">
-                                    <span>Awards</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- /.v-line.v-line-left  FIX: was missing -->
-                </section>
-
-                <!-- ==================== WORKS SECTION ==================== -->
-                <section class="lui-section lui-gradient-top" id="works-section">
-                    <div class="lui-heading">
-                        <div class="container">
-                            <div class="m-titles align-center">
-                                <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-                                    <span>Featured Work</span>
-                                </h2>
-                                <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-                                    <span><b>A cross-section of products I've designed</b></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="v-line v-line-right">
-                        <!-- FIX: removed redundant <div class=""> wrapper that served no purpose -->
-                        <div class="works-box">
-                            <div class="sa-work-wrap portfolio-wrap">
-                                <div class="sa-work-item sa-work-panel p-relative not-hide-cursor mb-60" data-cursor="View<br>Case Study">
-                                    <div class="sa-work-portfolio-thumb">
-                                        <a href="/data-flow-manager-project" class="d-block cursor-hide">
-                                            <img src="assets/images/screenshots/dfm-web/dfm-web-banner.png" alt="Data Flow Manager — UX Case Study by Nitesh Bhat">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="sa-work-item sa-work-panel p-relative not-hide-cursor mb-60" data-cursor="View<br>Demo">
-                                    <div class="sa-work-portfolio-thumb">
-                                        <a href="/symbiontra-project" class="d-block cursor-hide">
-                                            <img src="assets/images/screenshots/symbiontra-web/symbiontra-web-banner.png" alt="Symbiontra Web Platform Design by Nitesh Bhat">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="sa-work-item sa-work-panel p-relative not-hide-cursor mb-60" data-cursor="View<br>Demo">
-                                    <div class="sa-work-portfolio-thumb">
-                                        <a href="/demerara-bank-project" class="d-block cursor-hide">
-                                            <img src="assets/images/screenshots/demerara-web/demerara-web-banner.png" alt="Demerara Bank Digital Platform UI/UX Design by Nitesh Bhat">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="sa-work-item sa-work-panel p-relative not-hide-cursor mb-60" data-cursor="View<br>Demo">
-                                    <div class="sa-work-portfolio-thumb">
-                                        <a href="/dashboard-ninja-project" class="d-block cursor-hide">
-                                            <img src="assets/images/screenshots/dashboard-ninja-web/dn-web-banner.png" alt="Dashboard Ninja Web App Design by Nitesh Bhat">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="sa-work-item sa-work-panel p-relative not-hide-cursor mb-60" data-cursor="View<br>Demo">
-                                    <div class="sa-work-portfolio-thumb">
-                                        <a href="/odoo-ecommerce-project" class="d-block cursor-hide">
-                                            <img src="assets/images/screenshots/odoo-ecommerce-web/ecommerce-web-banner.png" alt="Odoo E-commerce UI/UX Design by Nitesh Bhat">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="sa-work-item sa-work-panel p-relative not-hide-cursor mb-60" data-cursor="View<br>Demo">
-                                    <div class="sa-work-portfolio-thumb">
-                                        <a href="/mind-ai-ninja-project" class="d-block cursor-hide">
-                                            <img src="assets/images/screenshots/man-web/man-web-banner.png" alt="Mind AI Ninja Web App Design by Nitesh Bhat">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="sa-work-item sa-work-panel p-relative mb-60" data-cursor="View<br>Demo">
-                                    <div class="sa-work-portfolio-thumb">
-                                        <a class="d-block cursor-hide" href="https://play.google.com/store/apps/details?id=us.fvbank.mobile" target="_blank">
-                                            <img src="assets/images/screenshots/fvbank-mob/fvbank-featured.png" alt="FV Bank Mobile App UI/UX Design by Nitesh Bhat">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="load-more-link">
-                                <a href="/webapp-design" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                    <span>View More</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="lui-bgtitle"><span>Portfolio</span></div>
-                    </div>
-                </section>
-
-                <!-- ==================== TESTIMONIALS SECTION ==================== -->
-                <section class="lui-section lui-gradient-bottom below-fold" id="testimonials-section">
-                    <div class="lui-heading">
-                        <div class="container">
-                            <div class="m-titles align-center">
-                                <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-                                    <span>Testimonials</span>
-                                </h2>
-                                <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-                                    <span><b>Trusted by founders, engineers, and product leaders across 4 countries.</b></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="v-line v-line-right">
-                        <div class="container">
-                            <div class="layers"></div>
-                            <div class="box">
-                                <div class="swiper-container js-testimonials scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                    <div class="swiper-wrapper">
-                                        <!-- Testimonial: Pavan Verma -->
-                                        <div class="swiper-slide">
-                                            <div class="testimonials-item testimonial-inner">
-                                                <div class="image">
-                                                    <img decoding="async" loading="lazy" src="assets/images/clients/pavan.jpg" alt="Pavan Verma">
-                                                    <div class="icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44px" height="34px">
-                                                            <path fill-rule="evenodd" stroke-width="2px" stroke="rgb(0, 0, 0)" fill="rgb(41, 165, 135)" d="M17.360,8.325 C15.490,5.563 11.616,4.762 8.705,6.536 C6.901,7.635 5.815,9.533 5.826,11.567 C5.828,14.854 8.637,17.516 12.101,17.515 C13.290,17.513 14.456,17.192 15.460,16.587 C14.967,17.975 14.049,19.457 12.537,20.942 C11.934,21.533 11.951,22.476 12.574,23.048 C13.198,23.619 14.192,23.604 14.794,23.012 C20.384,17.515 19.658,11.539 17.360,8.333 L17.360,8.325 ZM32.407,8.325 C30.538,5.563 26.663,4.762 23.752,6.536 C21.949,7.635 20.863,9.533 20.873,11.567 C20.875,14.854 23.685,17.516 27.148,17.515 C28.338,17.513 29.503,17.192 30.508,16.587 C30.015,17.975 29.097,19.457 27.585,20.942 C26.982,21.533 26.999,22.476 27.622,23.048 C28.245,23.619 29.239,23.604 29.842,23.012 C35.432,17.515 34.706,11.539 32.407,8.333 L32.407,8.325 Z" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="text lui-text">
-                                                    <div>
-                                                        <p class="">Nitesh made an important impact during his 1.4 years at Orgzit as a UX Designer & UI Developer. His creativity and meticulous coding skills transformed complex ideas into user-friendly interfaces. As a UI Developer, Nitesh's commitment to clean and efficient code adhered to coding standards. </p>
-                                                    </div>
-                                                </div>
-                                                <div class="info">
-                                                    <h6 class="name"><span>Pavan Verma</span></h6>
-                                                    <div class="author"><span>CEO & Founder of Orgzit</span></div>
-                                                </div>
-                                                <div class="bg-img" style="background-image: url(assets/images/pat-2.png);"></div>
-                                            </div>
-                                        </div>
-                                        <!-- Testimonial: Abhishek Sharma -->
-                                        <div class="swiper-slide">
-                                            <div class="testimonials-item">
-                                                <div class="image">
-                                                    <img decoding="async" loading="lazy" src="assets/images/clients/abhishek.jpg" alt="Abhishek Sharma">
-                                                    <div class="icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44px" height="34px">
-                                                            <path fill-rule="evenodd" stroke-width="2px" stroke="rgb(0, 0, 0)" fill="rgb(41, 165, 135)" d="M17.360,8.325 C15.490,5.563 11.616,4.762 8.705,6.536 C6.901,7.635 5.815,9.533 5.826,11.567 C5.828,14.854 8.637,17.516 12.101,17.515 C13.290,17.513 14.456,17.192 15.460,16.587 C14.967,17.975 14.049,19.457 12.537,20.942 C11.934,21.533 11.951,22.476 12.574,23.048 C13.198,23.619 14.192,23.604 14.794,23.012 C20.384,17.515 19.658,11.539 17.360,8.333 L17.360,8.325 ZM32.407,8.325 C30.538,5.563 26.663,4.762 23.752,6.536 C21.949,7.635 20.863,9.533 20.873,11.567 C20.875,14.854 23.685,17.516 27.148,17.515 C28.338,17.513 29.503,17.192 30.508,16.587 C30.015,17.975 29.097,19.457 27.585,20.942 C26.982,21.533 26.999,22.476 27.622,23.048 C28.245,23.619 29.239,23.604 29.842,23.012 C35.432,17.515 34.706,11.539 32.407,8.333 L32.407,8.325 Z" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="text lui-text">
-                                                    <div>
-                                                        <p>We are very happy with "Nitesh's performance in the past three years". 2021's projections look promising even with COVID's devastating impact on the hospitality industry. Nitesh is always helpful and proactive when it comes to new plans or taking on new challenges. Looking forward to a long term partnership</p>
-                                                    </div>
-                                                </div>
-                                                <div class="info">
-                                                    <h6 class="name"><span>Abhishek Sharma</span></h6>
-                                                    <div class="author"><span>CEO, CrypticOcean</span></div>
-                                                </div>
-                                                <div class="bg-img" style="background-image: url(assets/images/pat-2.png);"></div>
-                                            </div>
-                                        </div>
-                                        <!-- Testimonial: Preetam Rao -->
-                                        <div class="swiper-slide">
-                                            <div class="testimonials-item">
-                                                <div class="image">
-                                                    <img decoding="async" loading="lazy" src="assets/images/clients/preetam.jpg" alt="Preetam Rao">
-                                                    <div class="icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44px" height="34px">
-                                                            <path fill-rule="evenodd" stroke-width="2px" stroke="rgb(0, 0, 0)" fill="rgb(41, 165, 135)" d="M17.360,8.325 C15.490,5.563 11.616,4.762 8.705,6.536 C6.901,7.635 5.815,9.533 5.826,11.567 C5.828,14.854 8.637,17.516 12.101,17.515 C13.290,17.513 14.456,17.192 15.460,16.587 C14.967,17.975 14.049,19.457 12.537,20.942 C11.934,21.533 11.951,22.476 12.574,23.048 C13.198,23.619 14.192,23.604 14.794,23.012 C20.384,17.515 19.658,11.539 17.360,8.333 L17.360,8.325 ZM32.407,8.325 C30.538,5.563 26.663,4.762 23.752,6.536 C21.949,7.635 20.863,9.533 20.873,11.567 C20.875,14.854 23.685,17.516 27.148,17.515 C28.338,17.513 29.503,17.192 30.508,16.587 C30.015,17.975 29.097,19.457 27.585,20.942 C26.982,21.533 26.999,22.476 27.622,23.048 C28.245,23.619 29.239,23.604 29.842,23.012 C35.432,17.515 34.706,11.539 32.407,8.333 L32.407,8.325 Z" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="text lui-text">
-                                                    <div>
-                                                        <p>I would like to recommend Nitesh. I look forward to working with him in future projects. I would like to express my satisfaction on the cooperation regarding the development of the projects. Nitesh did a very professional job. I am satisfied with the solution given to me and with the communication flow through all the projects.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="info">
-                                                    <h6 class="name"><span>Preetam Rao</span></h6>
-                                                    <div class="author"><span>CEO, QuillAudits & QuillHash</span></div>
-                                                </div>
-                                                <div class="bg-img" style="background-image: url(assets/images/pat-2.png);"></div>
-                                            </div>
-                                        </div>
-                                        <!-- Testimonial: Himanshu Chawla -->
-                                        <div class="swiper-slide">
-                                            <div class="testimonials-item">
-                                                <div class="image">
-                                                    <img decoding="async" loading="lazy" src="assets/images/clients/himanshu.jpg" alt="Himanshu Chawla">
-                                                    <div class="icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44px" height="34px">
-                                                            <path fill-rule="evenodd" stroke-width="2px" stroke="rgb(0, 0, 0)" fill="rgb(41, 165, 135)" d="M17.360,8.325 C15.490,5.563 11.616,4.762 8.705,6.536 C6.901,7.635 5.815,9.533 5.826,11.567 C5.828,14.854 8.637,17.516 12.101,17.515 C13.290,17.513 14.456,17.192 15.460,16.587 C14.967,17.975 14.049,19.457 12.537,20.942 C11.934,21.533 11.951,22.476 12.574,23.048 C13.198,23.619 14.192,23.604 14.794,23.012 C20.384,17.515 19.658,11.539 17.360,8.333 L17.360,8.325 ZM32.407,8.325 C30.538,5.563 26.663,4.762 23.752,6.536 C21.949,7.635 20.863,9.533 20.873,11.567 C20.875,14.854 23.685,17.516 27.148,17.515 C28.338,17.513 29.503,17.192 30.508,16.587 C30.015,17.975 29.097,19.457 27.585,20.942 C26.982,21.533 26.999,22.476 27.622,23.048 C28.245,23.619 29.239,23.604 29.842,23.012 C35.432,17.515 34.706,11.539 32.407,8.333 L32.407,8.325 Z" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="text lui-text">
-                                                    <div>
-                                                        <p>I worked with Nitesh on designing our website from scratch and we are delighted with the results. Nitesh has excellent communication skills and uses robust workflows that allowed me to work with him remotely smoothly and efficiently.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="info">
-                                                    <h6 class="name"><span>Himanshu Chawla</span></h6>
-                                                    <div class="author"><span>Software Engineer</span></div>
-                                                </div>
-                                                <div class="bg-img" style="background-image: url(assets/images/pat-2.png);"></div>
-                                            </div>
-                                        </div>
-                                        <!-- Testimonial: Anurag Yadav -->
-                                        <div class="swiper-slide">
-                                            <div class="testimonials-item">
-                                                <div class="image">
-                                                    <img decoding="async" loading="lazy" src="assets/images/clients/anurag.jpg" alt="Anurag Yadav">
-                                                    <div class="icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44px" height="34px">
-                                                            <path fill-rule="evenodd" stroke-width="2px" stroke="rgb(0, 0, 0)" fill="rgb(41, 165, 135)" d="M17.360,8.325 C15.490,5.563 11.616,4.762 8.705,6.536 C6.901,7.635 5.815,9.533 5.826,11.567 C5.828,14.854 8.637,17.516 12.101,17.515 C13.290,17.513 14.456,17.192 15.460,16.587 C14.967,17.975 14.049,19.457 12.537,20.942 C11.934,21.533 11.951,22.476 12.574,23.048 C13.198,23.619 14.192,23.604 14.794,23.012 C20.384,17.515 19.658,11.539 17.360,8.333 L17.360,8.325 ZM32.407,8.325 C30.538,5.563 26.663,4.762 23.752,6.536 C21.949,7.635 20.863,9.533 20.873,11.567 C20.875,14.854 23.685,17.516 27.148,17.515 C28.338,17.513 29.503,17.192 30.508,16.587 C30.015,17.975 29.097,19.457 27.585,20.942 C26.982,21.533 26.999,22.476 27.622,23.048 C28.245,23.619 29.239,23.604 29.842,23.012 C35.432,17.515 34.706,11.539 32.407,8.333 L32.407,8.325 Z" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="text lui-text">
-                                                    <div>
-                                                        <p>Working with Nitesh as a UI Engineer was an awesome experience. Gave 100% output within the specified period of time. Work quality is the key factor to achieve great output which nitesh always follows. Looking forward to work into long run with nitesh</p>
-                                                    </div>
-                                                </div>
-                                                <div class="info">
-                                                    <h6 class="name"><span>Anurag Yadav</span></h6>
-                                                    <div class="author"><span>Full-stack Developer</span></div>
-                                                </div>
-                                                <div class="bg-img" style="background-image: url(assets/images/pat-2.png);"></div>
-                                            </div>
-                                        </div>
-                                        <!-- Testimonial: Parth Agarwal -->
-                                        <div class="swiper-slide">
-                                            <div class="testimonials-item">
-                                                <div class="image">
-                                                    <img decoding="async" loading="lazy" src="assets/images/clients/parth.jpg" alt="Parth Agarwal">
-                                                    <div class="icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44px" height="34px">
-                                                            <path fill-rule="evenodd" stroke-width="2px" stroke="rgb(0, 0, 0)" fill="rgb(41, 165, 135)" d="M17.360,8.325 C15.490,5.563 11.616,4.762 8.705,6.536 C6.901,7.635 5.815,9.533 5.826,11.567 C5.828,14.854 8.637,17.516 12.101,17.515 C13.290,17.513 14.456,17.192 15.460,16.587 C14.967,17.975 14.049,19.457 12.537,20.942 C11.934,21.533 11.951,22.476 12.574,23.048 C13.198,23.619 14.192,23.604 14.794,23.012 C20.384,17.515 19.658,11.539 17.360,8.333 L17.360,8.325 ZM32.407,8.325 C30.538,5.563 26.663,4.762 23.752,6.536 C21.949,7.635 20.863,9.533 20.873,11.567 C20.875,14.854 23.685,17.516 27.148,17.515 C28.338,17.513 29.503,17.192 30.508,16.587 C30.015,17.975 29.097,19.457 27.585,20.942 C26.982,21.533 26.999,22.476 27.622,23.048 C28.245,23.619 29.239,23.604 29.842,23.012 C35.432,17.515 34.706,11.539 32.407,8.333 L32.407,8.325 Z" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="text lui-text">
-                                                    <div>
-                                                        <p>Nitesh is very agile. He has a great sense of design and is very articulate at his work!</p>
-                                                    </div>
-                                                </div>
-                                                <div class="info">
-                                                    <h6 class="name"><span>Parth Agarwal</span></h6>
-                                                    <div class="author"><span>Business Developer</span></div>
-                                                </div>
-                                                <div class="bg-img" style="background-image: url(assets/images/pat-2.png);"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
-                            <div class="lui-bgtitle"><span>Reviews</span></div>
-                            <div class="load-more-link">
-                                <a href="/testimonials" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                    <span>View More</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- ==================== EXPERIENCE SECTION ==================== -->
-                <section class="lui-section lui-gradient-top below-fold" id="exp">
-                    <div class="lui-heading">
-                        <div class="container">
-                            <div class="m-titles align-center">
-                                <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-                                    <span>Experience</span>
-                                </h2>
-                                <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-                                    <span>my <b>Story</b></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="v-line v-line-left">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <div class="history-items">
-                                        <!-- Experience: Ksolves -->
-                                        <div class="history-item lui-collapse-item opened scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                            <div class="name lui-collapse-btn exp-company active">
-                                                <div class="exp-company-inner">
-                                                    <div class="folder-container folder-container--default">
-                                                        <div class="folder-icon-area">
-                                                            <img class="folder-back" loading="lazy" decoding="async" src="assets/images/icons/back.svg" alt="Folder back">
-                                                            <div class="project-previews">
-                                                                <div class="project-card project-card--1"></div>
-                                                                <div class="project-card project-card--2"></div>
-                                                                <div class="project-card project-card--3"></div>
-                                                            </div>
-                                                            <img class="folder-front" loading="lazy" decoding="async" src="assets/images/icons/front.svg" alt="Folder front">
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-left exp-text-head">
-                                                        <h4><span>Ksolves</span></h4>
-                                                        <div class="subname"><span>Senior UI/UX Designer</span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="date lui-subtitle">
-                                                    <span>June 2024 - <b>Present</b></span>
-                                                </div>
-                                            </div>
-                                            <div class="history-content">
-                                                <div class="text">
-                                                    <div>
-                                                        <p>Led end-to-end design of internal products across Odoo, Big Data, and AI (DFM, Mind AI Ninja, Dashboard Ninja, Arc Backend Theme, Etc), from research to high-fidelity UI and scalable design systems.</p>
-                                                        <br>
-                                                        <p>Designed & Enhanced Odoo-based landing pages and some client Product Features, ensuring consistent, user-centric UI/UX across platforms.</p>
-                                                        <p>Revamped client projects in Salesforce and Big Data domains (Demerara Bank, Meshantra / Symbiontra), improving usability through research-driven design and scalable systems.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Experience: Solultima -->
-                                        <div class="history-item lui-collapse-item scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                            <div class="name lui-collapse-btn exp-company active">
-                                                <div class="exp-company-inner">
-                                                    <div class="folder-container folder-container--default">
-                                                        <div class="folder-icon-area">
-                                                            <img class="folder-back" loading="lazy" decoding="async" src="assets/images/icons/back.svg" alt="Folder back">
-                                                            <div class="project-previews">
-                                                                <div class="project-card project-card--1"></div>
-                                                                <div class="project-card project-card--2"></div>
-                                                                <div class="project-card project-card--3"></div>
-                                                            </div>
-                                                            <img class="folder-front" loading="lazy" decoding="async" src="assets/images/icons/front.svg" alt="Folder front">
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-left exp-text-head">
-                                                        <h4><span>Solultima Pvt. Ltd.</span></h4>
-                                                        <div class="subname"><span>UI/UX Designer & UI Developer</span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="date lui-subtitle">
-                                                    <span>August 2021 - June 2024</span>
-                                                </div>
-                                            </div>
-                                            <div class="history-content">
-                                                <div class="text">
-                                                    <div>
-                                                        <p>Led end-to-end design for FV Bank and Yug Network across web, mobile, and browser platforms; built Yug Network from scratch and revamped FV Bank by improving usability and implementing scalable design systems.</p>
-                                                        <br>
-                                                        <p>Designed multiple Web3 and crypto products across fintech, gaming, launchpads, and staking; simplified complex workflows into intuitive UI/UX and contributed to front-end for pixel-perfect implementation.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Experience: Orgzit -->
-                                        <div class="history-item lui-collapse-item scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                            <div class="name lui-collapse-btn exp-company active">
-                                                <div class="exp-company-inner">
-                                                    <div class="folder-container folder-container--default">
-                                                        <div class="folder-icon-area">
-                                                            <img class="folder-back" loading="lazy" decoding="async" src="assets/images/icons/back.svg" alt="Folder back">
-                                                            <div class="project-previews">
-                                                                <div class="project-card project-card--1"></div>
-                                                                <div class="project-card project-card--2"></div>
-                                                                <div class="project-card project-card--3"></div>
-                                                            </div>
-                                                            <img class="folder-front" loading="lazy" decoding="async" src="assets/images/icons/front.svg" alt="Folder front">
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-left exp-text-head">
-                                                        <h4><span>Orgzit</span></h4>
-                                                        <div class="subname"><span>UI/UX Designer & UI Developer</span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="date lui-subtitle">
-                                                    <span>Apr 2020 - Aug 2021</span>
-                                                </div>
-                                            </div>
-                                            <div class="history-content">
-                                                <div class="text">
-                                                    <div>
-                                                        <p>Designed high-fidelity web and mobile experiences for Orgzit Web & Mobile App aligned with business goals, creating wireframes and UI designs while enhancing existing features for better usability. Also optimized Orgzit's mobile interface using React Native, ensuring consistency and smooth performance.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Experience: Quillhash -->
-                                        <div class="history-item lui-collapse-item scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                            <div class="name lui-collapse-btn exp-company active">
-                                                <div class="exp-company-inner">
-                                                    <div class="folder-container folder-container--default">
-                                                        <div class="folder-icon-area">
-                                                            <img class="folder-back" loading="lazy" decoding="async" src="assets/images/icons/back.svg" alt="Folder back">
-                                                            <div class="project-previews">
-                                                                <div class="project-card project-card--1"></div>
-                                                                <div class="project-card project-card--2"></div>
-                                                                <div class="project-card project-card--3"></div>
-                                                            </div>
-                                                            <img class="folder-front" loading="lazy" decoding="async" src="assets/images/icons/front.svg" alt="Folder front">
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-left exp-text-head">
-                                                        <h4><span>Quillhash Technologies</span></h4>
-                                                        <div class="subname"><span>UI/UX Designer & UI Developer</span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="date lui-subtitle">
-                                                    <span>May 2019 - Mar 2020</span>
-                                                </div>
-                                            </div>
-                                            <div class="history-content">
-                                                <div class="text">
-                                                    <div>
-                                                        <p>Designed interactive, high-fidelity website experiences aligned with business requirements, ensuring pixel-perfect implementation from design to development. Worked on multiple product- and service-based websites while contributing to overall product UI/UX design, focusing on usability, consistency, and seamless user experience.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lui-bgtitle"><span>History</span></div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- ==================== CONTACT SECTION ==================== -->
-                <section class="lui-section lui-gradient-bottom below-fold" id="contact-section">
-                    <div class="lui-heading">
-                        <div class="container">
-                            <div class="m-titles align-center">
-                                <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-                                    <span>Contact Me</span>
-                                </h2>
-                                <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-                                    <span>Let's <b>Talk About Ideas</b></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="v-line v-line-left">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-                                    <div class="numbers-items">
-                                        <div class="numbers-item scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                            <div class="icon"><i aria-hidden="true" class="far fa-map"></i></div>
-                                            <div class="title"><span>Location</span></div>
-                                            <div class="lui-text"><span>Remote</span></div>
-                                        </div>
-                                        <div class="numbers-item scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                            <div class="icon"><i aria-hidden="true" class="far fa-envelope"></i></div>
-                                            <div class="title"><span>Email</span></div>
-                                            <div class="lui-text"><span>niteshbhat97@gmail.com</span></div>
-                                        </div>
-                                        <div class="numbers-item scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                            <div class="icon"><i aria-hidden="true" class="far fa-address-book"></i></div>
-                                            <div class="title"><span>Phone</span></div>
-                                            <div class="lui-text"><span>+91 7889514480</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-                                    <!-- FIX: removed redundant inner <div class="contacts-form"> wrapper -->
-                                    <div class="contacts-form scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                        <div class="bg-img" style="background-image: url(assets/images/pat-1.png);"></div>
-                                        <form id="cform" method="post" action="https://formsubmit.co/5fe64e19719148bb55fce3f30b139f3a">
-                                            <div class="row">
-                                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                                    <div class="group">
-                                                        <label>
-                                                            Your Full Name <b>*</b>
-                                                            <input type="text" name="name">
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                                    <div class="group">
-                                                        <label>
-                                                            Your Email Address <b>*</b>
-                                                            <input type="email" name="email">
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                    <div class="group">
-                                                        <label>
-                                                            Your Subject <b>*</b>
-                                                            <input type="text" name="subject">
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                    <div class="group">
-                                                        <label>
-                                                            Your Message <b>*</b>
-                                                            <textarea name="message"></textarea>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-right">
-                                                    <button class="btn" type="submit">
-                                                        <span>Send Message</span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <div class="alert-success" style="display: none;">
-                                            <p>Thanks, your message is sent successfully.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lui-bgtitle"><span>Contact Me</span></div>
-                        </div>
-                    </div>
-                </section>
-
-            </div><!-- /.wrapper -->
-
-            <!-- ==================== FOOTER ==================== -->
-            <div class="footer lui-gradient-top">
-                <div class="footer__builder">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                <div class="social-links scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                    <a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/niteshkrbhat/">
-                                        <i aria-hidden="true" class="fab fa-linkedin"></i>
-                                    </a>
-                                    <a target="_blank" rel="nofollow" href="https://wa.me/7889514480?text=I%20am%20interested%20in%20your%20services.%20How%20to%20get%20started%3F">
-                                        <i aria-hidden="true" class="fab fa-whatsapp"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                <div class="copyright-text align-center scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                    Working Since <strong>2019 - Present</strong>
-                                </div>
-                            </div>
-                        </div>
+                    <nav class="site-foot-col" aria-label="Work"><h2>Work</h2><ul><li><a href="/website-design">Website Design</a></li><li><a href="/webapp-design">Webapp Design</a></li><li><a href="/mobile-app-design">Mobile App Design</a></li><li><a href="/website-development">Website Development</a></li><li><a href="/webapp-development">Webapp Development</a></li></ul></nav>
+                    <nav class="site-foot-col" aria-label="Case studies"><h2>Case studies</h2><ul><li><a href="/data-flow-manager-project">Data Flow Manager</a></li><li><a href="/symbiontra-project">Symbiontra</a></li><li><a href="/demerara-bank-project">Demerara Bank</a></li><li><a href="/dashboard-ninja-project">Dashboard Ninja with AI</a></li><li><a href="/mind-ai-ninja-project">Mind AI Ninja</a></li><li><a href="/odoo-ecommerce-project">Odoo Ecommerce</a></li><li><a href="/arc-theme-backend-project">ARC Backend Theme</a></li></ul></nav>
+                    <nav class="site-foot-col" aria-label="More"><h2>More</h2><ul><li><a href="/">Home</a></li><li><a href="/#exp">Experience</a></li><li><a href="/testimonials">Testimonials</a></li><li><a href="/#contact-section">Contact</a></li></ul></nav>
+                </div>
+                <div class="site-foot-bottom">
+                    <p>Working since <strong>2019 &ndash; Present</strong></p>
+                    <div class="site-foot-social">
+                        <a href="https://www.linkedin.com/in/niteshkrbhat/" target="_blank" rel="nofollow noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.64-1.6-2.64-1.62 0-1.86 1.26-1.86 2.55v4.92h-4z"/></svg></a>
+                        <a href="https://wa.me/7889514480?text=I%20am%20interested%20in%20your%20services.%20How%20to%20get%20started%3F" target="_blank" rel="nofollow noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.16-1.5A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.06.9.92-2.98-.2-.31a8.2 8.2 0 1 1 6.84 3.72zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.71-1.33.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.3-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.66 4.22 3.73 1.57.68 2.19.74 2.97.62.48-.07 1.46-.6 1.67-1.18.2-.57.2-1.07.14-1.17-.06-.11-.22-.17-.47-.29z"/></svg></a>
+                        <a href="#" class="site-foot-top-link" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
                     </div>
                 </div>
-            </div><!-- /.footer -->
+            </div>
+        </footer><!-- /.footer -->
 
         </div><!-- /.container-page -->
 
-        <div class="cursor"></div>
+        <div class="cursor" aria-hidden="true"></div>
 
         <!-- ==================== SCRIPTS ==================== -->
         <!-- jQuery: no defer — required by dependent scripts synchronously -->
         <script src="assets/js/jquery.min.js"></script>
         <!-- All remaining scripts: defer = parallel download, ordered execution after DOM -->
-        <script src="assets/js/jquery.validate.min.js" defer></script>
         <script src="assets/js/performance.js" defer></script>
-        <script src="assets/js/bootstrap.js" defer></script>
-        <script src="assets/js/swiper.js" defer></script>
         <script src="assets/js/splitting.js" defer></script>
-        <script src="assets/js/jarallax.min.js" defer></script>
-        <script src="assets/js/magnific-popup.js" defer></script>
-        <script src="assets/js/imagesloaded.pkgd.js" defer></script>
-        <script src="assets/js/isotope.pkgd.js" defer></script>
-        <script src="assets/js/jquery.scrolla.js" defer></script>
-        <script src="assets/js/skrollr.js" defer></script>
         <script src="assets/js/jquery.cookie.js" defer></script>
         <script src="assets/js/plugin.js" defer></script>
         <script src="assets/js/tp-cursor.js" defer></script>
-        <script src="assets/js/typed.js" defer></script>
         <script src="assets/js/common.js" defer></script>
-        <script>
-            const fg         = document.getElementById('videoFg');
-            const bg         = document.getElementById('videoBg');
-            const btnMute    = document.getElementById('btnMute');
-            const btnPlay    = document.getElementById('btnPlay');
-            const soundBadge = document.getElementById('soundBadge');
-            const timecodeEl = document.getElementById('timecode');
-
-            const MAX_AUTO_LOOPS = 3;
-            let loopsDone  = 0;
-            let afterLimit = false;
-            let playOnce   = false;
-
-            /* bg always stays muted — enforce it */
-            bg.muted = true;
-
-            /* Sync bg position to fg (visual only, no audio) */
-            fg.addEventListener('timeupdate', () => {
-                if (Math.abs(bg.currentTime - fg.currentTime) > 0.3) {
-                    bg.currentTime = fg.currentTime;
-                }
-                const t   = fg.currentTime;
-                const h   = Math.floor(t / 3600);
-                const m   = Math.floor((t % 3600) / 60);
-                const s   = Math.floor(t % 60);
-                const fr  = Math.floor((t % 1) * 24);
-                const pad = n => String(Math.floor(n)).padStart(2, '0');
-                timecodeEl.textContent = `${pad(h)}:${pad(m)}:${pad(s)}:${pad(fr)}`;
-            });
-
-            /* Handle each fg video end */
-            fg.addEventListener('ended', () => {
-                if (!afterLimit) {
-                    loopsDone++;
-                    if (loopsDone < MAX_AUTO_LOOPS) {
-                        fg.currentTime = 0;
-                        bg.currentTime = 0;
-                        fg.play().catch(() => {});
-                    } else {
-                        afterLimit     = true;
-                        playOnce       = false;
-                        fg.currentTime = 0;
-                        bg.currentTime = 0;
-                        bg.pause();
-                        syncPlayUI();
-                    }
-                } else if (playOnce) {
-                    playOnce       = false;
-                    fg.currentTime = 0;
-                    bg.currentTime = 0;
-                    bg.pause();
-                    syncPlayUI();
-                }
-            });
-
-            /* Auto-start with audio */
-            fg.muted = false;
-            fg.play().then(() => {
-                soundBadge.classList.add('hidden');
-                syncMuteUI();
-            }).catch(() => {
-                fg.muted = true;
-                fg.play().catch(() => {});
-                syncMuteUI();
-                setTimeout(() => {
-                    soundBadge.style.transition = 'opacity 1s';
-                    soundBadge.classList.add('hidden');
-                }, 6000);
-            });
-
-            /* Mute / Unmute (fg only — bg is always muted) */
-            function syncMuteUI() {
-                const muted = fg.muted;
-                document.getElementById('iconMuted').style.display   = muted ? ''     : 'none';
-                document.getElementById('iconUnmuted').style.display = muted ? 'none' : '';
-                if (!muted) soundBadge.classList.add('hidden');
-            }
-
-            btnMute.addEventListener('click', () => {
-                fg.muted = !fg.muted;
-                syncMuteUI();
-            });
-
-            soundBadge.addEventListener('click', () => {
-                fg.muted = false;
-                syncMuteUI();
-            });
-
-            /* Play / Pause */
-            function syncPlayUI() {
-                const playing = !fg.paused;
-                document.getElementById('iconPause').style.display = playing ? ''     : 'none';
-                document.getElementById('iconPlay').style.display  = playing ? 'none' : '';
-                btnPlay.setAttribute('aria-label', playing ? 'Pause video' : 'Play video');
-            }
-
-            btnPlay.addEventListener('click', () => {
-                if (fg.paused) {
-                    if (afterLimit) {
-                        playOnce       = true;
-                        fg.currentTime = 0;
-                        bg.currentTime = 0;
-                    }
-                    fg.play().catch(() => {});
-                    bg.play().catch(() => {});
-                } else {
-                    fg.pause();
-                    bg.pause();
-                    if (afterLimit) playOnce = false;
-                }
-                syncPlayUI();
-            });
-
-            fg.addEventListener('play',  syncPlayUI);
-            fg.addEventListener('pause', syncPlayUI);
-
-            /* Initial UI state */
-            syncMuteUI();
-            syncPlayUI();
-        </script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+        <script src="assets/js/home-hero.js" defer></script>
+        <script src="assets/js/home-award.js" defer></script>
+        <script src="assets/js/home-featured.js" defer></script>
+        <script src="assets/js/cs-story.js" defer></script>
     </body>
 </html>

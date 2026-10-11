@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>ARC Backend Theme - Odoo 17 Backend Theme UX/UI Case Study | Nitesh Bhat</title>
+        <meta name="description" content="How I redesigned the Odoo 17 backend with an app-drawer home, side-by-side lists and records, 13 colour themes and dark mode, with every setting owned by a user, a company or everyone." />
+        <meta name="keywords" content="ARC Backend Theme, Odoo 17 backend theme, Odoo theme design, Odoo UI UX, Odoo dark mode, backend theme customisation, design system, UX case study, Nitesh Bhat, Ksolves" />
+        <meta name="author" content="Nitesh Bhat" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://niteshkrbhat.in/arc-theme-backend-project" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://niteshkrbhat.in/arc-theme-backend-project" />
+        <meta property="og:title" content="ARC Backend Theme - Odoo 17 Backend Theme UX/UI Case Study | Nitesh Bhat" />
+        <meta property="og:description" content="How I redesigned the Odoo 17 backend with an app-drawer home, side-by-side lists and records, 13 colour themes and dark mode, with every setting owned by a user, a company or everyone." />
+        <meta property="og:image" content="https://niteshkrbhat.in/assets/images/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Nitesh Bhat Portfolio" />
+        <meta property="og:locale" content="en_IN" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="ARC Backend Theme - Odoo 17 Backend Theme UX/UI Case Study | Nitesh Bhat" />
+        <meta name="twitter:description" content="How I redesigned the Odoo 17 backend with an app-drawer home, side-by-side lists and records, 13 colour themes and dark mode, with every setting owned by a user, a company or everyone." />
+        <meta name="twitter:image" content="https://niteshkrbhat.in/assets/images/og-image.jpg" />
+        <!-- <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" /> -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/performance.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/fonts/css/font-awesome.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/splitting.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/dark.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/cs-hero.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/cs-story.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/cs-persona.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/site-shell.css" type="text/css" media="all" >
+    </head>
+    <body class="portfolio-template light-skin">
+        <script>if (/(?:^|;\s*)skin=dark(?:;|$)/.test(document.cookie)) document.body.className = document.body.className.replace('light-skin', 'dark-skin');</script>
+        <a class="skip-link" href="#cs">Skip to main content</a>
+        <div class="container-page">
+            <!-- Header -->
+            <nav class="navbar header" role="navigation" aria-label="Main navigation" id="web-header">
+                <div class="logo">
+                    <a href="/">
+                    <img width="228" height="38" src="assets/images/logo.png" alt="Nitesh Bhat &mdash; Home">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#screenshots">Product Screenshots</a></li>
+                    <li><a href="/#award-section">Award</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a class="featured-work" href="#">Works</a>
+                        <ul class="dropdown">
+                            <li class="menu-item">
+                                <a href="/website-design">Website Design</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/webapp-design">Webapp Design</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/mobile-app-design">Mobile App Design</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/website-development">Website Development</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/webapp-development">Webapp Development</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/#exp">Experience</a></li>
+                    <li><a href="/testimonials">Testimonials</a></li>
+                    <li><a href="/#contact-section">Contact</a></li>
+                </ul>
+                <div class="row">
+                    <div class="align-right">
+                        <a href="#" class="switcher-btn" role="button" aria-label="Dark mode" aria-pressed="false">
+                            <span class="sw-before">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+                                    <path id="Dark_Theme" data-name="Dark Theme" fill="currentColor" d="M1759.46,111.076a0.819,0.819,0,0,0-.68.147,8.553,8.553,0,0,1-2.62,1.537,8.167,8.167,0,0,1-2.96.531,8.655,8.655,0,0,1-8.65-8.682,9.247,9.247,0,0,1,.47-2.864,8.038,8.038,0,0,1,1.42-2.54,0.764,0.764,0,0,0-.12-1.063,0.813,0.813,0,0,0-.68-0.148,11.856,11.856,0,0,0-6.23,4.193,11.724,11.724,0,0,0,1,15.387,11.63,11.63,0,0,0,19.55-5.553A0.707,0.707,0,0,0,1759.46,111.076Zm-4.5,6.172a10.137,10.137,0,0,1-14.29-14.145,10.245,10.245,0,0,1,3.38-2.836c-0.14.327-.29,0.651-0.41,1.006a9.908,9.908,0,0,0-.56,3.365,10.162,10.162,0,0,0,10.15,10.189,9.776,9.776,0,0,0,3.49-.62,11.659,11.659,0,0,0,1.12-.473A10.858,10.858,0,0,1,1754.96,117.248Z" transform="translate(-1737 -98)" />
+                                </svg>
+                            </span>
+                            <span class="sw-after">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22.22" height="22.313" viewBox="0 0 22.22 22.313">
+                                    <path id="Light_Theme" data-name="Light Theme" fill="currentColor" d="M1752.49,105.511a5.589,5.589,0,0,0-3.94-1.655,5.466,5.466,0,0,0-3.94,1.655,5.61,5.61,0,0,0,3.94,9.566,5.473,5.473,0,0,0,3.94-1.653,5.643,5.643,0,0,0,1.65-3.957A5.516,5.516,0,0,0,1752.49,105.511Zm-1.06,6.85a4.1,4.1,0,0,1-5.76,0,4.164,4.164,0,0,1,0-5.788A4.083,4.083,0,0,1,1751.43,112.361Zm7.47-3.662h-2.27a0.768,0.768,0,0,0,0,1.536h2.27A0.768,0.768,0,0,0,1758.9,108.7Zm-10.35,8.12a0.777,0.777,0,0,0-.76.769v2.274a0.777,0.777,0,0,0,.76.767,0.786,0.786,0,0,0,.77-0.767v-2.274A0.786,0.786,0,0,0,1748.55,116.819Zm7.85-.531-1.62-1.624a0.745,0.745,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.625a0.747,0.747,0,0,0,1.06,0A0.759,0.759,0,0,0,1756.4,116.288ZM1748.55,98.3a0.777,0.777,0,0,0-.76.768v2.273a0.778,0.778,0,0,0,.76.768,0.787,0.787,0,0,0,.77-0.768V99.073A0.786,0.786,0,0,0,1748.55,98.3Zm7.88,3.278a0.744,0.744,0,0,0-1.06,0l-1.62,1.624a0.758,0.758,0,0,0,0,1.063,0.745,0.745,0,0,0,1.06,0l1.62-1.624A0.758,0.758,0,0,0,1756.43,101.583Zm-15.96,7.116h-2.26a0.78,0.78,0,0,0-.77.768,0.76,0.76,0,0,0,.77.768h2.26A0.768,0.768,0,0,0,1740.47,108.7Zm2.88,5.965a0.745,0.745,0,0,0-1.06,0l-1.62,1.624a0.759,0.759,0,0,0,0,1.064,0.747,0.747,0,0,0,1.06,0l1.62-1.625A0.758,0.758,0,0,0,1743.35,114.664Zm0-11.457-1.62-1.624a0.744,0.744,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.624a0.745,0.745,0,0,0,1.06,0A0.758,0.758,0,0,0,1743.35,103.207Z" transform="translate(-1737.44 -98.313)" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <header class="header" id="mob-header">
+                <div class="header__builder">
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="logo">
+                                <a href="/">
+                                <img width="228" height="38" src="assets/images/logo.png" alt="Nitesh Bhat &mdash; Home" >
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align-right">
+                            <a href="#" class="switcher-btn" role="button" aria-label="Dark mode" aria-pressed="false">
+                                <span class="sw-before">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+                                        <path id="Dark_Theme" data-name="Dark Theme" fill="#000" d="M1759.46,111.076a0.819,0.819,0,0,0-.68.147,8.553,8.553,0,0,1-2.62,1.537,8.167,8.167,0,0,1-2.96.531,8.655,8.655,0,0,1-8.65-8.682,9.247,9.247,0,0,1,.47-2.864,8.038,8.038,0,0,1,1.42-2.54,0.764,0.764,0,0,0-.12-1.063,0.813,0.813,0,0,0-.68-0.148,11.856,11.856,0,0,0-6.23,4.193,11.724,11.724,0,0,0,1,15.387,11.63,11.63,0,0,0,19.55-5.553A0.707,0.707,0,0,0,1759.46,111.076Zm-4.5,6.172a10.137,10.137,0,0,1-14.29-14.145,10.245,10.245,0,0,1,3.38-2.836c-0.14.327-.29,0.651-0.41,1.006a9.908,9.908,0,0,0-.56,3.365,10.162,10.162,0,0,0,10.15,10.189,9.776,9.776,0,0,0,3.49-.62,11.659,11.659,0,0,0,1.12-.473A10.858,10.858,0,0,1,1754.96,117.248Z" transform="translate(-1737 -98)" />
+                                    </svg>
+                                </span>
+                                <span class="sw-after">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22.22" height="22.313" viewBox="0 0 22.22 22.313">
+                                        <path id="Light_Theme" data-name="Light Theme" fill="#fff" d="M1752.49,105.511a5.589,5.589,0,0,0-3.94-1.655,5.466,5.466,0,0,0-3.94,1.655,5.61,5.61,0,0,0,3.94,9.566,5.473,5.473,0,0,0,3.94-1.653,5.643,5.643,0,0,0,1.65-3.957A5.516,5.516,0,0,0,1752.49,105.511Zm-1.06,6.85a4.1,4.1,0,0,1-5.76,0,4.164,4.164,0,0,1,0-5.788A4.083,4.083,0,0,1,1751.43,112.361Zm7.47-3.662h-2.27a0.768,0.768,0,0,0,0,1.536h2.27A0.768,0.768,0,0,0,1758.9,108.7Zm-10.35,8.12a0.777,0.777,0,0,0-.76.769v2.274a0.777,0.777,0,0,0,.76.767,0.786,0.786,0,0,0,.77-0.767v-2.274A0.786,0.786,0,0,0,1748.55,116.819Zm7.85-.531-1.62-1.624a0.745,0.745,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.625a0.747,0.747,0,0,0,1.06,0A0.759,0.759,0,0,0,1756.4,116.288ZM1748.55,98.3a0.777,0.777,0,0,0-.76.768v2.273a0.778,0.778,0,0,0,.76.768,0.787,0.787,0,0,0,.77-0.768V99.073A0.786,0.786,0,0,0,1748.55,98.3Zm7.88,3.278a0.744,0.744,0,0,0-1.06,0l-1.62,1.624a0.758,0.758,0,0,0,0,1.063,0.745,0.745,0,0,0,1.06,0l1.62-1.624A0.758,0.758,0,0,0,1756.43,101.583Zm-15.96,7.116h-2.26a0.78,0.78,0,0,0-.77.768,0.76,0.76,0,0,0,.77.768h2.26A0.768,0.768,0,0,0,1740.47,108.7Zm2.88,5.965a0.745,0.745,0,0,0-1.06,0l-1.62,1.624a0.759,0.759,0,0,0,0,1.064,0.747,0.747,0,0,0,1.06,0l1.62-1.625A0.758,0.758,0,0,0,1743.35,114.664Zm0-11.457-1.62-1.624a0.744,0.744,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.624a0.745,0.745,0,0,0,1.06,0A0.758,0.758,0,0,0,1743.35,103.207Z" transform="translate(-1737.44 -98.313)" />
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="#" class="menu-btn" role="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+                            <span></span>
+                            <span></span>
+                            </a>
+                            <div class="menu-full-overlay" id="site-menu">
+                                <div class="menu-full-container">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                <div class="menu-full">
+                                                    <ul class="menu-full">
+                                                        <li class="menu-item">
+                                                            <a class="splitting-text-anim-2" data-splitting="chars" href="/">Home</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a class="splitting-text-anim-2" data-splitting="chars" href="/#screenshots">Product Screenshots</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a class="splitting-text-anim-2" data-splitting="chars" href="/#award-section">Award</a>
+                                                        </li>
+                                                        <li class="menu-item menu-item-has-children has-children">
+                                                            <a class="splitting-text-anim-2" data-splitting="chars" href="#" role="button" aria-expanded="false">Works</a>
+                                                            <ul class="sub-menu">
+                                                                <li class="menu-item">
+                                                                    <a class="splitting-text-anim-1" data-splitting="chars" href="/website-design">Website Design</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a class="splitting-text-anim-1" data-splitting="chars" href="/webapp-design">Webapp Design</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a class="splitting-text-anim-1" data-splitting="chars" href="/mobile-app-design">Mobile App Design</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a class="splitting-text-anim-1" data-splitting="chars" href="/website-development">Website Development</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a class="splitting-text-anim-1" data-splitting="chars" href="/webapp-development">Webapp Development</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a class="splitting-text-anim-2" data-splitting="chars" href="/#exp">Experience</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a class="splitting-text-anim-2" data-splitting="chars" href="/testimonials">Testimonials</a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a class="splitting-text-anim-2" data-splitting="chars" href="/#contact-section">Contact</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="menu-social-links">
+                                                    <a target="_blank" rel="nofollow noopener" href="https://www.linkedin.com/in/niteshkrbhat/" aria-label="LinkedIn">
+                                                    <i aria-hidden="true" class="fab fa-linkedin"></i>
+                                                    </a>
+                                                    <a target="_blank" rel="nofollow noopener" href="https://wa.me/7889514480?text=I%20am%20interested%20in%20your%20services.%20How%20to%20get%20started%3F" aria-label="WhatsApp">
+                                                    <i aria-hidden="true" class="fab fa-whatsapp"></i>
+                                                    </a>
+                                                    <!-- <a target="_blank" rel="nofollow" href="https://www.instagram.com/travellerlyfe/">
+                                                        <i aria-hidden="true" class="fab fa-instagram"></i>
+                                                        </a> -->
+                                                </div>
+                                                <div class="v-line-block"><span></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="wrapper">
+                <!-- HERO -->
+                <section class="csh csh--arc" aria-labelledby="csh-title">
+                    <div class="csh-band">
+                        <div class="csh-wrap">
+                            <div class="csh-tags">
+                                <span class="csh-chip is-accent">UX Case Study</span>
+                                <span class="csh-chip">Odoo Backend · Theme &amp; UI Kit</span>
+                                <span class="csh-chip">Odoo 17</span>
+                                <span class="csh-chip">2024</span>
+                            </div>
+                            <div class="csh-top">
+                                <div>
+                                    <p class="csh-brand">ARC Backend Theme</p>
+                                    <h1 class="csh-title" id="csh-title">The Odoo screens people use all day, <em>finally made theirs</em></h1>
+                                    <p class="csh-lead">Every Odoo company got the same backend: a long grid of apps, one bright look, and no say in any of it without a developer. I redesigned the home, menus, views and settings so each person, company and admin can shape them to how they work.</p>
+                                </div>
+                                <div class="csh-side">
+                                    <svg class="csh-art csh-art--ar" viewBox="0 0 440 200" aria-hidden="true">
+                                        <defs><clipPath id="arWin"><rect x="0.5" y="76.5" width="439" height="123" rx="12"/></clipPath></defs>
+                                        <!-- Theme picker: the ring walks Teal → Rose → Ocean → Sunset -->
+                                        <rect class="card" x="0.5" y="0.5" width="439" height="62" rx="12"/>
+                                        <text class="t" x="16" y="22">INTERFACE THEME</text>
+                                        <g class="t t-hi" text-anchor="end"><text class="ar-name" x="424" y="22">Teal</text><text class="ar-name" opacity="0" style="--d:2.5s" x="424" y="22">Rose</text><text class="ar-name" opacity="0" style="--d:5s" x="424" y="22">Ocean</text><text class="ar-name" opacity="0" style="--d:7.5s" x="424" y="22">Sunset</text></g>
+                                        <g><circle cx="24" cy="42" r="8" fill="#2F8C74"/><circle cx="56" cy="42" r="8" fill="#1E7A8C"/><circle cx="88" cy="42" r="8" fill="#8A99A6"/><circle cx="120" cy="42" r="8" fill="#E879A6"/><circle cx="152" cy="42" r="8" fill="#C04CC8"/><circle cx="184" cy="42" r="8" fill="#C9A23A"/><circle cx="216" cy="42" r="8" fill="#5E7D6E"/><circle cx="248" cy="42" r="8" fill="#F2662B"/><circle cx="280" cy="42" r="8" fill="#22A55B"/><circle cx="312" cy="42" r="8" fill="#18A7A0"/><circle cx="344" cy="42" r="8" fill="#3D7CF0"/><circle cx="376" cy="42" r="8" fill="#7A6CF0"/><circle cx="408" cy="42" r="8" fill="#D8D2C4"/></g>
+                                        <circle class="ar-ring" cx="24" cy="42" r="12.5" fill="none" stroke="#F6F2EC" stroke-width="2"/>
+                                        <!-- Live backend preview: accent follows the picked swatch, halfway through it flips to light mode -->
+                                        <g clip-path="url(#arWin)">
+                                            <rect class="ar-bg" x="0" y="76" width="440" height="124" fill="rgba(255,255,255,.05)"/>
+                                            <rect class="ar-acc" x="0" y="76" width="52" height="124" fill="#2F8C74"/>
+                                            <rect x="18" y="90" width="16" height="16" rx="5" fill="rgba(255,255,255,.9)"/>
+                                            <g fill="rgba(255,255,255,.5)"><rect x="18" y="116" width="16" height="16" rx="5"/><rect x="18" y="142" width="16" height="16" rx="5"/><rect x="18" y="168" width="16" height="16" rx="5"/></g>
+                                            <g class="ar-ink" fill="rgba(255,255,255,.22)">
+                                                <rect x="66" y="86" width="150" height="14" rx="7"/>
+                                                <rect x="74" y="145" width="20" height="3.5" rx="1.75"/><rect x="126" y="145" width="20" height="3.5" rx="1.75"/><rect x="178" y="145" width="20" height="3.5" rx="1.75"/><rect x="230" y="145" width="20" height="3.5" rx="1.75"/><rect x="282" y="145" width="20" height="3.5" rx="1.75"/><rect x="334" y="145" width="20" height="3.5" rx="1.75"/><rect x="386" y="145" width="20" height="3.5" rx="1.75"/>
+                                                <rect x="74" y="185" width="20" height="3.5" rx="1.75"/><rect x="126" y="185" width="20" height="3.5" rx="1.75"/><rect x="178" y="185" width="20" height="3.5" rx="1.75"/><rect x="230" y="185" width="20" height="3.5" rx="1.75"/><rect x="282" y="185" width="20" height="3.5" rx="1.75"/><rect x="334" y="185" width="20" height="3.5" rx="1.75"/><rect x="386" y="185" width="20" height="3.5" rx="1.75"/>
+                                            </g>
+                                            <circle class="ar-acc" cx="370" cy="93" r="7" fill="#2F8C74"/>
+                                            <rect x="388.5" y="85.5" width="36" height="16" rx="8" fill="none" stroke="rgba(160,160,160,.55)"/>
+                                            <g class="ar-knob"><circle class="ar-acc" cx="397" cy="93.5" r="5" fill="#2F8C74"/></g>
+                                            <!-- App drawer -->
+                                            <g fill="none" stroke="#F6F2EC" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                                <g class="ar-tile" style="--d:0s"><rect class="ar-acc" x="70" y="112" width="28" height="28" rx="8" fill="#2F8C74" stroke="none"/><path d="M79 132v-6M84 132v-11M89 132v-4"/></g>
+                                                <g class="ar-tile" style="--d:0.04s"><rect class="ar-acc" x="122" y="112" width="28" height="28" rx="8" fill="#2F8C74" fill-opacity=".7" stroke="none"/><path d="M130 126a6 6 0 1 0 12 0a6 6 0 1 0-12 0"/></g>
+                                                <g class="ar-tile" style="--d:0.08s"><rect class="ar-acc" x="174" y="112" width="28" height="28" rx="8" fill="#2F8C74" fill-opacity=".85" stroke="none"/><path d="M182 122h12M182 126h12M182 130h7"/></g>
+                                                <g class="ar-tile" style="--d:0.12s"><rect class="ar-acc" x="226" y="112" width="28" height="28" rx="8" fill="#2F8C74" fill-opacity=".6" stroke="none"/><path d="M235 126l3.5 3.5 6.5-7"/></g>
+                                                <g class="ar-tile" style="--d:0.16s"><rect class="ar-acc" x="278" y="112" width="28" height="28" rx="8" fill="#2F8C74" stroke="none"/><path d="M287 132v-6M292 132v-11M297 132v-4"/></g>
+                                                <g class="ar-tile" style="--d:0.2s"><rect class="ar-acc" x="330" y="112" width="28" height="28" rx="8" fill="#2F8C74" fill-opacity=".75" stroke="none"/><path d="M338 126a6 6 0 1 0 12 0a6 6 0 1 0-12 0"/></g>
+                                                <g class="ar-tile" style="--d:0.24s"><rect class="ar-acc" x="382" y="112" width="28" height="28" rx="8" fill="#2F8C74" fill-opacity=".9" stroke="none"/><path d="M390 122h12M390 126h12M390 130h7"/></g>
+                                                <g class="ar-tile" style="--d:0.08s"><rect class="ar-acc" x="70" y="152" width="28" height="28" rx="8" fill="#2F8C74" fill-opacity=".8" stroke="none"/><path d="M78 162h12M78 166h12M78 170h7"/></g>
+                                                <g class="ar-tile" style="--d:0.12s"><rect class="ar-acc" x="122" y="152" width="28" height="28" rx="8" fill="#2F8C74" stroke="none"/><path d="M131 166l3.5 3.5 6.5-7"/></g>
+                                                <g class="ar-tile" style="--d:0.16s"><rect class="ar-acc" x="174" y="152" width="28" height="28" rx="8" fill="#2F8C74" fill-opacity=".65" stroke="none"/><path d="M183 172v-6M188 172v-11M193 172v-4"/></g>
+                                                <g class="ar-tile" style="--d:0.2s"><rect class="ar-acc" x="226" y="152" width="28" height="28" rx="8" fill="#2F8C74" fill-opacity=".9" stroke="none"/><path d="M234 166a6 6 0 1 0 12 0a6 6 0 1 0-12 0"/></g>
+                                                <g class="ar-tile" style="--d:0.24s"><rect class="ar-acc" x="278" y="152" width="28" height="28" rx="8" fill="#2F8C74" fill-opacity=".7" stroke="none"/><path d="M286 162h12M286 166h12M286 170h7"/></g>
+                                                <g class="ar-tile" style="--d:0.28s"><rect class="ar-acc" x="330" y="152" width="28" height="28" rx="8" fill="#2F8C74" stroke="none"/><path d="M339 166l3.5 3.5 6.5-7"/></g>
+                                                <g class="ar-tile" style="--d:0.32s"><rect class="ar-acc" x="382" y="152" width="28" height="28" rx="8" fill="#2F8C74" fill-opacity=".8" stroke="none"/><path d="M391 172v-6M396 172v-11M401 172v-4"/></g>
+                                            </g>
+                                        </g>
+                                        <rect x="0.5" y="76.5" width="439" height="123" rx="12" fill="none" stroke="rgba(255,255,255,.2)"/>
+                                    </svg>
+                                    <!-- DRAFT: review before publishing — role and timeline carried over from the previous version of this page -->
+                                    <dl class="csh-meta">
+                                        <div><dt>My Role</dt><dd>Sole Product Designer</dd></div>
+                                        <div><dt>Platform</dt><dd>Odoo 17 · Ksolves</dd></div>
+                                        <div class="wide"><dt>Responsibilities &amp; Deliverables</dt><dd>UX Strategy, Information Architecture, Navigation Design, Interaction Design, Visual Design, Dark Mode, Design System, Prototyping</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="csh-wrap">
+                        <figure class="csh-shot">
+                            <div class="csh-shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>arc backend theme · home</span></div>
+                            <img src="assets/images/screenshots/arc-theme-web/All.webp" width="1440" height="931" alt="ARC Backend Theme home: a welcome header and an app drawer of Odoo apps with All, Recently and Favourite tabs">
+                        </figure>
+                        <div class="csh-stats" role="list" aria-label="The theme at a glance">
+                            <div role="listitem"><b>13</b><strong>Interface colour themes</strong><p>One click recolours the whole backend — sidebar, buttons, highlights — without touching code.</p></div>
+                            <div role="listitem"><b>3</b><strong>Setting scopes</strong><p>Every preference can be set for a single user, a whole company, or globally by the admin.</p></div>
+                            <div role="listitem"><b>3</b><strong>App-drawer icon styles</strong><p>Glassmorphism, solid and gradient icons, each available in light and dark mode.</p></div>
+                        </div>
+                        <div class="csh-ctx">
+                            <div><h2>The challenge</h2><p>Odoo's default backend works, but it's the same for everyone: the same look, the same menus, the same layout. Changing any of it means paying a developer. People spend their whole working day in these screens, yet have no say in how they work.</p></div>
+                            <div><h2>The solution</h2><p>ARC gives Odoo a modern backend people can shape: a phone-style app drawer, 13 colour themes, three icon styles, movable menus, side-by-side lists and records, and dark mode. Every option can be set for one person, one company or everyone, and it all sits on one design system.</p></div>
+                        </div>
+                    </div>
+                </section>
+
+                <main class="cs cs--arc" id="cs">
+                    <div class="cs-progress" aria-hidden="true"></div>
+                    <div class="cs-wrap cs-body">
+                        <aside class="cs-toc" aria-label="Case study chapters">
+                            <span class="eyebrow">Chapters</span>
+                            <ol>
+                                <li><a href="#overview"><span>01</span>Overview</a></li>
+                                <li><a href="#context"><span>02</span>Context</a></li>
+                                <li><a href="#persona"><span>03</span>Persona</a></li>
+                                <li><a href="#problem"><span>04</span>The Problem</a></li>
+                                <li><a href="#research"><span>05</span>Research</a></li>
+                                <li><a href="#competitors"><span>06</span>Competitors</a></li>
+                                <li><a href="#decisions"><span>07</span>Design Decisions</a></li>
+                                <li><a href="#solution"><span>08</span>The Solution</a></li>
+                                <li><a href="#impact"><span>09</span>Impact</a></li>
+                                <li><a href="#reflection"><span>10</span>Reflection</a></li>
+                            </ol>
+                        </aside>
+                        <div class="cs-main">
+                        <!-- 01 OVERVIEW -->
+                        <section class="ch" id="overview">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">01</span><span class="eyebrow">Overview</span></div>
+                                <h2 class="ch-title">Project overview: before, turning point, after</h2>
+                                <p class="ch-lead">This is the story of how the Odoo screens people stare at from nine to six went from one fixed look for everyone to something each person, and each company, can make their own.</p>
+                            </header>
+                            <div class="arc">
+                                <article class="cs-card arc-step is-before rv">
+                                    <span class="eyebrow">Before</span>
+                                    <h3>Everyone got the same screens, and no say in them</h3>
+                                    <p>A long grid of apps to scan every morning, lists and records on separate screens, a single bright look, and any change to colours or layout meant a developer.</p>
+                                </article>
+                                <article class="cs-card arc-step rv">
+                                    <span class="eyebrow">The turning point</span>
+                                    <h3>It wasn't about looks, it was about control</h3>
+                                    <p>Nobody wanted a prettier Odoo for its own sake. They wanted <em>fewer steps</em> to their daily work, and <em>the right person</em> in control of each choice.</p>
+                                </article>
+                                <article class="cs-card arc-step is-after rv">
+                                    <span class="eyebrow">After</span>
+                                    <h3>A backend that adapts to each person</h3>
+                                    <p>An app-drawer home, side-by-side lists and records, 13 colour themes and dark mode, with every setting owned by a user, a company, or the whole system.</p>
+                                </article>
+                            </div>
+                            <div class="block">
+                                <h3 class="sub-h rv">My design process</h3>
+                                <nav class="proc rv" aria-label="Design process steps">
+                                    <a href="#research"><div class="proc-lbl"><small>STEP 1</small><strong>Research &amp; Discovery</strong><em>Odoo audit, user needs</em></div><div class="proc-bar"></div></a>
+                                    <a href="#problem"><div class="proc-lbl"><small>STEP 2</small><strong>Defining the UX Problem</strong><em>Challenges, persona</em></div><div class="proc-bar"></div></a>
+                                    <a href="#competitors"><div class="proc-lbl"><small>STEP 3</small><strong>Product Strategy</strong><em>Theme landscape</em></div><div class="proc-bar"></div></a>
+                                    <a href="#decisions"><div class="proc-lbl"><small>STEP 4</small><strong>Design Exploration</strong><em>Design decisions</em></div><div class="proc-bar"></div></a>
+                                    <a href="#solution"><div class="proc-lbl"><small>STEP 5</small><strong>Final Solution</strong><em>Hi-fi UI, design system</em></div><div class="proc-bar"></div></a>
+                                    <a href="#impact" class="is-final"><div class="proc-lbl"><small>STEP 6</small><strong>What Shipped &amp; Learnings</strong><em>Outcomes, reflection</em></div><div class="proc-bar"></div></a>
+                                </nav>
+                            </div>
+                        </section>
+
+                        <!-- 02 CONTEXT — DRAFT: review before publishing -->
+                        <section class="ch" id="context">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">02</span><span class="eyebrow">Context</span></div>
+                                <h2 class="ch-title">Why the Odoo backend needed a rethink</h2>
+                                <p class="ch-lead">Odoo runs sales, accounting, stock, HR and dozens of other apps from one set of behind-the-scenes screens. The apps keep growing, but the screens around them (home, menus, views and settings) stay the same for every company and every person.</p>
+                            </header>
+                            <figure class="pq rv"><p>The default backend is like an office where everyone gets the same desk, chair and lighting, whatever their job. ARC lets each person adjust their own desk, lets the company paint the walls in its colours, and keeps the house rules with whoever runs the building.</p></figure>
+                            <div class="block">
+                                <h3 class="sub-h rv">Where it breaks down</h3>
+                                <div class="grid-2">
+                                    <article class="cs-card ctx-card rv"><span class="ico lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><div><h3>A growing grid of apps</h3><p>The home screen is one flat grid. The more apps a company adds, the longer people scan for the two or three they actually use.</p></div></article>
+                                    <article class="cs-card ctx-card rv"><span class="ico lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2a10 10 0 1 0 0 20c.9 0 1.5-.7 1.5-1.5 0-.4-.2-.8-.4-1-.3-.3-.4-.6-.4-1 0-.8.7-1.5 1.5-1.5H16a6 6 0 0 0 6-6c0-4.4-4.5-9-10-9z"/></svg></span><div><h3>One look for every company</h3><p>Branding stops at the logo. Matching the company's colours means a developer writing and maintaining custom code.</p></div></article>
+                                    <article class="cs-card ctx-card rv"><span class="ico lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg></span><div><h3>Lists and records live apart</h3><p>Working through quotations or contacts means opening one, going back to the list, and opening the next, losing your place every time.</p></div></article>
+                                    <article class="cs-card ctx-card rv"><span class="ico lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span><div><h3>Long days, one bright screen</h3><p>Many teams spend eight hours or more in Odoo. Without a proper dark mode, long or late sessions are hard on the eyes.</p></div></article>
+                                </div>
+                            </div>
+                            <div class="block">
+                                <h3 class="sub-h rv">Key terms</h3>
+                                <dl class="gloss rv">
+                                    <div><dt>Backend</dt><dd>The behind-the-scenes screens staff use to run the business, as opposed to the website customers see.</dd></div>
+                                    <div><dt>App drawer</dt><dd>A home screen that groups your apps like a phone does, with tabs for recent and favourite ones.</dd></div>
+                                    <div><dt>List &amp; form view</dt><dd>A list shows many records, like all quotations; a form shows one record in full detail.</dd></div>
+                                    <div><dt>Chatter</dt><dd>The comments and activity log attached to each record.</dd></div>
+                                    <div><dt>Scope</dt><dd>Who a setting applies to: just you (user), your whole company, or everyone (global).</dd></div>
+                                    <div><dt>Design tokens</dt><dd>Named colours, sizes and spacing that every screen reuses, so one change updates everything.</dd></div>
+                                </dl>
+                            </div>
+                        </section>
+
+                        <!-- 03 PERSONA — DRAFT: review before publishing -->
+                        <section class="ch" id="persona">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">03</span><span class="eyebrow">User Persona</span></div>
+                                <h2 class="ch-title">Designing for the person who lives in Odoo</h2>
+                                <p class="ch-lead">Kavya is a sales coordinator at an 80-person distribution company. She's in Odoo from nine to six, handling dozens of records a day. None of her problems were big; they just added up. Here's a typical day.</p>
+                            </header>
+                            <div class="cs-card tl rv">
+                                <div class="tl-head">
+                                    <span class="eyebrow">A working day, before ARC</span>
+                                    <span class="tl-total is-bad">Every single day</span>
+                                </div>
+                                <ol class="tl-list">
+                                    <li class="tl-row is-warn"><span class="tl-time">9:00 am</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>She scans the full app grid to find Sales.</strong><p>She uses three or four apps, but has to look past all of them.</p></div></li>
+                                    <li class="tl-row is-bad"><span class="tl-time">9:15 am</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>She works through 40 quotations.</strong><p>Open one, back to the list, find her place, open the next. Forty times.</p></div></li>
+                                    <li class="tl-row is-bad"><span class="tl-time">11:00 am</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>Autosave saves a discount she was still checking.</strong><p>Now she has to find it and undo it.</p></div></li>
+                                    <li class="tl-row is-warn"><span class="tl-time">2:00 pm</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>Her boss asks for the company colours in Odoo.</strong><p>IT says that needs a developer and custom code.</p></div></li>
+                                    <li class="tl-row"><span class="tl-time">6:00 pm</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>A bright white screen, all day long.</strong><p>Her eyes are tired, and tomorrow will be the same.</p></div></li>
+                                </ol>
+                            </div>
+                            <p class="caption rv">An illustrative day, pieced together from what daily users and administrators described in research.</p>
+                            <div class="block">
+                                <h3 class="sub-h rv">User personas</h3>
+                                <p class="intro rv">Three roles shaped ARC: the daily user who works in the backend all day, the administrator who keeps it consistent, and the business owner who wants it to feel like their company.</p>
+                            <!-- DRAFT - review before publishing: personas Kavya Iyer, Vikram Shah, Anjali Mehra and all stats / Traits scales were written as drafts, not from research. -->
+                            <div class="pz rv">
+                                <div class="pz-tabs" role="tablist" aria-label="User personas">
+                                    <button class="pz-tab" role="tab" id="pz-tab-0" aria-controls="pz-0" aria-selected="true"><span class="pz-av sm" aria-hidden="true">KI</span><span class="pz-tab-txt"><span class="pz-kind is-primary">Primary persona</span><strong>Kavya Iyer</strong><small>Sales Coordinator</small></span></button>
+                                    <button class="pz-tab" role="tab" id="pz-tab-1" aria-controls="pz-1" aria-selected="false" tabindex="-1"><span class="pz-av sm" aria-hidden="true">VS</span><span class="pz-tab-txt"><span class="pz-kind">Secondary persona</span><strong>Vikram Shah</strong><small>Odoo Administrator</small></span></button>
+                                    <button class="pz-tab" role="tab" id="pz-tab-2" aria-controls="pz-2" aria-selected="false" tabindex="-1"><span class="pz-av sm" aria-hidden="true">AM</span><span class="pz-tab-txt"><span class="pz-kind">Secondary persona</span><strong>Anjali Mehra</strong><small>Business Owner</small></span></button>
+                                </div>
+                                <article class="pz-card" id="pz-0" role="tabpanel" aria-labelledby="pz-tab-0">
+                                    <header class="pz-head">
+                                        <div class="pz-id"><div class="pz-av" aria-hidden="true">KI</div><div><h3 class="pz-name">Kavya Iyer</h3><p class="pz-role">Sales Coordinator<br>Distribution company · 80 employees</p><div class="pz-tags"><span>Daily user</span><span>Power user</span></div></div></div>
+                                        <p class="pz-quote">I'm in Odoo from nine to six. I just want it to get out of my way.</p>
+                                    </header>
+                                    <dl class="pz-stats"><div><dt>Time in Odoo</dt><dd>Most of the day</dd></div><div><dt>Apps used daily</dt><dd>3–4</dd></div><div><dt>Records handled</dt><dd>Dozens a day</dd></div><div><dt>Can change settings</dt><dd>Her own only</dd></div></dl>
+                                    <div class="pz-body">
+                                        <section class="pz-box good"><h4>Goals</h4><ul class="ticks"><li>Reach her daily apps in one click</li><li>Work through quotations without losing her place</li><li>A comfortable screen for long days</li><li>Avoid saving half-finished edits</li></ul></section>
+                                        <section class="pz-box bad"><h4>Frustrations</h4><ul class="ticks bad"><li>Scanning a crowded app grid every morning</li><li>Jumping back and forth between list and form</li><li>Bright white screens late in the day</li><li>Changes saved before she was ready</li></ul></section>
+                                        <section class="pz-box"><h4>Responsibilities</h4><ul class="pz-list"><li>Create and follow up on quotations</li><li>Keep customer records up to date</li><li>Confirm orders and deliveries</li><li>Answer customer queries quickly</li></ul></section>
+                                        <section class="pz-box"><h4>Traits</h4><div class="pz-scales"><div class="pz-scale"><div class="pz-scale-top"><span>Technical skill</span><b>Medium</b></div><div class="pz-track" role="img" aria-label="Technical skill: Medium"><i class="lv-45"></i></div></div><div class="pz-scale"><div class="pz-scale-top"><span>Time in the backend</span><b>Very high</b></div><div class="pz-track" role="img" aria-label="Time in the backend: Very high"><i class="lv-95"></i></div></div><div class="pz-scale"><div class="pz-scale-top"><span>Wish to personalise</span><b>High</b></div><div class="pz-track" role="img" aria-label="Wish to personalise: High"><i class="lv-75"></i></div></div></div></section>
+                                    </div>
+                                    <footer class="pz-foot"><h4>Current workarounds</h4><div class="tools"><span class="tag">Browser bookmarks</span><span class="tag">Multiple tabs</span><span class="tag">Browser dark-mode extensions</span><span class="tag">Notes on paper</span></div></footer>
+                                </article>
+                                <article class="pz-card" id="pz-1" role="tabpanel" aria-labelledby="pz-tab-1" hidden>
+                                    <header class="pz-head">
+                                        <div class="pz-id"><div class="pz-av" aria-hidden="true">VS</div><div><h3 class="pz-name">Vikram Shah</h3><p class="pz-role">Odoo Administrator<br>Same company · IT team</p><div class="pz-tags"><span>Admin</span><span>Gatekeeper</span></div></div></div>
+                                        <p class="pz-quote">Let people tweak their own screen — but some things have to look the same for everyone.</p>
+                                    </header>
+                                    <dl class="pz-stats"><div><dt>Users supported</dt><dd>80</dd></div><div><dt>Companies</dt><dd>2</dd></div><div><dt>UI requests</dt><dd>Weekly</dd></div><div><dt>Odoo experience</dt><dd>5 years</dd></div></dl>
+                                    <div class="pz-body">
+                                        <section class="pz-box good"><h4>Goals</h4><ul class="ticks"><li>Set sensible company-wide defaults</li><li>Decide which options users may change</li><li>Roll changes back safely</li><li>Fewer interface tickets</li></ul></section>
+                                        <section class="pz-box bad"><h4>Frustrations</h4><ul class="ticks bad"><li>Every UI tweak needs a developer</li><li>No middle ground between "everyone" and "no one"</li><li>Custom CSS breaks on upgrades</li><li>Hard to undo a bad change</li></ul></section>
+                                        <section class="pz-box"><h4>Responsibilities</h4><ul class="pz-list"><li>Configure apps and access rights</li><li>Manage users and companies</li><li>Plan and test upgrades</li><li>Support colleagues day to day</li></ul></section>
+                                        <section class="pz-box"><h4>Traits</h4><div class="pz-scales"><div class="pz-scale"><div class="pz-scale-top"><span>Technical skill</span><b>High</b></div><div class="pz-track" role="img" aria-label="Technical skill: High"><i class="lv-85"></i></div></div><div class="pz-scale"><div class="pz-scale-top"><span>Need for control</span><b>High</b></div><div class="pz-track" role="img" aria-label="Need for control: High"><i class="lv-90"></i></div></div><div class="pz-scale"><div class="pz-scale-top"><span>Wish to personalise</span><b>Low</b></div><div class="pz-track" role="img" aria-label="Wish to personalise: Low"><i class="lv-30"></i></div></div></div></section>
+                                    </div>
+                                    <footer class="pz-foot"><h4>Current workarounds</h4><div class="tools"><span class="tag">Custom CSS modules</span><span class="tag">Odoo Studio</span><span class="tag">Developer tickets</span><span class="tag">Upgrade checklists</span></div></footer>
+                                </article>
+                                <article class="pz-card" id="pz-2" role="tabpanel" aria-labelledby="pz-tab-2" hidden>
+                                    <header class="pz-head">
+                                        <div class="pz-id"><div class="pz-av" aria-hidden="true">AM</div><div><h3 class="pz-name">Anjali Mehra</h3><p class="pz-role">Business Owner<br>Same company · leadership</p><div class="pz-tags"><span>Decision maker</span><span>Occasional user</span></div></div></div>
+                                        <p class="pz-quote">We invested in Odoo. It should look and feel like our company.</p>
+                                    </header>
+                                    <dl class="pz-stats"><div><dt>Time in Odoo</dt><dd>&lt; 1 hr / day</dd></div><div><dt>Main use</dt><dd>Reviews &amp; approvals</dd></div><div><dt>Devices</dt><dd>Laptop &amp; tablet</dd></div><div><dt>Cares most about</dt><dd>Brand &amp; adoption</dd></div></dl>
+                                    <div class="pz-body">
+                                        <section class="pz-box good"><h4>Goals</h4><ul class="ticks"><li>A backend in the company's colours</li><li>Staff who actually enjoy using it</li><li>Quick access to approvals</li><li>No extra development cost</li></ul></section>
+                                        <section class="pz-box bad"><h4>Frustrations</h4><ul class="ticks bad"><li>The system looks generic</li><li>Branding quotes from developers</li><li>New staff find it overwhelming</li><li>Too many clicks for simple checks</li></ul></section>
+                                        <section class="pz-box"><h4>Responsibilities</h4><ul class="pz-list"><li>Approve budgets and purchases</li><li>Review sales and performance</li><li>Decide on tools and vendors</li><li>Drive adoption across teams</li></ul></section>
+                                        <section class="pz-box"><h4>Traits</h4><div class="pz-scales"><div class="pz-scale"><div class="pz-scale-top"><span>Technical skill</span><b>Low</b></div><div class="pz-track" role="img" aria-label="Technical skill: Low"><i class="lv-25"></i></div></div><div class="pz-scale"><div class="pz-scale-top"><span>Brand sensitivity</span><b>High</b></div><div class="pz-track" role="img" aria-label="Brand sensitivity: High"><i class="lv-85"></i></div></div><div class="pz-scale"><div class="pz-scale-top"><span>Time in the backend</span><b>Low</b></div><div class="pz-track" role="img" aria-label="Time in the backend: Low"><i class="lv-25"></i></div></div></div></section>
+                                    </div>
+                                    <footer class="pz-foot"><h4>Current workarounds</h4><div class="tools"><span class="tag">Company logo only</span><span class="tag">Email approvals</span><span class="tag">Asking staff for numbers</span></div></footer>
+                                </article>
+                            </div>
+                                <p class="caption rv">Kavya is the primary persona; Vikram and Anjali are secondary.</p>
+                            </div>
+                            <div class="insight rv"><span class="insight-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span><div><div class="insight-lbl">What this meant for design</div><p>Kavya needed fewer steps and a calmer screen. Vikram needed control over who changes what. Anjali needed the brand. One way of handling settings had to serve all three.</p></div></div>
+                        </section>
+
+                        <!-- 04 PROBLEM -->
+                        <section class="ch" id="problem">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">04</span><span class="eyebrow">The Problem</span></div>
+                                <h2 class="ch-title">Powerful apps. One-size-fits-all interface.</h2>
+                                <p class="ch-lead">Odoo's default backend treats every company and every person the same: the same home, the same menus, the same look. And there's no way to change that without code.</p>
+                            </header>
+                            <figure class="pq rv"><p>The people who use Odoo the most have the least say in how it looks and works.</p></figure>
+                            <div class="block">
+                                <h3 class="sub-h rv">Challenge &rarr; business impact</h3>
+                                <div class="impact-list rv">
+                                    <div class="impact-row head"><span>The problem</span><span></span><span>What it cost the business</span></div>
+                                    <div class="impact-row"><span class="chal">A flat, ever-growing app grid</span><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="eff">Time lost hunting for the same apps every day.</span></div>
+                                    <div class="impact-row"><span class="chal">Lists and records on separate screens</span><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="eff">Quotations, orders and contacts take longer to get through.</span></div>
+                                    <div class="impact-row"><span class="chal">No branding beyond the logo</span><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="eff">The tool feels generic, and branding costs paid custom work.</span></div>
+                                    <div class="impact-row"><span class="chal">All-or-nothing settings</span><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="eff">Admins can't set defaults, and users can't adjust them.</span></div>
+                                    <div class="impact-row"><span class="chal">Light mode only</span><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="eff">Tired eyes across long working days.</span></div>
+                                </div>
+                            </div>
+                            <div class="hmw block rv">
+                                <span class="eyebrow">Problem statement</span>
+                                <p>How might we give every Odoo user <em>a faster, more comfortable backend they can shape themselves</em>, while letting companies keep a consistent, branded experience?</p>
+                            </div>
+                        </section>
+
+                        <!-- 05 RESEARCH — DRAFT: review before publishing -->
+                        <section class="ch" id="research">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">05</span><span class="eyebrow">Research &amp; Discovery</span></div>
+                                <h2 class="ch-title">Where everyday Odoo work slows down</h2>
+                                <p class="ch-lead">I wanted to find the friction a theme could genuinely remove, not just repaint, and to work out which choices belong to the user, the company and the administrator.</p>
+                            </header>
+                            <div class="block">
+                                <h3 class="sub-h rv">Understanding the domain</h3>
+                                <div class="areas">
+                                    <div class="cs-card area rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><span>The home screen and finding apps</span></div>
+                                    <div class="cs-card area rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></span><span>Menus and getting around</span></div>
+                                    <div class="cs-card area rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg></span><span>Lists and records</span></div>
+                                    <div class="cs-card area rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span><span>Settings, and who can change them</span></div>
+                                    <div class="cs-card area rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2a10 10 0 1 0 0 20c.9 0 1.5-.7 1.5-1.5 0-.4-.2-.8-.4-1-.3-.3-.4-.6-.4-1 0-.8.7-1.5 1.5-1.5H16a6 6 0 0 0 6-6c0-4.4-4.5-9-10-9z"/></svg></span><span>Company colours and branding</span></div>
+                                    <div class="cs-card area rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span><span>Dark mode and easy reading</span></div>
+                                </div>
+                            </div>
+                            <div class="block">
+                                <h3 class="sub-h rv">Stakeholder interviews</h3>
+                                <div class="people">
+                                    <div class="cs-card person rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><strong>Daily Odoo Users</strong><small>Sales &amp; operations</small></div>
+                                    <div class="cs-card person rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><strong>Odoo Administrators</strong><small>Run the system</small></div>
+                                    <div class="cs-card person rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-6 9 6M5 10v8M9 10v8M15 10v8M19 10v8M3 21h18"/></svg></span><strong>Business Owners</strong><small>Own the brand</small></div>
+                                    <div class="cs-card person rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg></span><strong>Odoo Consultants</strong><small>Set it all up</small></div>
+                                    <div class="cs-card person rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><strong>Support Team</strong><small>Hear complaints</small></div>
+                                </div>
+                            </div>
+                            <div class="block">
+                                <h3 class="sub-h rv">Key questions I asked</h3>
+                                <div class="qs rv">
+                                    <details open><summary><span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>Finding your way<span class="q-cnt">3 questions</span><span class="q-plus" aria-hidden="true"></span></summary><ul><li>Which apps do you open every day, and how do you get to them?</li><li>Where in the menus do you most often get lost?</li><li>What would you put on your home screen if you could choose?</li></ul></details>
+                                    <details><summary><span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg></span>Working through records<span class="q-cnt">2 questions</span><span class="q-plus" aria-hidden="true"></span></summary><ul><li>How do you work through a long list of quotations or contacts?</li><li>When has an automatic save changed something you didn't mean to?</li></ul></details>
+                                    <details><summary><span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2a10 10 0 1 0 0 20c.9 0 1.5-.7 1.5-1.5 0-.4-.2-.8-.4-1-.3-.3-.4-.6-.4-1 0-.8.7-1.5 1.5-1.5H16a6 6 0 0 0 6-6c0-4.4-4.5-9-10-9z"/></svg></span>Look &amp; feel<span class="q-cnt">2 questions</span><span class="q-plus" aria-hidden="true"></span></summary><ul><li>Should the backend carry your company's colours?</li><li>When and why would you switch to a dark screen?</li></ul></details>
+                                    <details><summary><span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Control<span class="q-cnt">2 questions</span><span class="q-plus" aria-hidden="true"></span></summary><ul><li>Which settings should each person decide for themselves?</li><li>Which should the company or administrator lock for everyone?</li></ul></details>
+                                </div>
+                            </div>
+                            <div class="block">
+                                <h3 class="sub-h rv">What we found</h3>
+                                <p class="intro rv">Small frustrations, repeated dozens of times a day. Paraphrased from the interviews:</p>
+                                <div class="grid-3">
+                                    <div class="cs-card finding rv"><span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><p>“I use four apps, but I scroll past thirty to find them.”</p></div>
+                                    <div class="cs-card finding rv"><span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 0 1-4 4H3"/></svg></span><p>“Every time I go back to the list, I lose my place.”</p></div>
+                                    <div class="cs-card finding rv"><span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg></span><p>“Changing a colour means raising a ticket with a developer.”</p></div>
+                                    <div class="cs-card finding rv"><span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><p>Users and admins wanted different things, and both were right.</p></div>
+                                    <div class="cs-card finding rv"><span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M17 21v-8H7v8M7 3v5h8"/></svg></span><p>“Autosave saved my edit before I'd finished checking it.”</p></div>
+                                    <div class="cs-card finding rv"><span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span><p>“On late shifts, I'd love a dark screen.”</p></div>
+                                </div>
+                                <div class="insight rv"><span class="insight-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span><div><div class="insight-lbl">Key insight</div><p>Nobody wanted a prettier Odoo for its own sake. They wanted fewer steps to their daily work, and the right person in control of each choice.</p></div></div>
+                            </div>
+                        </section>
+
+                        <!-- 06 COMPETITORS — DRAFT: review before publishing -->
+                        <section class="ch" id="competitors">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">06</span><span class="eyebrow">Competitor Analysis</span></div>
+                                <h2 class="ch-title">Themes repainted Odoo. None reorganised it.</h2>
+                                <p class="ch-lead">I compared the ways companies change how their Odoo backend looks and works. Most changed the colours; few changed how people move through their day, and almost none let users and admins share control.</p>
+                            </header>
+                            <div class="tbl-wrap rv">
+                                <table class="tbl">
+                                    <thead><tr><th scope="col">Approach</th><th scope="col">Good at</th><th scope="col">What's missing</th><th scope="col">Verdict</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><span class="t-name">Default Odoo backend</span><span class="t-cat">Built-in</span></td><td data-lbl="Good at">Clean and reliable.</td><td data-lbl="Missing">Choice. One flat app grid, one look, and only basic personal preferences.</td><td><span class="tag gold">Generic</span></td></tr>
+                                        <tr><td><span class="t-name">Colour-only themes</span><span class="t-cat">App store</span></td><td data-lbl="Good at">A new colour scheme.</td><td data-lbl="Missing">Anything beyond paint. Layout and menus stay the same, and it's the same for everyone.</td><td><span class="tag gold">Cosmetic</span></td></tr>
+                                        <tr><td><span class="t-name">Custom code</span><span class="t-cat">Developer</span></td><td data-lbl="Good at">Exactly the brand you want.</td><td data-lbl="Missing">Staying power. It breaks with each Odoo upgrade and needs fixing again.</td><td><span class="tag red">Fragile</span></td></tr>
+                                        <tr><td><span class="t-name">Odoo Studio</span><span class="t-cat">Built-in tool</span></td><td data-lbl="Good at">Changing fields, forms and reports.</td><td data-lbl="Missing">The overall look, the home screen and the menus. It does a different job.</td><td><span class="tag gold">Different job</span></td></tr>
+                                        <tr class="is-us"><td><span class="t-name">ARC Backend Theme</span><span class="t-cat">This project</span></td><td data-lbl="Good at">App-drawer home, 13 colour themes, icon styles, menu layouts, split view and dark mode.</td><td data-lbl="Missing">No code, and nothing all-or-nothing. Each setting belongs to a user, a company or everyone.</td><td><span class="tag green">Opportunity</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="insight rv"><span class="insight-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span><div><div class="insight-lbl">Opportunity</div><p>The gap wasn't another colour scheme. It was a backend that rethinks how people get around every day, and puts each choice in the right person's hands, with no code.</p></div></div>
+                        </section>
+
+                        <!-- 07 DECISIONS — rationale DRAFT: review before publishing -->
+                        <section class="ch" id="decisions">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">07</span><span class="eyebrow">Design Decisions</span></div>
+                                <h2 class="ch-title">Why it works the way it does</h2>
+                                <p class="ch-lead">Each decision came from a finding: fewer steps to daily work, a calmer screen, and the right person in control of every option. Here's what we noticed, what we could have done, and what we chose.</p>
+                            </header>
+                            <div class="grid-2">
+                                <article class="cs-card dec rv"><div class="dec-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><h3>Every setting has an owner</h3></div><p><b>We noticed:</b> users and admins wanted different things. So each preference (dark mode, list density, menu bar, favourites bar, comment panel position, company logo) can be set for one person, one company, or everyone. Admins set the defaults; users adjust within them.</p><div class="vs"><div class="rej"><b>Instead of</b>One theme the admin sets for all</div><div class="cho"><b>We chose</b>User · Company · Global for each setting</div></div></article>
+                                <article class="cs-card dec rv"><div class="dec-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><h3>A home that remembers you</h3></div><p><b>We noticed:</b> people used a handful of apps but scanned the whole grid to reach them. So the home screen became an app drawer, like a phone's, with All, Recent and Favourite tabs, putting daily apps one click away.</p><div class="vs"><div class="rej"><b>Instead of</b>A longer, recoloured app grid</div><div class="cho"><b>We chose</b>An app drawer with Recent &amp; Favourite tabs</div></div></article>
+                                <article class="cs-card dec rv"><div class="dec-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg></span><h3>Lists and records side by side</h3></div><p><b>We noticed:</b> going back and forth between a list and its records broke concentration every time. So a split view shows the list and the open record together, like an email inbox with its reading pane.</p><div class="vs"><div class="rej"><b>Instead of</b>List → record → back again</div><div class="cho"><b>We chose</b>A split list-and-record view</div></div></article>
+                                <article class="cs-card dec rv"><div class="dec-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Choose by seeing, not by reading</h3></div><p><b>We noticed:</b> theme names like “curved” or “glassmorphism” meant nothing to most people. So settings use colour swatches, icon previews and layout thumbnails, plus Apply, Cancel and Restore to default so nothing changes by accident.</p><div class="vs"><div class="rej"><b>Instead of</b>Dropdowns of theme names</div><div class="cho"><b>We chose</b>Visual pickers + Apply / Restore</div></div></article>
+                                <article class="cs-card dec span-2 rv"><div class="dec-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><h3>One design system behind every option</h3></div><p><b>We noticed:</b> 13 colour themes, 3 icon styles, 2 modes and several layouts multiply into hundreds of combinations, far too many to design one by one. So every screen draws from shared colour scales, one type scale (Inter) and one set of components. Any combination stays consistent, and dark mode comes from the same building blocks rather than a separate design.</p><div class="vs"><div class="rej"><b>Instead of</b>Designing every theme screen by hand</div><div class="cho"><b>We chose</b>One token-based system for all themes &amp; modes</div></div></article>
+                            </div>
+                            <div class="insight rv"><span class="insight-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span><div><div class="insight-lbl">The hardest part</div><p>No single screen was hard. The hard part was deciding who controls each option, and keeping hundreds of possible combinations looking consistent.</p></div></div>
+                        </section>
+
+                        <!-- 08 SOLUTION -->
+                        <section class="ch" id="solution">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">08</span><span class="eyebrow">The Solution</span></div>
+                                <h2 class="ch-title">A backend that adapts to each person</h2>
+                                <p class="ch-lead">ARC brings Odoo 17 a new home screen, flexible colours, settings with clear owners, and faster ways to work through records, all in light and dark mode.</p>
+                            </header>
+                            <div class="cs-card tl is-after rv">
+                                <div class="tl-head">
+                                    <span class="eyebrow">The same day, with ARC</span>
+                                    <span class="tl-total is-good">Fewer clicks, calmer screens</span>
+                                </div>
+                                <ol class="tl-list">
+                                    <li class="tl-row is-good"><span class="tl-time">9:00 am</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>Home opens on her Recent and Favourite apps.</strong><p>Sales is one click away.</p></div></li>
+                                    <li class="tl-row is-good"><span class="tl-time">9:05 am</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>Split view: the list on the left, the quotation on the right.</strong><p>She works through all 40 without ever losing her place.</p></div></li>
+                                    <li class="tl-row is-good"><span class="tl-time">11:00 am</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>“Prevent auto save” is switched on.</strong><p>The discount isn't saved until she says so.</p></div></li>
+                                    <li class="tl-row is-good"><span class="tl-time">2:00 pm</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>The company colours are already in place.</strong><p>The admin picked them from a swatch and applied them company-wide. No code needed.</p></div></li>
+                                    <li class="tl-row is-good"><span class="tl-time">6:00 pm</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>Dark mode switches on automatically for the evening.</strong><p>Her own setting, just for her.</p></div></li>
+                                </ol>
+                            </div>
+                            <figure class="block rv">
+                                <div class="ba">
+                                    <img width="2880" height="1862" src="assets/images/screenshots/arc-theme-web/Quotation.webp" alt="Quotation list in light mode" loading="lazy">
+                                    <img width="2880" height="1862" class="ba-after" src="assets/images/screenshots/arc-theme-web/screenshot-3.webp" alt="Quotation list in dark mode" loading="lazy">
+                                    <div class="ba-line"><span class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg></span></div>
+                                    <span class="ba-tag l">Light</span><span class="ba-tag r">Dark</span>
+                                    <input type="range" min="0" max="100" value="50" aria-label="Drag to compare light and dark mode">
+                                </div>
+                                <figcaption class="caption">Drag to compare the same Sales screen in light and dark mode.</figcaption>
+                            </figure>
+                            <div class="block">
+                                <h3 class="sub-h rv">Key features</h3>
+                                <div class="feat rv">
+                                    <div><span class="feat-n">01 · App drawer home</span><h3>Your apps, one click away</h3><p>A welcome header, search, and an app drawer with All, Recent and Favourite tabs. Icons come in three styles (frosted glass, solid and gradient), with an optional background image behind them.</p><p class="solves"><b>Fixes</b>“I use four apps, but I scroll past thirty to find them.”</p></div>
+                                    <div class="feat-media pair"><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/arc-theme-web/All.webp" data-cap="App drawer home — solid icons"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/All-sm.webp" alt="App drawer home with solid icons" loading="lazy"></button><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/arc-theme-web/ARC%20Backend%20Theme%20-%20Glassmorphism12.webp" data-cap="App drawer home — glassmorphism icons"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/ARC%20Backend%20Theme%20-%20Glassmorphism12-sm.webp" alt="App drawer home with glassmorphism icons" loading="lazy"></button></div>
+                                </div>
+                                <div class="feat flip rv">
+                                    <div><span class="feat-n">02 · Theme settings</span><h3>Make it look like your company</h3><p>Pick a boxed or curved style, one of 13 colours, an icon style, a background image and where the menu sits. You see each option before it's applied.</p><p class="solves"><b>Fixes</b>“Changing a colour means raising a ticket with a developer.”</p></div>
+                                    <div class="feat-media pair"><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/arc-theme-web/Theme%20Settings.webp" data-cap="Theme settings — light"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/Theme%20Settings-sm.webp" alt="Theme settings with colour swatches, icon styles and menu layouts" loading="lazy"></button><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/arc-theme-web/screenshot-5.webp" data-cap="Theme settings — dark"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/screenshot-5-sm.webp" alt="Theme settings in dark mode" loading="lazy"></button></div>
+                                </div>
+                                <div class="feat rv">
+                                    <div><span class="feat-n">03 · Scoped settings</span><h3>The right person decides</h3><p>Every setting, from automatic dark mode and list density to the menu bar and company logo, says who it applies to: you, your company, or everyone. Apply, Cancel and Restore to default keep changes safe.</p><p class="solves"><b>Fixes</b>All-or-nothing settings</p></div>
+                                    <div class="feat-media pair"><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/arc-theme-web/General%20settings.webp" data-cap="General settings with User / Company / Global scope"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/General%20settings-sm.webp" alt="General settings with User, Company and Global scope per option" loading="lazy"></button><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/arc-theme-web/screenshot-2.webp" data-cap="General settings — dark"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/screenshot-2-sm.webp" alt="General settings in dark mode" loading="lazy"></button></div>
+                                </div>
+                                <div class="feat flip rv">
+                                    <div><span class="feat-n">04 · Faster working views</span><h3>Stay in the flow of the list</h3><p>A split view keeps the list and the open record side by side, a slim icon sidebar keeps every app in reach, and a “Prevent auto save” switch lets people decide when edits are saved.</p><p class="solves"><b>Fixes</b>“Every time I go back to the list, I lose my place.”</p></div>
+                                    <div class="feat-media pair"><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/arc-theme-web/Vertical%20spit.webp" data-cap="Vertical split: list and record side by side"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/Vertical%20spit-sm.webp" alt="Vertical split view with the quotation list beside the open quotation" loading="lazy"></button><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/arc-theme-web/Customers%20list.webp" data-cap="Customer record"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/Customers%20list-sm.webp" alt="Customer record form" loading="lazy"></button></div>
+                                </div>
+                            </div>
+                            <div class="block" id="screenshots">
+                                <h3 class="sub-h rv">Product screens</h3>
+                                <div class="tabs rv" role="tablist" aria-label="Screenshot categories">
+                                    <button role="tab" aria-selected="true" aria-controls="gal-0" id="tab-0">Light mode</button>
+                                    <button role="tab" aria-selected="false" aria-controls="gal-1" id="tab-1" tabindex="-1">Dark mode</button>
+                                    <button role="tab" aria-selected="false" aria-controls="gal-2" id="tab-2" tabindex="-1">Design system</button>
+                                </div>
+                                <div class="gal" id="gal-0" role="tabpanel" aria-labelledby="tab-0">
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/arc-theme-web/All.webp" data-cap="Home — app drawer"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/All-sm.webp" alt="Home — app drawer" loading="lazy"></button><figcaption>Home — app drawer</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/arc-theme-web/ARC%20Backend%20Theme%20-%20Glassmorphism12.webp" data-cap="Home — glassmorphism icons"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/ARC%20Backend%20Theme%20-%20Glassmorphism12-sm.webp" alt="Home — glassmorphism icons" loading="lazy"></button><figcaption>Home — glassmorphism icons</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/arc-theme-web/Theme%20Settings.webp" data-cap="Theme settings"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/Theme%20Settings-sm.webp" alt="Theme settings" loading="lazy"></button><figcaption>Theme settings</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/arc-theme-web/General%20settings.webp" data-cap="General settings"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/General%20settings-sm.webp" alt="General settings" loading="lazy"></button><figcaption>General settings</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/arc-theme-web/Quotation.webp" data-cap="Quotations"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/Quotation-sm.webp" alt="Quotations" loading="lazy"></button><figcaption>Quotations</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/arc-theme-web/Vertical%20spit.webp" data-cap="Vertical split view"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/Vertical%20spit-sm.webp" alt="Vertical split view" loading="lazy"></button><figcaption>Vertical split view</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/arc-theme-web/Customers%20list.webp" data-cap="Customer record"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/Customers%20list-sm.webp" alt="Customer record" loading="lazy"></button><figcaption>Customer record</figcaption></figure>
+                                </div>
+                                <div class="gal" id="gal-1" role="tabpanel" aria-labelledby="tab-1" hidden>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/arc-theme-web/screenshot-1.webp" data-cap="Home — app drawer"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/screenshot-1-sm.webp" alt="Home — app drawer, dark" loading="lazy"></button><figcaption>Home — app drawer</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/arc-theme-web/screenshot-5.webp" data-cap="Theme settings"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/screenshot-5-sm.webp" alt="Theme settings, dark" loading="lazy"></button><figcaption>Theme settings</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/arc-theme-web/screenshot-2.webp" data-cap="General settings"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/screenshot-2-sm.webp" alt="General settings, dark" loading="lazy"></button><figcaption>General settings</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/arc-theme-web/screenshot-3.webp" data-cap="Quotations"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/screenshot-3-sm.webp" alt="Quotations, dark" loading="lazy"></button><figcaption>Quotations</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/arc-theme-web/screenshot-4.webp" data-cap="Customer record"><img width="1200" height="776" src="assets/images/screenshots/arc-theme-web/screenshot-4-sm.webp" alt="Customer record, dark" loading="lazy"></button><figcaption>Customer record</figcaption></figure>
+                                </div>
+                                <div class="gal" id="gal-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+                                    <figure><button class="shot-btn" data-group="g2" data-src="assets/images/screenshots/arc-theme-web/Colors.webp" data-cap="Colour scales"><img width="1200" height="1956" src="assets/images/screenshots/arc-theme-web/Colors-sm.webp" alt="Colour scales" loading="lazy"></button><figcaption>Colour scales</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g2" data-src="assets/images/screenshots/arc-theme-web/Typography.webp" data-cap="Typography — Inter"><img width="1200" height="1951" src="assets/images/screenshots/arc-theme-web/Typography-sm.webp" alt="Typography — Inter" loading="lazy"></button><figcaption>Typography — Inter</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g2" data-src="assets/images/screenshots/arc-theme-web/Button%20Styles.webp" data-cap="Button styles"><img width="1200" height="1041" src="assets/images/screenshots/arc-theme-web/Button%20Styles-sm.webp" alt="Button styles" loading="lazy"></button><figcaption>Button styles</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g2" data-src="assets/images/screenshots/arc-theme-web/Radio%20Button.svg" data-cap="Radio &amp; selection cards"><img src="assets/images/screenshots/arc-theme-web/Radio%20Button.svg" alt="Radio and selection cards" loading="lazy"></button><figcaption>Radio &amp; selection cards</figcaption></figure>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 09 IMPACT — DRAFT: add real outcome metrics (installs, ratings, support tickets) if available -->
+                        <section class="ch" id="impact">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">09</span><span class="eyebrow">Impact</span></div>
+                                <h2 class="ch-title">One theme, many ways to work</h2>
+                                <p class="ch-lead">What shipped: a backend that companies can brand and people can tune, without a single line of custom code.</p>
+                            </header>
+                            <div class="grid-3">
+                                <article class="cs-card kpi rv"><div class="kpi-val">13</div><h3>Interface colour themes</h3><p>Plus boxed or curved styles and an optional background image. Branding without custom code.</p></article>
+                                <article class="cs-card kpi rv"><div class="kpi-val">3<small>×</small>3</div><h3>Icon styles × menu layouts</h3><p>Frosted-glass, solid and gradient app icons, and three places to put the main menu.</p></article>
+                                <article class="cs-card kpi rv"><div class="kpi-val">2</div><h3>Modes from one system</h3><p>Every screen in light and dark, both made from the same colours, type and components.</p></article>
+                            </div>
+                            <figure class="pq block rv"><p>Remember Kavya? “I'm in Odoo from nine to six. I just want it to get out of my way.” Now it does.</p></figure>
+                        </section>
+
+                        <!-- 10 REFLECTION — DRAFT: review before publishing -->
+                        <section class="ch" id="reflection">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">10</span><span class="eyebrow">Reflection</span></div>
+                                <h2 class="ch-title">What this project taught me</h2>
+                                <p class="ch-lead">ARC turned Odoo's backend from one fixed interface into one people can shape: a faster home, calmer screens and working views built around how people move through their day, rather than a new coat of paint.</p>
+                            </header>
+                            <div class="grid-3">
+                                <article class="cs-card learn rv"><span class="n">Lesson 01</span><h3>Customisation needs ownership</h3><p>Options only help when it's clear who sets them. User, company and global turned a long list of settings into something people understood.</p></article>
+                                <article class="cs-card learn rv"><span class="n">Lesson 02</span><h3>Show, don't name</h3><p>Swatches and thumbnails made choices obvious. Nobody needed to know what “curved” or “glassmorphism” meant before picking one.</p></article>
+                                <article class="cs-card learn rv"><span class="n">Lesson 03</span><h3>Systems scale, screens don't</h3><p>With 13 colours, 3 icon styles and 2 modes, designing every combination was impossible. Shared building blocks kept them all consistent.</p></article>
+                            </div>
+                            <div class="cta rv">
+                                <h2>Want to see more product design work?</h2>
+                                <div class="cta-btns">
+                                    <a class="cs-btn" href="/webapp-design">View web app designs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                                    <a class="cs-btn ghost" href="/#contact-section">Get in touch</a>
+                                </div>
+                            </div>
+                        </section>
+                        </div>
+                    </div>
+                    <nav class="cs-pager" aria-label="More case studies">
+                        <p class="cs-pager-lbl">Keep exploring</p>
+                        <div class="cs-pager-grid"><a class="cs-pager-card is-prev pg--odoo" href="/odoo-ecommerce-project"><img width="1893" height="900" src="assets/images/screenshots/odoo-ecommerce-web/ecommerce-web-banner.webp" alt="" loading="lazy"><span class="cs-pager-txt"><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Previous case study</small><strong>Odoo Ecommerce</strong><span>AI store builder</span></span></a><a class="cs-pager-card is-next pg--dfm" href="/data-flow-manager-project"><img width="1893" height="900" src="assets/images/screenshots/dfm-web/dfm-web-banner.webp" alt="" loading="lazy"><span class="cs-pager-txt"><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Next case study</small><strong>Data Flow Manager</strong><span>Enterprise data infrastructure</span></span></a></div>
+                    </nav>
+                    <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Screenshot viewer" hidden>
+                        <div class="lb-top"><span id="lbCount"></span><button type="button" id="lbClose" aria-label="Close viewer">&times;</button></div>
+                        <div class="lb-stage" id="lbStage">
+                            <button type="button" class="lb-prev" id="lbPrev" aria-label="Previous image">&#8592;</button>
+                            <img id="lbImg" alt="">
+                            <button type="button" class="lb-next" id="lbNext" aria-label="Next image">&#8594;</button>
+                        </div>
+                        <div class="lb-cap" id="lbCap"></div>
+                    </div>
+                </main>
+            </div>
+            <footer class="site-foot" aria-label="Site footer">
+            <div class="site-foot-inner">
+                <div class="site-foot-top">
+                    <div class="site-foot-brand">
+                        <a href="/" class="site-foot-logo"><img src="assets/images/logo.png" width="228" height="38" alt="Nitesh Bhat"></a>
+                        <p>UI/UX designer &amp; front-end developer crafting enterprise platforms, web apps and mobile products.</p>
+                        <a class="site-foot-cta" href="/#contact-section">Start a project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    </div>
+                    <nav class="site-foot-col" aria-label="Work"><h2>Work</h2><ul><li><a href="/website-design">Website Design</a></li><li><a href="/webapp-design">Webapp Design</a></li><li><a href="/mobile-app-design">Mobile App Design</a></li><li><a href="/website-development">Website Development</a></li><li><a href="/webapp-development">Webapp Development</a></li></ul></nav>
+                    <nav class="site-foot-col" aria-label="Case studies"><h2>Case studies</h2><ul><li><a href="/data-flow-manager-project">Data Flow Manager</a></li><li><a href="/symbiontra-project">Symbiontra</a></li><li><a href="/demerara-bank-project">Demerara Bank</a></li><li><a href="/dashboard-ninja-project">Dashboard Ninja with AI</a></li><li><a href="/mind-ai-ninja-project">Mind AI Ninja</a></li><li><a href="/odoo-ecommerce-project">Odoo Ecommerce</a></li><li><a href="/arc-theme-backend-project">ARC Backend Theme</a></li></ul></nav>
+                    <nav class="site-foot-col" aria-label="More"><h2>More</h2><ul><li><a href="/">Home</a></li><li><a href="/#exp">Experience</a></li><li><a href="/testimonials">Testimonials</a></li><li><a href="/#contact-section">Contact</a></li></ul></nav>
+                </div>
+                <div class="site-foot-bottom">
+                    <p>Working since <strong>2019 &ndash; Present</strong></p>
+                    <div class="site-foot-social">
+                        <a href="https://www.linkedin.com/in/niteshkrbhat/" target="_blank" rel="nofollow noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.64-1.6-2.64-1.62 0-1.86 1.26-1.86 2.55v4.92h-4z"/></svg></a>
+                        <a href="https://wa.me/7889514480?text=I%20am%20interested%20in%20your%20services.%20How%20to%20get%20started%3F" target="_blank" rel="nofollow noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.16-1.5A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.06.9.92-2.98-.2-.31a8.2 8.2 0 1 1 6.84 3.72zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.71-1.33.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.3-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.66 4.22 3.73 1.57.68 2.19.74 2.97.62.48-.07 1.46-.6 1.67-1.18.2-.57.2-1.07.14-1.17-.06-.11-.22-.17-.47-.29z"/></svg></a>
+                        <a href="#" class="site-foot-top-link" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </div>
+        <div class="cursor" aria-hidden="true"></div>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/performance.js" defer></script>
+        <script src="assets/js/splitting.js"></script>
+        <script src="assets/js/jquery.cookie.js"></script>
+        <script src="assets/js/plugin.js"></script>
+        <script src="assets/js/tp-cursor.js"></script>
+        <script src="assets/js/common.js"></script>
+        <script src="assets/js/cs-story.js"></script>
+    </body>
+</html>

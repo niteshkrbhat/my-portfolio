@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Symbiontra - An Enterprise Data Platform UX/UI Case Study | Nitesh Bhat</title>
-        <meta name="description" content="Symbiontra was conceptualized as a unified operational experience platform for modern Data Mesh ecosystems — enabling organizations to procure, produce, publish, govern, and consume Data-Products-as-a-Service (DPaaS) through a centralized yet domain-driven platform experience." />
+        <meta name="description" content="How I designed Symbiontra: one place where every team can find company data, see where it came from, and ask it questions in SQL or plain English, without waiting on engineers." />
         <meta name="keywords" content="" />
         <meta name="author" content="Nitesh Bhat" />
         <meta name="robots" content="index, follow" />
@@ -13,7 +13,7 @@
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://niteshkrbhat.in/symbiontra-project" />
         <meta property="og:title" content="Symbiontra - An Enterprise Data Platform UX/UI Case Study | Nitesh Bhat" />
-        <meta property="og:description" content="Symbiontra was conceptualized as a unified operational experience platform for modern Data Mesh ecosystems — enabling organizations to procure, produce, publish, govern, and consume Data-Products-as-a-Service (DPaaS) through a centralized yet domain-driven platform experience." />
+        <meta property="og:description" content="How I designed Symbiontra: one place where every team can find company data, see where it came from, and ask it questions in SQL or plain English, without waiting on engineers." />
         <meta property="og:image" content="https://niteshkrbhat.in/assets/images/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -21,7 +21,7 @@
         <meta property="og:locale" content="en_IN" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Symbiontra - An Enterprise Data Platform UX/UI Case Study | Nitesh Bhat" />
-        <meta name="twitter:description" content="Symbiontra was conceptualized as a unified operational experience platform for modern Data Mesh ecosystems — enabling organizations to procure, produce, publish, govern, and consume Data-Products-as-a-Service (DPaaS) through a centralized yet domain-driven platform experience." />
+        <meta name="twitter:description" content="How I designed Symbiontra: one place where every team can find company data, see where it came from, and ask it questions in SQL or plain English, without waiting on engineers." />
         <meta name="twitter:image" content="https://niteshkrbhat.in/assets/images/og-image.jpg" />
         <!-- <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
             <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" /> -->
@@ -32,21 +32,22 @@
         <link rel="stylesheet" href="assets/css/performance.css">
         <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" media="all" >
         <link rel="stylesheet" href="assets/fonts/css/font-awesome.css" type="text/css" media="all" >
-        <link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css" media="all" >
         <link rel="stylesheet" href="assets/css/splitting.css" type="text/css" media="all" >
-        <link rel="stylesheet" href="assets/css/swiper.css" type="text/css" media="all" >
-        <link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all" >
         <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" >
-        <link rel="stylesheet" href="assets/css/case-study.css" type="text/css" media="all" >
         <link rel="stylesheet" href="assets/css/dark.css" type="text/css" media="all" >
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/cs-hero.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/cs-story.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/cs-persona.css" type="text/css" media="all" >
+        <link rel="stylesheet" href="assets/css/site-shell.css" type="text/css" media="all" >
     </head>
     <body class="portfolio-template light-skin">
+        <script>if (/(?:^|;\s*)skin=dark(?:;|$)/.test(document.cookie)) document.body.className = document.body.className.replace('light-skin', 'dark-skin');</script>
+        <a class="skip-link" href="#cs">Skip to main content</a>
         <div class="container-page">
             <nav class="navbar header" role="navigation" aria-label="Main navigation" id="web-header">
                 <div class="logo">
                     <a href="/">
-                    <img width="228" height="38" src="assets/images/logo.png"  alt="">
+                    <img width="228" height="38" src="assets/images/logo.png" alt="Nitesh Bhat &mdash; Home">
                     </a>
                 </div>
                 <ul class="nav-links">
@@ -76,11 +77,11 @@
                     </li>
                     <li><a href="/#exp">Experience</a></li>
                     <li><a href="/testimonials">Testimonials</a></li>
-                    <li><a href="#contact-section">Contact</a></li>
+                    <li><a href="/#contact-section">Contact</a></li>
                 </ul>
                 <div class="row">
                     <div class="align-right">
-                        <a href="#" class="switcher-btn">
+                        <a href="#" class="switcher-btn" role="button" aria-label="Dark mode" aria-pressed="false">
                             <span class="sw-before">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
                                     <path id="Dark_Theme" data-name="Dark Theme" fill="currentColor" d="M1759.46,111.076a0.819,0.819,0,0,0-.68.147,8.553,8.553,0,0,1-2.62,1.537,8.167,8.167,0,0,1-2.96.531,8.655,8.655,0,0,1-8.65-8.682,9.247,9.247,0,0,1,.47-2.864,8.038,8.038,0,0,1,1.42-2.54,0.764,0.764,0,0,0-.12-1.063,0.813,0.813,0,0,0-.68-0.148,11.856,11.856,0,0,0-6.23,4.193,11.724,11.724,0,0,0,1,15.387,11.63,11.63,0,0,0,19.55-5.553A0.707,0.707,0,0,0,1759.46,111.076Zm-4.5,6.172a10.137,10.137,0,0,1-14.29-14.145,10.245,10.245,0,0,1,3.38-2.836c-0.14.327-.29,0.651-0.41,1.006a9.908,9.908,0,0,0-.56,3.365,10.162,10.162,0,0,0,10.15,10.189,9.776,9.776,0,0,0,3.49-.62,11.659,11.659,0,0,0,1.12-.473A10.858,10.858,0,0,1,1754.96,117.248Z" transform="translate(-1737 -98)" />
@@ -101,12 +102,12 @@
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                             <div class="logo">
                                 <a href="/">
-                                <img width="228" height="38" src="assets/images/logo.png" alt="" >
+                                <img width="228" height="38" src="assets/images/logo.png" alt="Nitesh Bhat &mdash; Home" >
                                 </a>
                             </div>
                         </div>
                         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align-right">
-                            <a href="#" class="switcher-btn">
+                            <a href="#" class="switcher-btn" role="button" aria-label="Dark mode" aria-pressed="false">
                                 <span class="sw-before">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
                                         <path id="Dark_Theme" data-name="Dark Theme" fill="#000" d="M1759.46,111.076a0.819,0.819,0,0,0-.68.147,8.553,8.553,0,0,1-2.62,1.537,8.167,8.167,0,0,1-2.96.531,8.655,8.655,0,0,1-8.65-8.682,9.247,9.247,0,0,1,.47-2.864,8.038,8.038,0,0,1,1.42-2.54,0.764,0.764,0,0,0-.12-1.063,0.813,0.813,0,0,0-.68-0.148,11.856,11.856,0,0,0-6.23,4.193,11.724,11.724,0,0,0,1,15.387,11.63,11.63,0,0,0,19.55-5.553A0.707,0.707,0,0,0,1759.46,111.076Zm-4.5,6.172a10.137,10.137,0,0,1-14.29-14.145,10.245,10.245,0,0,1,3.38-2.836c-0.14.327-.29,0.651-0.41,1.006a9.908,9.908,0,0,0-.56,3.365,10.162,10.162,0,0,0,10.15,10.189,9.776,9.776,0,0,0,3.49-.62,11.659,11.659,0,0,0,1.12-.473A10.858,10.858,0,0,1,1754.96,117.248Z" transform="translate(-1737 -98)" />
@@ -118,11 +119,11 @@
                                     </svg>
                                 </span>
                             </a>
-                            <a href="#" class="menu-btn">
+                            <a href="#" class="menu-btn" role="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
                             <span></span>
                             <span></span>
                             </a>
-                            <div class="menu-full-overlay">
+                            <div class="menu-full-overlay" id="site-menu">
                                 <div class="menu-full-container">
                                     <div class="container">
                                         <div class="row">
@@ -139,7 +140,7 @@
                                                             <a class="splitting-text-anim-2" data-splitting="chars" href="/#award-section">Award</a>
                                                         </li>
                                                         <li class="menu-item menu-item-has-children has-children">
-                                                            <a class="splitting-text-anim-2" data-splitting="chars">Works</a>
+                                                            <a class="splitting-text-anim-2" data-splitting="chars" href="#" role="button" aria-expanded="false">Works</a>
                                                             <ul class="sub-menu">
                                                                 <li class="menu-item">
                                                                     <a class="splitting-text-anim-1" data-splitting="chars" href="/website-design">Website Design</a>
@@ -170,10 +171,10 @@
                                                     </ul>
                                                 </div>
                                                 <div class="menu-social-links">
-                                                    <a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/niteshkrbhat/">
+                                                    <a target="_blank" rel="nofollow noopener" href="https://www.linkedin.com/in/niteshkrbhat/" aria-label="LinkedIn">
                                                     <i aria-hidden="true" class="fab fa-linkedin"></i>
                                                     </a>
-                                                    <a target="_blank" rel="nofollow" href="https://wa.me/7889514480?text=I%20am%20interested%20in%20your%20services.%20How%20to%20get%20started%3F">
+                                                    <a target="_blank" rel="nofollow noopener" href="https://wa.me/7889514480?text=I%20am%20interested%20in%20your%20services.%20How%20to%20get%20started%3F" aria-label="WhatsApp">
                                                     <i aria-hidden="true" class="fab fa-whatsapp"></i>
                                                     </a>
                                                     <!-- <a target="_blank" rel="nofollow" href="https://www.instagram.com/travellerlyfe/">
@@ -192,414 +193,526 @@
                 </div>
             </header>
             <div class="wrapper">
-                <section>
-                    <img src="assets/images/screenshots/symbiontra-web/symbiontra-web-banner.png">
+                <!-- HERO -->
+                <section class="csh csh--symbiontra" aria-labelledby="csh-title">
+                    <div class="csh-band">
+                        <div class="csh-wrap">
+                            <div class="csh-tags">
+                                <span class="csh-chip is-accent">UX Case Study</span>
+                                <span class="csh-chip">Enterprise · Data Platform</span>
+                                <span class="csh-chip">Data Mesh</span>
+                                <span class="csh-chip">2025–2026</span>
+                            </div>
+                            <div class="csh-top">
+                                <div>
+                                    <p class="csh-brand">Symbiontra</p>
+                                    <h1 class="csh-title" id="csh-title">Helping every team find and trust company data, <em>without waiting on engineers</em></h1>
+                                    <p class="csh-lead">Big companies have data scattered across dozens of teams and tools. I designed Symbiontra: one place where anyone can find a dataset, see where it came from, and ask it questions, in SQL or plain English.</p>
+                                </div>
+                                <div class="csh-side">
+                                    <svg class="csh-art csh-art--sy" viewBox="0 0 440 200" aria-hidden="true">
+                                        <!-- Peer links between domains -->
+                                        <g stroke="rgba(232,194,76,.3)" fill="none"><path class="flow" d="M90 69V131"/><path class="flow" d="M350 69V131"/></g>
+                                        <!-- Sales & Supply publish data products in; Geo & Ops consume them out -->
+                                        <g class="wire"><path d="M111 57C150 57 150 83 190 83"/><path d="M111 143C150 143 150 117 190 117"/><path d="M250 83C290 83 290 57 329 57"/><path d="M250 117C290 117 290 143 329 143"/></g>
+                                        <g stroke="rgba(232,194,76,.6)" stroke-width="1.5" fill="none">
+                                            <path class="flow" d="M111 57C150 57 150 83 190 83"/>
+                                            <path class="flow" d="M111 143C150 143 150 117 190 117"/>
+                                            <path class="flow" d="M250 83C290 83 290 57 329 57"/>
+                                            <path class="flow" d="M250 117C290 117 290 143 329 143"/>
+                                        </g>
+                                        <path class="pkt loop" pathLength="100" d="M111 57C150 57 150 83 190 83"/>
+                                        <path class="pkt loop" pathLength="100" style="--d:1.5s" d="M111 143C150 143 150 117 190 117"/>
+                                        <path class="pkt loop" pathLength="100" style="--d:.75s" d="M250 83C290 83 290 57 329 57"/>
+                                        <path class="pkt loop" pathLength="100" style="--d:2.25s" d="M250 117C290 117 290 143 329 143"/>
+                                        <!-- DPaaS hub -->
+                                        <polygon class="sy-orbit" points="220,42 270.2,71 270.2,129 220,158 169.8,129 169.8,71" fill="none" stroke="rgba(232,194,76,.35)" stroke-dasharray="3 7"/>
+                                        <polygon points="220,52 261.6,76 261.6,124 220,148 178.4,124 178.4,76" fill="rgba(232,194,76,.07)"/>
+                                        <polygon class="sy-ping" points="220,66 249.4,83 249.4,117 220,134 190.6,117 190.6,83" fill="none" stroke="#E8C24C" stroke-width="1.5"/>
+                                        <polygon points="220,66 249.4,83 249.4,117 220,134 190.6,117 190.6,83" fill="#17140A" stroke="#E8C24C" stroke-width="2"/>
+                                        <text x="220" y="104" text-anchor="middle" fill="#E8C24C" font-size="12" font-weight="600">DPaaS</text>
+                                        <g fill="#17140A" stroke="rgba(255,255,255,.35)" stroke-width="1.5">
+                                            <polygon points="90,21 110.8,33 110.8,57 90,69 69.2,57 69.2,33"/>
+                                            <polygon points="90,131 110.8,143 110.8,167 90,179 69.2,167 69.2,143"/>
+                                            <polygon points="350,21 370.8,33 370.8,57 350,69 329.2,57 329.2,33"/>
+                                            <polygon points="350,131 370.8,143 370.8,167 350,179 329.2,167 329.2,143"/>
+                                        </g>
+                                        <g class="t" text-anchor="middle"><text x="90" y="49">Sales</text><text x="90" y="159">Supply</text><text x="350" y="49">Geo</text><text x="350" y="159">Ops</text></g>
+                                        <!-- Domain health -->
+                                        <g fill="#4ADE80"><circle class="blink" cx="90" cy="21" r="3"/><circle class="blink" style="animation-delay:.6s" cx="90" cy="179" r="3"/><circle class="blink" style="animation-delay:1.2s" cx="350" cy="21" r="3"/><circle class="blink" style="animation-delay:1.8s" cx="350" cy="179" r="3"/></g>
+                                        <!-- Federated governance -->
+                                        <rect class="card-on" x="176.5" y="170.5" width="87" height="22" rx="11"/>
+                                        <path d="M190 175.5l5 2v3.5c0 3-2 5-5 6-3-1-5-3-5-6v-3.5z" fill="none" stroke="#E8C24C" stroke-width="1.2" stroke-linejoin="round"/>
+                                        <text class="t" x="201" y="185.5">Governed</text>
+                                    </svg>
+                                    <dl class="csh-meta">
+                                        <div><dt>My Role</dt><dd>Sole Product Designer</dd></div>
+                                        <div><dt>Timeline</dt><dd>8–10 weeks</dd></div>
+                                        <div class="wide"><dt>Responsibilities &amp; Deliverables</dt><dd>UX Strategy, Product Thinking, User Research, Information Architecture, Workflow Design, Interaction Design, Prompt UX, Design System, Prototyping</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="csh-wrap">
+                        <figure class="csh-shot">
+                            <div class="csh-shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>symbiontra · datagraph</span></div>
+                            <img src="assets/images/screenshots/symbiontra-web/datagraph-dark.webp" width="1920" height="1080" alt="Symbiontra datagraph view of data products across domains">
+                        </figure>
+                        <!-- Results strip hidden: the previous stats on this page were copied from Data Flow Manager.
+                             Add Symbiontra's own numbers here using the same markup as the other case studies:
+                        <div class="csh-stats" role="list" aria-label="Results at a glance">
+                            <div role="listitem"><b>00<small>%</small></b><strong>Metric</strong><p>Description</p></div>
+                        </div> -->
+                        <div class="csh-ctx">
+                            <div><h2>The challenge</h2><p>Every team was supposed to own its data, but in practice almost everything still went through one central engineering team. Finding the right dataset, trusting it, or knowing where a number came from meant filing a ticket and waiting.</p></div>
+                            <div><h2>The solution</h2><p>Symbiontra treats each dataset as a product on a shelf, with an owner, a version and a history. Teams can create, publish, find and use those data products on their own, while shared rules keep everything trustworthy.</p></div>
+                        </div>
+                    </div>
                 </section>
 
-                <section id="hero">
-                <div class="container">
-                    <div class="container">
-                        <div class="hero-inner">
-                            <p class="hero-sub">Transforming fragmented enterprise data operations into a scalable, domain-driven, and AI-powered platform experience.</p><br>
-                            <p class="hero-sub">Modern enterprises struggled to operationalize distributed data ecosystems across teams, domains, and cloud environments. Data workflows were fragmented, governance lacked consistency, and business domains remained heavily dependent on centralized engineering teams to access, manage, and operationalize data products.</p><br>
-                            <p class="hero-sub">Symbiontra was conceptualized as a unified operational experience platform for modern Data Mesh ecosystems — enabling organizations to procure, produce, publish, govern, and consume Data-Products-as-a-Service (DPaaS) through a centralized yet domain-driven platform experience.</p>
-                            <!-- <div class="hero-stats">
-                                <div class="hstat">
-                                    <div class="hstat-val"><span>90</span>%</div>
-                                    <div class="hstat-lbl">Reduced deployment effort by</div>
-                                    <p>Reduced deployment effort by automating repetitive operational workflows across environments and clusters. Teams were able to eliminate manual deployment dependencies, reducing operational overhead and improving efficiency at enterprise scale.</p>
-                                </div>
-                                <div class="hstat">
-                                    <div class="hstat-val">6hr<span style="font-size:22px">→</span>Min</div>
-                                    <div class="hstat-lbl">Minimized multi-cluster deployment time from hours to minutes</div>
-                                    <p>Minimized multi-cluster deployment time from several hours to just a few minutes through centralized deployment management, validation workflows, and streamlined environment promotion processes.</p>
-                                </div>
-                                <div class="hstat">
-                                    <div class="hstat-val">$<span>1M</span>+</div>
-                                    <div class="hstat-lbl">Saved vs. enterprise vendor per year</div>
-                                    <p>Helped enterprises significantly reduce infrastructure and operational costs by removing dependency on expensive vendor-managed ecosystem solutions while improving operational scalability and control.</p>
-                                </div>
-                            </div> -->
-                            <div class="hero-meta">
-                                <div class="hm-item">
-                                    <div class="hm-label">My Role</div>
-                                    <div class="hm-val">Sole Product Designer</div>
-                                </div>
-                                <div class="hm-item">
-                                    <div class="hm-label">Responsibilities & Deliverables</div>
-                                    <div class="hm-val">UX Strategy, Product Thinking, User Research, Information Architecture, Workflow Design, Interaction Design, Prompt UX, Design System, Prototyping</div>
-                                </div>
-                                <div class="hm-item">
-                                    <div class="hm-label">Timeline</div>
-                                    <div class="hm-val">2024, 8-10 Weeks</div>
-                                </div>
+                <main class="cs cs--symbiontra" id="cs">
+                    <div class="cs-progress" aria-hidden="true"></div>
+                    <div class="cs-wrap cs-body">
+                        <aside class="cs-toc" aria-label="Case study chapters">
+                            <span class="eyebrow">Chapters</span>
+                            <ol>
+                                <li><a href="#overview"><span>01</span>Overview</a></li>
+                                <li><a href="#context"><span>02</span>Context</a></li>
+                                <li><a href="#persona"><span>03</span>Persona</a></li>
+                                <li><a href="#problem"><span>04</span>The Problem</a></li>
+                                <li><a href="#research"><span>05</span>Research</a></li>
+                                <li><a href="#competitors"><span>06</span>Competitors</a></li>
+                                <li><a href="#decisions"><span>07</span>Design Decisions</a></li>
+                                <li><a href="#solution"><span>08</span>The Solution</a></li>
+                                <li><a href="#impact"><span>09</span>Impact</a></li>
+                                <li><a href="#reflection"><span>10</span>Reflection</a></li>
+                            </ol>
+                        </aside>
+                        <div class="cs-main">
+                        <!-- 01 OVERVIEW -->
+                        <section class="ch" id="overview">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">01</span><span class="eyebrow">Overview</span></div>
+                                <h2 class="ch-title">Project overview: before, turning point, after</h2>
+                                <p class="ch-lead">This is the story of how a company's data stopped being a maze only engineers could find their way through, and became something every team could find, trust and use on its own.</p>
+                            </header>
+                            <div class="arc">
+                                <article class="cs-card arc-step is-before rv">
+                                    <span class="eyebrow">Before</span>
+                                    <h3>Finding the right data meant asking around</h3>
+                                    <p>Data was spread across teams and tools. Finding a dataset, checking whether it could be trusted, or seeing where a number came from meant filing a ticket and waiting for an engineer.</p>
+                                </article>
+                                <article class="cs-card arc-step rv">
+                                    <span class="eyebrow">The turning point</span>
+                                    <h3>Data needed a shop window, not a warehouse</h3>
+                                    <p>The data existed. What was missing was a way to <em>see</em> it as something ready to use, with an owner, a label and a history.</p>
+                                </article>
+                                <article class="cs-card arc-step is-after rv">
+                                    <span class="eyebrow">After</span>
+                                    <h3>One place to find, understand and use data</h3>
+                                    <p>Symbiontra puts every data product in a searchable catalog, shows where it comes from and who relies on it, and lets anyone ask questions in SQL or plain English.</p>
+                                </article>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                            <div class="block">
+                                <h3 class="sub-h rv">My design process</h3>
+                                <nav class="proc rv" aria-label="Design process steps">
+                                    <a href="#research"><div class="proc-lbl"><small>STEP 1</small><strong>Research &amp; Discovery</strong><em>Domain study, interviews</em></div><div class="proc-bar"></div></a>
+                                    <a href="#problem"><div class="proc-lbl"><small>STEP 2</small><strong>Defining the UX Problem</strong><em>Challenges, persona</em></div><div class="proc-bar"></div></a>
+                                    <a href="#competitors"><div class="proc-lbl"><small>STEP 3</small><strong>Product Strategy</strong><em>Competitor audit</em></div><div class="proc-bar"></div></a>
+                                    <a href="#decisions"><div class="proc-lbl"><small>STEP 4</small><strong>Design Exploration</strong><em>Design decisions</em></div><div class="proc-bar"></div></a>
+                                    <a href="#solution"><div class="proc-lbl"><small>STEP 5</small><strong>Final Solution</strong><em>Hi-fi UI, key flows</em></div><div class="proc-bar"></div></a>
+                                    <a href="#impact" class="is-final"><div class="proc-lbl"><small>STEP 6</small><strong>Impact &amp; Learnings</strong><em>Results, reflection</em></div><div class="proc-bar"></div></a>
+                                </nav>
+                            </div>
+                        </section>
 
-                <div class="section section-inner">
-                    <div class="m-image-large">
-                        <div class="image">
-                            <div class="img js-parallax" style="background-image: url(assets/images/screenshots/symbiontra-web/symbiontra-web-featured.png);"></div>
-                        </div>
-                    </div>
-                </div>
+                        <!-- 02 CONTEXT — DRAFT: review before publishing -->
+                        <section class="ch" id="context">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">02</span><span class="eyebrow">Context</span></div>
+                                <h2 class="ch-title">What is a Data Mesh?</h2>
+                                <p class="ch-lead">Big companies have data everywhere: sales, supply, operations, finance. Traditionally one central data team looked after all of it. A Data Mesh flips that: each team looks after its own data and shares it with the rest of the company, like a product on a shelf.</p>
+                            </header>
+                            <figure class="pq rv"><p>Think of a Data Mesh as a farmers' market instead of one big supermarket. Each stall grows and sells its own produce, with a label saying who made it, what's in it and how fresh it is. Symbiontra is the market itself: the stalls, the signs and the rules everyone follows.</p></figure>
+                            <div class="block">
+                                <h3 class="sub-h rv">Core principles</h3>
+                                <div class="grid-2">
+                                    <article class="cs-card ctx-card rv"><span class="ico lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><h3>Domain ownership</h3><p>The team that creates the data looks after it, not a distant central team.</p></div></article>
+                                    <article class="cs-card ctx-card rv"><span class="ico lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8.7 5v10L12 22l-8.7-5V7z"/></svg></span><div><h3>Data as a product</h3><p>Every dataset comes with an owner, a version, a description and a quality score, like the label on a jar.</p></div></article>
+                                    <article class="cs-card ctx-card rv"><span class="ico lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><div><h3>Self-serve platform</h3><p>Teams can publish and use data on their own, without being infrastructure experts.</p></div></article>
+                                    <article class="cs-card ctx-card rv"><span class="ico lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><div><h3>Federated governance</h3><p>Shared rules keep everyone's data trustworthy, even though no single team owns it all.</p></div></article>
+                                </div>
+                            </div>
+                            <div class="block">
+                                <h3 class="sub-h rv">Key terms</h3>
+                                <dl class="gloss rv">
+                                    <div><dt>Data product</dt><dd>A dataset packaged for others to use, with an owner, a version and a description.</dd></div>
+                                    <div><dt>Domain</dt><dd>A business area, like Sales or Supply, that owns its own data.</dd></div>
+                                    <div><dt>Lineage</dt><dd>The family tree of a number: where it came from, and what depends on it.</dd></div>
+                                    <div><dt>Upstream / downstream</dt><dd>The sources a dataset is built from, and the reports and teams that rely on it.</dd></div>
+                                    <div><dt>SQL</dt><dd>The language engineers use to ask a database questions.</dd></div>
+                                    <div><dt>DPaaS</dt><dd>Data-Products-as-a-Service: getting the data you need on demand, like streaming a film instead of ordering a disc.</dd></div>
+                                </dl>
+                            </div>
+                        </section>
 
-                <section class="section section-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <div class="post-content">
-                                    <h4>Description</h4>
+                        <!-- 03 PERSONA — DRAFT: review before publishing -->
+                        <section class="ch" id="persona">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">03</span><span class="eyebrow">User Persona</span></div>
+                                <h2 class="ch-title">Designing for the owner of a data product</h2>
+                                <p class="ch-lead">Daniel owns a dozen data products for his company's subsurface team. He knows his data better than anyone, yet he still can't answer simple questions about it without help. Here's how one simple question played out.</p>
+                            </header>
+                            <div class="cs-card tl rv">
+                                <div class="tl-head">
+                                    <span class="eyebrow">One question, before Symbiontra</span>
+                                    <span class="tl-total is-bad">≈ 3 days</span>
                                 </div>
+                                <ol class="tl-list">
+                                    <li class="tl-row"><span class="tl-time">Mon 9am</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>An analyst in another team asks a question.</strong><p>“Which version of your well data should I use for the monthly report?”</p></div></li>
+                                    <li class="tl-row is-warn"><span class="tl-time">Mon 10am</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>Daniel checks the data catalog.</strong><p>It lists the tables, but not which version is current or who else uses it.</p></div></li>
+                                    <li class="tl-row is-warn"><span class="tl-time">Mon 11am</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>He opens an engineering ticket.</strong><p>The lineage diagram on the wiki is months out of date, so only an engineer can say what feeds the dataset.</p></div></li>
+                                    <li class="tl-row is-bad"><span class="tl-time">Wed 2pm</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>The engineer replies.</strong><p>An upstream source changed last week, and nobody downstream was told.</p></div></li>
+                                    <li class="tl-row is-bad"><span class="tl-time">Wed 4pm</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>The analyst's numbers turn out to be wrong.</strong><p>Two reports already shared with the business have to be redone.</p></div></li>
+                                    <li class="tl-row"><span class="tl-time">Thu 10am</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>Finally answered.</strong><p>Three days, three people and one ticket for a single question.</p></div></li>
+                                </ol>
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                <div class="post-content">
-                                    <p>The product focused on simplifying complex enterprise data interactions through AI-assisted workflows, low-code/no-code operational tooling, and scalable multi-tenant architecture.</p>
+                            <p class="caption rv">An illustrative scenario, pieced together from the frustrations people described in research.</p>
+                            <div class="block">
+                                <h3 class="sub-h rv">User personas</h3>
+                                <p class="intro rv">Three roles came up around every data product. Daniel owns it. Ana, a data engineer, builds the pipelines behind it. Kofi, a business analyst, uses it to make decisions.</p>
+                            <!-- DRAFT - review before publishing: personas Daniel Brooks, Ana Costa, Kofi Mensah and all Traits scales were written as drafts, not from research. -->
+                            <div class="pz rv">
+                                <div class="pz-tabs" role="tablist" aria-label="User personas">
+                                    <button class="pz-tab" role="tab" id="pz-tab-0" aria-controls="pz-0" aria-selected="true"><span class="pz-av sm" aria-hidden="true">DB</span><span class="pz-tab-txt"><span class="pz-kind is-primary">Primary persona</span><strong>Daniel Brooks</strong><small>Data Product Owner</small></span></button>
+                                    <button class="pz-tab" role="tab" id="pz-tab-1" aria-controls="pz-1" aria-selected="false" tabindex="-1"><span class="pz-av sm" aria-hidden="true">AC</span><span class="pz-tab-txt"><span class="pz-kind">Secondary persona</span><strong>Ana Costa</strong><small>Data Engineer</small></span></button>
+                                    <button class="pz-tab" role="tab" id="pz-tab-2" aria-controls="pz-2" aria-selected="false" tabindex="-1"><span class="pz-av sm" aria-hidden="true">KM</span><span class="pz-tab-txt"><span class="pz-kind">Secondary persona</span><strong>Kofi Mensah</strong><small>Business Analyst</small></span></button>
                                 </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                <div class="post-content">
-                                    <p>The UX challenge was to design a platform that could make highly technical data operations feel intuitive, collaborative, and operationally transparent for both business and engineering teams while supporting enterprise-scale governance and distributed ownership models.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="section section-inner" id="screenshots">
-                    <div class="container">
-                        <div class="gallery-filter-wrap">
-                            <button class="g-tab active" data-filter="light">Light Mode</button>
-                            <button class="g-tab" data-filter="dark">Dark Mode</button>
-                            <!-- <button class="g-tab" data-filter="system">Design System</button> -->
-                        </div>
-                        <div class="m-gallery">
-                            <div class="gallery-group" data-category="light">
-                                <div class="g-row">
-                                    <div class="g-col g-col-left">
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/landing-light.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/landing-light.png" alt="landing-light" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/product-catalog-light.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/product-catalog-light.png" alt="product-catalog-light" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/datagraph-light.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/datagraph-light.png" alt="datagraph-light" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/datagraph-split-light.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/datagraph-split-light.png" alt="datagraph-split-light" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/flowgraph-light.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/flowgraph-light.png" alt="flowgraph-light" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/ai-chat-light.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/ai-chat-light.png" alt="ai-chat-light" loading="lazy">
-                                        </div>
+                                <article class="pz-card" id="pz-0" role="tabpanel" aria-labelledby="pz-tab-0">
+                                    <header class="pz-head">
+                                        <div class="pz-id"><div class="pz-av" aria-hidden="true">DB</div><div><h3 class="pz-name">Daniel Brooks</h3><p class="pz-role">Data Product Owner<br>Energy data provider · subsurface domain</p><div class="pz-tags"><span>Owner</span><span>Publisher</span></div></div></div>
+                                        <p class="pz-quote">I own this data, but I still need an engineer to tell me who uses it and what feeds it.</p>
+                                    </header>
+                                    <dl class="pz-stats"><div><dt>Products owned</dt><dd>12</dd></div><div><dt>Consumers</dt><dd>Several domains</dd></div><div><dt>Releases</dt><dd>Monthly</dd></div><div><dt>SQL comfort</dt><dd>Reads, rarely writes</dd></div></dl>
+                                    <div class="pz-body">
+                                        <section class="pz-box good"><h4>Goals</h4><ul class="ticks"><li>See every product's lineage in one view</li><li>Answer data questions without writing SQL</li><li>Know who consumes each product</li><li>Publish without an engineering ticket</li></ul></section>
+                                        <section class="pz-box bad"><h4>Frustrations</h4><ul class="ticks bad"><li>Lineage diagrams are out of date the day they're drawn</li><li>Each view of the data lives in a different tool</li><li>Quality issues are reported by consumers, not caught early</li><li>Simple questions wait in the engineering queue</li></ul></section>
+                                        <section class="pz-box"><h4>Responsibilities</h4><ul class="pz-list"><li>Publish and version data products</li><li>Keep quality and documentation current</li><li>Understand upstream and downstream impact</li><li>Support consumers in other domains</li></ul></section>
+                                        <section class="pz-box"><h4>Traits</h4><div class="pz-scales"><div class="pz-scale"><div class="pz-scale-top"><span>Technical skill</span><b>Medium</b></div><div class="pz-track" role="img" aria-label="Technical skill: Medium"><i class="lv-60"></i></div></div><div class="pz-scale"><div class="pz-scale-top"><span>Need for control</span><b>High</b></div><div class="pz-track" role="img" aria-label="Need for control: High"><i class="lv-80"></i></div></div><div class="pz-scale"><div class="pz-scale-top"><span>Trust in AI</span><b>Medium</b></div><div class="pz-track" role="img" aria-label="Trust in AI: Medium"><i class="lv-55"></i></div></div></div></section>
                                     </div>
-                                    <div class="g-col g-col-right">
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/signup-light.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/signup-light.png" alt="signup-light" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/product-details-light.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/product-details-light.png" alt="product-details-light" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/folder-tree-light.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/folder-tree-light.png" alt="folder-tree-light" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/query-board-light.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/query-board-light.png" alt="query-board-light" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/lineography-light.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/lineography-light.png" alt="lineography-light" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/table-light.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/table-light.png" alt="table-light" loading="lazy">
-                                        </div>
+                                    <footer class="pz-foot"><h4>Current workarounds</h4><div class="tools"><span class="tag">Data catalog</span><span class="tag">SQL notebooks</span><span class="tag">Static lineage diagrams</span><span class="tag">Engineering tickets</span><span class="tag">Spreadsheets</span></div></footer>
+                                </article>
+                                <article class="pz-card" id="pz-1" role="tabpanel" aria-labelledby="pz-tab-1" hidden>
+                                    <header class="pz-head">
+                                        <div class="pz-id"><div class="pz-av" aria-hidden="true">AC</div><div><h3 class="pz-name">Ana Costa</h3><p class="pz-role">Data Engineer<br>Platform team · supports 4 domains</p><div class="pz-tags"><span>Producer</span><span>Pipelines</span></div></div></div>
+                                        <p class="pz-quote">I build the pipelines, then spend the rest of the week explaining them.</p>
+                                    </header>
+                                    <dl class="pz-stats"><div><dt>Pipelines maintained</dt><dd>40+</dd></div><div><dt>Domains supported</dt><dd>4</dd></div><div><dt>Tickets</dt><dd>~25 / week</dd></div><div><dt>Languages</dt><dd>SQL, Python</dd></div></dl>
+                                    <div class="pz-body">
+                                        <section class="pz-box good"><h4>Goals</h4><ul class="ticks"><li>Ship pipelines without becoming a help desk</li><li>Trace breakages to their source fast</li><li>Give domains self-serve access</li><li>Keep schemas and versions consistent</li></ul></section>
+                                        <section class="pz-box bad"><h4>Frustrations</h4><ul class="ticks bad"><li>Routine questions interrupt deep work</li><li>Breakages surface downstream first</li><li>Documentation drifts from reality</li><li>Every tool shows a different slice</li></ul></section>
+                                        <section class="pz-box"><h4>Responsibilities</h4><ul class="pz-list"><li>Build and maintain pipelines</li><li>Model schemas and data products</li><li>Monitor data quality</li><li>Support domain teams</li></ul></section>
+                                        <section class="pz-box"><h4>Traits</h4><div class="pz-scales"><div class="pz-scale"><div class="pz-scale-top"><span>Technical skill</span><b>High</b></div><div class="pz-track" role="img" aria-label="Technical skill: High"><i class="lv-95"></i></div></div><div class="pz-scale"><div class="pz-scale-top"><span>Time pressure</span><b>High</b></div><div class="pz-track" role="img" aria-label="Time pressure: High"><i class="lv-80"></i></div></div><div class="pz-scale"><div class="pz-scale-top"><span>Trust in AI</span><b>Medium</b></div><div class="pz-track" role="img" aria-label="Trust in AI: Medium"><i class="lv-45"></i></div></div></div></section>
                                     </div>
-                                </div>
+                                    <footer class="pz-foot"><h4>Current workarounds</h4><div class="tools"><span class="tag">SQL IDEs</span><span class="tag">Orchestration tools</span><span class="tag">Git</span><span class="tag">Monitoring alerts</span><span class="tag">Chat support threads</span></div></footer>
+                                </article>
+                                <article class="pz-card" id="pz-2" role="tabpanel" aria-labelledby="pz-tab-2" hidden>
+                                    <header class="pz-head">
+                                        <div class="pz-id"><div class="pz-av" aria-hidden="true">KM</div><div><h3 class="pz-name">Kofi Mensah</h3><p class="pz-role">Business Analyst<br>Commercial domain · data consumer</p><div class="pz-tags"><span>Consumer</span><span>Decision support</span></div></div></div>
+                                        <p class="pz-quote">I can't tell which dataset is the right one, so I ask — and then I wait.</p>
+                                    </header>
+                                    <dl class="pz-stats"><div><dt>Datasets used</dt><dd>8–10</dd></div><div><dt>Requests to engineering</dt><dd>Weekly</dd></div><div><dt>SQL comfort</dt><dd>Basic</dd></div><div><dt>Reports</dt><dd>Monthly</dd></div></dl>
+                                    <div class="pz-body">
+                                        <section class="pz-box good"><h4>Goals</h4><ul class="ticks"><li>Find trusted data on his own</li><li>Ask questions in plain language</li><li>Understand where a number comes from</li><li>Share results with confidence</li></ul></section>
+                                        <section class="pz-box bad"><h4>Frustrations</h4><ul class="ticks bad"><li>Can't tell which version to trust</li><li>SQL is a barrier for most questions</li><li>No visibility into data quality</li><li>Waits days for simple extracts</li></ul></section>
+                                        <section class="pz-box"><h4>Responsibilities</h4><ul class="pz-list"><li>Analyse market and well data</li><li>Build monthly reports</li><li>Support commercial decisions</li><li>Validate data with owners</li></ul></section>
+                                        <section class="pz-box"><h4>Traits</h4><div class="pz-scales"><div class="pz-scale"><div class="pz-scale-top"><span>Technical skill</span><b>Medium</b></div><div class="pz-track" role="img" aria-label="Technical skill: Medium"><i class="lv-40"></i></div></div><div class="pz-scale"><div class="pz-scale-top"><span>Time pressure</span><b>High</b></div><div class="pz-track" role="img" aria-label="Time pressure: High"><i class="lv-75"></i></div></div><div class="pz-scale"><div class="pz-scale-top"><span>Trust in AI</span><b>High</b></div><div class="pz-track" role="img" aria-label="Trust in AI: High"><i class="lv-75"></i></div></div></div></section>
+                                    </div>
+                                    <footer class="pz-foot"><h4>Current workarounds</h4><div class="tools"><span class="tag">Spreadsheets</span><span class="tag">BI dashboards</span><span class="tag">Extract requests</span><span class="tag">Email to data owners</span></div></footer>
+                                </article>
                             </div>
+                                <p class="caption rv">Daniel is the primary persona; Ana and Kofi are secondary.</p>
+                            </div>
+                            <div class="insight rv"><span class="insight-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span><div><div class="insight-lbl">What this meant for design</div><p>Each person needed a different view of the same data product: technical depth for Ana, plain clarity for Kofi, and a sense of ownership for Daniel. One product, three lenses.</p></div></div>
+                        </section>
 
-                            <div class="gallery-group" data-category="dark">
-                                <div class="g-row">
-                                    <div class="g-col g-col-left">
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/landing-dark.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/landing-dark.png" alt="landing-dark" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/product-catalog-dark.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/product-catalog-dark.png" alt="product-catalog-dark" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/datagraph-dark.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/datagraph-dark.png" alt="datagraph-dark" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/datagraph-split-dark.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/datagraph-split-dark.png" alt="datagraph-split-dark" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/flowgraph-dark.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/flowgraph-dark.png" alt="flowgraph-dark" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/ai-chat-dark.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/ai-chat-dark.png" alt="ai-chat-dark" loading="lazy">
-                                        </div>
-                                    </div>
-                                    <div class="g-col g-col-right">
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/signup-dark.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/signup-dark.png" alt="Screenshot 2" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/product-details-dark.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/product-details-dark.png" alt="product-details-dark" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/folder-tree-dark.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/folder-tree-dark.png" alt="folder-tree-dark" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/query-board-dark.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/query-board-dark.png" alt="query-board-dark" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/lineography-dark.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/lineography-dark.png" alt="lineography-dark" loading="lazy">
-                                        </div>
-                                        <div class="g-item" data-src="assets/images/screenshots/symbiontra-web/table-dark.png" data-fancybox="symbiontra-web">
-                                            <img src="assets/images/screenshots/symbiontra-web/table-dark.png" alt="table-dark" loading="lazy">
-                                        </div>
-                                    </div>
+                        <!-- 04 PROBLEM -->
+                        <section class="ch" id="problem">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">04</span><span class="eyebrow">The Problem</span></div>
+                                <h2 class="ch-title">Distributed data, centralised bottlenecks</h2>
+                                <p class="ch-lead">On paper, every team owned its data. In practice, almost everything still had to go through one central engineering team.</p>
+                            </header>
+                            <figure class="pq rv"><p>The data was spread out, but the keys to it were not. Every question, every new dataset and every fix still waited in the same engineering queue.</p></figure>
+                            <div class="block">
+                                <h3 class="sub-h rv">Challenge &rarr; business impact</h3>
+                                <div class="impact-list rv">
+                                    <div class="impact-row head"><span>The problem</span><span></span><span>What it cost the business</span></div>
+                                    <div class="impact-row"><span class="chal">Scattered tools and pipelines</span><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="eff">Different teams built the same thing twice, and got different answers.</span></div>
+                                    <div class="impact-row"><span class="chal">No shared rules</span><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="eff">Nobody was sure which data to trust, and compliance became a risk.</span></div>
+                                    <div class="impact-row"><span class="chal">Everything through engineering</span><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="eff">Teams waited in a queue just to publish or open their own data.</span></div>
+                                    <div class="impact-row"><span class="chal">Hidden lineage</span><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="eff">When a source changed, reports further down broke without anyone noticing.</span></div>
+                                    <div class="impact-row"><span class="chal">Tools built only for engineers</span><span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="eff">Business users couldn't help themselves to data they owned.</span></div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="g-lightbox" role="dialog" aria-label="Image lightbox">
-                    <button class="g-lb-close" id="lb-close" aria-label="Close">&times;</button>
-                    <button class="g-lb-prev" id="lb-prev" aria-label="Previous">&#8592;</button>
-                    <button class="g-lb-next" id="lb-next" aria-label="Next">&#8594;</button>
-                    <div class="g-lb-counter" id="lb-counter"></div>
-                    <div id="g-lightbox-stage">
-                        <img id="g-lightbox-img" src="" alt="Full size preview">
-                    </div>
-                    <div class="g-lb-controls">
-                        <button class="g-lb-btn" id="lb-zoom-out" title="Zoom out">&#8722;</button>
-                        <span class="g-lb-zoom-label" id="lb-zoom-label">100%</span>
-                        <button class="g-lb-btn" id="lb-zoom-in" title="Zoom in">&#43;</button>
-                        <button class="g-lb-btn" id="lb-reset" title="Reset" style="font-size:14px;">&#8635;</button>
-                    </div>
-                </div>
+                            <div class="hmw block rv">
+                                <span class="eyebrow">Problem statement</span>
+                                <p>How might we let every team <em>find, publish, trust and use</em> data products through one platform, without waiting on a central team?</p>
+                            </div>
+                        </section>
 
-                <!-- <section class="section section-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <div class="post-content">
-                                    <h4>Conclusion</h4>
+                        <!-- 05 RESEARCH — DRAFT: review before publishing -->
+                        <section class="ch" id="research">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">05</span><span class="eyebrow">Research &amp; Discovery</span></div>
+                                <h2 class="ch-title">Following data from producer to consumer</h2>
+                                <p class="ch-lead">I followed data products from the people who create them to the people who use them, looking for every point where someone had to stop and ask an engineer.</p>
+                            </header>
+                            <div class="block">
+                                <h3 class="sub-h rv">Understanding the domain</h3>
+                                <div class="areas">
+                                    <div class="cs-card area rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8.7 5v10L12 22l-8.7-5V7z"/></svg></span><span>How a data product is created, published and retired</span></div>
+                                    <div class="cs-card area rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.5 11l9-4.5M7.5 13l9 4.5"/></svg></span><span>Where data comes from, and what depends on it</span></div>
+                                    <div class="cs-card area rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span>Which team owns what</span></div>
+                                    <div class="cs-card area rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><span>Rules, quality and trust signals</span></div>
+                                    <div class="cs-card area rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg></span><span>How people search and ask questions</span></div>
+                                    <div class="cs-card area rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7-4.7-1.8 4.7-1.8z"/><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8z"/></svg></span><span>Where AI could take the load off</span></div>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                <div class="post-content">
-                                    <p>MindAiNinja successfully transformed complex enterprise knowledge workflows into a streamlined and user-friendly AI-powered platform. The project focused heavily on usability, scalability, and modern SaaS design principles to create an intuitive experience for enterprise users.</p>
+                            <div class="block">
+                                <h3 class="sub-h rv">Stakeholder interviews</h3>
+                                <div class="people">
+                                    <div class="cs-card person rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8.7 5v10L12 22l-8.7-5V7z"/></svg></span><strong>Data Product Owners</strong><small>Own the data</small></div>
+                                    <div class="cs-card person rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg></span><strong>Data Engineers</strong><small>Build pipelines</small></div>
+                                    <div class="cs-card person rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><strong>Analysts &amp; Scientists</strong><small>Use the data</small></div>
+                                    <div class="cs-card person rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><strong>Business Users</strong><small>Make decisions</small></div>
+                                    <div class="cs-card person rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><strong>Governance Teams</strong><small>Set the rules</small></div>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                <div class="post-content">
-                                    <p>By combining AI interactions with efficient dashboard UX, the platform improved information accessibility, reduced search friction, and enhanced overall productivity. The final design delivered a scalable foundation capable of supporting future AI-driven features and enterprise growth.</p>
+                            <div class="block">
+                                <h3 class="sub-h rv">Key questions I asked</h3>
+                                <div class="qs rv">
+                                    <details open><summary><span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>Finding data<span class="q-cnt">3 questions</span><span class="q-plus" aria-hidden="true"></span></summary><ul><li>How do you find out which data already exists?</li><li>How do you decide whether a dataset is good enough to use?</li><li>Who do you ask when something looks wrong?</li></ul></details>
+                                    <details><summary><span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.5 11l9-4.5M7.5 13l9 4.5"/></svg></span>Tracing changes<span class="q-cnt">2 questions</span><span class="q-plus" aria-hidden="true"></span></summary><ul><li>If a source changes, how do you know what breaks?</li><li>How do you trace a number back to where it came from?</li></ul></details>
+                                    <details><summary><span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8.7 5v10L12 22l-8.7-5V7z"/></svg></span>Publishing<span class="q-cnt">2 questions</span><span class="q-plus" aria-hidden="true"></span></summary><ul><li>What does it take to publish a new data product today?</li><li>Which steps need an engineer?</li></ul></details>
+                                    <details><summary><span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>Rules and trust<span class="q-cnt">2 questions</span><span class="q-plus" aria-hidden="true"></span></summary><ul><li>How are quality and usage tracked across teams?</li><li>Who decides who can see what, and which version is current?</li></ul></details>
                                 </div>
                             </div>
+                            <div class="block">
+                                <h3 class="sub-h rv">What we found</h3>
+                                <p class="intro rv">The same frustrations came up from every side of the data. Paraphrased from the interviews:</p>
+                                <div class="grid-3">
+                                    <div class="cs-card finding rv"><span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><p>“I can't tell which datasets exist, or which version to trust.”</p></div>
+                                    <div class="cs-card finding rv"><span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.5 11l9-4.5M7.5 13l9 4.5"/></svg></span><p>“Only the engineers know where this data really comes from.”</p></div>
+                                    <div class="cs-card finding rv"><span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg></span><p>“Every new question means writing SQL, or asking someone who can.”</p></div>
+                                    <div class="cs-card finding rv"><span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="8" height="8" rx="1"/><rect x="14" y="13" width="8" height="8" rx="1"/><path d="M6 11v4a2 2 0 0 0 2 2h6M18 13V9a2 2 0 0 0-2-2h-6"/></svg></span><p>“To understand one dataset, I jump between several tools.”</p></div>
+                                    <div class="cs-card finding rv"><span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.94 17.94A10 10 0 0 1 12 20c-7 0-11-8-11-8a18.5 18.5 0 0 1 5.06-5.94M9.9 4.24A9 9 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19M1 1l22 22"/></svg></span><p>“I only hear about quality problems when someone complains.”</p></div>
+                                    <div class="cs-card finding rv"><span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><p>“We can't publish anything without the central team.”</p></div>
+                                </div>
+                                <div class="insight rv"><span class="insight-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span><div><div class="insight-lbl">Key insight</div><p>The Data Mesh was a good idea about how teams should work, but nobody had built the screen for it. People needed one place where every data product could be found, understood, traced and questioned.</p></div></div>
+                            </div>
+                        </section>
+
+                        <!-- 06 COMPETITORS — DRAFT: review before publishing -->
+                        <section class="ch" id="competitors">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">06</span><span class="eyebrow">Competitor Analysis</span></div>
+                                <h2 class="ch-title">Plenty of data tools. No Data Mesh experience.</h2>
+                                <p class="ch-lead">I looked at everything teams were already using to work with data. Each tool handled one step well, and none of them connected the steps around the idea of a data product.</p>
+                            </header>
+                            <div class="tbl-wrap rv">
+                                <table class="tbl">
+                                    <thead><tr><th scope="col">Approach</th><th scope="col">Good at</th><th scope="col">What's missing</th><th scope="col">Verdict</th></tr></thead>
+                                    <tbody>
+                                        <tr><td><span class="t-name">Data catalogs</span><span class="t-cat">Discovery</span></td><td data-lbl="Good at">Listing and describing datasets.</td><td data-lbl="Missing">Exploring, querying or running them.</td><td><span class="tag gold">Partial</span></td></tr>
+                                        <tr><td><span class="t-name">Central data team</span><span class="t-cat">Ticket queue</span></td><td data-lbl="Good at">Reliable expertise.</td><td data-lbl="Missing">Speed. Every request waits in the same queue.</td><td><span class="tag red">Bottleneck</span></td></tr>
+                                        <tr><td><span class="t-name">SQL &amp; notebook tools</span><span class="t-cat">Exploration</span></td><td data-lbl="Good at">Powerful questions, for people who can code.</td><td data-lbl="Missing">Anything a business owner can use.</td><td><span class="tag gold">Narrow</span></td></tr>
+                                        <tr><td><span class="t-name">Custom pipelines &amp; scripts</span><span class="t-cat">DIY</span></td><td data-lbl="Good at">Flexibility.</td><td data-lbl="Missing">Documentation, stability, and visibility for the people using the data.</td><td><span class="tag red">Fragile</span></td></tr>
+                                        <tr class="is-us"><td><span class="t-name">Symbiontra</span><span class="t-cat">This project</span></td><td data-lbl="Good at">The whole journey: find, explore, trace and query a data product in one place.</td><td data-lbl="Missing">No split between business and engineering. Both use the same screens.</td><td><span class="tag green">Opportunity</span></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="insight rv"><span class="insight-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span><div><div class="insight-lbl">Opportunity</div><p>Put the data product, not the table or the pipeline, at the centre of the experience, and build every tool around it.</p></div></div>
+                        </section>
+
+                        <!-- 07 DECISIONS — rationale DRAFT: review before publishing -->
+                        <section class="ch" id="decisions">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">07</span><span class="eyebrow">Design Decisions</span></div>
+                                <h2 class="ch-title">Why it works the way it does</h2>
+                                <p class="ch-lead">Each big decision came straight from research. Here's what we noticed, what we could have done, and what we chose.</p>
+                            </header>
+                            <div class="grid-2">
+                                <article class="cs-card dec rv"><div class="dec-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><h3>The catalog is the front door</h3></div><p><b>We noticed:</b> people don't think in databases and tables. They think “I need the sales forecast”. So everyone starts from a searchable catalog of data products, each card showing who publishes it, which version it is and how usable it is.</p><div class="vs"><div class="rej"><b>Instead of</b>A database and table browser</div><div class="cho"><b>We chose</b>Product cards with trust signals</div></div></article>
+                                <article class="cs-card dec rv"><div class="dec-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><h3>One product, many lenses</h3></div><p><b>We noticed:</b> understanding one dataset meant opening several tools. So every product gets a lens bar, like switching between map, satellite and traffic views of the same place. Structure, pipelines, data, history, lineage, stats and quality are all one click away.</p><div class="vs"><div class="rej"><b>Instead of</b>A separate tool for every task</div><div class="cho"><b>We chose</b>A lens bar on every product</div></div></article>
+                                <article class="cs-card dec rv"><div class="dec-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.5 11l9-4.5M7.5 13l9 4.5"/></svg></span><h3>Lineage as live columns</h3></div><p><b>We noticed:</b> lineage lived in engineers' heads and in diagrams that were out of date the day they were drawn. So where the data comes from, the product itself, and who uses it sit side by side, and the impact of a change is visible at a glance.</p><div class="vs"><div class="rej"><b>Instead of</b>Static lineage diagrams</div><div class="cho"><b>We chose</b>An interactive “where from, where to” view</div></div></article>
+                                <article class="cs-card dec rv"><div class="dec-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7-4.7-1.8 4.7-1.8z"/><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8z"/></svg></span><h3>SQL and AI next to the data</h3></div><p><b>We noticed:</b> every question meant writing SQL, or waiting for someone who could. So a query board and an AI chat sit right beside the data. Engineers write SQL, business users ask in plain English, and both work in the same place.</p><div class="vs"><div class="rej"><b>Instead of</b>A separate SQL editor</div><div class="cho"><b>We chose</b>Query board + AI chat in a side panel</div></div></article>
+                                <article class="cs-card dec span-2 rv"><div class="dec-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8.7 5v10L12 22l-8.7-5V7z"/></svg></span><h3>See the whole value chain</h3></div><p><b>We noticed:</b> nobody could see how products, teams and organisations connected across the company. So a network graph shows the whole chain, a bit like an airline route map, with product details in a side panel. Light and dark themes support both presentations and long analysis sessions.</p><div class="vs"><div class="rej"><b>Instead of</b>Lists of products and domains</div><div class="cho"><b>We chose</b>A network graph of the data value chain</div></div></article>
+                            </div>
+                            <div class="insight rv"><span class="insight-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span><div><div class="insight-lbl">The hardest part</div><p>Engineers needed depth; business users needed clarity. The challenge was serving both on the same screens, without quietly building two separate products.</p></div></div>
+                        </section>
+
+                        <!-- 08 SOLUTION -->
+                        <section class="ch" id="solution">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">08</span><span class="eyebrow">The Solution</span></div>
+                                <h2 class="ch-title">One platform for the data product lifecycle</h2>
+                                <p class="ch-lead">Symbiontra gives every data product a home: a place where business and engineering teams alike can find it, understand it, trace it and question it.</p>
+                            </header>
+                            <div class="cs-card tl is-after rv">
+                                <div class="tl-head">
+                                    <span class="eyebrow">The same question, with Symbiontra</span>
+                                    <span class="tl-total is-good">≈ 10 minutes</span>
+                                </div>
+                                <ol class="tl-list">
+                                    <li class="tl-row"><span class="tl-time">9:00 am</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>The analyst needs the well data for the monthly report.</strong><p>This time, he doesn't need to ask anyone.</p></div></li>
+                                    <li class="tl-row is-good"><span class="tl-time">9:02 am</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>He searches the catalog himself.</strong><p>The product card shows the current version, who publishes it and how usable it is.</p></div></li>
+                                    <li class="tl-row is-warn"><span class="tl-time">9:04 am</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>The lineage view flags last week's upstream change.</strong><p>He sees it before it reaches his report, not after.</p></div></li>
+                                    <li class="tl-row is-good"><span class="tl-time">9:08 am</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>He asks the AI chat a follow-up in plain English.</strong><p>Right beside the data, with no SQL needed.</p></div></li>
+                                    <li class="tl-row is-good"><span class="tl-time">9:10 am</span><span class="tl-dot" aria-hidden="true"></span><div class="tl-txt"><strong>The report is built on the right data.</strong><p>Daniel never had to open a ticket.</p></div></li>
+                                </ol>
+                            </div>
+                            <div class="block">
+                                <h3 class="sub-h rv">Key features</h3>
+                                <div class="feat rv">
+                                    <div><span class="feat-n">01 · Discover</span><h3>A catalog of trustworthy data products</h3><p>Browse data products the way you'd browse an online shop. Every card shows who publishes it, which version it is and how usable it is. Open one to see its details, its metrics, and what it depends on.</p><p class="solves"><b>Fixes</b>“I can't tell which datasets exist, or which version to trust.”</p></div>
+                                <div class="feat-media pair"><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/symbiontra-web/product-catalog-light.webp" data-cap="Data product catalog"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/product-catalog-light-sm.webp" alt="Data product catalog" loading="lazy"></button><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/symbiontra-web/product-details-light.webp" data-cap="Data product details"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/product-details-light-sm.webp" alt="Data product details" loading="lazy"></button></div>
+                                </div>
+                                <div class="feat flip rv">
+                                    <div><span class="feat-n">02 · Explore</span><h3>Every lens on one product</h3><p>The Datagraph explorer shows a product's structure and fields. Split views put details side by side, and a table view shows how the values in each column are spread.</p><p class="solves"><b>Fixes</b>“To understand one dataset, I jump between several tools.”</p></div>
+                                <div class="feat-media pair"><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/symbiontra-web/datagraph-split-light.webp" data-cap="Datagraph with split detail view"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/datagraph-split-light-sm.webp" alt="Datagraph with split detail view" loading="lazy"></button><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/symbiontra-web/table-light.webp" data-cap="Table view with column distributions"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/table-light-sm.webp" alt="Table view with column distributions" loading="lazy"></button></div>
+                                </div>
+                                <div class="feat rv">
+                                    <div><span class="feat-n">03 · Trace</span><h3>Lineage you can follow</h3><p>Lineography lays out where each product's data comes from and who uses it. The network graph zooms out to show how everything connects across teams.</p><p class="solves"><b>Fixes</b>Reports breaking silently when a source changes</p></div>
+                                <div class="feat-media pair"><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/symbiontra-web/lineography-light.webp" data-cap="Lineography: upstream and downstream"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/lineography-light-sm.webp" alt="Lineography: upstream and downstream" loading="lazy"></button><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/symbiontra-web/networkgraph-light.webp" data-cap="Network graph of the data value chain"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/networkgraph-light-sm.webp" alt="Network graph of the data value chain" loading="lazy"></button></div>
+                                </div>
+                                <div class="feat flip rv">
+                                    <div><span class="feat-n">04 · Query</span><h3>Ask in SQL or in plain language</h3><p>A query board and an AI chat sit beside the data, so engineers can write SQL and business users can simply ask, in the same place.</p><p class="solves"><b>Fixes</b>“Every new question means writing SQL, or asking someone who can.”</p></div>
+                                <div class="feat-media pair"><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/symbiontra-web/query-board-light.webp" data-cap="Query board"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/query-board-light-sm.webp" alt="Query board" loading="lazy"></button><button class="shot-btn" data-group="feat" data-src="assets/images/screenshots/symbiontra-web/ai-chat-light.webp" data-cap="AI chat beside the data"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/ai-chat-light-sm.webp" alt="AI chat beside the data" loading="lazy"></button></div>
+                                </div>
+                            </div>
+                            <div class="block" id="screenshots">
+                                <h3 class="sub-h rv">Product screens</h3>
+                                <div class="tabs rv" role="tablist" aria-label="Screenshot categories">
+                                    <button role="tab" aria-selected="true" aria-controls="gal-0" id="tab-0">Light mode</button>
+                                    <button role="tab" aria-selected="false" aria-controls="gal-1" id="tab-1" tabindex="-1">Dark mode</button>
+                                </div>
+                                <div class="gal" id="gal-0" role="tabpanel" aria-labelledby="tab-0">
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/symbiontra-web/landing-light.webp" data-cap="Landing"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/landing-light-sm.webp" alt="Landing" loading="lazy"></button><figcaption>Landing</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/symbiontra-web/signup-light.webp" data-cap="Signup"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/signup-light-sm.webp" alt="Signup" loading="lazy"></button><figcaption>Signup</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/symbiontra-web/product-catalog-light.webp" data-cap="Product catalog"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/product-catalog-light-sm.webp" alt="Product catalog" loading="lazy"></button><figcaption>Product catalog</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/symbiontra-web/product-details-light.webp" data-cap="Product details"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/product-details-light-sm.webp" alt="Product details" loading="lazy"></button><figcaption>Product details</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/symbiontra-web/datagraph-light.webp" data-cap="Datagraph"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/datagraph-light-sm.webp" alt="Datagraph" loading="lazy"></button><figcaption>Datagraph</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/symbiontra-web/datagraph-split-light.webp" data-cap="Datagraph split"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/datagraph-split-light-sm.webp" alt="Datagraph split" loading="lazy"></button><figcaption>Datagraph split</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/symbiontra-web/table-light.webp" data-cap="Table"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/table-light-sm.webp" alt="Table" loading="lazy"></button><figcaption>Table</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/symbiontra-web/folder-tree-light.webp" data-cap="Folder tree"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/folder-tree-light-sm.webp" alt="Folder tree" loading="lazy"></button><figcaption>Folder tree</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/symbiontra-web/lineography-light.webp" data-cap="Lineography"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/lineography-light-sm.webp" alt="Lineography" loading="lazy"></button><figcaption>Lineography</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/symbiontra-web/query-board-light.webp" data-cap="Query board"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/query-board-light-sm.webp" alt="Query board" loading="lazy"></button><figcaption>Query board</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/symbiontra-web/ai-chat-light.webp" data-cap="Ai chat"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/ai-chat-light-sm.webp" alt="Ai chat" loading="lazy"></button><figcaption>Ai chat</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g0" data-src="assets/images/screenshots/symbiontra-web/flowgraph-light.webp" data-cap="Flowgraph"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/flowgraph-light-sm.webp" alt="Flowgraph" loading="lazy"></button><figcaption>Flowgraph</figcaption></figure>
+                                </div>
+                                <div class="gal" id="gal-1" role="tabpanel" aria-labelledby="tab-1" hidden>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/symbiontra-web/landing-dark.webp" data-cap="Landing"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/landing-dark-sm.webp" alt="Landing" loading="lazy"></button><figcaption>Landing</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/symbiontra-web/signup-dark.webp" data-cap="Signup"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/signup-dark-sm.webp" alt="Signup" loading="lazy"></button><figcaption>Signup</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/symbiontra-web/product-catalog-dark.webp" data-cap="Product catalog"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/product-catalog-dark-sm.webp" alt="Product catalog" loading="lazy"></button><figcaption>Product catalog</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/symbiontra-web/product-details-dark.webp" data-cap="Product details"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/product-details-dark-sm.webp" alt="Product details" loading="lazy"></button><figcaption>Product details</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/symbiontra-web/datagraph-dark.webp" data-cap="Datagraph"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/datagraph-dark-sm.webp" alt="Datagraph" loading="lazy"></button><figcaption>Datagraph</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/symbiontra-web/datagraph-split-dark.webp" data-cap="Datagraph split"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/datagraph-split-dark-sm.webp" alt="Datagraph split" loading="lazy"></button><figcaption>Datagraph split</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/symbiontra-web/table-dark.webp" data-cap="Table"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/table-dark-sm.webp" alt="Table" loading="lazy"></button><figcaption>Table</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/symbiontra-web/folder-tree-dark.webp" data-cap="Folder tree"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/folder-tree-dark-sm.webp" alt="Folder tree" loading="lazy"></button><figcaption>Folder tree</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/symbiontra-web/lineography-dark.webp" data-cap="Lineography"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/lineography-dark-sm.webp" alt="Lineography" loading="lazy"></button><figcaption>Lineography</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/symbiontra-web/query-board-dark.webp" data-cap="Query board"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/query-board-dark-sm.webp" alt="Query board" loading="lazy"></button><figcaption>Query board</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/symbiontra-web/ai-chat-dark.webp" data-cap="Ai chat"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/ai-chat-dark-sm.webp" alt="Ai chat" loading="lazy"></button><figcaption>Ai chat</figcaption></figure>
+                                    <figure><button class="shot-btn" data-group="g1" data-src="assets/images/screenshots/symbiontra-web/flowgraph-dark.webp" data-cap="Flowgraph"><img width="1200" height="675" src="assets/images/screenshots/symbiontra-web/flowgraph-dark-sm.webp" alt="Flowgraph" loading="lazy"></button><figcaption>Flowgraph</figcaption></figure>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 09 IMPACT — DRAFT: review before publishing -->
+                        <section class="ch" id="impact">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">09</span><span class="eyebrow">Impact</span></div>
+                                <h2 class="ch-title">What the design set out to change</h2>
+                                <p class="ch-lead">Symbiontra was designed to change who can work with data, and how much they have to ask for help. These are the outcomes it was built around.</p>
+                            </header>
+                            <!-- Add Symbiontra's measured results here when available (same markup as the other case studies: <div class="kpi-val">00<small>%</small></div>). -->
+                            <div class="grid-3">
+                                <article class="cs-card kpi rv"><span class="ico lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Data work anyone can follow</h3><p>Complex, technical data work shown through visual, product-centred views that business users can understand.</p></article>
+                                <article class="cs-card kpi rv"><span class="ico lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Shared ground for business &amp; engineering</h3><p>Both groups find, trace and question the same data products in the same place, instead of passing tickets back and forth.</p></article>
+                                <article class="cs-card kpi rv"><span class="ico lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><h3>Rules that scale with shared ownership</h3><p>Company-wide governance and transparency, while each team keeps ownership of its own data.</p></article>
+                            </div>
+                            <figure class="pq block rv"><p>Remember Daniel? “I own this data, but I still need an engineer to tell me who uses it and what feeds it.” Symbiontra was designed so he never has to ask.</p></figure>
+                        </section>
+
+                        <!-- 10 REFLECTION — DRAFT: review before publishing (the previous conclusion on this page was Mind AI Ninja's) -->
+                        <section class="ch" id="reflection">
+                            <header class="ch-head rv">
+                                <div class="ch-kicker"><span class="ch-num">10</span><span class="eyebrow">Reflection</span></div>
+                                <h2 class="ch-title">What this project taught me</h2>
+                                <p class="ch-lead">Symbiontra gave a Data Mesh something it usually lacks: one shared place to work. Organising everything around the data product, and giving every product the same set of lenses, made complex data feel navigable for business and engineering teams alike.</p>
+                            </header>
+                            <div class="grid-3">
+                                <article class="cs-card learn rv"><span class="n">Lesson 01</span><h3>Pick one centre of gravity</h3><p>Making the data product the main thing on screen simplified every other navigation decision.</p></article>
+                                <article class="cs-card learn rv"><span class="n">Lesson 02</span><h3>Depth without walls</h3><p>Engineers kept all their detail; business users got friendlier views of the same data. Nobody needed a separate tool.</p></article>
+                                <article class="cs-card learn rv"><span class="n">Lesson 03</span><h3>Show relationships, don't list them</h3><p>Lineage and network views answered “what depends on this?” faster than any list could.</p></article>
+                            </div>
+                            <div class="cta rv">
+                                <h2>Want to see more product design work?</h2>
+                                <div class="cta-btns">
+                                    <a class="cs-btn" href="/webapp-design">View web app designs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                                    <a class="cs-btn ghost" href="/#contact-section">Get in touch</a>
+                                </div>
+                            </div>
+                        </section>
                         </div>
                     </div>
-                </section> -->
+                    <nav class="cs-pager" aria-label="More case studies">
+                        <p class="cs-pager-lbl">Keep exploring</p>
+                        <div class="cs-pager-grid"><a class="cs-pager-card is-prev pg--dfm" href="/data-flow-manager-project"><img width="1893" height="900" src="assets/images/screenshots/dfm-web/dfm-web-banner.webp" alt="" loading="lazy"><span class="cs-pager-txt"><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Previous case study</small><strong>Data Flow Manager</strong><span>Enterprise data infrastructure</span></span></a><a class="cs-pager-card is-next pg--demerara" href="/demerara-bank-project"><img width="1893" height="900" src="assets/images/screenshots/demerara-web/demerara-web-banner.webp" alt="" loading="lazy"><span class="cs-pager-txt"><small><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Next case study</small><strong>Demerara Bank</strong><span>Digital banking</span></span></a></div>
+                    </nav>
+                    <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Screenshot viewer" hidden>
+                        <div class="lb-top"><span id="lbCount"></span><button type="button" id="lbClose" aria-label="Close viewer">&times;</button></div>
+                        <div class="lb-stage" id="lbStage">
+                            <button type="button" class="lb-prev" id="lbPrev" aria-label="Previous image">&#8592;</button>
+                            <img id="lbImg" alt="">
+                            <button type="button" class="lb-next" id="lbNext" aria-label="Next image">&#8594;</button>
+                        </div>
+                        <div class="lb-cap" id="lbCap"></div>
+                    </div>
+                </main>
             </div>
-            <div class="footer lui-gradient-top">
-                <div class="footer__builder">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                <div class="social-links scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                    <a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/niteshkrbhat/">
-                                    <i aria-hidden="true" class="fab fa-linkedin"></i>
-                                    </a>
-                                    <a target="_blank" rel="nofollow" href="https://wa.me/7889514480?text=I%20am%20interested%20in%20your%20services.%20How%20to%20get%20started%3F">
-                                    <i aria-hidden="true" class="fab fa-whatsapp"></i>
-                                    </a>
-                                    <!-- <a target="_blank" rel="nofollow" href="https://www.instagram.com/travellerlyfe/">
-                                        <i aria-hidden="true" class="fab fa-instagram"></i>
-                                        </a> -->
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                <div class="copyright-text align-center scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                    Working Since <strong>2019 - Present</strong>
-                                </div>
-                            </div>
-                        </div>
+            <footer class="site-foot" aria-label="Site footer">
+            <div class="site-foot-inner">
+                <div class="site-foot-top">
+                    <div class="site-foot-brand">
+                        <a href="/" class="site-foot-logo"><img src="assets/images/logo.png" width="228" height="38" alt="Nitesh Bhat"></a>
+                        <p>UI/UX designer &amp; front-end developer crafting enterprise platforms, web apps and mobile products.</p>
+                        <a class="site-foot-cta" href="/#contact-section">Start a project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    </div>
+                    <nav class="site-foot-col" aria-label="Work"><h2>Work</h2><ul><li><a href="/website-design">Website Design</a></li><li><a href="/webapp-design">Webapp Design</a></li><li><a href="/mobile-app-design">Mobile App Design</a></li><li><a href="/website-development">Website Development</a></li><li><a href="/webapp-development">Webapp Development</a></li></ul></nav>
+                    <nav class="site-foot-col" aria-label="Case studies"><h2>Case studies</h2><ul><li><a href="/data-flow-manager-project">Data Flow Manager</a></li><li><a href="/symbiontra-project">Symbiontra</a></li><li><a href="/demerara-bank-project">Demerara Bank</a></li><li><a href="/dashboard-ninja-project">Dashboard Ninja with AI</a></li><li><a href="/mind-ai-ninja-project">Mind AI Ninja</a></li><li><a href="/odoo-ecommerce-project">Odoo Ecommerce</a></li><li><a href="/arc-theme-backend-project">ARC Backend Theme</a></li></ul></nav>
+                    <nav class="site-foot-col" aria-label="More"><h2>More</h2><ul><li><a href="/">Home</a></li><li><a href="/#exp">Experience</a></li><li><a href="/testimonials">Testimonials</a></li><li><a href="/#contact-section">Contact</a></li></ul></nav>
+                </div>
+                <div class="site-foot-bottom">
+                    <p>Working since <strong>2019 &ndash; Present</strong></p>
+                    <div class="site-foot-social">
+                        <a href="https://www.linkedin.com/in/niteshkrbhat/" target="_blank" rel="nofollow noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.64-1.6-2.64-1.62 0-1.86 1.26-1.86 2.55v4.92h-4z"/></svg></a>
+                        <a href="https://wa.me/7889514480?text=I%20am%20interested%20in%20your%20services.%20How%20to%20get%20started%3F" target="_blank" rel="nofollow noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.16-1.5A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.06.9.92-2.98-.2-.31a8.2 8.2 0 1 1 6.84 3.72zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.71-1.33.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.3-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.66 4.22 3.73 1.57.68 2.19.74 2.97.62.48-.07 1.46-.6 1.67-1.18.2-.57.2-1.07.14-1.17-.06-.11-.22-.17-.47-.29z"/></svg></a>
+                        <a href="#" class="site-foot-top-link" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
                     </div>
                 </div>
             </div>
+        </footer>
         </div>
-        <div class="cursor"></div>
+        <div class="cursor" aria-hidden="true"></div>
         <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.validate.min.js"></script>
         <script src="assets/js/performance.js" defer></script>
-        <script src="assets/js/bootstrap.js"></script>
-        <script src="assets/js/swiper.js"></script>
         <script src="assets/js/splitting.js"></script>
-        <script src="assets/js/jarallax.min.js"></script>
-        <script src="assets/js/magnific-popup.js"></script>
-        <script src="assets/js/imagesloaded.pkgd.js"></script>
-        <script src="assets/js/isotope.pkgd.js"></script>
-        <script src="assets/js/jquery.scrolla.js"></script>
-        <script src="assets/js/skrollr.js"></script>
         <script src="assets/js/jquery.cookie.js"></script>
         <script src="assets/js/plugin.js"></script>
         <script src="assets/js/tp-cursor.js"></script>
-        <script src="assets/js/typed.js"></script>
         <script src="assets/js/common.js"></script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-        <script type="text/javascript">
-            (function () {
-      /* TAB FILTER */
-      const tabs   = document.querySelectorAll('.g-tab');
-      const groups = document.querySelectorAll('.gallery-group');
-     
-      function applyFilter(filter) {
-        groups.forEach(g => {
-          g.classList.toggle('hidden', g.dataset.category !== filter);
-        });
-        buildIndex();
-      }
-     
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          tabs.forEach(t => t.classList.remove('active'));
-          tab.classList.add('active');
-          applyFilter(tab.dataset.filter);
-        });
-      });
-     
-      /* activate first tab on load */
-      const firstTab = document.querySelector('.g-tab.active');
-      if (firstTab) applyFilter(firstTab.dataset.filter);
-     
-      /* LIGHTBOX */
-      const lb      = document.getElementById('g-lightbox');
-      const lbImg   = document.getElementById('g-lightbox-img');
-      const lbStage = document.getElementById('g-lightbox-stage');
-      const lbCount = document.getElementById('lb-counter');
-      const lbLabel = document.getElementById('lb-zoom-label');
-     
-      let items = [], cur = 0, scale = 1, tx = 0, ty = 0;
-      let drag = false, sx = 0, sy = 0, ox = 0, oy = 0;
-     
-      function buildIndex(items) {
-        items = Array.from(document.querySelectorAll('.gallery-group:not(.hidden) .g-item'));
-      }
-     
-      function applyT(anim) {
-        lbImg.style.transition = anim ? 'transform 0.2s ease' : 'none';
-        lbImg.style.transform  = `translate(${tx}px,${ty}px) scale(${scale})`;
-        lbLabel.textContent    = Math.round(scale * 100) + '%';
-      }
-     
-      function resetZ(anim) { scale=1; tx=0; ty=0; applyT(anim); }
-     
-      function zoom(d) { scale = Math.min(5, Math.max(0.5, scale + d)); applyT(false); }
-     
-      function open(i) {
-        cur = i;
-        lbImg.src = items[cur].dataset.src;
-        lbImg.style.opacity = '1';
-        lbCount.textContent = (cur+1) + ' / ' + items.length;
-        resetZ(false);
-        lb.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      }
-     
-      function close() {
-        lb.classList.remove('open');
-        document.body.style.overflow = '';
-        lbImg.src = '';
-      }
-     
-      function nav(d) {
-        cur = (cur + d + items.length) % items.length;
-        lbImg.style.opacity = '0';
-        setTimeout(() => {
-          lbImg.src = items[cur].dataset.src;
-          lbCount.textContent = (cur+1) + ' / ' + items.length;
-          resetZ(false);
-          lbImg.style.opacity = '1';
-        }, 150);
-      }
-     
-      document.querySelector('.m-gallery').addEventListener('click', e => {
-        const item = e.target.closest('.g-item');
-        if (!item) return;
-        buildIndex();
-        open(items.indexOf(item));
-      });
-     
-      document.getElementById('lb-close').addEventListener('click', close);
-      lb.addEventListener('click', e => { if (e.target === lb) close(); });
-      document.getElementById('lb-prev').addEventListener('click', e => { e.stopPropagation(); nav(-1); });
-      document.getElementById('lb-next').addEventListener('click', e => { e.stopPropagation(); nav(1); });
-      document.getElementById('lb-zoom-in').addEventListener('click',  e => { e.stopPropagation(); zoom(0.3); });
-      document.getElementById('lb-zoom-out').addEventListener('click', e => { e.stopPropagation(); zoom(-0.3); });
-      document.getElementById('lb-reset').addEventListener('click',    e => { e.stopPropagation(); resetZ(true); });
-     
-      document.addEventListener('keydown', e => {
-        if (!lb.classList.contains('open')) return;
-        if (e.key==='Escape') close();
-        else if (e.key==='ArrowLeft') nav(-1);
-        else if (e.key==='ArrowRight') nav(1);
-        else if (e.key==='+'||e.key==='=') zoom(0.2);
-        else if (e.key==='-') zoom(-0.2);
-      });
-     
-      lbStage.addEventListener('wheel', e => { e.preventDefault(); zoom(e.deltaY<0?0.15:-0.15); }, {passive:false});
-     
-      lbStage.addEventListener('mousedown', e => {
-        if (scale<=1) return;
-        drag=true; lbStage.classList.add('dragging');
-        sx=e.clientX; sy=e.clientY; ox=tx; oy=ty;
-      });
-      document.addEventListener('mousemove', e => {
-        if (!drag) return;
-        tx=ox+(e.clientX-sx); ty=oy+(e.clientY-sy); applyT(false);
-      });
-      document.addEventListener('mouseup', () => { drag=false; lbStage.classList.remove('dragging'); });
-     
-      let lastD=0;
-      lbStage.addEventListener('touchstart', e => {
-        if (e.touches.length===2) lastD=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);
-        else if (e.touches.length===1&&scale>1){drag=true;sx=e.touches[0].clientX;sy=e.touches[0].clientY;ox=tx;oy=ty;}
-      },{passive:true});
-      lbStage.addEventListener('touchmove', e => {
-        if (e.touches.length===2){const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);zoom((d-lastD)*0.01);lastD=d;}
-        else if(drag&&e.touches.length===1){tx=ox+(e.touches[0].clientX-sx);ty=oy+(e.touches[0].clientY-sy);applyT(false);}
-      },{passive:true});
-      lbStage.addEventListener('touchend',()=>{drag=false;});
-     
-      lbStage.addEventListener('dblclick', e => {
-        e.stopPropagation();
-        scale>1?resetZ(true):(scale=2.5,applyT(true));
-      });
-     
-      buildIndex();
-    })();
-        </script>
-        <script type="text/javascript">
-            const imgAfter = document.querySelector('.img-wrapper:nth-of-type(2)');
-            const line = document.getElementById('line');
-            const slider = document.getElementById('slider');
-            
-            slider.addEventListener('input', () => {
-              line.style.left = `${slider.value}%`;   
-              imgAfter.style.clipPath = `inset(0px 0px 0px ${slider.value}%)`;
-            });
-            
-            // Reset on double-click
-            slider.addEventListener('dblclick', () => {
-              slider.value = 50;
-              line.style.left = '50%';
-              imgAfter.style.clipPath = 'inset(0px 0px 0px 50%';
-            });
-        </script>    
+        <script src="assets/js/cs-story.js"></script>
     </body>
 </html>

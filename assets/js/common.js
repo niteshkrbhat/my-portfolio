@@ -3,27 +3,28 @@
 /**
 	Preloader
 **/
+/* No imagesLoaded wait here: on <body> it re-requests every image that isn't loaded yet,
+   which force-downloads all lazy images. Window load already covers the eager ones. */
 $(window).on("load", function() {
-	$('body').imagesLoaded( {}, function() {
-		var preload = $('.preloader');
-		preload.addClass('loaded');
-		preload.find('.centrize').fadeOut();
+	var preload = $('.preloader');
+	preload.addClass('loaded');
+	preload.find('.centrize').fadeOut();
 
-		/**
-			init Cursor
-		**/
-		initCursor();
+	/**
+		init Cursor
+	**/
+	initCursor();
 
-		/**
-			init Scrolla
-		**/
+	/**
+		init Scrolla
+	**/
+	if ($.fn.scrolla) {
 		$('.elementor-widget-text-editor').attr('data-animate','active');
 		$('.scroll-animate').scrolla({
 			once: true,
 			mobile: true
 		});
-
-	});
+	}
 });
 
 $(function() {
@@ -117,10 +118,12 @@ $(function() {
 	/**
 		Parallax
 	**/
-	$('.js-parallax').jarallax({
-		speed: 0.65,
-		type: 'scroll'
-	});
+	if ($.fn.jarallax) {
+		$('.js-parallax').jarallax({
+			speed: 0.65,
+			type: 'scroll'
+		});
+	}
 
 	/**
 		Block Line
@@ -133,19 +136,21 @@ $(function() {
 	/**
 		Splitting
 	**/
-	Splitting();
+	if (window.Splitting) {
+		Splitting();
+	}
 
 	/**
 		Skrollr
 	**/
-	if ($(window).width() > 1200 ) {
+	if (window.skrollr && $(window).width() > 1200 ) {
 	var s = skrollr.init();
 	}
 
 	/*
 		Typed
 	*/
-	$('.subtitle.subtitle-typed').each(function(){
+	if ($.fn.typed) $('.subtitle.subtitle-typed').each(function(){
 		var subtitleContainer = $(this);
 
 		subtitleContainer.typed({
@@ -160,21 +165,21 @@ $(function() {
 		Header Sticky
 	**/
 	if($('.header').length) {
-		$(window).on('scroll', function(event){
+		var $header = $('.header'), $win = $(window);
+		$win.on('scroll', function(event){
+			var top = $win.scrollTop();
 
-			if ( $(window).scrollTop() > 100 ) {
-				$('.header').addClass('sticky');
+			if ( top > 100 ) {
+				$header.addClass('sticky');
 				if ( this.oldScroll < this.scrollY ) {
-					$('.header').addClass('animate-in');
+					$header.addClass('animate-in');
 				} else {
-					if ( $(window).scrollTop() < 200 ) {
-						$('.header').addClass('animate-out');
+					if ( top < 200 ) {
+						$header.addClass('animate-out');
 					}
 				}
 			} else {
-				$('.header').removeClass('sticky');
-				$('.header').removeClass('animate-in');
-				$('.header').removeClass('animate-out');
+				$header.removeClass('sticky animate-in animate-out');
 			}
 
 			this.oldScroll = this.scrollY;
@@ -204,6 +209,10 @@ $(function() {
 	if ( $('body').hasClass('dark-skin') ) {
 		$('.header .switcher-btn').addClass('active');
 	}
+	function syncSwitcher() {
+		$('.header .switcher-btn').attr('aria-pressed', $('body').hasClass('dark-skin') ? 'true' : 'false');
+	}
+	syncSwitcher();
 	$('.header').on('click', '.switcher-btn', function(){
 		if($(this).hasClass('active')) {
 			$(this).removeClass('active');
@@ -217,7 +226,12 @@ $(function() {
 			$('body').addClass('dark-skin');
 			$.cookie('skin', 'dark', { expires: 7, path: '/' });
 		}
+		syncSwitcher();
 		return false;
+	});
+	/* the switcher and menu button are <a role="button">: Space should activate them too */
+	$('.header').on('keydown', '.switcher-btn, .menu-btn', function(e){
+		if (e.key === ' ') { e.preventDefault(); $(this).trigger('click'); }
 	});
 
 	/**
@@ -226,6 +240,7 @@ $(function() {
 	$('.header').on('click', '.menu-btn', function(){
 		if($(this).hasClass('active')) {
 			$(this).removeClass('active');
+			$(this).attr({ 'aria-expanded': 'false', 'aria-label': 'Open menu' });
 			$(this).addClass('no-touch');
 			$('.menu-overlay').addClass('no-touch');
 			$('body').removeClass('no-scroll');
@@ -240,6 +255,7 @@ $(function() {
 		}
 		else {
 			$(this).addClass('active no-touch');
+			$(this).attr({ 'aria-expanded': 'true', 'aria-label': 'Close menu' });
 			$('.menu-overlay').addClass('no-touch');
 			var height = $(window).height();
 			$('.menu-full-overlay').css({'height': height});
@@ -255,6 +271,7 @@ $(function() {
 	});
 	$('.menu-full-overlay').on('click', '.menu-overlay', function(){
 		$('.menu-btn').removeClass('active');
+		$('.menu-btn').attr({ 'aria-expanded': 'false', 'aria-label': 'Open menu' });
 		$('.menu-btn').addClass('no-touch');
 		$('.menu-overlay').addClass('no-touch');
 		$('body').removeClass('no-scroll');
@@ -277,6 +294,12 @@ $(function() {
 			$('.header .menu-btn.active').trigger('click');
 		}
 	});
+	/* Escape closes the full-screen menu and returns focus to its button */
+	$(document).on('keydown', function(e){
+		if (e.key === 'Escape' && $('.header .menu-btn.active').length) {
+			$('.header .menu-btn.active').trigger('click').trigger('focus');
+		}
+	});
 
 	/*
 		Header Menu Dropdown
@@ -287,11 +310,14 @@ $(function() {
 			$(this).closest('li').removeClass('opened');
 			$(this).closest('li').addClass('closed');
 			$(this).closest('li').find('> ul').slideUp();
+			$(this).attr('aria-expanded', 'false');
 		} else {
 			$(this).closest('ul').find('> li').removeClass('closed').removeClass('opened');
 			$(this).closest('ul').find('> li').find('> ul').slideUp();
+			$(this).closest('ul').find('> li.has-children > a').attr('aria-expanded', 'false');
 			$(this).closest('li').addClass('opened');
 			$(this).closest('li').find('> ul').slideDown();
+			$(this).attr('aria-expanded', 'true');
 		}
 		return false;
 	});
@@ -299,7 +325,7 @@ $(function() {
 	/*
 		Carousel Services
 	*/
-  var swiperServices = new Swiper('.js-services', {
+  if (window.Swiper && $('.js-services').length) var swiperServices = new Swiper('.js-services', {
     slidesPerView: 3,
 	  spaceBetween: 40,
 		watchSlidesVisibility: true,
@@ -334,7 +360,7 @@ $(function() {
 	/*
 		Carousel Testimonials
 	*/
-	var swiperTestimonials = new Swiper('.js-testimonials', {
+	if (window.Swiper && $('.js-testimonials').length) var swiperTestimonials = new Swiper('.js-testimonials', {
     slidesPerView: 3,
 	  spaceBetween: 40,
 		watchSlidesVisibility: true,
@@ -370,20 +396,24 @@ $(function() {
 		Initialize portfolio items
 	*/
 	var $container = $('.works-items');
-	$container.imagesLoaded(function() {
-		$container.isotope({
-			itemSelector: '.works-col',
-			percentPosition: true,
+	if ($container.length && $.fn.imagesLoaded && $.fn.isotope) {
+		$container.imagesLoaded(function() {
+			$container.isotope({
+				itemSelector: '.works-col',
+				percentPosition: true,
+			});
 		});
-	});
+	}
 
 	var $gal_container = $('.m-gallery');
-	$gal_container.imagesLoaded(function() {
-		$gal_container.isotope({
-			itemSelector: '.col-lg-6',
-			percentPosition: true,
+	if ($gal_container.length && $.fn.imagesLoaded && $.fn.isotope) {
+		$gal_container.imagesLoaded(function() {
+			$gal_container.isotope({
+				itemSelector: '.col-lg-6',
+				percentPosition: true,
+			});
 		});
-	});
+	}
 
 	/*
 		Filter items on button click
@@ -402,6 +432,7 @@ $(function() {
 		return false;
 	});
 
+	if ($.fn.magnificPopup) {
 	$('.has-popup-image').magnificPopup({
 		type: 'image',
 		closeOnContentClick: true,
@@ -448,6 +479,7 @@ $(function() {
 		fixedContentPos: false,
 		mainClass: 'mfp-fade'
 	});
+	}
 
 	/**
 		Tabs
@@ -519,11 +551,12 @@ const hoverItem = document.querySelectorAll(".hover-reveal-item");
     }
     hoverItem.forEach((item, i) => {
         item.addEventListener("mousemove", (e) => {
-            setInterval(moveImage(e, item), 100);
+            moveImage(e, item);
         });
     });
 
     // 19. Work Pin Section
+    if (window.gsap && document.querySelector('.sa-work-panel')) {
     let tl = gsap.timeline();
     let pr = gsap.matchMedia();
     pr.add("(min-width: 767px)", () => {
@@ -546,9 +579,15 @@ const hoverItem = document.querySelectorAll(".hover-reveal-item");
                 },
             })
         })
-    });   
+    });
+    }
 
 function initCursor() {
+	/* mouse-follow circle: only for a real mouse, and not when reduced motion is requested */
+	var fine = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+	var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	if (!fine || calm) { $('.cursor').hide(); return; }
+
 	var mouseX=window.innerWidth/2, mouseY=window.innerHeight/2;
 
 	var cursor = {
@@ -575,12 +614,13 @@ function initCursor() {
 		$('.cursor').removeClass("cursor-zoom");
 	});
 
-	setInterval(move,1000/60);
+	requestAnimationFrame(move);
 
 	function move() {
 		cursor.x = lerp (cursor.x, mouseX, 0.1);
 		cursor.y = lerp (cursor.y, mouseY, 0.1);
-		cursor.update()
+		cursor.update();
+		requestAnimationFrame(move);
 	}
 
 	function lerp (start, end, amt) {

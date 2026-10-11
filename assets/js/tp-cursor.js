@@ -2,7 +2,11 @@
 (function ($) {
 	"use strict";
 
-if ($("body").not(".is-mobile").hasClass("tp-magic-cursor")) {
+/* mouse-follow ball: only with a real mouse, and not when reduced motion is requested */
+var finePointer = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if ($("body").not(".is-mobile").hasClass("tp-magic-cursor") && window.gsap && finePointer && !reduceMotion) {
     $(".tp-magnetic-item").wrap('<div class="tp-magnetic-wrap"></div>');
     
     if ($("a.tp-magnetic-item").length) {

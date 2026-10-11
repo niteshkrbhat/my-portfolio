@@ -1,0 +1,107 @@
+/* ═══════════════════════════════════════════════════════════
+   CASE STUDY PERSONAS — persona switcher + persona profile card
+   Shared by all case studies (.cs pages and the .dfm page).
+   Colours come from the page's --accent / --surface tokens.
+   Load after cs-story.css (and after the inline styles on the DFM page).
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Switcher ── */
+.pz-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 16px; }
+:is(#cs, #dfm) button.pz-tab,
+:is(#cs, #dfm) button.pz-tab:hover,
+:is(#cs, #dfm) button.pz-tab:focus { display: flex; align-items: center; gap: 12px; width: 100%; padding: 14px 16px; text-align: left; border: 1px solid var(--line); border-radius: var(--r, 16px); background: var(--surface); box-shadow: none; transition: border-color .2s, box-shadow .2s, transform .2s; }
+:is(#cs, #dfm) button.pz-tab:hover { transform: translateY(-2px); border-color: var(--line-2); }
+:is(#cs, #dfm) button.pz-tab[aria-selected="true"] { border-color: var(--accent-line); box-shadow: 0 0 0 3px var(--accent-soft), var(--shadow); }
+.pz-tab-txt { display: grid; gap: 2px; min-width: 0; }
+.pz-tab-txt strong { font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+.pz-tab-txt small { font-size: 13px; color: var(--muted); line-height: 1.35; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pz-kind { justify-self: start; margin-bottom: 2px; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.pz-kind.is-primary { color: var(--accent-ink); }
+
+/* ── Avatar ── */
+.pz-av { flex-shrink: 0; display: grid; place-items: center; width: 84px; height: 84px; border-radius: 24px; font-size: 28px; font-weight: 700; letter-spacing: .02em; color: var(--on-accent, #fff); background: linear-gradient(135deg, var(--accent-2, #FF9A4D), var(--accent)); box-shadow: 0 12px 28px -12px var(--accent); }
+.pz-av.sm { width: 44px; height: 44px; border-radius: 13px; font-size: 15px; box-shadow: none; }
+.pz-av.alt { background: linear-gradient(135deg, var(--surface-2), var(--line-2)); color: var(--ink); }
+/* unselected personas in the switcher get a muted avatar so the active one stands out */
+.pz-tab[aria-selected="false"] .pz-av.sm { background: var(--surface-2); color: var(--muted); box-shadow: inset 0 0 0 1px var(--line-2); }
+.pz-tab:hover .pz-av.sm { color: var(--ink); }
+
+/* ── Profile card ── */
+.pz-card { overflow: hidden; border: 1px solid var(--line); border-radius: var(--r-lg, 24px); background: var(--surface); box-shadow: var(--shadow); }
+.pz-head { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 28px; align-items: center; padding: clamp(22px, 3vw, 32px); border-bottom: 1px solid var(--line);
+    background:
+        radial-gradient(circle, var(--accent-line) 1px, transparent 1.6px) 0 0 / 18px 18px,
+        linear-gradient(120deg, var(--accent-soft) 0%, transparent 70%),
+        var(--surface-2); }
+.pz-id { display: flex; align-items: center; gap: 20px; min-width: 0; }
+:is(.cs, .dfm) .pz-name { margin: 0; font-size: clamp(22px, 2.4vw, 28px); font-weight: 600; line-height: 1.15; color: var(--ink); }
+:is(.cs, .dfm) .pz-role { margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
+.pz-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.pz-tags span { padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; color: var(--accent-ink); background: var(--surface); border: 1px solid var(--accent-line); }
+:is(.cs, .dfm) .pz-quote { position: relative; margin: 0; padding: 18px 20px 18px 52px; border-radius: var(--r, 16px); background: var(--surface); border: 1px solid var(--line); font-size: clamp(16px, 1.6vw, 19px); font-weight: 500; line-height: 1.45; color: var(--ink); }
+.pz-quote::before { content: "\201C"; position: absolute; left: 16px; top: 6px; font-family: Georgia, serif; font-size: 52px; line-height: 1; color: var(--accent); }
+
+.pz-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; border-bottom: 1px solid var(--line); }
+.pz-stats > div { padding: 16px 24px; }
+.pz-stats > div + div { border-left: 1px solid var(--line); }
+:is(.cs, .dfm) .pz-stats dt { margin: 0 0 4px; font-size: 11.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+:is(.cs, .dfm) .pz-stats dd { margin: 0; font-size: 18px; font-weight: 600; line-height: 1.3; color: var(--ink); }
+
+.pz-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; padding: clamp(18px, 3vw, 28px); }
+.pz-box { padding: 20px; border-radius: var(--r, 16px); border: 1px solid var(--line); background: var(--surface-2); }
+:is(.cs, .dfm) .pz-box h4 { display: flex; align-items: center; gap: 8px; margin: 0 0 14px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.pz-box h4::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.pz-box.good h4::before { background: var(--good); }
+.pz-box.bad h4::before { background: var(--bad); }
+.pz-box.good { background: linear-gradient(180deg, var(--good-soft), transparent 60%), var(--surface-2); }
+.pz-box.bad { background: linear-gradient(180deg, var(--bad-soft), transparent 60%), var(--surface-2); }
+
+:is(.cs, .dfm) .pz-list { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+.pz-list li { position: relative; padding-left: 20px; font-size: 15px; line-height: 1.5; color: var(--ink-2); }
+.pz-list li::before { content: ""; position: absolute; left: 2px; top: .55em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); transform: rotate(45deg); }
+
+.pz-scales { display: grid; gap: 14px; }
+.pz-scale { display: grid; gap: 6px; }
+.pz-scale-top { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; color: var(--ink-2); }
+.pz-scale-top b { font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.pz-track { position: relative; height: 8px; border-radius: 8px; background: var(--line); overflow: hidden; }
+.pz-track i.lv-5 { width: 5%; }
+.pz-track i.lv-10 { width: 10%; }
+.pz-track i.lv-15 { width: 15%; }
+.pz-track i.lv-20 { width: 20%; }
+.pz-track i.lv-25 { width: 25%; }
+.pz-track i.lv-30 { width: 30%; }
+.pz-track i.lv-35 { width: 35%; }
+.pz-track i.lv-40 { width: 40%; }
+.pz-track i.lv-45 { width: 45%; }
+.pz-track i.lv-50 { width: 50%; }
+.pz-track i.lv-55 { width: 55%; }
+.pz-track i.lv-60 { width: 60%; }
+.pz-track i.lv-65 { width: 65%; }
+.pz-track i.lv-70 { width: 70%; }
+.pz-track i.lv-75 { width: 75%; }
+.pz-track i.lv-80 { width: 80%; }
+.pz-track i.lv-85 { width: 85%; }
+.pz-track i.lv-90 { width: 90%; }
+.pz-track i.lv-95 { width: 95%; }
+.pz-track i.lv-100 { width: 100%; }
+.pz-track i { position: absolute; inset: 0 auto 0 0; border-radius: inherit; background: linear-gradient(90deg, var(--accent-2, var(--accent)), var(--accent)); }
+
+.pz-foot { padding: 0 clamp(18px, 3vw, 28px) clamp(18px, 3vw, 28px); }
+:is(.cs, .dfm) .pz-foot h4 { margin: 0 0 10px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .pz-head { grid-template-columns: minmax(0, 1fr); }
+    .pz-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pz-stats > div:nth-child(3) { border-left: 0; }
+    .pz-stats > div:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .pz-body { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+    .pz-tabs { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
+    :is(#cs, #dfm) button.pz-tab { scroll-snap-align: start; }
+    .pz-id { gap: 14px; }
+    .pz-av { width: 64px; height: 64px; border-radius: 18px; font-size: 22px; }
+    .pz-stats > div { padding: 14px 16px; }
+}

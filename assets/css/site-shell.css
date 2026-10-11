@@ -1,0 +1,112 @@
+/* ═══════════════════════════════════════════════════════════
+   SITE SHELL — shared footer + case-study pager
+   Used by the case studies, work pages and testimonials.
+   Load last, after the page stylesheets.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Case-study pager (prev / next) ── */
+.cs-pager { max-width: 1320px; margin: 0 auto; padding: clamp(8px, 2vw, 16px) clamp(16px, 4vw, 40px) clamp(56px, 8vw, 96px); }
+.cs-pager-lbl { margin: 0 0 16px; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+/* Cards: the project banner shown whole on top (banners carry their own title text,
+   so they are never side-cropped), copy below, and a round arrow that fills on hover. */
+.cs-pager-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2vw, 24px); }
+a.cs-pager-card { display: flex; flex-direction: column; overflow: hidden; border-radius: 20px; border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); color: inherit; text-decoration: none; transition: transform .3s cubic-bezier(.2,.7,.2,1), border-color .3s, box-shadow .3s; }
+a.cs-pager-card:hover { transform: translateY(-4px); border-color: var(--pg); color: inherit; box-shadow: 0 26px 50px -30px var(--pg), var(--shadow); }
+.cs-pager-card img { display: block; width: 100%; height: auto; aspect-ratio: 1893 / 900; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+a.cs-pager-card:hover img { transform: scale(1.03); }
+.cs-pager-txt { position: relative; z-index: 1; display: grid; gap: 4px; padding: 20px 84px 22px 24px; min-width: 0; background: var(--surface); }
+.cs-pager-txt small { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--pg-ink, var(--pg)); }
+.cs-pager-txt small svg { display: none; } /* direction is shown by the round arrow */
+.cs-pager-txt strong { font-size: clamp(19px, 1.8vw, 23px); font-weight: 600; line-height: 1.2; letter-spacing: -0.02em; color: var(--ink); }
+.cs-pager-txt > span { font-size: 14.5px; color: var(--muted); }
+.cs-pager-txt::before, .cs-pager-txt::after { content: ""; position: absolute; top: 50%; right: 24px; width: 44px; height: 44px; margin-top: -22px; border-radius: 50%; transition: background-color .25s, border-color .25s, transform .25s cubic-bezier(.2,.7,.2,1); }
+.cs-pager-txt::before { border: 1px solid var(--line-2, var(--line)); }
+.cs-pager-txt::after { background: var(--pg); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center / 18px no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center / 18px no-repeat; }
+.cs-pager-card.is-prev .cs-pager-txt::after { transform: scaleX(-1); }
+a.cs-pager-card:hover .cs-pager-txt::before { background: var(--pg); border-color: var(--pg); }
+a.cs-pager-card:hover .cs-pager-txt::after { background-color: var(--surface); }
+a.cs-pager-card.is-next:hover .cs-pager-txt::after { transform: translateX(3px); }
+a.cs-pager-card.is-prev:hover .cs-pager-txt::after { transform: scaleX(-1) translateX(3px); }
+a.cs-pager-card:focus-visible { outline: 2px solid var(--pg); outline-offset: 3px; }
+/* --pg-ink: darker shade for small text on light backgrounds (4.5:1); dark mode uses --pg as is */
+.pg--dfm        { --pg: #D9620B; --pg-ink: #AB4D09; }
+.pg--symbiontra { --pg: #A57A0C; --pg-ink: #86630A; }
+.pg--demerara   { --pg: #1E7A4E; --pg-ink: #1D784C; }
+.pg--dn         { --pg: #C62A74; --pg-ink: #C02971; }
+.pg--mind       { --pg: #0B7F86; --pg-ink: #0A757B; }
+.pg--odoo       { --pg: #714B67; }
+.pg--arc        { --pg: #1B6B58; }
+.dark-skin [class*="pg--"] { --pg-ink: var(--pg); }
+.dark-skin .pg--dfm       { --pg: #FF8A3D; }
+.dark-skin .pg--symbiontra { --pg: #E8C24C; }
+.dark-skin .pg--demerara   { --pg: #4ADE80; }
+.dark-skin .pg--dn         { --pg: #FF6AAE; }
+.dark-skin .pg--mind       { --pg: #4FE3EA; }
+.dark-skin .pg--odoo       { --pg: #D4A0C6; }
+.dark-skin .pg--arc        { --pg: #5CD6B0; }
+
+/* ── Side rails — the theme's vertical line + dot pattern, alternating
+   left / right per section. Line, dots and pattern are styled in style.css. ── */
+.cs .v-line { position: relative; }
+.cs .v-line-block, .cs .v-line-block::before, .cs .v-line-block::after { box-sizing: content-box; }
+/* kept inside the section with a gap at both ends, and toned down */
+.cs .v-line-block { top: 40px; bottom: 40px; width: 1px; background: rgba(28,25,23,.14); }
+.cs .v-line-block::before, .cs .v-line-block::after { left: -6px; width: 10px; height: 10px; background: var(--bg); border: 1px solid rgba(28,25,23,.22); box-shadow: none; }
+.cs .v-line-block::before { top: -6px; }
+.cs .v-line-block::after { bottom: -6px; }
+.cs .v-line-block span { bottom: -40px; opacity: .35; }
+.cs .v-line-top .v-line-block span { top: -40px; bottom: auto; }
+.dark-skin .cs .v-line-block { background: rgba(255,255,255,.12); }
+.dark-skin .cs .v-line-block::before, .dark-skin .cs .v-line-block::after { background: var(--bg); border-color: rgba(255,255,255,.2); box-shadow: none; }
+.dark-skin .cs .v-line-block span { filter: invert(1); opacity: .55; } /* black rings → white; thin light strokes need more opacity */
+@media (max-width: 1399px) { .cs .v-line-block { display: none; } } /* no gutter wide enough */
+
+/* ── Footer ── */
+.site-foot { position: relative; overflow: hidden; color: rgba(242,238,232,.72); background: #15130F; font-family: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif; }
+.dark-skin .site-foot { background: #131110; border-top: 1px solid rgba(255,255,255,.08); }
+.site-foot::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(40% 80% at 100% 0%, rgba(41,165,135,.22), transparent 70%), radial-gradient(circle, rgba(255,255,255,.07) 1px, transparent 1.6px) 0 0 / 22px 22px; -webkit-mask-image: linear-gradient(180deg, #000, transparent 85%); mask-image: linear-gradient(180deg, #000, transparent 85%); }
+.site-foot-inner { position: relative; max-width: 1320px; margin: 0 auto; padding: clamp(48px, 7vw, 80px) clamp(16px, 4vw, 40px) 28px; }
+.site-foot-top { display: grid; grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr)); gap: 32px; padding-bottom: clamp(32px, 5vw, 48px); border-bottom: 1px solid rgba(255,255,255,.1); }
+.site-foot-logo img { display: block; width: auto; height: 32px; filter: invert(1) brightness(1.6); }
+.site-foot-brand p { max-width: 36ch; margin: 16px 0 0; font-size: 15px; line-height: 1.6; color: rgba(242,238,232,.7); }
+a.site-foot-cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; padding: 11px 18px; border-radius: 12px; font-size: 15px; font-weight: 600; color: #fff; background: #20826B; text-decoration: none; transition: transform .2s, background .2s; }
+a.site-foot-cta:hover { color: #fff; background: #1A6E5A; transform: translateY(-2px); }
+.site-foot-cta svg { width: 17px; height: 17px; }
+.site-foot-col h2 { margin: 0 0 14px; font-family: inherit; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #F2EEE8; }
+.site-foot-col ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.site-foot-col a { font-size: 15px; color: rgba(242,238,232,.68); text-decoration: none; transition: color .2s; }
+.site-foot-col a:hover { color: #4FD6A8; }
+.site-foot-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-top: 24px; }
+.site-foot-bottom p { margin: 0; font-size: 14px; color: rgba(242,238,232,.6); }
+.site-foot-bottom strong { font-weight: 600; color: #4FD6A8; }
+.site-foot-social { display: flex; gap: 10px; }
+.site-foot-social a { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; color: #F2EEE8; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); transition: background .2s, color .2s; }
+.site-foot-social a:hover { color: #0A1A14; background: #4FD6A8; }
+.site-foot-social svg { width: 18px; height: 18px; }
+.site-foot a:focus-visible { outline: 2px solid #4FD6A8; outline-offset: 3px; }
+
+/* ── Keyboard access ──
+   style.css removes outlines everywhere (* { outline: none }); bring back a visible
+   ring for keyboard focus only. Page scopes (.cs, .dfm, the footer) keep their own colours. */
+:focus-visible { outline: 2px solid #20826B; outline-offset: 3px; }
+:where(.dark-skin) :focus-visible { outline-color: #4FD6A8; }
+#web-header :focus-visible, #mob-header :focus-visible { outline-color: currentColor; }
+.hero :focus-visible { outline-color: #fff; }
+
+/* Skip link: first tab stop on every page, hidden until focused */
+a.skip-link, a.skip-link:link, a.skip-link:visited { position: fixed; top: 12px; left: 12px; z-index: 100000; padding: 10px 16px; border-radius: 10px; background: #1C1917; color: #fff; font: 600 15px/1.2 "Geist", system-ui, sans-serif; text-decoration: none; transform: translateY(-200%); transition: transform .2s; }
+a.skip-link:focus { transform: none; }
+
+/* Desktop "Works" menu opens on hover only — also open it while a link inside has focus */
+.has-dropdown:focus-within .dropdown { opacity: 1; pointer-events: all; }
+
+@media (max-width: 900px) {
+    .site-foot-top { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .site-foot-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+    .cs-pager-grid { grid-template-columns: minmax(0, 1fr); }
+    .cs-pager-txt { padding: 16px 72px 18px 18px; }
+    .cs-pager-txt::before, .cs-pager-txt::after { right: 18px; }
+    .site-foot-top { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

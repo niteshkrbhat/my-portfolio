@@ -1,0 +1,222 @@
+/* ═══════════════════════════════════════════════════════════
+   WORK PAGES
+   Shared by mobile-app-design, website-design, webapp-design,
+   website-development and webapp-development.
+   Builds on cs-hero.css (hero band) and cs-story.css (tokens,
+   lightbox, reveal). Each app sets its own --app colour.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── App colours ──
+   --app-ink: darker shade for small text on the light page (4.5:1)
+   --app-fill: darker shade behind white text (4.5:1); dark mode uses --app for both */
+.wk-app--fvbank   { --app: #3B82F6; --app-ink: #2F67C2; --app-fill: #3472D8; }
+.wk-app--ridewise { --app: #E8505B; --app-ink: #B73F48; --app-fill: #CC4650; }
+.wk-app--yug      { --app: #6D4AFF; --app-ink: #6947F5; }
+.wk-app--wishtok  { --app: #E9A23B; --app-ink: #896023; --app-fill: #9A6B27; }
+.wk-app--nayi     { --app: #0EA5E9; --app-ink: #0A709E; --app-fill: #0A7CAF; }
+.dark-skin [class*="wk-app--"], .dark-skin [class*="wk-case--"], .dark-skin [data-cat] { --app-ink: var(--app); --app-fill: var(--app); }
+.dark-skin .wk-app--fvbank   { --app: #6EA4FF; }
+.dark-skin .wk-app--ridewise { --app: #FF7A82; }
+.dark-skin .wk-app--yug      { --app: #9B83FF; }
+.dark-skin .wk-app--wishtok  { --app: #F4BD62; }
+.dark-skin .wk-app--nayi     { --app: #4CC6F5; }
+
+/* ── Hero: the band holds the category nav, so it needs less bottom space ── */
+.csh--apps .csh-band, .csh--work .csh-band { padding-bottom: clamp(40px, 6vw, 72px); }
+.csh--apps, .csh--work { padding-bottom: 0; }
+
+/* Fan of app screens in the hero */
+.wk-fan { position: relative; height: clamp(240px, 26vw, 330px); margin-left: auto; width: 100%; max-width: 460px; }
+.wk-fan img { position: absolute; bottom: 0; width: 29%; height: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,.18); box-shadow: 0 24px 50px -18px rgba(0,0,0,.65); transform-origin: 50% 100%; }
+.wk-fan img:nth-child(1) { left: 2%;  transform: rotate(-12deg) translateY(14px); }
+.wk-fan img:nth-child(2) { left: 18%; transform: rotate(-6deg) translateY(4px); }
+.wk-fan img:nth-child(3) { left: 34%; z-index: 2; transform: translateY(-8px); }
+.wk-fan img:nth-child(4) { left: 50%; z-index: 1; transform: rotate(6deg) translateY(4px); }
+.wk-fan img:nth-child(5) { left: 64%; transform: rotate(12deg) translateY(14px); }
+
+/* Category nav inside the band */
+.wk-cats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: clamp(32px, 4vw, 48px); padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); }
+.wk-cats-lbl { width: 100%; margin: 0 0 4px; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: rgba(246,242,236,.55); }
+.csh .wk-cats a { padding: 9px 16px; border-radius: 999px; font-size: 14px; font-weight: 600; color: rgba(246,242,236,.8); background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.14); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); transition: background .2s, color .2s; }
+.csh .wk-cats a:hover { color: #fff; background: rgba(255,255,255,.12); }
+.csh .wk-cats a[aria-current="page"] { color: #052019; background: var(--hb-accent); border-color: transparent; }
+
+/* ── Project index ── */
+.cs .wk-index { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin: clamp(32px, 5vw, 56px) 0 0; padding: 0; list-style: none; }
+.cs .wk-index a { display: flex; align-items: center; gap: 12px; height: 100%; padding: 14px 16px; border-radius: var(--r); border: 1px solid var(--line); background: var(--surface); transition: transform .2s var(--ease), border-color .2s; }
+.cs .wk-index a:hover { transform: translateY(-2px); border-color: var(--app); }
+.wk-index b { font-size: 12px; font-weight: 700; color: var(--app-ink, var(--app)); font-variant-numeric: tabular-nums; }
+.wk-index span { display: grid; min-width: 0; }
+.wk-index strong { font-size: 15px; font-weight: 600; line-height: 1.3; color: var(--ink); }
+.wk-index small { font-size: 12.5px; line-height: 1.35; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ── App section ── */
+.wk-app { padding-block: clamp(56px, 8vw, 96px); border-top: 1px solid var(--line); scroll-margin-top: 96px; }
+.wk-app:first-of-type { border-top: 0; }
+.wk-app-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 32px; margin-bottom: clamp(24px, 3vw, 36px); }
+.wk-app-id { display: flex; align-items: flex-start; gap: 18px; max-width: 760px; }
+.wk-num { flex-shrink: 0; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; font-size: 16px; font-weight: 700; color: #fff; background: var(--app-fill, var(--app)); box-shadow: 0 12px 24px -12px var(--app); font-variant-numeric: tabular-nums; }
+.cs .wk-domain { margin: 0 0 6px; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--app-ink, var(--app)); }
+.cs .wk-app h2 { margin: 0; font-size: clamp(30px, 4vw, 48px); line-height: 1.05; font-weight: 600; letter-spacing: -0.03em; }
+.cs .wk-tagline { margin-top: 10px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.45; color: var(--ink-2); }
+.wk-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* Buttons (button + link variants) */
+/* Primary buttons use the site green on every work page */
+#cs button.wk-btn, .cs a.wk-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 12px; font-size: 15px; font-weight: 600; line-height: 1.2; color: #fff; background: #20826B; border: 1px solid transparent; box-shadow: 0 10px 22px -12px rgba(41,165,135,.8); transition: transform .2s var(--ease), background .2s; }
+#cs button.wk-btn:hover, .cs a.wk-btn:hover { transform: translateY(-2px); color: #fff; background: #1A6E5A; }
+#cs button.wk-btn.ghost, .cs a.wk-btn.ghost { color: var(--ink); background: var(--surface); border-color: var(--line-2); box-shadow: none; }
+#cs button.wk-btn.ghost:hover, .cs a.wk-btn.ghost:hover { color: var(--ink); background: var(--surface); border-color: #29A587; }
+.wk-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+/* Banner + about */
+.wk-app-body { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: clamp(20px, 3vw, 36px); align-items: stretch; }
+#cs button.wk-feature { position: relative; height: 100%; border-radius: var(--r-lg); border: 1px solid var(--line); box-shadow: 0 30px 60px -36px var(--app), var(--shadow); }
+.cs .wk-feature img { width: 100%; height: 100%; aspect-ratio: 21 / 10; object-fit: cover; object-position: center; }
+.wk-about { display: flex; flex-direction: column; gap: 18px; padding: clamp(20px, 2.6vw, 28px); border-radius: var(--r-lg); border: 1px solid var(--line); background: linear-gradient(160deg, color-mix(in srgb, var(--app) 10%, transparent), transparent 55%), var(--surface); }
+.cs .wk-about p { font-size: 15.5px; line-height: 1.7; }
+.cs .wk-facts { display: grid; gap: 0; margin: auto 0 0; }
+.wk-facts div { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; }
+.cs .wk-facts dt { color: var(--muted); font-weight: 400; }
+.cs .wk-facts dd { margin: 0; text-align: right; font-weight: 600; color: var(--ink); }
+
+/* Screen rail */
+.wk-rail-wrap { position: relative; margin-top: clamp(20px, 3vw, 32px); padding: clamp(16px, 2.4vw, 24px) 0 clamp(16px, 2.4vw, 24px) clamp(16px, 2.4vw, 24px); border-radius: var(--r-lg); border: 1px solid var(--line);
+    background:
+        radial-gradient(circle, color-mix(in srgb, var(--app) 35%, transparent) 1px, transparent 1.6px) 0 0 / 18px 18px,
+        linear-gradient(120deg, color-mix(in srgb, var(--app) 9%, transparent), transparent 70%),
+        var(--surface-2); }
+.wk-rail-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-right: clamp(16px, 2.4vw, 24px); margin-bottom: 14px; }
+.cs .wk-rail-top h3 { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.wk-rail-nav { display: flex; gap: 8px; }
+#cs .wk-rail-nav button { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; color: var(--ink); background: var(--surface); border: 1px solid var(--line-2); transition: background .2s, color .2s; }
+#cs .wk-rail-nav button:hover { color: #fff; background: var(--app); border-color: transparent; }
+#cs .wk-rail-nav button:disabled { opacity: .35; cursor: default; }
+#cs .wk-rail-nav button:disabled:hover { color: var(--ink); background: var(--surface); border-color: var(--line-2); }
+.wk-rail-nav svg { width: 18px; height: 18px; }
+.wk-rail { display: flex; gap: clamp(12px, 1.6vw, 18px); overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 0; padding: 4px clamp(16px, 2.4vw, 24px) 12px 2px; scrollbar-width: thin; scrollbar-color: color-mix(in srgb, var(--app) 50%, transparent) transparent; }
+.wk-rail:focus-visible { outline: 2px solid var(--app); outline-offset: 4px; }
+#cs button.wk-screen { flex: 0 0 auto; width: auto; scroll-snap-align: start; border-radius: 22px; border: 1px solid var(--line); box-shadow: 0 18px 36px -22px rgba(0,0,0,.45); background: var(--surface); }
+#cs button.wk-screen:hover { transform: translateY(-4px); }
+.cs .wk-screen img { width: auto; height: clamp(340px, 34vw, 460px); aspect-ratio: auto; object-fit: contain; }
+/* Raw screens (no device art in the export) get a phone bezel */
+#cs button.wk-screen.is-raw { padding: 7px; border: 0; border-radius: 30px; background: #111; box-shadow: inset 0 0 0 1px rgba(255,255,255,.12), 0 18px 36px -22px rgba(0,0,0,.6); }
+.cs .wk-screen.is-raw img { border-radius: 24px; height: clamp(326px, 32.8vw, 446px); }
+
+/* ── Closing CTA ── */
+.wk-cta { margin: clamp(24px, 4vw, 48px) 0 clamp(56px, 8vw, 96px); }
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+    .cs .wk-index { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+    .wk-app-body { grid-template-columns: minmax(0, 1fr); }
+    .wk-fan { max-width: 380px; margin: 0 auto; }
+}
+@media (max-width: 640px) {
+    .cs .wk-index { grid-template-columns: minmax(0, 1fr); }
+    .wk-app-id { gap: 14px; }
+    .wk-num { width: 44px; height: 44px; border-radius: 13px; font-size: 14px; }
+    .wk-rail-nav { display: none; }
+    .cs .wk-screen img { height: 380px; }
+    .cs .wk-screen.is-raw img { height: 366px; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   WEB WORK PAGES — project card grid
+   ═══════════════════════════════════════════════════════════ */
+
+/* Domain colours (cards set --app from data-cat) */
+[data-cat="saas"]     { --app: #0E9AA7; --app-ink: #0A737D; }
+[data-cat="fintech"]  { --app: #2563EB; --app-ink: #245FE2; }
+[data-cat="web3"]     { --app: #7C3AED; }
+[data-cat="business"] { --app: #E0631A; --app-ink: #AC4C14; }
+.dark-skin [data-cat="saas"]     { --app: #3FD0DB; }
+.dark-skin [data-cat="fintech"]  { --app: #6CA0FF; }
+.dark-skin [data-cat="web3"]     { --app: #A88BFF; }
+.dark-skin [data-cat="business"] { --app: #FF9A5C; }
+
+/* Hero: stack of project banners in browser frames */
+.wk-stack { position: relative; width: 100%; max-width: 480px; height: clamp(220px, 22vw, 290px); margin-left: auto; }
+.wk-stack figure { position: absolute; margin: 0; width: 78%; overflow: hidden; border-radius: 12px; border: 1px solid rgba(255,255,255,.18); background: #0d0d0d; box-shadow: 0 26px 50px -20px rgba(0,0,0,.7); }
+.wk-stack figure::before { content: ""; display: block; height: 16px; background: radial-gradient(circle at 9px 8px, #FF5F57 2.6px, transparent 3px), radial-gradient(circle at 19px 8px, #FEBC2E 2.6px, transparent 3px), radial-gradient(circle at 29px 8px, #28C840 2.6px, transparent 3px), rgba(255,255,255,.08); }
+.wk-stack img { display: block; width: 100%; height: auto; aspect-ratio: 21 / 10; object-fit: cover; }
+.wk-stack figure:nth-child(1) { top: 0; left: 0; transform: rotate(-4deg); opacity: .75; }
+.wk-stack figure:nth-child(2) { top: 18%; left: 11%; transform: rotate(1deg); opacity: .9; }
+.wk-stack figure:nth-child(3) { top: 36%; left: 22%; z-index: 2; transform: rotate(-1deg); }
+
+/* Section headings on the grid pages */
+.wk-sec { padding-top: clamp(40px, 6vw, 72px); }
+.wk-sec + .wk-sec { border-top: 1px solid var(--line); margin-top: clamp(40px, 6vw, 72px); }
+.wk-sec-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 32px; margin-bottom: clamp(20px, 3vw, 32px); }
+.cs .wk-sec-head h2 { margin: 0; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.1; font-weight: 600; }
+.cs .wk-sec-head p { margin-top: 8px; max-width: 60ch; font-size: 16.5px; }
+
+/* Filter chips */
+.wk-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+#cs .wk-filters button { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; font-size: 14px; font-weight: 600; color: var(--ink-2); background: var(--surface); border: 1px solid var(--line-2); transition: background .2s, color .2s, border-color .2s; }
+#cs .wk-filters button:hover { border-color: var(--accent-line); }
+#cs .wk-filters button[aria-pressed="true"] { color: var(--bg); background: var(--ink); border-color: transparent; }
+.wk-filters i { width: 8px; height: 8px; border-radius: 50%; background: var(--app, var(--accent)); }
+.wk-filters small { font-size: 12px; font-weight: 600; opacity: .85; font-variant-numeric: tabular-nums; }
+
+/* Featured case studies */
+.wk-cases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.cs a.wk-case { display: flex; flex-direction: column; overflow: hidden; border-radius: var(--r-lg); border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); transition: transform .25s var(--ease), border-color .25s; }
+.cs a.wk-case:hover { transform: translateY(-4px); border-color: var(--app); }
+.wk-case img { display: block; width: 100%; aspect-ratio: 21 / 10; object-fit: cover; }
+.wk-case-body { display: flex; flex-direction: column; gap: 8px; flex: 1; padding: 18px 20px 20px; }
+.cs .wk-case h3 { margin: 0; font-size: 19px; font-weight: 600; line-height: 1.25; }
+.cs .wk-case p { font-size: 14.5px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.wk-case-go { margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--app-ink, var(--app)); }
+.wk-case-go svg { width: 16px; height: 16px; transition: transform .2s; }
+.cs a.wk-case:hover .wk-case-go svg { transform: translateX(3px); }
+.wk-case--dfm        { --app: #EA6A0A; --app-ink: #AB4D07; }
+.wk-case--symbiontra { --app: #B8870F; --app-ink: #86630B; }
+.wk-case--demerara   { --app: #1E7A4E; --app-ink: #1D784C; }
+.wk-case--dn         { --app: #D6337F; --app-ink: #BE2D71; }
+.wk-case--mind       { --app: #0B8F99; --app-ink: #09747C; }
+.wk-case--odoo       { --app: #714B67; }
+.dark-skin .wk-case--dfm        { --app: #FF8A3D; }
+.dark-skin .wk-case--symbiontra { --app: #E8C24C; }
+.dark-skin .wk-case--demerara   { --app: #4ADE80; }
+.dark-skin .wk-case--dn         { --app: #FF6AAE; }
+.dark-skin .wk-case--mind       { --app: #4FE3EA; }
+.dark-skin .wk-case--odoo       { --app: #D4A0C6; }
+
+/* Project cards */
+.wk-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2vw, 24px); }
+.wk-card { display: flex; flex-direction: column; overflow: hidden; border-radius: var(--r-lg); border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); }
+#cs button.wk-card-media { border: 0; border-radius: 0; box-shadow: none; }
+#cs button.wk-card-media:hover { transform: none; }
+.cs .wk-card-media img { width: 100%; aspect-ratio: 21 / 10; object-fit: cover; transition: transform .6s var(--ease); }
+#cs button.wk-card-media:hover img { transform: scale(1.03); }
+.wk-card-body { display: flex; flex-direction: column; gap: 10px; flex: 1; padding: clamp(18px, 2.2vw, 24px); }
+.cs .wk-card .wk-domain { margin: 0; }
+.cs .wk-card h3 { margin: 0; font-size: clamp(20px, 2vw, 24px); font-weight: 600; line-height: 1.2; letter-spacing: -0.02em; }
+.cs .wk-card-text { font-size: 15px; line-height: 1.65; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.cs .wk-card-text.is-open { display: block; -webkit-line-clamp: unset; overflow: visible; }
+#cs button.wk-more { position: relative; align-self: flex-start; font-size: 14px; font-weight: 600; color: var(--app-ink, var(--app)); }
+#cs button.wk-more::after { content: ""; position: absolute; inset: -10px -6px; } /* bigger tap target */
+#cs button.wk-more:hover { text-decoration: underline; }
+
+.wk-thumbs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 4px; }
+#cs button.wk-thumb { position: relative; border-radius: 8px; box-shadow: none; }
+.cs .wk-thumb img { aspect-ratio: 16 / 10; object-fit: cover; object-position: top center; }
+.wk-thumb-more { position: absolute; inset: 0; display: grid; place-items: center; font-size: 15px; font-weight: 700; color: #fff; background: rgba(15,13,12,.62); }
+.wk-card-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 8px; }
+#cs .wk-card-actions button.wk-btn, .cs .wk-card-actions a.wk-btn { padding: 10px 14px; font-size: 14px; }
+
+@media (max-width: 1100px) {
+    .wk-cases { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+    .wk-stack { margin: 0 auto; }
+    .wk-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+    .wk-cases { grid-template-columns: minmax(0, 1fr); }
+    .wk-sec-head { align-items: flex-start; }
+    .wk-thumbs { gap: 6px; }
+}

@@ -1605,11 +1605,26 @@ hr {
 }
 
 
-@media screen and (max-width: 768px) {
+/* Hamburger header below 1024px: the desktop pill nav wraps onto two rows under ~1000px */
+@media screen and (max-width: 1023px) {
 	#mob-header {
 		display: block;
 		position: relative;
 		z-index: 20;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	#mob-header.sticky {
+		padding-top: 0;
+		padding-bottom: 0;
+		height: 50px !important;
+	}
+	/* invisible padding so the 25-28px icons get a ~44px touch target */
+	#mob-header .switcher-btn::after,
+	#mob-header .menu-btn::after {
+		content: "";
+		position: absolute;
+		inset: -8px;
 	}
 
 	#mob-header .switcher-btn {
@@ -1654,7 +1669,7 @@ hr {
 	vertical-align: .155em;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
 	.header .logo img {
 		filter: brightness(0.5);
 	}
@@ -3143,7 +3158,7 @@ hr {
 }
 
 .dark-skin .works-items.works-list-items .works-item {
-	background: #1d222a;
+	background: #131110;
 }
 
 .works-items.works-list-items .works-item .desc {
@@ -6189,7 +6204,7 @@ a.btn-fx:after, a.btn-fx:hover:after, a.btn-fx:before, a.btn-fx:hover:before, #m
     left: 40px;
     right: 40px;
     bottom: 130px;
-    background: #1d222a;
+    background: #131110;
     border-radius: 15px;
     opacity: .7;
     z-index: 0;
@@ -6202,7 +6217,7 @@ a.btn-fx:after, a.btn-fx:hover:after, a.btn-fx:before, a.btn-fx:hover:before, #m
     left: 20px;
     right: 20px;
     bottom: 5px;
-    background: #1d222a;
+    background: #131110;
     border-radius: 15px;
     opacity: .7;
     z-index: -1;
@@ -7630,7 +7645,7 @@ body.tp-magic-cursor #magic-cursor {
   }
 
   .dark-skin .header.sticky {
-  	background: #12161d;
+  	background: #131110;
   }
 
   .navbar::before {
@@ -8146,8 +8161,11 @@ body.tp-magic-cursor #magic-cursor {
       color: var(--white);
     }
 
+    .ctrl-btn,
     .dark-skin .ctrl-btn {
     	color: #fff;
+    	border-color: var(--glass-border);
+    	box-shadow: none;
     }
     .ctrl-btn:hover {
       background: rgba(255,255,255,0.12);

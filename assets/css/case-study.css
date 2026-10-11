@@ -309,11 +309,11 @@
   cursor: default;
 }
 .dark-skin .hstat {
-  background: #1e232b;
+  background: #1F1C1A;
 }
 
 .hstat:hover { background: #eae8e8; }
-.dark-skin .hstat:hover {background: #242b26;}
+.dark-skin .hstat:hover {background: #2C2825;}
 .hstat-arrow { font-size: 14px; font-weight: 800; margin-bottom: 4px; }
 .hstat-arrow.up   { color: var(--green); }
 .hstat-arrow.down { color: var(--red); }
@@ -340,6 +340,10 @@
   .hero-meta {
     flex-direction: column;
   }
+  /* three stat columns were clipped / one word per line on phones */
+  .hero-stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .hm-item {
@@ -350,11 +354,11 @@
   transition: background 0.25s;
 }
 
-.dark-skin .hm-item { background: #12161d; }
+.dark-skin .hm-item { background: #131110; }
 .hm-item:last-child { border-right: none; }
 .hm-item:hover { background: #fcfcfc; }
 
-.dark-skin .hm-item:hover { background: #1e232b; }
+.dark-skin .hm-item:hover { background: #1F1C1A; }
 .hm-label {
   font-size: 10px;
   letter-spacing: 0.12em;
@@ -386,7 +390,7 @@
   background: #e5e5e5;
   font-weight: 500;
 }
-.dark-skin .cs-table thead th{ background: #101216; }
+.dark-skin .cs-table thead th{ background: #131110; }
 .cs-table tbody tr {
   border-bottom: 1px solid #afafaf1f;
   transition: background 0.2s;
@@ -725,7 +729,7 @@
 .vs-opt.rej { background: #f0ebe3; border: 1px solid rgba(239,68,68,0.2); text-decoration: line-through; opacity: 0.7; }
 .dark-skin .vs-opt.rej { background: #000000; }
 .vs-opt.cho { background: #f1e1c8; border: 1px solid rgba(99,102,241,0.25); }
-.dark-skin .vs-opt.cho { background: #222831; }
+.dark-skin .vs-opt.cho { background: #1A1816; }
 .vs-label { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 4px; opacity: 0.8; }
  
 /* ══════════════════════════════════════
@@ -1070,7 +1074,7 @@ footer {
   }
  
   .dark {
-    --card-bg:       #101216;
+    --card-bg:       #131110;
     --title-color:   #ECEAE4;
     --sub-color:     #6A6A68;
     --lbl-border:    rgba(255,255,255,0.7);
@@ -1117,7 +1121,7 @@ footer {
   }
 
   .dark-skin .card {
-    background: #101216;
+    background: #131110;
   }
  
   .chart-title {
@@ -1310,7 +1314,7 @@ footer {
 .pc:hover::before{opacity:1}
 
 .dark-skin .pc {
-  background: #12161d;
+  background: #131110;
 }
 /* center last 2 in row 2 of 6-col grid */
 .pc:nth-child(4){grid-column:2/span 2}
